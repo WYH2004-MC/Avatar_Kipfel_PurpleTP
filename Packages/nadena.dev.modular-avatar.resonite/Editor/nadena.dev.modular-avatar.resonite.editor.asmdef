@@ -1,0 +1,40 @@
+{
+    "name": "nadena.dev.modular-avatar.resonite.editor",
+    "rootNamespace": "",
+    "references": [
+        "nadena.dev.ndmf",
+        "nadena.dev.ndmf.runtime",
+        "nadena.dev.modular-avatar.core",
+        "nadena.dev.modular-avatar.core.editor",
+        "nadena.dev.ndmf.multiplatform.runtime",
+        "lilToon.Editor",
+        "nadena.dev.modular-avatar.resonite"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "ResoPuppetSchema.dll",
+        "Grpc.Core.Api.dll",
+        "Grpc.Core.dll",
+        "GrpcDotNetNamedPipes.dll",
+        "VRCSDK3A.dll",
+        "Google.Protobuf.dll",
+        "VRCSDK3A-Editor.dll",
+        "VRCSDKBase.dll",
+        "VRCSDKBase-Editor.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "jp.lilxyzw.liltoon",
+            "expression": "(0,999999]",
+            "define": "MA_LILTOON_PRESENT"
+        }
+    ],
+    "noEngineReferences": false
+}
