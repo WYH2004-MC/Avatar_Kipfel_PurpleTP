@@ -272,10 +272,9 @@ namespace anatawa12.gists
         private void DisplayRating(PerformanceRating rating, string message)
         {
             EditorGUILayout.BeginHorizontal();
-            GUI.DrawTexture(
-                GUILayoutUtility.GetRect(32 * scale, 32 * scale),
-                PerformanceIcons.GetIconForPerformance(rating)
-                );
+            var rect = GUILayoutUtility.GetRect(32 * scale, 32 * scale);
+            var icon = PerformanceIcons.GetIconForPerformance(rating);
+            if (icon != null) GUI.DrawTexture(rect, icon);
             Styles.ScaledTextStyle.fontSize = (int)(Styles.TextStyle.fontSize * scale);
             GUILayout.Label(message, Styles.ScaledTextStyle, GUILayout.MinHeight(32 * scale));
             GUILayout.FlexibleSpace();
@@ -477,6 +476,11 @@ namespace anatawa12.gists
                 var window = GetWindowInstance();
                 window.MarkBuilding();
                 var name = avatarGameObject.name;
+                if (EditorApplication.isPlayingOrWillChangePlaymode && !ComputeOnPlay.Enabled)
+                {
+                    Debug.Log("Skipping the computing because IVRCSDKPreprocessAvatarCallback is called in play mode and computing on play is disabled");
+                    return true;
+                }
 
                 // strip (Clone) at end
                 if (name.EndsWith("(Clone)", StringComparison.Ordinal))
@@ -580,6 +584,7 @@ namespace anatawa12.gists
                 AddCategory("TextureMegabytes", stats => ToStringMegabytes(stats.textureMegabytes));
                 AddCategory("ConstraintsCount", stats => ToStringCount(stats.constraintsCount));
                 AddCategory("ConstraintDepth", stats => ToStringCount(stats.constraintDepth));
+                AddCategory("RaycastCount", stats => ToStringCount(stats.raycastCount));
             }
 
             public static AvatarPerformanceInfo Compute(GameObject avatarGameObject, bool isMobile)

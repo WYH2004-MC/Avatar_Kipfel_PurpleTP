@@ -18,6 +18,39 @@ namespace Poi.Tools.ShaderTranslator.Translations
             return sourceMaterial.shader.name.IndexOf("liltoon", StringComparison.CurrentCultureIgnoreCase) != -1;
         }
 
+        protected override Shader GetTargetShader(Material sourceMaterial, string newShaderName)
+        {
+            string sourceShaderName = sourceMaterial.shader.name;
+            
+            bool isFakeShadow = sourceShaderName.IndexOf("fakeshadow", StringComparison.CurrentCultureIgnoreCase) != -1;
+            if (isFakeShadow)
+                return Shader.Find(".poiyomi/Extras/Poiyomi Fake Shadow");
+            
+            bool isFurShader = sourceShaderName.IndexOf("fur", StringComparison.CurrentCultureIgnoreCase) != -1;
+            bool isTwoPassFur = sourceShaderName.IndexOf("twopass", StringComparison.CurrentCultureIgnoreCase) != -1 || 
+                                sourceShaderName.IndexOf("two pass", StringComparison.CurrentCultureIgnoreCase) != -1;
+
+            if (isFurShader)
+            {
+                if (newShaderName.Contains("Pro"))
+                {
+                    if (isTwoPassFur)
+                        return Shader.Find(".poiyomi/Poiyomi Pro + Lil Fur Two Pass");
+                    else
+                        return Shader.Find(".poiyomi/Poiyomi Pro + Lil Fur");
+                }
+                else if (newShaderName.Contains("Toon"))
+                {
+                    if (isTwoPassFur)
+                        return Shader.Find(".poiyomi/Poiyomi Toon + Lil Fur Two Pass");
+                    else
+                        return Shader.Find(".poiyomi/Poiyomi Toon + Lil Fur");
+                }
+            }
+
+            return base.GetTargetShader(sourceMaterial, newShaderName);
+        }
+
         protected override void DoBeforeTranslation(TranslationContext context)
         {
             // Set render mode dropdown based on liltoon shader name.
@@ -48,6 +81,24 @@ namespace Poi.Tools.ShaderTranslator.Translations
             if (hasOutline)
                 SetTargetPropertyValue(context, "_EnableOutlines", 1);
 
+            // Set fur rendering mode based on liltoon shader type
+            bool isFurShader = SourceShader.Shader.name.IndexOf("fur", StringComparison.CurrentCultureIgnoreCase) != -1;
+            if (isFurShader)
+            {
+                bool isTwoPassFur = SourceShader.Shader.name.IndexOf("twopass", StringComparison.CurrentCultureIgnoreCase) != -1 || 
+                                    SourceShader.Shader.name.IndexOf("two pass", StringComparison.CurrentCultureIgnoreCase) != -1;
+                bool isCutoutFur = SourceShader.Shader.name.IndexOf("cutout", StringComparison.CurrentCultureIgnoreCase) != -1;
+                
+                if (isTwoPassFur || !isCutoutFur)
+                {
+                    SetTargetPropertyValue(context, "_FurRenderingMode", 1f); // Transparent
+                }
+                else
+                {
+                    SetTargetPropertyValue(context, "_FurRenderingMode", 0f); // Cutout
+                }
+            }
+
             // Match liltoon lighting settings
             SetTargetPropertyValue(context, "_LightingColorMode", 3);
             SetTargetPropertyValue(context, "_LightingMapMode", 1);
@@ -71,7 +122,7 @@ namespace Poi.Tools.ShaderTranslator.Translations
 
         protected override List<PropertyTranslation> AddProperties()
         {
-            return new List<PropertyTranslation>()
+            var properties = new List<PropertyTranslation>()
             {
                 #region Main Color
                 new PropertyTranslation("_AlphaMaskMode", "_MainAlphaMaskMode"),
@@ -613,7 +664,19 @@ namespace Poi.Tools.ShaderTranslator.Translations
                 new PropertyTranslation("_StencilZFail", "_StencilZFailOp"),
                 new PropertyTranslation("_StencilComp", "_StencilCompareFunction"),
                 #endregion
+
+                #region Fake Shadow
+                new PropertyTranslation("_FakeShadowVector", (prop, context) =>
+                {
+                    Vector4 fakeShadowVector = GetSourcePropertyValue<Vector4>(context, prop);
+                    SetTargetPropertyValue(context, "_ShadowDirectionBias", new Vector4(fakeShadowVector.x, fakeShadowVector.y, fakeShadowVector.z, 0));
+                    SetTargetPropertyValue(context, "_ShadowDistance", fakeShadowVector.w);
+                }),
+                #endregion
             };
+
+            properties.AddRange(LiltoonToPoiyomiFurTranslation.GetFurPropertyTranslations());
+            return properties;
         }
 
         bool TryGetDecalMirrorModes(TranslationContext context, string decalPropertyNameNumberPart, out PoiUvMirrorMode uvMirrorMode, out PoiUvSymmetryMode uvSymmetryMode)

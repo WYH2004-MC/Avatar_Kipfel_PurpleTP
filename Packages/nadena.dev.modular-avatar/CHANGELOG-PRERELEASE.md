@@ -19,6 +19,50 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Deprecated
 
+## [1.17.1] - [2026-05-14]
+
+### Changed
+- [#1981] Adjusted execution order of `Floor Adjuster` to be after TexTransTool and some other pre-existing NDMF plugins.
+
+## [1.17.0] - [2026-05-11]
+
+## [1.17.0-beta.1] - [2026-05-05]
+
+### Added
+- [#1974] Added support for `VRCRaycast` components and parameters in `MA Parameters`
+
+### Fixed
+- [#1973] Fixed an issue causing compilation errors when importing into World Project
+
+## [1.17.0-beta.0] - [2026-03-04]
+
+### Added
+- [#1919] Added multi-select support for blendshape picker window (Shape Changer, Blendshape Sync, VF By Shape)
+- [#1941] Added `MA Floor Adjuster`
+- [#1915] Added `Match scale` option to `MA Bone Proxy`
+
+### Fixed
+- [#1936] Fixed `EditorGUI.showMixedValue` not being reset after use in inspector GUIs, which could affect other editor extensions
+
+### Changed
+- [#1939] The "non-constant curves" warning now appears only on the `Merge Motion` inspector UI, instead of as part of the build report.
+
+## [1.16.3-alpha.1] - [2026-02-23]
+
+### Added
+- [#1932] Patched a VRCSDK bug which caused the expressions menu editor to hang
+
+### Fixed
+- [#1926] Revisions to the Japanese FAQ page
+
+## [1.16.3-alpha.0] - [2026-02-13]
+
+### Added
+- [#1924] Added a watchdog to limit time spent in menu GUI rendering to help diagnose an issue
+
+### Fixed
+- [#1921] Fixed additional false positives in the non-constant curve check
+
 ## [1.16.2] - [2026-02-11]
 
 ### Fixed

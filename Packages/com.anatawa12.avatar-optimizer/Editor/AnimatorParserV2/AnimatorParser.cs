@@ -143,6 +143,14 @@ namespace Anatawa12.AvatarOptimizer.AnimatorParsersV2
                 }
             }
 
+            internal override void ModifyProperties(GameObject go, IEnumerable<string> properties)
+            {
+                foreach (var prop in properties)
+                {
+                    _modifications.Add(go, prop, new VariableComponentPropModNode(Modifier!), ApplyState.Always);
+                }
+            }
+
             internal override void PreserveProperties(Component component, IEnumerable<string> properties)
             {
                 foreach (var prop in properties)
@@ -659,7 +667,7 @@ namespace Anatawa12.AvatarOptimizer.AnimatorParsersV2
                 case AnimatorWeightChange.NonZeroOneChange:
                     return AnimatorWeightState.NonZeroOne;
                 default:
-                    throw new ArgumentOutOfRangeException();
+                    throw new ArgumentOutOfRangeException(nameof(external), external, $"Invalid AnimatorWeightChange value: {external}");
             }
         }
 

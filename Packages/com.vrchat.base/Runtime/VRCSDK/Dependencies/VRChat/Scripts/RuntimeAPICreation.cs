@@ -49,7 +49,7 @@ namespace VRCSDK2
             if (!Application.isEditor || !Application.isPlaying)
                 return;
 
-            PipelineSaver ps = GameObject.FindObjectOfType<PipelineSaver>();
+            PipelineSaver ps = GameObject.FindFirstObjectByType<PipelineSaver>();
             pipelineManager = ps.gameObject.GetComponent<PipelineManager>();
 
             imageCapture = GetComponent<CameraImageCapture>();

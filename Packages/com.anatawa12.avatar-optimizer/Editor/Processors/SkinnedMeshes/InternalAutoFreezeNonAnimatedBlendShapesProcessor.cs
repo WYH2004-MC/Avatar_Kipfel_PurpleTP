@@ -26,6 +26,8 @@ namespace Anatawa12.AvatarOptimizer.Processors.SkinnedMeshes
                 {
                     unchanged.Add(name);
                     target.BlendShapes[i] = (name, newWeight);
+                    Tracing.Trace(TracingArea.TraceAndOptimizeDecision, 
+                        $"Automatically freezing blendShape '{name}' of {TargetGeneric.name} because it is not animated.");
                 }
             }
 
@@ -55,7 +57,7 @@ namespace Anatawa12.AvatarOptimizer.Processors.SkinnedMeshes
                     case ApplyState.Never:
                         return true;
                     default:
-                        throw new ArgumentOutOfRangeException();
+                        throw new InvalidOperationException($"Unknown ApplyState: {prop.ApplyState}");
                 }
             }
 

@@ -37,6 +37,9 @@ namespace VRC.SDK3.Avatars
             //PhysBones
             VRCPhysBoneBase.OnInitialize = PhysBone_OnInitialize;
             VRCPhysBoneColliderBase.OnPreShapeInitialize += PhysBoneCollider_OnPreShapeInitialize;
+
+            //Raycasts (not really part of dynamics, but they still need animator parameters)
+            VRCRaycast.OnInitializeParameters = VRCRaycast_OnInitialize;
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -86,6 +89,24 @@ namespace VRC.SDK3.Avatars
                         physBone.param_Angle = new AnimParameterAccessAvatarSDK(animator, physBone.parameter + VRCPhysBoneBase.PARAM_ANGLE);
                         physBone.param_Stretch = new AnimParameterAccessAvatarSDK(animator, physBone.parameter + VRCPhysBoneBase.PARAM_STRETCH);
                         physBone.param_Squish = new AnimParameterAccessAvatarSDK(animator, physBone.parameter + VRCPhysBoneBase.PARAM_SQUISH);
+                    }
+                }
+            }
+        }
+
+        private static void VRCRaycast_OnInitialize(VRCRaycast raycast)
+        {
+            if (!string.IsNullOrEmpty(raycast.Parameter))
+            {
+                var avatarDesc = raycast.GetComponentInParent<VRCAvatarDescriptor>();
+                if (avatarDesc != null)
+                {
+                    var animator = avatarDesc.GetComponent<Animator>();
+                    if (animator != null)
+                    {
+                        raycast.param_Hit = new AnimParameterAccessAvatarSDK(animator, raycast.Parameter + VRCRaycast.PARAM_HIT);
+                        raycast.param_Ratio = new AnimParameterAccessAvatarSDK(animator, raycast.Parameter + VRCRaycast.PARAM_RATIO);
+                        raycast.param_Distance = new AnimParameterAccessAvatarSDK(animator, raycast.Parameter + VRCRaycast.PARAM_DISTANCE);
                     }
                 }
             }

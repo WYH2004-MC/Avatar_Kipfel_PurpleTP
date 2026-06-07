@@ -24,10 +24,14 @@ class AutoMergeCompatiblePhysBone: TraceAndOptimizePass<AutoMergeCompatiblePhysB
 
     protected override void Execute(BuildContext context, TraceAndOptimizeState state)
     {
+        var map = DependantMap.CreateEntrypointsMap(context);
+        var componentInfos = context.Extension<GCComponentInfoContext>();
+
         var physBonesByKey = new Dictionary<PbInfo, List<VRCPhysBone>>();
         foreach (var physBone in context.GetComponents<VRCPhysBone>()
                      .GroupBy(x => x.GetTarget())
                      .Where(x => x.Count() == 1) // if multiple PhysBones share the same target, they cannot be merged; skip them
+                     .Where(x => x.Key.IsChildOf(context.AvatarRootTransform))
                      .Select(x => x.First())
                  )
         {
@@ -40,6 +44,14 @@ class AutoMergeCompatiblePhysBone: TraceAndOptimizePass<AutoMergeCompatiblePhysB
 
             // If the physBone is toggled by toggling the GameObject, it cannot be merged.
             if (toggleRoot == physBone.gameObject)
+                continue;
+
+            var rootTransform = physBone.GetTarget();   
+            // If the root transform is not allowed to be renamed, creating new root is not allowed thus skip merging.
+            // typical case is humanoid bone mapping of animator (physbones on humanoid is not supported though).
+            // We don't need to check all dependencies because no children will be changed by merge; only root transform is.
+            // https://github.com/anatawa12/AvatarOptimizer/issues/1703
+            if ((map.MergedUsages(componentInfos.GetInfo(rootTransform)) & GCComponentInfo.DependencyType.ObjectName) != 0)
                 continue;
 
             var key = new PbInfo(physBone, toggleRoot);
@@ -74,7 +86,12 @@ class AutoMergeCompatiblePhysBone: TraceAndOptimizePass<AutoMergeCompatiblePhysB
 
             foreach (var groups in Utils.Partition(list.Select(pb => (pb.GetAffectedTransforms().Count(), pb)), 128))
             {
-                if (groups.Count() == 1) continue; // no need to merge if only one physbone in the group
+                if (groups.Count == 1) continue; // no need to merge if only one physbone in the group
+
+                Tracing.Trace(TracingArea.TraceAndOptimizeDecision, 
+                    $"Merging {groups.Count} PhysBones with the same settings into one MergePhysBone: " +
+                    $"{string.Join(", ", groups.Select(g => g.data.name))}");
+
                 var mergePBGameObject = new GameObject($"$$$$$AutoMergedPhysBone_{index++}$$$$");
                 mergePBGameObject.transform.SetParent(parent.transform, worldPositionStays: false);
                 var mergePB = mergePBGameObject.AddComponent<MergePhysBone>();
@@ -99,7 +116,7 @@ class AutoMergeCompatiblePhysBone: TraceAndOptimizePass<AutoMergeCompatiblePhysB
 
     readonly struct PbInfo : IEquatable<PbInfo>
     {
-        public readonly bool Enabled;
+        public readonly bool IsActiveAndEnabled;
 
         public readonly VRCPhysBoneBase.Version Version;
 
@@ -169,7 +186,8 @@ class AutoMergeCompatiblePhysBone: TraceAndOptimizePass<AutoMergeCompatiblePhysB
 
         public PbInfo(VRCPhysBone physBone, GameObject? toggleRoot)
         {
-            Enabled = physBone.enabled;
+            // https://discussions.unity.com/t/ui-button-isactiveandenabled-false-even-if-enabled-and-gameobject-active-isactiveandenabled-false-even-tho-everything-is-true/248002/2
+            IsActiveAndEnabled = physBone.enabled && physBone.gameObject.activeInHierarchy;
             Version = physBone.version;
             ToggleRoot = toggleRoot;
             // transform
@@ -295,7 +313,7 @@ class AutoMergeCompatiblePhysBone: TraceAndOptimizePass<AutoMergeCompatiblePhysB
 
         public bool CanMergePhysBone() => this is
         {
-            Enabled: true, // disabled physbone should not be merged; will be removed by optimizer later
+            IsActiveAndEnabled: true, // disabled physbone should not be merged; will be removed by optimizer later
             MultiChildType: VRCPhysBoneBase.MultiChildType.Ignore,
             AllowGrabbingOthers: false,
             AllowGrabbingSelf: false,
@@ -304,7 +322,7 @@ class AutoMergeCompatiblePhysBone: TraceAndOptimizePass<AutoMergeCompatiblePhysB
 
         public bool Equals(PbInfo other)
         {
-            return Enabled == other.Enabled && 
+            return IsActiveAndEnabled == other.IsActiveAndEnabled && 
                    Version == other.Version && 
                    ToggleRoot == other.ToggleRoot &&
                    RootTransformParent.Equals(other.RootTransformParent) &&
@@ -362,7 +380,7 @@ class AutoMergeCompatiblePhysBone: TraceAndOptimizePass<AutoMergeCompatiblePhysB
         public override int GetHashCode()
         {
             var hashCode = new HashCode();
-            hashCode.Add(Enabled);
+            hashCode.Add(IsActiveAndEnabled);
             hashCode.Add((int)Version);
             hashCode.Add(ToggleRoot);
             hashCode.Add(RootTransformParent);

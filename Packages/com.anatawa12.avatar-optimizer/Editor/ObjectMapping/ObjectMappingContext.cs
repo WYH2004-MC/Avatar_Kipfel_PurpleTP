@@ -34,7 +34,7 @@ namespace Anatawa12.AvatarOptimizer
         {
             if (MappingBuilder == null) return;
 
-            Tracing.Trace(TracingArea.ApplyObjectMapping, "Deactivating ObjectMappingContext");
+            Tracing.Trace(TracingArea.ApplyObjectMapping, $"Deactivating ObjectMappingContext");
 
             var mapping = MappingBuilder.BuildObjectMapping();
             var mappingSource = new MappingSourceImpl(mapping);
@@ -559,7 +559,7 @@ namespace Anatawa12.AvatarOptimizer
                             VrmFirstPersonFlag.Both => FirstPersonType.both,
                             VrmFirstPersonFlag.ThirdPersonOnly => FirstPersonType.thirdPersonOnly,
                             VrmFirstPersonFlag.FirstPersonOnly => FirstPersonType.firstPersonOnly,
-                            _ => throw new ArgumentOutOfRangeException()
+                            _ => throw new InvalidOperationException($"Invalid VrmFirstPersonFlag value: {vrmFirstPersonFlag}"),
                         }
                     };
                 }).ToList();

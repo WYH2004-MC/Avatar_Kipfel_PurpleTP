@@ -131,7 +131,7 @@ namespace Anatawa12.AvatarOptimizer
             }
         }
 
-        private class EmptyDictionaryHolder<TKey, TValue>
+        private sealed class EmptyDictionaryHolder<TKey, TValue>
         {
             public static readonly IReadOnlyDictionary<TKey, TValue> Empty =
                 new ReadOnlyDictionary<TKey, TValue>(new Dictionary<TKey, TValue>());
@@ -471,12 +471,14 @@ namespace Anatawa12.AvatarOptimizer
             // otherwise, match as possible from start
 
             return getChildren(root)
-                .Select(child => (child, name: getName(child)))
-                .Where(t => t.name == relative || relative.StartsWith(t.name + "/"))
-                .SelectMany(t =>
+                .SelectMany(child =>
                 {
-                    var remaining = relative.Length == t.name.Length ? "" : relative[(t.name.Length + 1)..];
-                    return ResolveAnimationPath(t.child, remaining, getChildren, getName);
+                    var name = getName(child);
+                    if (name == relative)
+                        return ResolveAnimationPath(child, "", getChildren, getName);
+                    if (relative.StartsWith(name + "/", StringComparison.Ordinal))
+                        return ResolveAnimationPath(child, relative[(name.Length + 1)..], getChildren, getName);
+                    return Array.Empty<T>();
                 });
         }
 

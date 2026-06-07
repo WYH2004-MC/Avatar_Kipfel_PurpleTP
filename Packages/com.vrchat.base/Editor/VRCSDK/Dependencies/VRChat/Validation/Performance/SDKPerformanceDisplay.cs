@@ -914,6 +914,49 @@ namespace VRC.SDKBase.Validation.Performance
 
                     break;
                 }
+                case AvatarPerformanceCategory.RaycastCount:
+                {
+                    //Max limits
+                    if (perfStats.raycastCount > AvatarValidation.MAX_RAYCAST_COMPONENTS_PER_AVATAR)
+                    {
+                        errorText = $"VRCRaycast Components: {perfStats.raycastCount} - Avatar exceeds the maximum limit ({AvatarValidation.MAX_RAYCAST_COMPONENTS_PER_AVATAR}) of this component type.  Reduce the number of VRCRaycast components on this avatar.";
+                    }
+
+                    switch(rating)
+                    {
+                        case PerformanceRating.Excellent:
+                        case PerformanceRating.Good:
+                        {
+                            displayLevel = PerformanceInfoDisplayLevel.Verbose;
+                            statText = string.Format("Raycasts: {0}", perfStats.raycastCount);
+                            break;
+                        }
+                        case PerformanceRating.Medium:
+                        case PerformanceRating.Poor:
+                        {
+                            displayLevel = PerformanceInfoDisplayLevel.Warning;
+                            statText = string.Format(
+                                "Raycasts: {0} (Recommended: {1}) - Reduce the number of VRCRaycast components for optimal performance.",
+                                perfStats.raycastCount,
+                                AvatarPerformanceStats.GetStatLevelForRating(PerformanceRating.Excellent, isMobilePlatform).raycastCount);
+
+                            break;
+                        }
+                        case PerformanceRating.VeryPoor:
+                        {
+                            displayLevel = isMobilePlatform ? PerformanceInfoDisplayLevel.Error : PerformanceInfoDisplayLevel.Warning;
+                            statText = string.Format(
+                                "Raycasts: {0} (Maximum: {1}, Recommended: {2}) - This avatar has too many raycast components. Reduce number of VRCRaycast components for better performance.",
+                                perfStats.raycastCount,
+                                AvatarPerformanceStats.GetStatLevelForRating(PerformanceRating.Poor, isMobilePlatform).raycastCount,
+                                AvatarPerformanceStats.GetStatLevelForRating(PerformanceRating.Excellent, isMobilePlatform).raycastCount);
+
+                            break;
+                        }
+                    }
+
+                    break;
+                }
                 case AvatarPerformanceCategory.ClothCount:
                 {
                     switch(rating)

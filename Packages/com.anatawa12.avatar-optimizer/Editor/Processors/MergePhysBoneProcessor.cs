@@ -20,21 +20,35 @@ namespace Anatawa12.AvatarOptimizer.Processors
 
         protected override void Execute(BuildContext context)
         {
+            // We need to replace ignoreTransfrom to new PhysBoneRoot object if any of source root is ignored
+            // so we create PhysBone lookup table from ignore transform
+            var pbByIgnoreTransform = MakePBMap(context);
+
             foreach (var mergePhysBone in context.GetComponents<MergePhysBone>())
             {
                 using (ErrorReport.WithContextObject(mergePhysBone))
                 {
-                    DoMerge(mergePhysBone, context);
+                    DoMerge(mergePhysBone, context, pbByIgnoreTransform);
                     DestroyTracker.DestroyImmediate(mergePhysBone);
                 }
             }
         }
 
+        internal static Dictionary<Transform, List<VRCPhysBoneBase>> MakePBMap(BuildContext context) => context
+            .GetComponents<VRCPhysBoneBase>()
+            .SelectMany(pb => pb.ignoreTransforms.Select(ignore => (ignore, pb)))
+            .Where(x => x.ignore != null)
+            .GroupBy(x => x.ignore)
+            .ToDictionary(x => x.Key, x => x.Select(y => y.pb).ToList());
+
         private static bool SetEq<T>(IEnumerable<T> a, IEnumerable<T> b) => 
             new HashSet<T>(a).SetEquals(b);
 
-        internal static void DoMerge(MergePhysBone merge, BuildContext? context)
+        internal static void DoMerge(MergePhysBone merge, BuildContext? context,
+            Dictionary<Transform, List<VRCPhysBoneBase>>? pbByIgnoreTransform = null)
         {
+            pbByIgnoreTransform ??= new Dictionary<Transform, List<VRCPhysBoneBase>>();
+
             var sourceComponents = merge.componentsSet.GetAsList();
             if (sourceComponents.Count == 0) return;
 
@@ -67,7 +81,14 @@ namespace Anatawa12.AvatarOptimizer.Processors
                 if (parentDiffer)
                     return; // differ error reported by validator
 
-                if (sourceComponents.Count == pb.GetTarget().parent.childCount)
+                if (context != null && !pb.GetTarget().IsChildOf(context.AvatarRootTransform))
+                {
+                    BuildLog.LogError("MergePhysBone:error:physbone-outside-of-avatar-root", pb, merge, pb.GetTarget());
+                    return;
+                }
+
+                if (sourceComponents.Count == pb.GetTarget().parent.childCount
+                    && !IsTransformAnimated(pb.GetTarget().parent, context))
                 {
                     root = pb.GetTarget().parent;
                 }
@@ -82,6 +103,26 @@ namespace Anatawa12.AvatarOptimizer.Processors
                         physBone.GetTarget().parent = root;
                         context?.Extension<GCComponentInfoContext>()?.ReplaceParent(physBone.GetTarget(), root, oldParent);
                     }
+                    
+                    // we remove original source targets to shrink the list and add our new root. 
+                    foreach (var physBoneIgnoringTarget in sourceComponents.SelectMany(x =>
+                                 pbByIgnoreTransform.GetValueOrDefault(x.GetTarget(), new List<VRCPhysBoneBase>()))
+                                 .Distinct())
+                    {
+                        // both ignoreTransforms and sourceComponents list is likely to be small so we use simple linear search)
+                        physBoneIgnoringTarget.ignoreTransforms.RemoveAll(x => sourceComponents.Any(pb => pb.GetTarget() == x));
+                        physBoneIgnoringTarget.ignoreTransforms.Add(root);
+                    }
+                }
+
+                bool IsTransformAnimated(Transform parent, BuildContext? buildContext)
+                {
+                    if (buildContext == null) return false;
+                    var component = buildContext.GetAnimationComponent(parent);
+                    foreach (var property in TransformRotationAndPositionAnimationKeys)
+                        if (component.IsAnimatedFloat(property))
+                            return true;
+                    return false;
                 }
             }
 
@@ -114,7 +155,7 @@ namespace Anatawa12.AvatarOptimizer.Processors
                     merged.endpointPosition = merge.endpointPositionConfig.value;
                     break;
                 default:
-                    throw new ArgumentOutOfRangeException();
+                    throw new ArgumentOutOfRangeException(nameof(merge), merge.endpointPositionConfig.@override, $"Invalid override mode: {merge.collidersConfig.@override}");
             }
 
             merged.multiChildType = VRCPhysBoneBase.MultiChildType.Ignore;
@@ -130,7 +171,7 @@ namespace Anatawa12.AvatarOptimizer.Processors
                     merged.colliders = merge.collidersConfig.value;
                     break;
                 default:
-                    throw new ArgumentOutOfRangeException();
+                    throw new ArgumentOutOfRangeException(nameof(merge), merge.collidersConfig.@override, $"Invalid override mode: {merge.collidersConfig.@override}");
             }
             // == Limits ==
             
@@ -347,7 +388,7 @@ namespace Anatawa12.AvatarOptimizer.Processors
                                 activeChildren.Length;
                             break;
                         default:
-                            throw new ArgumentOutOfRangeException();
+                            throw new ArgumentOutOfRangeException(nameof(physBone), physBone.multiChildType, $"Invalid multi child type: {physBone.multiChildType}");
                     }
 
                     break;
@@ -435,7 +476,7 @@ namespace Anatawa12.AvatarOptimizer.Processors
         sealed class MergePhysBoneMerger : MergePhysBoneEditorModificationUtils
         {
             private SerializedObject _mergedPhysBone;
-            private int _maxChainLength;
+            private int _maxChainLength; // = maxBoneChainIndex + (endpointPosition != Vector3.zero ? 1 : 0))
 
             public MergePhysBoneMerger(SerializedObject serializedObject, SerializedObject mergedPhysBone) : base(serializedObject)
             {
@@ -521,7 +562,9 @@ namespace Anatawa12.AvatarOptimizer.Processors
                 else
                 {
                     _mergedPhysBone.FindProperty(prop.PhysBoneCurveName).animationCurveValue =
-                        FixCurve(prop.GetCurveProperty(@override).animationCurveValue);
+                        prop == Radius 
+                            ? FixTransformCurve(prop.GetCurveProperty(@override).animationCurveValue)
+                            : FixBoneCurve(prop.GetCurveProperty(@override).animationCurveValue);
                 }
             }
 
@@ -534,11 +577,11 @@ namespace Anatawa12.AvatarOptimizer.Processors
                         _mergedPhysBone.FindProperty(prop.PhysBoneValueName).vector3Value =
                             prop.SourceValue!.vector3Value;
                         _mergedPhysBone.FindProperty(prop.PhysBoneCurveXName).animationCurveValue =
-                            FixCurve(prop.SourceCurveX!.animationCurveValue);
+                            FixBoneCurve(prop.SourceCurveX!.animationCurveValue);
                         _mergedPhysBone.FindProperty(prop.PhysBoneCurveYName).animationCurveValue =
-                            FixCurve(prop.SourceCurveY!.animationCurveValue);
+                            FixBoneCurve(prop.SourceCurveY!.animationCurveValue);
                         _mergedPhysBone.FindProperty(prop.PhysBoneCurveZName).animationCurveValue =
-                            FixCurve(prop.SourceCurveZ!.animationCurveValue);
+                            FixBoneCurve(prop.SourceCurveZ!.animationCurveValue);
                         break;
                     case MergePhysBone.LimitRotationConfigStruct.Override.Override:
                         _mergedPhysBone.FindProperty(prop.PhysBoneValueName).vector3Value =
@@ -558,8 +601,8 @@ namespace Anatawa12.AvatarOptimizer.Processors
                         _mergedPhysBone.FindProperty(prop.PhysBoneCurveYName).animationCurveValue = new AnimationCurve();
                         _mergedPhysBone.FindProperty(prop.PhysBoneCurveZName).animationCurveValue = new AnimationCurve();
                         break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
+                    case var overrideMode:
+                        throw new ArgumentOutOfRangeException(nameof(prop), overrideMode, $"Invalid override mode: {overrideMode}");
                 }
             }
 
@@ -577,11 +620,28 @@ namespace Anatawa12.AvatarOptimizer.Processors
                 // merged later
             }
             
-            private AnimationCurve FixCurve(AnimationCurve curve)
+            // Fixes a transform curve (curves ratio calculated with CalcTransformRatio) that is used for calculating radius
+            private AnimationCurve FixTransformCurve(AnimationCurve curve) => FixCurve(curve, _maxChainLength);
+
+            // Fixes a bone curve (curves ratio calculated with CalcBoneRatio) that is used for calculating limit and force
+            private AnimationCurve FixBoneCurve(AnimationCurve curve) => FixCurve(curve, _maxChainLength - 1);
+
+            private AnimationCurve FixCurve(AnimationCurve curve, int chainLength)
             {
-                //return curve;
-                var offset = 1f / (_maxChainLength + 1);
-                var tangentRatio = (_maxChainLength + 1f) / _maxChainLength;
+                if (curve == null || curve.length == 0)
+                    return new AnimationCurve();
+                if (chainLength <= 0)
+                {
+                    // If original chain length is less than or equals to 0, CalcBoneRatio always returns 1,
+                    // and the first frame of curve is used for whole chain.
+                    // We just calculate ratio for weight 0 and set it to whole curve.
+                    // This case is incorrect for transform chain, but transform chain with length 0
+                    // means no affected transform, so it won't cause any problem.
+                    var value = curve.Evaluate(0);
+                    return AnimationCurve.Constant(0, 1, value);
+                }
+                var offset = 1f / (chainLength + 1f);
+                var tangentRatio = (chainLength + 1f) / chainLength;
                 var keys = curve.keys;
                 foreach (ref var curveKey in keys.AsSpan())
                 {
@@ -589,8 +649,7 @@ namespace Anatawa12.AvatarOptimizer.Processors
                     curveKey.inTangent *= tangentRatio;
                     curveKey.outTangent *= tangentRatio;
                 }
-                curve.keys = keys;
-                return curve;
+                return new AnimationCurve(keys);
             }
         }
     }

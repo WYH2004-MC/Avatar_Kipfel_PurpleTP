@@ -10,6 +10,9 @@
  * 5. Enable / disable blendshape sync you want to generate.
  * 6. Click `Generate BlendShape Sync` button to generate MA Blendshape Sync components.
  *
+ * Changes
+ * - 2026-02-28: Added support for prefix / suffix matching
+ *
  * MIT License
  * 
  * Copyright (c) 2023 anatawa12
@@ -54,18 +57,24 @@ namespace anatawa12.gists
         static void Create() => GetWindow<BlendShapeSyncGenerator>(GIST_NAME);
 
         [SerializeField] private GameObject findRootObject;
+        [SerializeField] private bool allowPrefix;
+        [SerializeField] private bool allowSuffix;
         [SerializeField] private SkinnedMeshRenderer[] syncSources = Array.Empty<SkinnedMeshRenderer>();
         [SerializeField] private SyncBlendShapeRendererInfo[] syncDestinations = Array.Empty<SyncBlendShapeRendererInfo>();
         [SerializeField] private Vector2 _scrollPosition;
 
         private SerializedObject _serializedObject;
         private SerializedProperty _findRootObjectProperty;
+        private SerializedProperty _allowPrefixProperty;
+        private SerializedProperty _allowSuffixProperty;
         private SerializedProperty _syncSourcesProperty;
 
         private void OnEnable()
         {
             _serializedObject = new SerializedObject(this);
             _findRootObjectProperty = _serializedObject.FindProperty(nameof(findRootObject));
+            _allowPrefixProperty = _serializedObject.FindProperty(nameof(allowPrefix));
+            _allowSuffixProperty = _serializedObject.FindProperty(nameof(allowSuffix));
             _syncSourcesProperty = _serializedObject.FindProperty(nameof(syncSources));
         }
 
@@ -79,7 +88,8 @@ namespace anatawa12.gists
         [Serializable]
         struct SyncBlendshapeInfo
         {
-            public string blendShapeName;
+            public string sourceBlendShapeName;
+            public string destBlendShapeName;
             public SkinnedMeshRenderer sourceRenderer;
             public bool enabled;
         }
@@ -90,7 +100,10 @@ namespace anatawa12.gists
             _syncSourcesProperty.isExpanded = true;
             _serializedObject.Update();
             EditorGUILayout.PropertyField(_findRootObjectProperty);
-            
+
+            EditorGUILayout.PropertyField(_allowPrefixProperty);
+            EditorGUILayout.PropertyField(_allowSuffixProperty);
+
             EditorGUILayout.PropertyField(_syncSourcesProperty, true);
             _serializedObject.ApplyModifiedProperties();
             if (prevFindRoot == null && findRootObject != null && syncSources.Length == 0)
@@ -111,7 +124,7 @@ namespace anatawa12.gists
 
             if (GUILayout.Button("Find Candidates"))
             {
-                syncDestinations = GenerateSyncInfo(findRootObject, syncSources).ToArray();
+                syncDestinations = GenerateSyncInfo(findRootObject, syncSources, allowPrefix, allowSuffix).ToArray();
             }
 
             _scrollPosition = EditorGUILayout.BeginScrollView(_scrollPosition);
@@ -124,7 +137,10 @@ namespace anatawa12.gists
                     foreach (ref var shapeInfo in shapeRendererInfo.blendShapes.AsSpan())
                     {
                         EditorGUILayout.BeginHorizontal();
-                        shapeInfo.enabled = EditorGUILayout.ToggleLeft($"{shapeInfo.blendShapeName}", shapeInfo.enabled);
+                        var name = shapeInfo.destBlendShapeName == shapeInfo.sourceBlendShapeName
+                            ? shapeInfo.destBlendShapeName
+                            : $"{shapeInfo.destBlendShapeName} (from {shapeInfo.sourceBlendShapeName})";
+                        shapeInfo.enabled = EditorGUILayout.ToggleLeft(name, shapeInfo.enabled);
                         var prevIndentLevel = EditorGUI.indentLevel;
                         EditorGUI.indentLevel = 0;
                         EditorGUILayout.ObjectField(shapeInfo.sourceRenderer, typeof(SkinnedMeshRenderer), false);
@@ -142,8 +158,12 @@ namespace anatawa12.gists
             }
         }
 
-        private static List<SyncBlendShapeRendererInfo> GenerateSyncInfo(GameObject root, SkinnedMeshRenderer[] syncSources)
-        {
+        private static List<SyncBlendShapeRendererInfo> GenerateSyncInfo(
+            GameObject root, 
+            SkinnedMeshRenderer[] syncSources,
+            bool allowPrefix, 
+            bool allowSuffix
+        ) {
             var sourceByShapeNames = new Dictionary<string, SkinnedMeshRenderer>();
 
             foreach (var skinnedMeshRenderer in syncSources)
@@ -171,13 +191,31 @@ namespace anatawa12.gists
                 for (var i = 0; i < mesh.blendShapeCount; i++)
                 {
                     var shapeName = mesh.GetBlendShapeName(i);
-                    if (!sourceByShapeNames.TryGetValue(shapeName, out var sourceRenderer)) continue;
-                    if (sourceRenderer == skinnedMeshRenderer) continue;
+                    var (sourceShapeName, sourceRenderer) = sourceByShapeNames.FirstOrDefault(p =>
+                    {
+                        if (p.Value == skinnedMeshRenderer) return false;
+                        // shape name match
+                        if (p.Key == shapeName) return true;
+                        switch (allowPrefix, allowSuffix)
+                        {
+                            case (true, true)
+                                when shapeName.Contains(p.Key, StringComparison.InvariantCultureIgnoreCase):
+                            case (true, false)
+                                when shapeName.EndsWith(p.Key, StringComparison.InvariantCultureIgnoreCase):
+                            case (false, true)
+                                when shapeName.StartsWith(p.Key, StringComparison.InvariantCultureIgnoreCase):
+                                return true;
+                            default:
+                                return false;
+                        }
+                    });
+                    if (sourceShapeName == null) continue;
                     if (existing.Contains((sourceRenderer, shapeName))) continue;
                     
                     shapes.Add(new SyncBlendshapeInfo
                     {
-                        blendShapeName = shapeName,
+                        sourceBlendShapeName = sourceShapeName,
+                        destBlendShapeName = shapeName,
                         sourceRenderer = sourceRenderer,
                         enabled = true,
                     });
@@ -212,13 +250,13 @@ namespace anatawa12.gists
                 foreach (var blendShape in syncBlendShapeRendererInfo.blendShapes)
                 {
                     if (!blendShape.enabled) continue;
-                    var key = (blendShape.sourceRenderer, blendShape.blendShapeName);
+                    var key = (blendShape.sourceRenderer, blendShape.destBlendShapeName);
                     if (existing.Contains(key)) continue;
                     var newBinding = new BlendshapeBinding
                     {
                         ReferenceMesh = new AvatarObjectReference(),
-                        Blendshape = blendShape.blendShapeName,
-                        LocalBlendshape = "",
+                        Blendshape = blendShape.sourceBlendShapeName,
+                        LocalBlendshape = blendShape.sourceBlendShapeName == blendShape.destBlendShapeName ? "" : blendShape.destBlendShapeName,
                     };
                     newBinding.ReferenceMesh.Set(blendShape.sourceRenderer.gameObject);
                     syncComponent.Bindings.Add(newBinding);
@@ -240,7 +278,7 @@ namespace anatawa12.gists
                 if (meshObj == null) continue;
                 var skinnedMeshRenderer = meshObj.GetComponent<SkinnedMeshRenderer>();
                 if (skinnedMeshRenderer == null) continue;
-                result.Add((skinnedMeshRenderer, binding.Blendshape));
+                result.Add((skinnedMeshRenderer, binding.LocalBlendshape == "" ? binding.Blendshape : binding.LocalBlendshape));
             }
 
             return result;

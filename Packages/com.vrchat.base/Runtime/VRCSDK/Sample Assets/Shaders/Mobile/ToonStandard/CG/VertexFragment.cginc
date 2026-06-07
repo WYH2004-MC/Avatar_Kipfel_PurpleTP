@@ -48,12 +48,14 @@ half4 frag (v2f i, uint facing : SV_IsFrontFace) : SV_Target
     surface.albedoMap = tex2D(_MainTex, VRCHAT_TRANSFORM_ATLAS_TEX_MODE(uv0, _MainTex))
         * VRCHAT_GET_ATLAS_PROPERTY(_Color)
         * half4(i.color, 1);
-
+    
     #if !defined(UNITY_PASS_SHADOWCASTER)
+        float2 hueShiftDdx = ddx(uv0);
+        float2 hueShiftDdy = ddy(uv0);
         half hueShiftMask = 0;
         UNITY_BRANCH if (USE_HUE_SHIFT)
         {
-            hueShiftMask = SAMPLE_MASK(_HueShiftMask, uv0);
+            hueShiftMask = SAMPLE_MASK_GRAD(_HueShiftMask, uv0, hueShiftDdx, hueShiftDdy);
             surface.albedoMap.rgb = ApplyHue(surface.albedoMap.rgb, VRCHAT_GET_ATLAS_PROPERTY(_HueShift), hueShiftMask);
         }
     #endif
@@ -84,6 +86,17 @@ half4 frag (v2f i, uint facing : SV_IsFrontFace) : SV_Target
             * VRCHAT_GET_ATLAS_PROPERTY(_EmissionStrength);
         UNITY_BRANCH if (USE_HUE_SHIFT)
             surface.emissionMap.rgb = ApplyHue(surface.emissionMap.rgb, VRCHAT_GET_ATLAS_PROPERTY(_EmissionHueShift), hueShiftMask);
+    #endif
+
+    #if !defined(UNITY_PASS_SHADOWCASTER)
+        float2 colorMaskUv = VRCHAT_TRANSFORM_ATLAS_TEX_MODE(uv0, _ColorMask);
+        float2 colorMaskDdx = ddx(colorMaskUv);
+        float2 colorMaskDdy = ddy(colorMaskUv);
+        UNITY_BRANCH if (USE_COLOR_MASK)
+        {
+            half4 colorMask = tex2Dgrad(_ColorMask, colorMaskUv, colorMaskDdx, colorMaskDdy);
+            ApplyColorMask(colorMask, _ColorMaskColor1, _ColorMaskColor2, _ColorMaskColor3, _ColorMaskColor4, _ColorMaskBlendMode, /*inout*/ surface.albedoMap.rgb, /*inout*/ surface.emissionMap.rgb);
+        }
     #endif
 
     #if defined(USE_OCCLUSION_MAP)

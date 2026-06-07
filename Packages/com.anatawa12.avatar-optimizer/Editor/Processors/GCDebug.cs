@@ -36,11 +36,15 @@ namespace Anatawa12.AvatarOptimizer.Processors
 
             if (BugReportHelper.Context.Current is { } reportCtx)
             {
+                if (_position == InternalGcDebugPosition.AtTheBeginning)
+                    reportCtx.AddTraceAndOptimizeStateReport(context);
+
                 var place = new GameObject();
                 try
                 {
                     var gcDebugRoot = AddGCDebugInfo(context, place);
-                    reportCtx.AddGcDebugInfo(_position, gcDebugRoot.CollectDataToString(), context.AvatarRootObject);
+                    reportCtx.AddGcDebugInfo(_position, gcDebugRoot.CollectDataToString(), context.AvatarRootObject,
+                        context.GetState<MaterialInformationState>().MaterialInformationByMaterial.Values);
                 }
                 finally
                 {
@@ -103,16 +107,16 @@ namespace Anatawa12.AvatarOptimizer.Processors
                     {
                         if (gcData.component is null) continue; // use is instead of null to get type information of missing component
                         collect.Append(RuntimeUtil.RelativePath(root, gcData.component.gameObject))
-                            .Append("(").Append(gcData.component.GetType().Name).Append("):\n");
+                            .Append('(').Append(gcData.component.GetType().Name).Append("):\n");
                         collect.Append("  IsEntryPoint: ").Append(gcData.isEntryPoint).Append('\n');
                         collect.Append("  ActiveNess: ").Append(gcData.activeness).Append('\n');
                         collect.Append("  Dependencies:\n");
                         foreach (var line in PairsToStrings(root, gcData.dependencies))
-                            collect.Append("    ").Append(line).Append("\n");
+                            collect.Append("    ").Append(line).Append('\n');
                         collect.Append("  EntryPoints:\n");
                         foreach (var line in PairsToStrings(root, gcData.entryPoints))
-                            collect.Append("    ").Append(line).Append("\n");
-                        collect.Append("\n");
+                            collect.Append("    ").Append(line).Append('\n');
+                        collect.Append('\n');
                     }
 
                     return collect.ToString();

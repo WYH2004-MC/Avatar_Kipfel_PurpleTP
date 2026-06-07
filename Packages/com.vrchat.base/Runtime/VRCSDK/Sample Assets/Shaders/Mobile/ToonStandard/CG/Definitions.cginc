@@ -25,7 +25,8 @@ sampler2D   _MainTex,
             _MatcapMask,
 #endif
             _HueShiftMask,
-            _Ramp;
+            _Ramp,
+            _ColorMask;
 
 // Properties
 VRCHAT_DEFINE_ATLAS_PROPERTY(half4, _MainTex_ST);
@@ -70,6 +71,8 @@ VRCHAT_DEFINE_ATLAS_PROPERTY(half4, _Ramp_ST);
     VRCHAT_DEFINE_ATLAS_PROPERTY(half, _MatcapStrength);
 #endif
 
+VRCHAT_DEFINE_ATLAS_PROPERTY(half4, _ColorMask_ST);
+
 VRCHAT_DEFINE_ATLAS_PROPERTY(half4, _HueShiftMask_ST);
 VRCHAT_DEFINE_ATLAS_PROPERTY(uint, _HueShiftMaskChannel);
 
@@ -90,6 +93,19 @@ VRCHAT_DEFINE_ATLAS_PROPERTY(half, _RimIntensity);
 VRCHAT_DEFINE_ATLAS_PROPERTY(half, _RimRange);
 VRCHAT_DEFINE_ATLAS_PROPERTY(half, _RimSharpness);
 VRCHAT_DEFINE_ATLAS_PROPERTY(half, _RimEnvironmental);
+
+VRCHAT_DEFINE_ATLAS_PROPERTY(half4, _ColorMaskColor1);
+VRCHAT_DEFINE_ATLAS_PROPERTY(half, _ColorMaskEmissionStrength1);
+VRCHAT_DEFINE_ATLAS_PROPERTY(half4, _ColorMaskColor2);
+VRCHAT_DEFINE_ATLAS_PROPERTY(half, _ColorMaskEmissionStrength2);
+VRCHAT_DEFINE_ATLAS_PROPERTY(half4, _ColorMaskColor3);
+VRCHAT_DEFINE_ATLAS_PROPERTY(half, _ColorMaskEmissionStrength3);
+VRCHAT_DEFINE_ATLAS_PROPERTY(half4, _ColorMaskColor4);
+VRCHAT_DEFINE_ATLAS_PROPERTY(half, _ColorMaskEmissionStrength4);
+VRCHAT_DEFINE_ATLAS_PROPERTY(uint, _ColorMaskBlendMode);
+
+#define COLORMASK_BLEND_MULTIPLY 0
+#define COLORMASK_BLEND_ADDITIVE 1
 
 //VRCHAT_DEFINE_ATLAS_PROPERTY(half, _Cutoff);
 //VRCHAT_DEFINE_ATLAS_PROPERTY(half, _AlphaToMask);

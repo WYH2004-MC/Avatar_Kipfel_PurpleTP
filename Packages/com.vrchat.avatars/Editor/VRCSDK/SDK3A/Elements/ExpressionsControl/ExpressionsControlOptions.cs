@@ -26,7 +26,7 @@ namespace VRC.SDK3A.Editor.Elements
         private ExpressionsControlParameterField ControlParameterField;
         private Slider ValueSlider;
         private SliderInt ValueIntSlider;
-        private Toggle ValueToggle;
+        private HelpBox ValueEqualsZeroWarningHelpBox;
         private VisualElement ControlTypeHelpBoxContainer;
         private Button TypeInfoButton;
         private HelpBox ControlTypeHelpBox;
@@ -61,38 +61,42 @@ namespace VRC.SDK3A.Editor.Elements
         private SerializedProperty propControlParameterName;
         private SerializedProperty propValue;
 
+        private bool HasAnySelectedParameter => ControlParameterField.Parameter != null && ControlParameterField.Index > 0;
+
 
         #region HelpBox Text
 
         private const string HELPBOX_BUTTON =
             "Click or hold to activate. The button remains active for a minimum 0.2s.\n" +
-            "While active, the (Parameter) is set to (Value).\n" +
-            "When inactive, the (Parameter) is reset to zero.";
+            "While active, the (Parameter) is set to {0}.\n" +
+            "When inactive, the (Parameter) is reset to {1}.";
 
         private const string HELPBOX_TOGGLE =
             "Click to toggle on or off.\n" +
-            "When turned on, the (Parameter) is set to (Value).\n" +
-            "When turned off, the (Parameter) is reset to zero.";
+            "When turned on, the (Parameter) is set to {0}.\n" +
+            "When turned off, the (Parameter) is reset to {1}.";
 
         private const string HELPBOX_SUBMENU =
             "Opens another expression menu.\n" +
-            "When opened, the (Parameter) is set to (Value).\n" +
-            "When closed, (Parameter) is reset to zero.";
+            "When opened, the (Parameter) is set to {0}.\n" +
+            "When closed, (Parameter) is reset to {1}.";
 
         private const string HELPBOX_TWO_AXIS_PUPPET =
             "Puppet menu that maps the joystick to two parameters (-1 to +1).\n" +
-            "When opened, the (Parameter) is set to (Value).\n" +
-            "When closed, (Parameter) is reset to zero.";
+            "When opened, the (Parameter) is set to {0}.\n" +
+            "When closed, (Parameter) is reset to {1}.";
 
         private const string HELPBOX_FOUR_AXIS_PUPPET =
             "Puppet menu that maps the joystick to four parameters (0 to 1).\n" +
-            "When opened, the (Parameter) is set to (Value).\n" +
-            "When closed, (Parameter) is reset to zero.";
+            "When opened, the (Parameter) is set to {0}.\n" +
+            "When closed, (Parameter) is reset to {1}.";
 
         private const string HELPBOX_RADIAL_PUPPET =
             "Puppet menu that sets a value based on joystick rotation. (0 to 1)\n" +
-            "When opened, the (Parameter) is set to (Value).\n" +
-            "When closed, (Parameter) is reset to zero.";
+            "When opened, the (Parameter) is set to {0}.\n" +
+            "When closed, (Parameter) is reset to {1}.";
+
+        private string _assignedControlHelpBoxTextFormat = string.Empty;
 
         #endregion
 
@@ -129,7 +133,7 @@ namespace VRC.SDK3A.Editor.Elements
             ControlParameterField = this.Q<ExpressionsControlParameterField>("ControlParameterField");
             ValueSlider = this.Q<Slider>("ValueSlider");
             ValueIntSlider = this.Q<SliderInt>("ValueIntSlider");
-            ValueToggle = this.Q<Toggle>("ValueToggle");
+            ValueEqualsZeroWarningHelpBox = this.Q<HelpBox>("ValueEqualsZeroWarningHelpBox");
 
             MenuTypesContainer = this.Q<VisualElement>("MenuTypesContainer");
             SubMenuObjectField = this.Q<VRCCreateObjectField>("SubMenuObjectField");
@@ -157,7 +161,7 @@ namespace VRC.SDK3A.Editor.Elements
             // HelpBoxes must be added manually and cannot be created in UIBuilder.
             ControlTypeHelpBox = new HelpBox { messageType = HelpBoxMessageType.Info };
             ControlTypeHelpBoxContainer.Add(ControlTypeHelpBox);
-            ControlParameterField.changed += DisplayValueSlider;
+            ControlParameterField.changed += HandleParameterChanged;
 
             TypeInfoButton.clicked += () =>
             {
@@ -165,9 +169,9 @@ namespace VRC.SDK3A.Editor.Elements
                 TypeInfoButtonClicked();
             };
 
-            ControlTypeField.RegisterValueChangedCallback(evt => ControlTypeChanged());
+            ControlTypeField.RegisterValueChangedCallback(ControlTypeChanged);
 
-            ControlTypeChanged();
+            ControlTypeChanged(null);
         }
 
         public void BindProperty(SerializedProperty prop)
@@ -189,7 +193,7 @@ namespace VRC.SDK3A.Editor.Elements
             BindValueFields();
         }
 
-        private void ControlTypeChanged()
+        private void ControlTypeChanged(ChangeEvent<System.Enum> _)
         {
             ExpressionControl.ControlType controlType =
                 (ExpressionControl.ControlType)propControl.FindPropertyRelative(nameof(ExpressionControl.type))
@@ -206,12 +210,12 @@ namespace VRC.SDK3A.Editor.Elements
                 case ExpressionControl.ControlType.Button:
                     MenuTypesContainer.style.display = DisplayStyle.None;
 
-                    ControlTypeHelpBox.text = HELPBOX_BUTTON;
+                    _assignedControlHelpBoxTextFormat = HELPBOX_BUTTON;
                     break;
                 case ExpressionControl.ControlType.Toggle:
                     MenuTypesContainer.style.display = DisplayStyle.None;
 
-                    ControlTypeHelpBox.text = HELPBOX_TOGGLE;
+                    _assignedControlHelpBoxTextFormat = HELPBOX_TOGGLE;
                     break;
                 case ExpressionControl.ControlType.SubMenu:
                     MenuTypesContainer.style.display = DisplayStyle.Flex;
@@ -220,7 +224,7 @@ namespace VRC.SDK3A.Editor.Elements
                     FourAxisPuppetContainer.style.display = DisplayStyle.None;
                     RotationParamField.style.display = DisplayStyle.None;
 
-                    ControlTypeHelpBox.text = HELPBOX_SUBMENU;
+                    _assignedControlHelpBoxTextFormat = HELPBOX_SUBMENU;
 
                     SubMenuObjectField.BindProperty(propSubMenu, typeof(ExpressionsMenu), "SubMenu");
                     break;
@@ -231,7 +235,7 @@ namespace VRC.SDK3A.Editor.Elements
                     FourAxisPuppetContainer.style.display = DisplayStyle.None;
                     RotationParamField.style.display = DisplayStyle.None;
 
-                    ControlTypeHelpBox.text = HELPBOX_TWO_AXIS_PUPPET;
+                    _assignedControlHelpBoxTextFormat = HELPBOX_TWO_AXIS_PUPPET;
 
                     propSubParameters.arraySize = 2;
                     propLabels.arraySize = 4;
@@ -262,7 +266,7 @@ namespace VRC.SDK3A.Editor.Elements
                     FourAxisPuppetContainer.style.display = DisplayStyle.Flex;
                     RotationParamField.style.display = DisplayStyle.None;
 
-                    ControlTypeHelpBox.text = HELPBOX_FOUR_AXIS_PUPPET;
+                    _assignedControlHelpBoxTextFormat = HELPBOX_FOUR_AXIS_PUPPET;
 
                     propSubParameters.arraySize = 4;
                     propLabels.arraySize = 4;
@@ -301,7 +305,7 @@ namespace VRC.SDK3A.Editor.Elements
                     FourAxisPuppetContainer.style.display = DisplayStyle.None;
                     RotationParamField.style.display = DisplayStyle.Flex;
 
-                    ControlTypeHelpBox.text = HELPBOX_RADIAL_PUPPET;
+                    _assignedControlHelpBoxTextFormat = HELPBOX_RADIAL_PUPPET;
 
                     propSubParameters.arraySize = 1;
                     propLabels.arraySize = 0;
@@ -314,28 +318,22 @@ namespace VRC.SDK3A.Editor.Elements
                         false);
                     break;
             }
+
+            RefreshControlHelpBox();
         }
 
         private void BindValueFields()
         {
             ValueSlider.RegisterValueChangedCallback(evt =>
             {
-                propValue.floatValue = evt.newValue;
-                propControl.serializedObject.ApplyModifiedProperties();
+                UpdatePropValue(evt.newValue);
                 ValueIntSlider.SetValueWithoutNotify(Mathf.FloorToInt(evt.newValue));
             });
 
             ValueIntSlider.RegisterValueChangedCallback(evt =>
             {
-                propValue.floatValue = evt.newValue;
-                propControl.serializedObject.ApplyModifiedProperties();
+                UpdatePropValue(evt.newValue);
                 ValueSlider.SetValueWithoutNotify(evt.newValue);
-            });
-
-            ValueToggle.RegisterValueChangedCallback(evt =>
-            {
-                propValue.floatValue = evt.newValue ? 1f : 0f;
-                propControl.serializedObject.ApplyModifiedProperties();
             });
         }
 
@@ -344,27 +342,34 @@ namespace VRC.SDK3A.Editor.Elements
             ControlTypeHelpBox.style.display = ShowControlTypeHelpBox ? DisplayStyle.None : DisplayStyle.Flex;
         }
 
-        private void DisplayValueSlider()
+        private void HandleParameterChanged()
         {
-            if (ControlParameterField.Parameter != null && ControlParameterField.Index > 0)
+            if (HasAnySelectedParameter)
             {
                 switch (ControlParameterField.Parameter.valueType)
                 {
                     case VRCExpressionParameters.ValueType.Int:
                         ValueSlider.style.display = DisplayStyle.None;
                         ValueIntSlider.style.display = DisplayStyle.Flex;
-                        ValueToggle.style.display = DisplayStyle.None;
+
+                        UpdatePropValue(ValueIntSlider.value);
+
                         break;
                     case VRCExpressionParameters.ValueType.Float:
                         ValueSlider.style.display = DisplayStyle.Flex;
                         ValueIntSlider.style.display = DisplayStyle.None;
-                        ValueToggle.style.display = DisplayStyle.None;
+
+                        UpdatePropValue(ValueSlider.value);
+
                         break;
                     default:
                     case VRCExpressionParameters.ValueType.Bool:
                         ValueSlider.style.display = DisplayStyle.None;
                         ValueIntSlider.style.display = DisplayStyle.None;
-                        ValueToggle.style.display = DisplayStyle.Flex;
+
+                        // Booleans are always true when enabled.
+                        UpdatePropValue(1.0f);
+
                         break;
                 }
             }
@@ -372,15 +377,36 @@ namespace VRC.SDK3A.Editor.Elements
             {
                 ValueSlider.style.display = DisplayStyle.None;
                 ValueIntSlider.style.display = DisplayStyle.None;
-                ValueToggle.style.display = DisplayStyle.None;
             }
+
+            RefreshControlHelpBox();
         }
 
         private void UpdateValueSliders()
         {
             ValueSlider.SetValueWithoutNotify(propValue.floatValue);
             ValueIntSlider.SetValueWithoutNotify(Mathf.FloorToInt(propValue.floatValue));
-            ValueToggle.SetValueWithoutNotify(propValue.floatValue > 0f);
+
+            RefreshEqualsZeroHelpBox();
+        }
+
+        private void UpdatePropValue(float newValue)
+        {
+            propValue.floatValue = newValue;
+            propControl.serializedObject.ApplyModifiedProperties();
+
+            RefreshEqualsZeroHelpBox();
+        }
+
+        private void RefreshControlHelpBox()
+        {
+            bool isBooleanParameter = HasAnySelectedParameter && ControlParameterField.Parameter.valueType == VRCExpressionParameters.ValueType.Bool;
+            ControlTypeHelpBox.text = string.Format(_assignedControlHelpBoxTextFormat, isBooleanParameter ? "true" : "(Value)", isBooleanParameter ? "false" : "zero");
+        }
+
+        private void RefreshEqualsZeroHelpBox()
+        {
+            ValueEqualsZeroWarningHelpBox.style.display = HasAnySelectedParameter && propValue.floatValue == 0.0f ? DisplayStyle.Flex : DisplayStyle.None;
         }
     }
 }

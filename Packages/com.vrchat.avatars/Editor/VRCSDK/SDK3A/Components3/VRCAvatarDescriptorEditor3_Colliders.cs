@@ -154,7 +154,8 @@ public partial class AvatarDescriptorEditor3 : Editor
 			return;
 
 		//Head
-		UpdateConfig(ref avatarDescriptor.collider_head, VRCAvatarDescriptor.CalcHeadCollider(animator, avatarDescriptor.ViewPosition));
+		// Assume a prefab scale of one. This parameter is normally used by the client to handle properly generating heads for eyeless avatars.
+		UpdateConfig(ref avatarDescriptor.collider_head, VRCAvatarDescriptor.CalcHeadCollider(animator, avatarDescriptor.ViewPosition, 1.0f));
 
 		//Torso
 		UpdateConfig(ref avatarDescriptor.collider_torso, VRCAvatarDescriptor.CalcTorsoCollider(animator));

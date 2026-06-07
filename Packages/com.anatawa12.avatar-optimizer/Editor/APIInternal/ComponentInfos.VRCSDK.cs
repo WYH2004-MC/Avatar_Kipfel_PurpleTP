@@ -194,6 +194,20 @@ namespace Anatawa12.AvatarOptimizer.APIInternal.VRCSDK
             AddCollider(component.collider_fingerMiddleR, "FingerMiddleR");
             AddCollider(component.collider_fingerRingR, "FingerRingR");
             AddCollider(component.collider_fingerLittleR, "FingerLittleR");
+
+            if (component.enableEyeLook)
+            {
+                var leftEye = component.customEyeLookSettings.leftEye;
+                var rightEye = component.customEyeLookSettings.rightEye;
+                if (leftEye != null && rightEye != null)
+                {
+                    // We create cross dependency relationship to prevent deleting one
+                    // Deleting both is acceptable
+                    collector.AddDependency(leftEye, rightEye);
+                    collector.AddDependency(rightEye, leftEye);
+                }
+            }
+
             void AddCollider(VRCAvatarDescriptor.ColliderConfig collider, string where)
             {
                 switch (collider.state)
@@ -501,6 +515,12 @@ namespace Anatawa12.AvatarOptimizer.APIInternal.VRCSDK
             ComponentDependencyCollector collector)
         {
             collector.AddDependency(component.rootTransform);
+#if AAO_VRCSDK3_AVATARS_PHYSBONE_GLOBAL_COLLIDER
+            if (component.globalCollisionFlags != 0)
+            {
+                collector.MarkEntrypoint();
+            }
+#endif
         }
     }
 
@@ -645,5 +665,45 @@ namespace Anatawa12.AvatarOptimizer.APIInternal.VRCSDK
         {
         }
     }
+
+#if AAO_VRCSDK3_AVATARS_VRC_RAYCAST
+    [ComponentInformation(typeof(VRCRaycast))]
+    internal class VRCRaycastInformation : ComponentInformation<VRCRaycast>
+    {
+        protected override void CollectDependency(VRCRaycast component, ComponentDependencyCollector collector)
+        {
+            var transform = component.ResultTransform;
+            if (transform != null) // Raycast do nothing if target is null
+            {
+                collector.AddDependency(transform);
+                collector.AddDependency(transform, component);
+                collector.MarkBehaviour();
+            }
+
+            // if the component drives parameter that is used, 
+            // we need to keep the raycast
+            if (new[]
+                {
+                    component.Parameter + VRCRaycast.PARAM_DISTANCE,
+                    component.Parameter + VRCRaycast.PARAM_HIT,
+                    component.Parameter + VRCRaycast.PARAM_RATIO,
+                }.Any(collector.IsParameterUsed))
+            {
+                collector.MarkEntrypoint();
+            }
+        }
+
+        protected override void CollectMutations(VRCRaycast component, ComponentMutationsCollector collector)
+        {
+            var transform = component.ResultTransform;
+            if (transform != null) // Raycast do nothing if target is null
+            {
+                collector.TransformPosition(transform);
+                if (component.ApplyRotation)
+                    collector.TransformRotation(transform);
+            }
+        }
+    }
+#endif
 }
 #endif

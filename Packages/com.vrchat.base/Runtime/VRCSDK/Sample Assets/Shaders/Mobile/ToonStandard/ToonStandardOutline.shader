@@ -71,6 +71,18 @@ Shader "VRChat/Mobile/Toon Standard (Outline)"
         [PowerSlider(2)] _OutlineThickness ("Thickness Multiplier", Range(0, 0.5)) = 0.05
         _OutlineColor ("Color", Color) = (0,0,0,1)
         _OutlineFromAlbedo ("Color From Albedo", Range(0,1)) = 0.0
+        
+        _ColorMask ("Color Mask", 2D) = "black" {}
+        _ColorMaskColor1("Color 1", Color) = (1,1,1,1)
+        _ColorMaskEmissionStrength1("Color 1 Emission", Range(0,2)) = 0
+        _ColorMaskColor2("Color 2", Color) = (1,1,1,1)
+        _ColorMaskEmissionStrength2("Color 2 Emission", Range(0,2)) = 0
+        _ColorMaskColor3("Color 3", Color) = (1,1,1,1)
+        _ColorMaskEmissionStrength3("Color 3 Emission", Range(0,2)) = 0
+        _ColorMaskColor4("Color 4", Color) = (1,1,1,1)
+        _ColorMaskEmissionStrength4("Color 4 Emission", Range(0,2)) = 0
+        
+        [Enum(Multiply, 0, Additive, 1)] _ColorMaskBlendMode("Color Mask Blend Mode", Int) = 0
 
         //[Enum(UnityEngine.Rendering.BlendMode)]_SrcBlend ("__src", int) = 1
         //[Enum(UnityEngine.Rendering.BlendMode)]_DstBlend ("__dst", int) = 0
@@ -83,7 +95,7 @@ Shader "VRChat/Mobile/Toon Standard (Outline)"
         //AlphaToMask [_AlphaToMask]
         AlphaToMask Off
 
-        Tags { "VRCFallback" = "toonstandard" }
+        Tags { "VRCFallback" = "toonstandard" "RenderType" = "Opaque" }
 
         Pass
         {
@@ -112,6 +124,7 @@ Shader "VRChat/Mobile/Toon Standard (Outline)"
             #pragma shader_feature_local_fragment _ USE_OCCLUSION_MAP
             #pragma dynamic_branch_local_fragment _ USE_RIMLIGHT
             #pragma dynamic_branch_local_fragment _ USE_HUE_SHIFT
+            #pragma dynamic_branch_local_fragment _ USE_COLOR_MASK
 
             // this one is practically free in terms of performance, so save some variants by always enabling it for now
             #define USE_EMISSION_MAP
@@ -205,6 +218,7 @@ Shader "VRChat/Mobile/Toon Standard (Outline)"
             #pragma shader_feature_local_fragment _ USE_OCCLUSION_MAP
             #pragma dynamic_branch_local_fragment _ USE_RIMLIGHT
             #pragma dynamic_branch_local_fragment _ USE_HUE_SHIFT
+            #pragma dynamic_branch_local_fragment _ USE_COLOR_MASK
 
             // disable variants that are not needed, including realtime shadows (not supported)
             #pragma skip_variants LIGHTMAP_ON DYNAMICLIGHTMAP_ON DIRLIGHTMAP_COMBINED STEREO_CUBEMAP_RENDER_ON

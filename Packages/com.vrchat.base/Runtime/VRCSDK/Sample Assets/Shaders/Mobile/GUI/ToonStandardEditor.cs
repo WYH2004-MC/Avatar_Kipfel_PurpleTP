@@ -32,6 +32,8 @@ namespace VRC.ToonStandard
         public bool detailNormalTex = false;
         public bool occlusionTex = false;
         public bool outlineTex = false;
+        public bool colorMask = false;
+        public bool colorMaskTex = false;
     }
 
     public enum BlendModes
@@ -124,6 +126,18 @@ namespace VRC.ToonStandard
         protected MaterialProperty _EmissionHueShift;
         protected MaterialProperty _HueShiftMask;
         protected MaterialProperty _HueShiftMaskChannel;
+        
+        protected MaterialProperty _ColorMask;
+        protected MaterialProperty _ColorMaskBlendMode;
+        protected MaterialProperty _ColorMaskColor1;
+        protected MaterialProperty _ColorMaskColor2;
+        protected MaterialProperty _ColorMaskColor3;
+        protected MaterialProperty _ColorMaskColor4;
+        
+        protected MaterialProperty _ColorMaskEmissionStrength1;
+        protected MaterialProperty _ColorMaskEmissionStrength2;
+        protected MaterialProperty _ColorMaskEmissionStrength3;
+        protected MaterialProperty _ColorMaskEmissionStrength4;
 
         protected LocalKeyword USE_SPECULAR;
         protected LocalKeyword USE_MATCAP;
@@ -132,6 +146,7 @@ namespace VRC.ToonStandard
         protected LocalKeyword USE_NORMAL_MAPS;
         protected LocalKeyword USE_OCCLUSION_MAP;
         protected LocalKeyword USE_HUE_SHIFT;
+        protected LocalKeyword USE_COLOR_MASK;
 
         private int BlendMode = 0;
         private ShadowRamp RampMode = 0;
@@ -203,6 +218,7 @@ namespace VRC.ToonStandard
             DrawSpecular(materialEditor, material);
             DrawMatcap(materialEditor, material);
             DrawRimlighting(materialEditor, material);
+            DrawColorMask(materialEditor, material);
             HandleBlendModes(materialEditor, material);
 
             EditorGUI.EndChangeCheck();
@@ -669,6 +685,109 @@ namespace VRC.ToonStandard
             ResetToDefault(material, _OutlineThickness);
             ResetToDefault(material, _OutlineColor);
             ResetToDefault(material, _OutlineFromAlbedo);
+        }
+        
+        private void DrawColorMask(MaterialEditor materialEditor, Material material)
+        {
+            Foldouts toggles = Foldouts[material];
+            BeginGroup(ref toggles.colorMask, "Color Mask", USE_COLOR_MASK, ResetColorMask);
+            if(toggles.colorMask)
+            {
+                GUILayout.Space(MARGIN_TOP);
+                EditorGUI.BeginDisabledGroup(!material.IsKeywordEnabled(USE_COLOR_MASK));
+                {
+                    EditorGUI.BeginChangeCheck();
+                    DrawTexture(materialEditor, _ColorMask.displayName, _ColorMask, null, ref toggles.colorMaskTex);
+                    if (EditorGUI.EndChangeCheck())
+                    {
+                        HandleColorMaskTextureChange(materialEditor);
+                    }
+                    materialEditor.ShaderProperty(_ColorMaskBlendMode, _ColorMaskBlendMode.displayName);
+                    materialEditor.ShaderProperty(_ColorMaskColor1, _ColorMaskColor1.displayName);
+                    materialEditor.ShaderProperty(_ColorMaskEmissionStrength1, _ColorMaskEmissionStrength1.displayName);
+                    materialEditor.ShaderProperty(_ColorMaskColor2, _ColorMaskColor2.displayName);
+                    materialEditor.ShaderProperty(_ColorMaskEmissionStrength2, _ColorMaskEmissionStrength2.displayName);
+                    materialEditor.ShaderProperty(_ColorMaskColor3, _ColorMaskColor3.displayName);
+                    materialEditor.ShaderProperty(_ColorMaskEmissionStrength3, _ColorMaskEmissionStrength3.displayName);
+                    
+                    EditorGUI.BeginDisabledGroup(AllTargetsHaveNoAlpha(materialEditor));
+                    materialEditor.ShaderProperty(_ColorMaskColor4, _ColorMaskColor4.displayName);
+                    materialEditor.ShaderProperty(_ColorMaskEmissionStrength4, _ColorMaskEmissionStrength4.displayName);
+                    EditorGUI.EndDisabledGroup();
+                    
+                    EditorGUI.EndDisabledGroup();
+                }
+                EditorGUI.EndDisabledGroup();
+                GUILayout.Space(MARGIN_BOTTOM);
+            }
+            EndGroup();
+        }
+
+        private bool AllTargetsHaveNoAlpha(MaterialEditor materialEditor)
+        {
+            foreach (var target in materialEditor.targets)
+            {
+                var material = target as Material;
+                if (material == null)
+                    continue;
+
+                if (!material.HasProperty(_ColorMask.name))
+                    continue;
+                
+                var texture = material.GetTexture(_ColorMask.name);
+                if (DoesSourceTextureHaveAlpha(texture))
+                    return false;
+            }
+
+            return true;
+        }
+
+        private void HandleColorMaskTextureChange(MaterialEditor materialEditor)
+        {
+            FixColorChannelIfAlphaMissing(materialEditor);
+        }
+
+        private void FixColorChannelIfAlphaMissing(MaterialEditor materialEditor)
+        {
+            // If there's no alpha channel provided in the source texture, Unity will interpret the 4th channel as white.
+            // This will always enable the 4th colormask color everywhere unless we set the alpha to 0.
+            foreach (Object target in materialEditor.targets)
+            {
+                if (!(target is Material targetMaterial)) 
+                    continue;
+                
+                if (!DoesSourceTextureHaveAlpha(targetMaterial.GetTexture(_ColorMask.name)))
+                {
+                    Color color = _ColorMaskColor4.colorValue;
+                    color.a = 0f;
+                    _ColorMaskColor4.colorValue = color;
+                    _ColorMaskEmissionStrength4.floatValue = 0f;
+                }
+            }
+        }
+
+        private bool DoesSourceTextureHaveAlpha(Texture texture)
+        {
+            if (texture == null || !(texture is Texture2D texture2D)) return false;
+            string assetPath = AssetDatabase.GetAssetPath(texture2D);
+            if (!(AssetImporter.GetAtPath(assetPath) is TextureImporter importer))
+                return false;
+
+            return importer.DoesSourceTextureHaveAlpha();
+        }
+
+        private void ResetColorMask()
+        {
+            ResetToDefault(material, USE_COLOR_MASK);
+            ResetToDefault(material, _ColorMask);
+            ResetToDefault(material, _ColorMaskColor1);
+            ResetToDefault(material, _ColorMaskColor2);
+            ResetToDefault(material, _ColorMaskColor3);
+            ResetToDefault(material, _ColorMaskColor4);
+            ResetToDefault(material, _ColorMaskEmissionStrength1);
+            ResetToDefault(material, _ColorMaskEmissionStrength2);
+            ResetToDefault(material, _ColorMaskEmissionStrength3);
+            ResetToDefault(material, _ColorMaskEmissionStrength4);
         }
 
         private void HandleBlendModes(MaterialEditor materialEditor, Material material)

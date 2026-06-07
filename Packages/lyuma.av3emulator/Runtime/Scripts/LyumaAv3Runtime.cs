@@ -32,7 +32,6 @@ using VRC.SDK3.Avatars.ScriptableObjects;
 using VRC.SDK3.Dynamics.Contact.Components;
 using VRC.SDK3.Dynamics.PhysBone.Components;
 using VRC.SDKBase;
-using static VRC.SDK3.Avatars.ScriptableObjects.VRCExpressionParameters;
 
 namespace Lyuma.Av3Emulator.Runtime
 {
@@ -140,6 +139,9 @@ namespace Lyuma.Av3Emulator.Runtime
 
 		[NonSerialized] public VRCPhysBone[] AvDynamicsPhysBones = new VRCPhysBone[]{};
 		[NonSerialized] public VRCContactReceiver[] AvDynamicsContactReceivers = new VRCContactReceiver[]{};
+
+		Type raycastType = Type.GetType("VRC.SDK3.Avatars.Components.VRCRaycast, VRCSDK3A, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+		[NonSerialized] public Component[] Raycasts = new MonoBehaviour[]{};
 
 		public class Av3EmuParameterAccess : VRC.SDKBase.IAnimParameterAccess {
 			public LyumaAv3Runtime runtime;
@@ -313,7 +315,38 @@ namespace Lyuma.Av3Emulator.Runtime
 						accessInst.floatVal = (float)typeof(VRCPhysBoneBase).GetField("param_SquishValue").GetValue(mb);
 					}
 				}
-				// Debug.Log("Assigned strech access " + physBoneState.param_Stretch.GetValue(mb) + " to param " + parameter + ": was " + old_value);
+			}
+		}
+
+		public void assignRaycastParameters(Component[] behaviours)
+		{
+			Raycasts = behaviours;
+			foreach (var mb in Raycasts) {
+				string parameter = (string)raycastType.GetProperty("Parameter").GetValue(mb);
+				Av3EmuParameterAccess accessInst = new Av3EmuParameterAccess();
+				accessInst.runtime = this;
+				accessInst.paramName = parameter + raycastType.GetField("PARAM_HIT", BindingFlags.Public | BindingFlags.Static).GetValue(null);
+				if (IsLocal || !isBeingSynced(accessInst.paramName))
+				{
+					raycastType.GetField("param_Hit").SetValue(mb, accessInst);
+					accessInst.boolVal = (bool)raycastType.GetField("param_HitValue").GetValue(mb);
+				}
+				accessInst = new Av3EmuParameterAccess();
+				accessInst.runtime = this;
+				accessInst.paramName = parameter + raycastType.GetField("PARAM_RATIO", BindingFlags.Public | BindingFlags.Static).GetValue(null);
+				if (IsLocal || !isBeingSynced(accessInst.paramName))
+				{
+					raycastType.GetField("param_Ratio").SetValue(mb, accessInst);
+					accessInst.floatVal = (float)raycastType.GetField("param_RatioValue").GetValue(mb);
+				}
+				accessInst = new Av3EmuParameterAccess();
+				accessInst.runtime = this;
+				accessInst.paramName = parameter + raycastType.GetField("PARAM_DISTANCE", BindingFlags.Public | BindingFlags.Static).GetValue(null);
+				if (IsLocal || !isBeingSynced(accessInst.paramName))
+				{
+					raycastType.GetField("param_Distance").SetValue(mb, accessInst);
+					accessInst.floatVal = (float)raycastType.GetField("param_DistanceValue").GetValue(mb);
+				}
 			}
 		}
 
@@ -1169,14 +1202,14 @@ namespace Lyuma.Av3Emulator.Runtime
 				object Parameter = randomOrderType.GetEnumValues().GetValue(3);
 				object playbackOrder = audioSubType.GetField("PlaybackOrder").GetValue(playAudio);
 				FieldInfo playbackIndex = audioSubType.GetField("playbackIndex");
+
 				if (playbackOrder.ToString() == Random.ToString())
 				{
 					int newPlayIndex = UnityEngine.Random.Range(0, clips.Length);
 					playbackIndex.SetValue(playAudio, newPlayIndex);
 					clip = clips[newPlayIndex];
 				}
-
-				else if (playbackOrder == UniqueRandom)
+				else if (playbackOrder.ToString() == UniqueRandom.ToString()) 
 				{
 					int newPlayIndex = UnityEngine.Random.Range(0, clips.Length);
 					while (newPlayIndex == (int)playbackIndex.GetValue(playAudio) && clips.Length > 1)
@@ -1186,15 +1219,13 @@ namespace Lyuma.Av3Emulator.Runtime
 					playbackIndex.SetValue(playAudio, newPlayIndex);
 					clip = clips[newPlayIndex];
 				}
-
-				else if (playbackOrder == Roundabout)
+				else if (playbackOrder.ToString() == Roundabout.ToString())
 				{
 					int newPlayIndex = ((int)playbackIndex.GetValue(playAudio) + 1) % clips.Length;
 					playbackIndex.SetValue(playAudio, newPlayIndex);
 					clip = clips[newPlayIndex];
 				}
-				
-				else if (playbackOrder == Parameter)
+				else if (playbackOrder.ToString() == Parameter.ToString())
 				{
 					string parameterName = (string)audioSubType.GetField("ParameterName").GetValue(playAudio);
 					int? newPlayIndex = runtime.Ints.FirstOrDefault(x => x.name == parameterName)?.value;
@@ -3082,6 +3113,9 @@ namespace Lyuma.Av3Emulator.Runtime
 			{
 				assignContactParameters(avadesc.gameObject.GetComponentsInChildren<VRCContactReceiver>());
 				assignPhysBoneParameters(avadesc.gameObject.GetComponentsInChildren<VRCPhysBone>());
+				if (raycastType != null) {
+					assignRaycastParameters(avadesc.gameObject.GetComponentsInChildren(raycastType));
+				}
 			}
 
 			for (int i = 0; i < playableBlendingStates.Count; i++) {

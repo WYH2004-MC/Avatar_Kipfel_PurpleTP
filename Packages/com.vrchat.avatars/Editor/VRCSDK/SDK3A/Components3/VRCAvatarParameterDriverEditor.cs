@@ -101,6 +101,7 @@ public class AvatarParameterDriverEditor : Editor
 		var minValue = param.FindPropertyRelative("valueMin");
 		var maxValue = param.FindPropertyRelative("valueMax");
 		var chance = param.FindPropertyRelative("chance");
+		var preventRepeats = param.FindPropertyRelative("preventRepeats");
 
 		//Change type
 		EditorGUILayout.PropertyField(changeType);
@@ -200,6 +201,7 @@ public class AvatarParameterDriverEditor : Editor
 				{
 					minValue.floatValue = EditorGUILayout.IntField("Min Value", (int)minValue.floatValue);
 					maxValue.floatValue = EditorGUILayout.IntField("Max Value", (int)maxValue.floatValue);
+					EditorGUILayout.PropertyField(preventRepeats);
 					break;
 				}
 				case AnimatorControllerParameterType.Float:

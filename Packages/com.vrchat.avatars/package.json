@@ -1,11 +1,11 @@
 {
   "name": "com.vrchat.avatars",
   "displayName": "VRChat SDK - Avatars",
-  "version": "3.10.1",
+  "version": "3.10.3",
   "unity": "2022.3",
   "description": "Our powerful Avatars 3.0 System",
   "vpmDependencies": {
-    "com.vrchat.base": "3.10.1"
+    "com.vrchat.base": "3.10.3"
   },
   "author": {
     "name": "VRChat",

@@ -10,7 +10,7 @@
             <VRC.SDK3A.Editor.Elements.ExpressionsControlParameterField name="ControlParameterField" label="Parameter" />
             <ui:Slider picking-mode="Ignore" label="Value" value="0" high-value="1" name="ValueSlider" low-value="-1" show-input-field="true" style="margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px; display: none;" />
             <ui:SliderInt picking-mode="Ignore" label="Value" value="0" high-value="255" name="ValueIntSlider" show-input-field="true" style="margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px; display: none;" />
-            <ui:Toggle label="Value" value="true" name="ValueToggle" style="margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px; display: none;" />
+            <ui:HelpBox name="ValueEqualsZeroWarningHelpBox" message-type="Warning" text="The Value set when this control is activated should be a value other than zero, so it doesn't match the value set when the control is deactivated. Otherwise, the control may not behave correctly." />
         </ui:VisualElement>
         <ui:VisualElement name="MenuTypesContainer" style="flex-grow: 0; flex-shrink: 0; display: none;">
             <ui:VisualElement name="Spacer" style="flex-grow: 1; height: 4px; background-color: rgba(128, 128, 128, 0.5); margin-left: 8px; margin-right: 8px; margin-top: 8px; margin-bottom: 8px; border-top-left-radius: 2px; border-bottom-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px;" />

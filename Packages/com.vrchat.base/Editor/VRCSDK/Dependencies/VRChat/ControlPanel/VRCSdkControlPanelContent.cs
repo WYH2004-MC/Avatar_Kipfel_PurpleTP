@@ -19,22 +19,25 @@ public partial class VRCSdkControlPanel : EditorWindow
     static List<ApiAvatar> uploadedAvatars = null;
     static List<ApiWorld> uploadedWorlds = null;
     static List<ApiAvatar> testAvatars = null;
-    
-    
+
+
+
     public static Dictionary<string, Texture2D> ImageCache = new Dictionary<string, Texture2D>();
 
     static List<string> justDeletedContents;
     static List<ApiAvatar> justUpdatedAvatars;
 
     static EditorCoroutine fetchingAvatars = null, fetchingWorlds = null;
-    
+
+
 
     private static string searchString = "";
     private static bool WorldsToggle = true;
     private static bool AvatarsToggle = true;
     private static bool TestAvatarsToggle = true;
 
-    
+
+
     const string WORLDS_WEB_URL = "https://vrchat.com/home/content/worlds";
     const string WORLD_WEB_URL = "https://vrchat.com/home/content/worlds/";
     const string WORLD_WEB_URL_SUFFIX = "/edit";
@@ -159,6 +162,7 @@ public partial class VRCSdkControlPanel : EditorWindow
         testAvatars = new List<ApiAvatar>();
 #endif
     }
+
 
 
     private static void FetchWorlds(int offset = 0)
@@ -306,12 +310,12 @@ public partial class VRCSdkControlPanel : EditorWindow
             }
 
             layoutOption = expandedLayout ? GUILayout.Width(position.width) : GUILayout.Width(SdkWindowWidth - 8);
-            
+
             using (var scroll = new EditorGUILayout.ScrollViewScope(contentScrollPos, layoutOption))
             {
                 contentScrollPos = scroll.scrollPosition;
-                
-                #if UDON
+
+#if UDON
                 if (uploadedWorlds.Count > 0)
                 {
                     WorldsListGUI(expandedLayout, ref updatedContent);  
@@ -322,29 +326,31 @@ public partial class VRCSdkControlPanel : EditorWindow
                     AvatarsListGUI(expandedLayout, ref updatedContent);
                 }
 
+
                 
                 if (testAvatars.Count > 0)
                 {
                     TestAvatarsListGUI(expandedLayout, ref updatedContent);
                 }
-                #else
+#else
                 if (uploadedAvatars.Count > 0)
                 {
                     AvatarsListGUI(expandedLayout, ref updatedContent);
                 }
-                
+
+
                 if (testAvatars.Count > 0)
                 {
                     TestAvatarsListGUI(expandedLayout, ref updatedContent);
                 }
-                
+
                 if (uploadedWorlds.Count > 0)
                 {
-                    WorldsListGUI(expandedLayout, ref updatedContent);  
+                    WorldsListGUI(expandedLayout, ref updatedContent);
                 }
-                #endif
+#endif
             }
-            
+
             if (!expandedLayout)
             {
                 GUILayout.FlexibleSpace();
@@ -437,7 +443,7 @@ public partial class VRCSdkControlPanel : EditorWindow
 
                     a.SaveReleaseStatus((c) =>
                         {
-                            ApiAvatar savedBP = (ApiAvatar) c.Model;
+                            ApiAvatar savedBP = (ApiAvatar)c.Model;
 
                             if (justUpdatedAvatars == null) justUpdatedAvatars = new List<ApiAvatar>();
                             justUpdatedAvatars.Add(savedBP);
@@ -464,7 +470,7 @@ public partial class VRCSdkControlPanel : EditorWindow
                             "Are you sure you want to delete " + a.name + "? This cannot be undone.", "Delete",
                             "Cancel"))
                     {
-                        foreach (VRC.Core.PipelineManager pm in FindObjectsOfType<VRC.Core.PipelineManager>()
+                        foreach (VRC.Core.PipelineManager pm in FindObjectsByType<VRC.Core.PipelineManager>(FindObjectsSortMode.None)
                                      .Where(pm => pm.blueprintId == a.id))
                         {
                             pm.blueprintId = "";
@@ -494,7 +500,8 @@ public partial class VRCSdkControlPanel : EditorWindow
             }
         }
     }
-    
+
+
     private void TestAvatarsListGUI(bool expandedLayout, ref bool updatedContent)
     {
         EditorGUILayout.Space();
@@ -554,7 +561,7 @@ public partial class VRCSdkControlPanel : EditorWindow
             }
         }
     }
-    
+
     private void WorldsListGUI(bool expandedLayout, ref bool updatedContent)
     {
         EditorGUILayout.Space();
@@ -611,7 +618,7 @@ public partial class VRCSdkControlPanel : EditorWindow
                     EditorGUILayout.BeginVertical();
 
                     EditorGUILayout.BeginHorizontal();
-                    #if UDON
+#if UDON
                     if (w.id == _currentBlueprintId)
                     {
                         EditorGUILayout.LabelField(w.name + " (Current)", contentTitleStyle);
@@ -620,9 +627,9 @@ public partial class VRCSdkControlPanel : EditorWindow
                     {
                         EditorGUILayout.LabelField(w.name, contentTitleStyle);
                     }
-                    #else
+#else
                     EditorGUILayout.LabelField(w.name, contentTitleStyle);
-                    #endif
+#endif
 
                     if (GUILayout.Button("Open on web", GUILayout.Width(OPEN_ON_WEB_BUTTON_WIDTH)))
                         Application.OpenURL(WORLD_WEB_URL + w.id + WORLD_WEB_URL_SUFFIX);
@@ -636,10 +643,10 @@ public partial class VRCSdkControlPanel : EditorWindow
 
                 using (new GUILayout.HorizontalScope())
                 {
-                    #if UDON
+#if UDON
                     if (GUILayout.Button("Set Current", GUILayout.Width(COPY_WORLD_ID_BUTTON_WIDTH)))
                     {
-                        var pM = FindObjectOfType<PipelineManager>();
+                        var pM = FindFirstObjectByType<PipelineManager>();
                         if (pM != null)
                         {
                             Undo.RecordObject(pM, "Set Current World");
@@ -647,7 +654,7 @@ public partial class VRCSdkControlPanel : EditorWindow
                             _currentBlueprintId = w.id;
                         }
                     }
-                    #endif
+#endif
                     if (GUILayout.Button("Copy ID", GUILayout.Width(COPY_WORLD_ID_BUTTON_WIDTH)))
                     {
                         TextEditor te = new TextEditor();
@@ -663,7 +670,7 @@ public partial class VRCSdkControlPanel : EditorWindow
                             "Are you sure you want to delete " + w.name + "? This cannot be undone.", "Delete",
                             "Cancel"))
                     {
-                        foreach (VRC.Core.PipelineManager pm in FindObjectsOfType<VRC.Core.PipelineManager>()
+                        foreach (VRC.Core.PipelineManager pm in FindObjectsByType<VRC.Core.PipelineManager>(FindObjectsSortMode.None)
                                      .Where(pm => pm.blueprintId == w.id))
                         {
                             pm.blueprintId = "";
@@ -693,14 +700,14 @@ public partial class VRCSdkControlPanel : EditorWindow
             }
         }
     }
-    
+
     private string _currentBlueprintId;
     private void FetchCurrentBlueprintId()
     {
-        #if UDON
-        var pM = FindObjectOfType<PipelineManager>();
+#if UDON
+        var pM = FindFirstObjectByType<PipelineManager>();
         _currentBlueprintId = pM != null ? pM.blueprintId : null;
-        #endif
+#endif
     }
 
     void ShowContent()
@@ -729,7 +736,7 @@ public partial class VRCSdkControlPanel : EditorWindow
         GUILayout.EndHorizontal();
         GUILayout.EndVertical();
 
-        if (((PanelTab) VRCSettings.ActiveWindowPanel) == PanelTab.ContentManager)
+        if (((PanelTab)VRCSettings.ActiveWindowPanel) == PanelTab.ContentManager)
         {
             if (uploadedWorlds == null || uploadedAvatars == null || testAvatars == null)
             {

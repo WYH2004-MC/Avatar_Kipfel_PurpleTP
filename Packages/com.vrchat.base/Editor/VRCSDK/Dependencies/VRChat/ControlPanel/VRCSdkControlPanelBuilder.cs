@@ -891,7 +891,7 @@ public partial class VRCSdkControlPanel : EditorWindow
     private static void CleanUpPipelineSavers()
     {
         #pragma warning disable CS0618 // Disabled obsolete warnings because we're trying to get rid of the pipelineSavers in the scene
-        var pipelineSavers = FindObjectsOfType<PipelineSaver>();
+        var pipelineSavers = FindObjectsByType<PipelineSaver>(FindObjectsSortMode.None);
         foreach (var saver in pipelineSavers)
         {
             Undo.DestroyObjectImmediate(saver);
@@ -1075,7 +1075,7 @@ public partial class VRCSdkControlPanel : EditorWindow
 
         List<Object> objects = new List<Object>();
         if (obj == null) return objects.Count < 1 ? null : objects.ToArray();
-        Renderer[] renderers = obj ? obj.GetComponentsInChildren<Renderer>(true) : FindObjectsOfType<Renderer>();
+        Renderer[] renderers = obj ? obj.GetComponentsInChildren<Renderer>(true) : FindObjectsByType<Renderer>(FindObjectsSortMode.None);
 
         if (renderers == null || renderers.Length < 1)
             return null;
@@ -1109,7 +1109,7 @@ public partial class VRCSdkControlPanel : EditorWindow
 
     public static GameObject GetReferenceCameraObject()
     {
-        var sceneDescriptor = FindObjectOfType<VRC_SceneDescriptor>();
+        var sceneDescriptor = FindFirstObjectByType<VRC_SceneDescriptor>();
         if (sceneDescriptor == null) return null;
 
         return sceneDescriptor.ReferenceCamera;

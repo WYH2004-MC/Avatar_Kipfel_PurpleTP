@@ -11,6 +11,9 @@ half3 MaybeSaturate(half3 value, bool apply)
 #define SAMPLE_MASK(texName, uv) \
     (tex2D(texName, VRCHAT_TRANSFORM_ATLAS_TEX_MODE(uv, texName))[VRCHAT_GET_ATLAS_PROPERTY(texName##Channel)])
 
+#define SAMPLE_MASK_GRAD(texName, uv, ddx, ddy) \
+(tex2Dgrad(texName, VRCHAT_TRANSFORM_ATLAS_TEX_MODE(uv, texName), ddx, ddy)[VRCHAT_GET_ATLAS_PROPERTY(texName##Channel)])
+
 half3 F_Schlick(half3 f0, half vdh, half vdn)
 {
     return f0 + (1.0 - f0) * pow((1.0 - vdh) * (1-vdn), 5.0);
@@ -384,6 +387,51 @@ void ApplyDetailMap(Surface surface, inout half4 albedo)
     }
 }
 #endif
+
+float3 BlendAdditive(float3 base, float3 blend)
+{
+    return min(1, base + blend);
+}
+
+void ApplyColorMask(
+    half4 colorMask,
+     half4 colorMaskColor1,
+     half4 colorMaskColor2,
+     half4 colorMaskColor3,
+     half4 colorMaskColor4,
+     uint blendMode,
+     inout half3 albedo,
+     inout half3 emission)
+{
+    const float3 grayscaleVector = float3(0.3, 0.59, 0.11);
+    half grayscale = dot(albedo, grayscaleVector);
+
+    half opacity1 = colorMask.r * colorMaskColor1.a;
+    half opacity2 = colorMask.g * colorMaskColor2.a;
+    half opacity3 = colorMask.b * colorMaskColor3.a;
+    half opacity4 = colorMask.a * colorMaskColor4.a;
+
+    UNITY_BRANCH
+    if (blendMode == COLORMASK_BLEND_MULTIPLY)
+    {
+        albedo = lerp(albedo, grayscale * colorMaskColor1.rgb, opacity1);
+        albedo = lerp(albedo, grayscale * colorMaskColor2.rgb, opacity2);
+        albedo = lerp(albedo, grayscale * colorMaskColor3.rgb, opacity3);
+        albedo = lerp(albedo, grayscale * colorMaskColor4.rgb, opacity4);
+    }
+    else if (blendMode == COLORMASK_BLEND_ADDITIVE)
+    {
+        albedo = lerp(albedo, BlendAdditive(grayscale, colorMaskColor1.rgb), opacity1);
+        albedo = lerp(albedo, BlendAdditive(grayscale, colorMaskColor2.rgb), opacity2);
+        albedo = lerp(albedo, BlendAdditive(grayscale, colorMaskColor3.rgb), opacity3);
+        albedo = lerp(albedo, BlendAdditive(grayscale, colorMaskColor4.rgb), opacity4);
+    }
+
+    emission += colorMaskColor1.rgb * colorMask.r * _ColorMaskEmissionStrength1;
+    emission += colorMaskColor2.rgb * colorMask.g * _ColorMaskEmissionStrength2;
+    emission += colorMaskColor3.rgb * colorMask.b * _ColorMaskEmissionStrength3;
+    emission += colorMaskColor4.rgb * colorMask.a * _ColorMaskEmissionStrength4;
+}
 
 LightVectors PopulateLightingVectors(Surface surface, float3 worldPos, half3 worldNormal, half3 tangent, half3 bitangent)
 {

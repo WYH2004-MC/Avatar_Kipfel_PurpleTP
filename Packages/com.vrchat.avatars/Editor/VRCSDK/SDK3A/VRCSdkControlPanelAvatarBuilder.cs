@@ -36,6 +36,7 @@ using VRC.SDK3A.Editor;
 using VRC.SDK3A.Editor.Elements;
 using VRC.SDKBase;
 using VRC.SDKBase.Editor.Elements;
+using VRC.Utility;
 using Object = UnityEngine.Object;
 using Progress = UnityEditor.Progress;
 using VRCStation = VRC.SDK3.Avatars.Components.VRCStation;
@@ -984,7 +985,13 @@ namespace VRC.SDK3A.Editor
                     null);
             }
 
-            ScanAvatarForAutoDestructComponents(avatar, out List<ParticleSystem> autoDestructSystems, out List<ParticleSystem> autoDisableRootSystems, out List<TrailRenderer> autoDestructTrails);
+            ScanAvatarForProblematicParticleSystems(avatar,
+                out List<ParticleSystem> autoDestructSystems,
+                out List<ParticleSystem> autoDisableRootSystems,
+                out List<TrailRenderer> autoDestructTrails,
+                out List<ParticleSystem> collisionLayerSystems,
+                out List<ParticleSystem> lightSystems
+            );
             if (autoDestructSystems.Count > 0)
             {
                 _builder.OnGUIError(avatar,
@@ -1025,6 +1032,44 @@ namespace VRC.SDK3A.Editor
                         foreach (TrailRenderer trail in autoDestructTrails)
                         {
                             trail.autodestruct = false;
+                        }
+                    });
+            }
+            if (collisionLayerSystems.Count > 0)
+            {
+                _builder.OnGUIError(avatar,
+                    "This avatar contains one or more particle systems configured to apply collision forces to Pickups and/or Items. This is not allowed. Please either disable collision against these layers, or set the collider force to zero.",
+                    () => Selection.objects = CreateObjectArray(collisionLayerSystems),
+                    () =>
+                    {
+                        bool wipeLayers = EditorUtility.DisplayDialog("Particle Collision", "How would you like to resolve collision problems for the affected particle systems?", "Disable collision against protected layers", "Set collider force to zero");
+                        foreach (ParticleSystem system in collisionLayerSystems)
+                        {
+                            ParticleSystem.CollisionModule collisionModule = system.collision;
+                            if (wipeLayers)
+                            {
+                                // Intersect with everything EXCEPT the forbidden layers.
+                                collisionModule.collidesWith &= ~LayerHelper.Mask_ParticleCollisionForceForbiddenLayerMask;
+                            }
+                            else
+                            {
+                                collisionModule.colliderForce = 0.0f;
+                            }
+                        }
+                    });
+            }
+            if (lightSystems.Count > 0)
+            {
+                // Not an error, but warn against this increasing the light count without actually using any light components.
+                _builder.OnGUIWarning(avatar,
+                    "This avatar contains one or more particle systems configured to emit dynamic lights. These lights will be included in the overall Light count for this avatar, which may impact its performance rank. Click Auto Fix to clear lights from these particle systems.",
+                    () => Selection.objects = CreateObjectArray(lightSystems),
+                    () =>
+                    {
+                        foreach (ParticleSystem lightSystem in lightSystems)
+                        {
+                            ParticleSystem.LightsModule lightsModule = lightSystem.lights;
+                            lightsModule.light = null;
                         }
                     });
             }
@@ -1110,7 +1155,7 @@ namespace VRC.SDK3A.Editor
                         show = GetAvatarSubSelectAction<Cloth>(avatar);
                         break;
                     case AvatarPerformanceCategory.LightCount:
-                        show = GetAvatarSubSelectAction<Light>(avatar);
+                        show = GetLightsSelectAction(avatar);
                         break;
                     case AvatarPerformanceCategory.LineRendererCount:
                         show = GetAvatarSubSelectAction<LineRenderer>(avatar);
@@ -1172,6 +1217,9 @@ namespace VRC.SDK3A.Editor
                     case AvatarPerformanceCategory.ConstraintDepth:
                         // Behaves slightly differently from constraint count, we want to select the VRChat constraints at the end of the deepest chain(s) instead.
                         show = AvatarDynamicsSetup.GetDeepestConstraintSubSelection(avatar);
+                        break;
+                    case AvatarPerformanceCategory.RaycastCount:
+                        show = GetAvatarSubSelectAction<VRCRaycast>(avatar);
                         break;
                 }
 
@@ -3192,6 +3240,12 @@ namespace VRC.SDK3A.Editor
 
         private async Task VerifyUploadPermissions()
         {
+            // During multi-platform builds, permissions were already verified on the first platform.
+            // Skip re-checking on subsequent platforms because the assembly reload from a platform
+            // switch can cause APIUser.CurrentUser to be null while the user fetch is still in-flight.
+            if (VRCMultiPlatformBuild.MPB && VRCMultiPlatformBuild.MPBBuiltCount > 0)
+                return;
+
             if (!(APIUser.CurrentUser?.canPublishAvatars ?? false))
             {
                 VRCSdkControlPanel.ShowContentPublishPermissionsDialog();
@@ -3769,6 +3823,36 @@ namespace VRC.SDK3A.Editor
                     if (condition == null || condition(c))
                     {
                         gos.Add(c.gameObject);
+                    }
+                }
+
+                Selection.objects = gos.Count > 0 ? gos.ToArray() : new Object[] {avatar.gameObject};
+            };
+        }
+
+        private static Action GetLightsSelectAction(Component avatar)
+        {
+            return () =>
+            {
+                // Lights need special treatment because they can also be implicitly created via particle systems.
+                // Select both raw Light components and any particle systems configured to create lights.
+                List<Object> gos = new List<Object>();
+
+                List<Light> lightComponents = avatar.gameObject.GetComponentsInChildrenExcludingEditorOnly<Light>(true);
+                foreach (Light lightComponent in lightComponents)
+                {
+                    gos.Add(lightComponent.gameObject);
+                }
+
+                List<ParticleSystem> particleSystemComponents = avatar.gameObject.GetComponentsInChildrenExcludingEditorOnly<ParticleSystem>(true);
+                // list only the offending systems
+                foreach (var particleSystem in particleSystemComponents)
+                {
+                    // Deliberately including disabled lights modules, as they may be animated back on later
+                    bool isLightOffender = particleSystem.lights.light != null && particleSystem.lights.maxLights > 0;
+                    if (isLightOffender)
+                    {
+                        gos.Add(particleSystem.gameObject);
                     }
                 }
 
@@ -4633,11 +4717,19 @@ namespace VRC.SDK3A.Editor
             return errorClips;
         }
 
-        private static void ScanAvatarForAutoDestructComponents(VRC_AvatarDescriptor avatar, out List<ParticleSystem> autoDestructSystems, out List<ParticleSystem> autoDisableRootSystems, out List<TrailRenderer> autoDestructTrails)
+        private static void ScanAvatarForProblematicParticleSystems(VRC_AvatarDescriptor avatar,
+            out List<ParticleSystem> autoDestructSystems,
+            out List<ParticleSystem> autoDisableRootSystems,
+            out List<TrailRenderer> autoDestructTrails,
+            out List<ParticleSystem> collisionLayerSystems,
+            out List<ParticleSystem> lightSystems
+        )
         {
             autoDestructSystems = new List<ParticleSystem>();
             autoDisableRootSystems = new List<ParticleSystem>();
             autoDestructTrails = new List<TrailRenderer>();
+            collisionLayerSystems = new List<ParticleSystem>();
+            lightSystems = new List<ParticleSystem>();
 
             if (avatar == null)
             {
@@ -4654,6 +4746,19 @@ namespace VRC.SDK3A.Editor
                 else if (system.main.stopAction == ParticleSystemStopAction.Disable && system.gameObject == avatar.gameObject)
                 {
                     autoDisableRootSystems.Add(system);
+                }
+
+                // Scan for applying forces to illegal layers. This only applies when not using planes.
+                if (system.collision.type == ParticleSystemCollisionType.World && system.collision.colliderForce != 0.0f && (system.collision.collidesWith & LayerHelper.Mask_ParticleCollisionForceForbiddenLayerMask) > 0)
+                {
+                    collisionLayerSystems.Add(system);
+                }
+
+                // Scan for particle systems producing light. These aren't illegal, but they will contribute to the avatar's light count.
+                // We check to see if a light component is assigned, even if the module is off, as the module might be animated on later.
+                if (system.lights.light != null && system.lights.maxLights > 0)
+                {
+                    lightSystems.Add(system);
                 }
             }
 

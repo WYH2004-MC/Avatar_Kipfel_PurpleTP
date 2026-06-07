@@ -32,15 +32,16 @@ public static class Tracing
 
     public static bool IsEnabled(TracingArea area) => (Enabled & area) != 0;
 
-    public static void Trace(TracingArea area, string msg)
-    {
-        if (IsEnabled(area)) Debug.Log(msg);
-    }
-
     public static void Trace(TracingArea area,
         [InterpolatedStringHandlerArgument("area")] TracingInterpolatedStringHandler builder)
     {
         if (IsEnabled(area)) Debug.Log(builder.GetFormattedText());
+    }
+
+    public static void TraceError(TracingArea area,
+        [InterpolatedStringHandlerArgument("area")] TracingInterpolatedStringHandler builder)
+    {
+        if (IsEnabled(area)) Debug.LogError(builder.GetFormattedText());
     }
 }
 
@@ -49,6 +50,10 @@ public enum TracingArea : uint
 {
     ApplyObjectMapping = 1,
     BuildObjectMapping = 2,
+    AnimatorParser = 4,
+    TraceAndOptimizeDecision = 8,
+    OptimizeTexture = 16,
+    Assertions = 32,
     None = 0,
     All = uint.MaxValue,
 }
@@ -81,7 +86,7 @@ public readonly struct TracingInterpolatedStringHandler
     internal string? GetFormattedText() => _builder?.ToString();
 }
 
-internal class TracingManagerWindow : EditorWindow
+internal sealed class TracingManagerWindow : EditorWindow
 {
     [MenuItem("Tools/Avatar Optimizer/TracingLog Manager")]
     public static void OpenWindow() => GetWindow<TracingManagerWindow>("TracingLog Manager");

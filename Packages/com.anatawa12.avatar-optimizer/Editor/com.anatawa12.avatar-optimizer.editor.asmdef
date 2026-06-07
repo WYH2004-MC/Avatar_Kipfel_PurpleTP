@@ -2,6 +2,7 @@
     "name": "com.anatawa12.avatar-optimizer.editor",
     "rootNamespace": "Anatawa12.AvatarOptimizer",
     "references": [
+        "com.anatawa12.avatar-optimizer.development.analyzers",
         "com.anatawa12.avatar-optimizer.internal.localization.editor",
         "com.anatawa12.avatar-optimizer.internal.localization.runtime",
         "com.anatawa12.avatar-optimizer.runtime",
@@ -62,6 +63,16 @@
             "name": "com.vrchat.avatars",
             "expression": "3.8.0",
             "define": "AAO_VRCSDK3_AVATARS_IGNORE_OTHER_PHYSBONE"
+        },
+        {
+            "name": "com.vrchat.avatars",
+            "expression": "3.10.3-beta.2",
+            "define": "AAO_VRCSDK3_AVATARS_VRC_RAYCAST"
+        },
+        {
+            "name": "com.vrchat.avatars",
+            "expression": "3.10.4-beta.1",
+            "define": "AAO_VRCSDK3_AVATARS_PHYSBONE_GLOBAL_COLLIDER"
         },
         {
             "name": "com.vrmc.univrm",
