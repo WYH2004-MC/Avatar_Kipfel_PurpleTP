@@ -298,6 +298,20 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "jp.lilxyzw.nontoon": {
+      "version": "file:jp.lilxyzw.nontoon",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "jp.lilxyzw.shadercore": {
+      "version": "file:jp.lilxyzw.shadercore",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.0.0"
+      }
+    },
     "lyuma.av3emulator": {
       "version": "file:lyuma.av3emulator",
       "depth": 0,
