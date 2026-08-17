@@ -20,6 +20,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Deprecated
 
+## [1.14.4] - [2026-08-09]
+
+### Fixed
+- [#825] Compile error with VRChat SDK 3.9.0 or earlier
+
+## [1.14.3] - [2026-08-03]
+
+### Fixed
+- [#824] Additional performance improvements in NDMF preview
+
+## [1.14.2] - [2026-08-02]
+
+### Fixed
+- [#821] Changes to VRCConstraints may not affect behavior of VRCConstraints
+- [#822] Fix an occasional NullReferenceError in ProxyPipeline
+- [#823] Performance improvements for NDMF previews
+
+## [1.14.1] - [2026-07-18]
+
+### Added
+- [#818] Added single-step debugger functionality
+
+### Fixed
+- [#813] `AnimationIndex.EditClipsByBinding` bindings added in a callback were not reflected in subsequent calls.
+
+## [1.14.0] - [2026-06-29]
+
+### Added
+- [#804] Added `VirtualAnimatorController.SetParameter`
+
+### Fixed
+- [#795] Fix compatibility issues with Unity 6000.x
+- [#809] `PropCache` could become permanently stale if its compute or refresh operators throw.
+- [#811] Add explicit error when the avatar root is set to `EditorOnly`
+
+### Changed
+- [#810] Update Simplified Chinese localization
+
 ## [1.13.1] - [2026-05-14]
 
 ### Fixed

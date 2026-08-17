@@ -50,6 +50,9 @@
     },
     "jp.lilxyzw.nontoon": {
       "version": "0.1.3"
+    },
+    "com.github.kurotu.vrc-quest-tools": {
+      "version": "2.11.7"
     }
   },
   "locked": {
@@ -115,7 +118,7 @@
       "dependencies": {}
     },
     "nadena.dev.ndmf": {
-      "version": "1.13.1",
+      "version": "1.14.4",
       "dependencies": {}
     },
     "nadena.dev.modular-avatar.resonite": {
@@ -152,6 +155,12 @@
     "jp.lilxyzw.shadercore": {
       "version": "0.1.9",
       "dependencies": {}
+    },
+    "com.github.kurotu.vrc-quest-tools": {
+      "version": "2.11.7",
+      "dependencies": {
+        "com.vrchat.avatars": "^3.3.0"
+      }
     }
   }
 }

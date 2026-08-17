@@ -1,0 +1,89 @@
+{
+    "name": "VRCQuestTools-Editor",
+    "references": [
+        "VRCQuestTools",
+        "VRC.SDK3A.Editor",
+        "VRC.SDKBase",
+        "nadena.dev.modular-avatar.core"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "VRCCore-Editor.dll",
+        "VRCSDKBase.dll",
+        "VRCSDKBase-Editor.dll",
+        "VRCSDK3A.dll",
+        "VRC.Dynamics.dll",
+        "VRC.SDK3.Dynamics.PhysBone.dll",
+        "Newtonsoft.Json.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.vrchat.base",
+            "expression": "3.6.2-constraints.3",
+            "define": "VQT_HAS_VRCSDK_CONSTRAINTS"
+        },
+        {
+            "name": "com.vrchat.avatars",
+            "expression": "3.7.5",
+            "define": "VQT_HAS_VRCSDK_LOCAL_CONTACT_RECEIVER"
+        },
+        {
+            "name": "com.vrchat.avatars",
+            "expression": "3.7.6-beta.1",
+            "define": "VQT_HAS_VRCSDK_LOCAL_CONTACT_SENDER"
+        },
+        {
+            "name": "com.vrchat.avatars",
+            "expression": "3.8.1-beta.1",
+            "define": "VQT_HAS_VRCSDK_NO_PRECHECK"
+        },
+        {
+            "name": "com.vrchat.avatars",
+            "expression": "3.8.1",
+            "define": "VQT_HAS_VRCSDK_TOON_STANDARD"
+        },
+        {
+            "name": "com.unity.nuget.newtonsoft-json",
+            "expression": "",
+            "define": "VQT_HAS_NEWTONSOFT_JSON"
+        },
+        {
+            "name": "com.vrchat.base",
+            "expression": "",
+            "define": "VQT_HAS_VRCSDK_BASE"
+        },
+        {
+            "name": "nadena.dev.ndmf",
+            "expression": "",
+            "define": "VQT_HAS_NDMF"
+        },
+        {
+            "name": "nadena.dev.modular-avatar",
+            "expression": "1.0.0",
+            "define": "VQT_HAS_MODULAR_AVATAR"
+        },
+        {
+            "name": "nadena.dev.modular-avatar",
+            "expression": "1.8.0",
+            "define": "VQT_HAS_MODULAR_AVATAR_WFO"
+        },
+        {
+            "name": "nadena.dev.modular-avatar",
+            "expression": "1.9.0",
+            "define": "VQT_HAS_MODULAR_AVATAR_WFO_ANDROID"
+        },
+        {
+            "name": "nadena.dev.modular-avatar",
+            "expression": "1.9.14",
+            "define": "VQT_HAS_MA_CONVERT_CONSTRAINTS"
+        }
+    ],
+    "noEngineReferences": false
+}

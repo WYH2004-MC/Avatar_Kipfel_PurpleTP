@@ -1,4 +1,4 @@
-﻿#region
+#region
 
 using System;
 using System.Collections.Generic;
@@ -6,6 +6,7 @@ using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Linq;
 using JetBrains.Annotations;
+using nadena.dev.ndmf.localization;
 using nadena.dev.ndmf.platform;
 using nadena.dev.ndmf.reporting;
 using nadena.dev.ndmf.runtime.components;
@@ -124,10 +125,23 @@ namespace nadena.dev.ndmf
             {
                 obj.AddComponent<NDMFAvatarRoot>();
             }
-            
+
             BuildEvent.Dispatch(new BuildEvent.BuildStarted(obj));
             _registry = new ObjectRegistry(obj.transform);
             _report = ErrorReport.Create(obj, isClone);
+            if (obj.CompareTag("EditorOnly"))
+            {
+                var error = new InlineError(
+                    NDMFLocales.L, ErrorSeverity.Error,
+                    "Errors:EditorOnlyAvatarRoot"
+                );
+                error.AddReference(ObjectRegistry.GetReference(obj));
+                _report.AddError(error);
+                ErrorReportWindow.ShowErrorReportWindow();
+
+                throw new Exception(
+                    "Can't process an avatar whose root object is marked as EditorOnly");
+            }
 
             Debug.Log("Starting processing for avatar: " + obj.name);
             sw.Start();
@@ -334,33 +348,103 @@ namespace nadena.dev.ndmf
                     activationTimes = activationTimes.Add(ty, sw2.Elapsed.TotalMilliseconds);
                 }
 
-                Stopwatch passTimer = new Stopwatch();
-                passTimer.Start();
-                Profiler.BeginSample(pass.Description);
-                try
-                {
-                    pass.Execute(this);
-                }
-                catch (Exception e)
-                {
-                    pass.Plugin.OnUnhandledException(e);
-                    ErrorReport.ReportException(e);
-                }
-                finally
-                {
-                    Profiler.EndSample();
-                    passTimer.Stop();
-                }
-
-                BuildEvent.Dispatch(new BuildEvent.PassExecuted(
-                    pass.InstantiatedPass.QualifiedName,
-                    passTimer.Elapsed.TotalMilliseconds,
-                    activationTimes,
-                    deactivationTimes
-                ));
+                ExecutePassBody(pass, activationTimes, deactivationTimes);
 
                 sw.Stop();
             }
+        }
+
+        internal void RunExtensionContextDeactivation(ConcretePass pass, Type extensionType)
+        {
+            using var _platformScope = new AmbientPlatform.Scope(PlatformProvider);
+            using (new ExecutionScope(this))
+            using (_report.WithContext(pass.Plugin as PluginBase))
+            using (_report.WithContextPassName(pass.Description))
+            {
+                sw.Start();
+                try
+                {
+                    DeactivateExtensionContext(extensionType);
+                }
+                finally
+                {
+                    sw.Stop();
+                }
+            }
+        }
+
+        internal void RunExtensionContextActivation(ConcretePass pass, Type extensionType)
+        {
+            using var _platformScope = new AmbientPlatform.Scope(PlatformProvider);
+            using (new ExecutionScope(this))
+            using (_report.WithContext(pass.Plugin as PluginBase))
+            using (_report.WithContextPassName(pass.Description))
+            {
+                sw.Start();
+                try
+                {
+                    ActivateExtensionContext(extensionType);
+                }
+                finally
+                {
+                    sw.Stop();
+                }
+            }
+        }
+
+        internal void RunPassBody(ConcretePass pass)
+        {
+            using var _platformScope = new AmbientPlatform.Scope(PlatformProvider);
+            using (new ExecutionScope(this))
+            using (_report.WithContext(pass.Plugin as PluginBase))
+            using (_report.WithContextPassName(pass.Description))
+            {
+                sw.Start();
+                try
+                {
+                    ExecutePassBody(
+                        pass,
+                        ImmutableDictionary<Type, double>.Empty,
+                        ImmutableDictionary<Type, double>.Empty
+                    );
+                }
+                finally
+                {
+                    sw.Stop();
+                }
+            }
+        }
+
+        private void ExecutePassBody(
+            ConcretePass pass,
+            ImmutableDictionary<Type, double> activationTimes,
+            ImmutableDictionary<Type, double> deactivationTimes
+        )
+        {
+            var passTimer = new Stopwatch();
+            passTimer.Start();
+            Profiler.BeginSample(pass.Description);
+            try
+            {
+                pass.Execute(this);
+            }
+            catch (Exception e)
+            {
+                pass.Plugin.OnUnhandledException(e);
+                ErrorReport.ReportException(e);
+            }
+            finally
+            {
+                Profiler.EndSample();
+                passTimer.Stop();
+            }
+
+            BuildEvent.Dispatch(new BuildEvent.PassExecuted(
+                pass.InstantiatedPass.QualifiedName,
+                passTimer.Elapsed.TotalMilliseconds,
+                activationTimes,
+                deactivationTimes
+            ));
         }
 
         public void DeactivateAllExtensionContexts()
