@@ -730,6 +730,29 @@ namespace VRC.SDKBase
             }
         }
 
+        internal static string GetPlatformString(BuildTarget target)
+        {
+            string platformString;
+            switch (target)
+            {
+                case BuildTarget.StandaloneWindows:
+                case BuildTarget.StandaloneWindows64:
+                    platformString = "standalonewindows";
+                    break;
+                case BuildTarget.iOS:
+                    platformString = "ios";
+                    break;
+                case BuildTarget.Android:
+                    platformString = "android";
+                    break;
+                default:
+                    platformString = "unknownplatform";
+                    break;
+            }
+
+            return platformString;
+        }
+
         internal static bool DryRunState
         {
             get => SessionState.GetBool("VRC.SDKBase.DryRun", false);

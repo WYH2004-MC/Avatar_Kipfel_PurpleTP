@@ -18,6 +18,8 @@ namespace VRC.ToonStandard
         public bool matcap = true;
         public bool outline = true;
         public bool hueShift = true;
+        public bool audioLink = true;
+        public bool audioLinkNote = true;
 
         public bool mainTex = false;
         public bool hueShiftMaskTex = false;
@@ -34,6 +36,7 @@ namespace VRC.ToonStandard
         public bool outlineTex = false;
         public bool colorMask = false;
         public bool colorMaskTex = false;
+        public bool audioLinkMaskTex = false;
     }
 
     public enum BlendModes
@@ -138,6 +141,27 @@ namespace VRC.ToonStandard
         protected MaterialProperty _ColorMaskEmissionStrength2;
         protected MaterialProperty _ColorMaskEmissionStrength3;
         protected MaterialProperty _ColorMaskEmissionStrength4;
+        
+        protected MaterialProperty _AudioLinkMode;
+        protected MaterialProperty _AudioLinkMask;
+        protected MaterialProperty _ALBlendMode;
+        protected MaterialProperty _ALTint;
+        protected MaterialProperty _ALIntensity;
+        protected MaterialProperty _ALMaskByEmission;
+        protected MaterialProperty _ALMaskChannel;
+        protected MaterialProperty _ALMaskUVChannel;
+        protected MaterialProperty _ALRimMaskStrength;
+        protected MaterialProperty _ALRimMaskSmoothing;
+        protected MaterialProperty _ALEffectUseMask;
+        protected MaterialProperty _ALEffectMaskChannel;
+        protected MaterialProperty _ALBand;
+        protected MaterialProperty _ALSmoothing;
+        protected MaterialProperty _ALScrollCenterOut;
+        protected MaterialProperty _ALScrollScale;
+        protected MaterialProperty _ALEffectUVChannel;
+        protected MaterialProperty _ALBarSmoothing;
+        protected MaterialProperty _ALEnableFallback;
+        protected MaterialProperty _ALFallbackSpeed;
 
         protected LocalKeyword USE_SPECULAR;
         protected LocalKeyword USE_MATCAP;
@@ -147,6 +171,7 @@ namespace VRC.ToonStandard
         protected LocalKeyword USE_OCCLUSION_MAP;
         protected LocalKeyword USE_HUE_SHIFT;
         protected LocalKeyword USE_COLOR_MASK;
+        protected LocalKeyword USE_AUDIOLINK;
 
         private int BlendMode = 0;
         private ShadowRamp RampMode = 0;
@@ -219,6 +244,7 @@ namespace VRC.ToonStandard
             DrawMatcap(materialEditor, material);
             DrawRimlighting(materialEditor, material);
             DrawColorMask(materialEditor, material);
+            DrawAudioLink(materialEditor, material);
             HandleBlendModes(materialEditor, material);
 
             EditorGUI.EndChangeCheck();
@@ -723,6 +749,140 @@ namespace VRC.ToonStandard
             EndGroup();
         }
 
+        private void DrawAudioLink(MaterialEditor materialEditor, Material material)
+        {
+            Foldouts toggles = Foldouts[material];
+            BeginGroup(ref toggles.audioLink, "AudioLink", USE_AUDIOLINK, ResetAudioLink);
+            if (toggles.audioLink)
+            {
+                GUILayout.Space(MARGIN_TOP);
+                toggles.audioLinkNote = EditorGUILayout.Foldout(toggles.audioLinkNote, "What is AudioLink");
+                if (toggles.audioLinkNote)
+                {
+                    using (new EditorGUILayout.VerticalScope(EditorStyles.helpBox))
+                    {
+                        EditorGUILayout.LabelField("AudioLink is a community-created system to pass audio data between worlds and avatars.\n" +
+                                                   "To see it in action while configuring effects in editor, you need to install the \"AudioLink\" curated package from the VRChat Creator Companion.\n" +
+                                                   "However, if you already configured everything how you want, your effects will work in-game even if uploaded without the \"AudioLink\" package in your project.\n\n" +
+                                                   "The effects you configure will only react to audio in worlds that have AudioLink set up in them.\n" +
+                                                   "If you want some passive effects to show up even when AudioLink is not present in the world, you can use the \"Fallback Behaviour\" settings at the bottom of this section.", EditorStyles.wordWrappedLabel);
+                    }
+                    GUILayout.Space(MARGIN_TOP);
+                }
+                using (new EditorGUI.DisabledScope(!material.IsKeywordEnabled(USE_AUDIOLINK)))
+                {
+                    // Mode and Band
+                    materialEditor.ShaderProperty(_ALTint, _ALTint.displayName);
+                    materialEditor.ShaderProperty(_ALIntensity, _ALIntensity.displayName);
+                    materialEditor.ShaderProperty(_ALBlendMode, _ALBlendMode.displayName);
+                    materialEditor.ShaderProperty(
+                        _AudioLinkMode,
+                        new GUIContent(
+                            _AudioLinkMode.displayName, 
+                            "UV Based (X) switches to UV-driven AudioLink Mode selection. " +
+                            "Every UV tile is mapped to a different Mode based on the X-axis value.\n\n" +
+                            "E.g., any face within the X: 0-1 range will be using the Pulse effect, any face within X: 1-2 range will use the Scroll effect, etc.\n\n" +
+                            "All effect settings are visible at once when this is selected."
+                        )
+                    );
+                    materialEditor.ShaderProperty(_ALEffectUVChannel, _ALEffectUVChannel.displayName);
+                    
+                    // If mode is driven by UV - all settings are available at once
+                    bool uvDrivenMode = _AudioLinkMode.floatValue > 2;
+                    var mode = Mathf.FloorToInt(_AudioLinkMode.floatValue);
+                    
+                    // Masking
+                    GUILayout.Space(MARGIN_TOP);
+                    EditorGUILayout.LabelField("Masking", EditorStyles.boldLabel);
+                    materialEditor.ShaderProperty(_ALMaskByEmission, _ALMaskByEmission.displayName);
+                    if (_ALMaskByEmission.floatValue < 1 || ((mode == 1 || uvDrivenMode) && _ALEffectUseMask.floatValue > 0))
+                    {
+                        DrawTexture(materialEditor, _AudioLinkMask.displayName, _AudioLinkMask, null, ref toggles.audioLinkMaskTex);
+                    }
+                    if (_ALMaskByEmission.floatValue < 1)
+                    {
+                        materialEditor.ShaderProperty(_ALMaskUVChannel,  _ALMaskUVChannel.displayName);
+                    }
+                    materialEditor.ShaderProperty(_ALMaskChannel, _ALMaskChannel.displayName);
+                    materialEditor.ShaderProperty(_ALRimMaskStrength, new GUIContent(_ALRimMaskStrength.displayName, "Non-zero values will apply Rim Light-style mask to the effect."));
+                    materialEditor.ShaderProperty(_ALRimMaskSmoothing, _ALRimMaskSmoothing.displayName);
+                    
+                    // Effect Settings
+                    GUILayout.Space(MARGIN_TOP);
+                    var header = "Effect Settings";
+                    if (!uvDrivenMode)
+                    {
+                        switch (mode)
+                        {
+                            case 0: header = "Pulse Effect Settings"; break;
+                            case 1: header = "Scroll Effect Settings"; break;
+                            case 2: header = "Bar Effect Settings"; break;
+                        }
+                    }
+                    EditorGUILayout.LabelField(header, EditorStyles.boldLabel);
+                    
+                    materialEditor.ShaderProperty(
+                        _ALBand,
+                        new GUIContent(
+                            _ALBand.displayName,
+                            "UV Based (Y) switches to UV-driven AudioLink Band selection. " +
+                            "Every UV tile is mapped to a different Band based on the Y-axis value.\n\n" +
+                            "E.g. any face within the Y: 0-1 range will be using the Bass Band, any face within Y: 1-2 range will use the Mids Band, etc"
+                        )
+                    );
+                    
+                    // Bar and Pulse support band smoothing
+                    if (mode != 1 || uvDrivenMode)
+                    {
+                        materialEditor.ShaderProperty(_ALSmoothing, _ALSmoothing.displayName);
+                    }
+                    
+                    // Per-Effect settings
+                    if (mode > 0 || uvDrivenMode)
+                    {
+                        materialEditor.ShaderProperty(
+                            _ALEffectUseMask,
+                            new GUIContent(
+                                _ALEffectUseMask.displayName, 
+                                "Switches to using a channel of Audio Link Mask instead of UV coordinates to drive Scroll and Bar effects mapping. " +
+                                "The chosen channel should contain 0-1 gradients to map effects on.\n\n" +
+                                "For Scroll Effects, 0 is where the scroll starts, and 1 is where it ends.\n\n" +
+                                "For Bar effects, 0 is no volume on the selected band, and 1 is full volume."
+                            )
+                        );
+                        var useMaskForEffects = _ALEffectUseMask.floatValue > 0;
+                        if (useMaskForEffects)
+                        {
+                            materialEditor.ShaderProperty(_ALEffectMaskChannel, _ALEffectMaskChannel.displayName);
+                        }
+                        
+                        // Scroll-Specific stuff
+                        if (mode == 1 || uvDrivenMode)
+                        {
+                            materialEditor.ShaderProperty(_ALScrollCenterOut, _ALScrollCenterOut.displayName);
+                            materialEditor.ShaderProperty(_ALScrollScale, _ALScrollScale.displayName);
+                        }
+                        
+                        // Bar-Specific stuff
+                        if (mode == 2 || uvDrivenMode)
+                        {
+                            materialEditor.ShaderProperty(_ALBarSmoothing, _ALBarSmoothing.displayName);
+                        }
+                    }
+                    
+                    GUILayout.Space(MARGIN_TOP);
+                    EditorGUILayout.LabelField("Fallback Behaviour", EditorStyles.boldLabel);
+                    materialEditor.ShaderProperty(_ALEnableFallback, new GUIContent(_ALEnableFallback.displayName, "Enabling this will show fixed beat pulses even in worlds without AudioLink."));
+                    if (_ALEnableFallback.floatValue > 0)
+                    {
+                        materialEditor.ShaderProperty(_ALFallbackSpeed, _ALFallbackSpeed.displayName);
+                    }
+                }
+                GUILayout.Space(MARGIN_BOTTOM);
+            }
+            EndGroup();
+        }
+
         private bool AllTargetsHaveNoAlpha(MaterialEditor materialEditor)
         {
             foreach (var target in materialEditor.targets)
@@ -788,6 +948,30 @@ namespace VRC.ToonStandard
             ResetToDefault(material, _ColorMaskEmissionStrength2);
             ResetToDefault(material, _ColorMaskEmissionStrength3);
             ResetToDefault(material, _ColorMaskEmissionStrength4);
+        }
+
+        private void ResetAudioLink()
+        {
+            ResetToDefault(material, _AudioLinkMode);
+            ResetToDefault(material, _AudioLinkMask);
+            ResetToDefault(material, _ALBlendMode);
+            ResetToDefault(material, _ALTint);
+            ResetToDefault(material, _ALIntensity);
+            ResetToDefault(material, _ALMaskByEmission);
+            ResetToDefault(material, _ALMaskChannel);
+            ResetToDefault(material, _ALMaskUVChannel);
+            ResetToDefault(material, _ALRimMaskStrength);
+            ResetToDefault(material, _ALRimMaskSmoothing);
+            ResetToDefault(material, _ALEffectUseMask);
+            ResetToDefault(material, _ALEffectMaskChannel);
+            ResetToDefault(material, _ALBand);
+            ResetToDefault(material, _ALSmoothing);
+            ResetToDefault(material, _ALScrollCenterOut);
+            ResetToDefault(material, _ALScrollScale);
+            ResetToDefault(material, _ALEffectUVChannel);
+            ResetToDefault(material, _ALBarSmoothing);
+            ResetToDefault(material, _ALEnableFallback);
+            ResetToDefault(material, _ALFallbackSpeed);
         }
 
         private void HandleBlendModes(MaterialEditor materialEditor, Material material)

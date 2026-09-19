@@ -45,7 +45,7 @@ half4 frag (v2f i, uint facing : SV_IsFrontFace) : SV_Target
 
     //surface.cutoff = material.cutoff;
 
-    surface.albedoMap = tex2D(_MainTex, VRCHAT_TRANSFORM_ATLAS_TEX_MODE(uv0, _MainTex))
+    surface.albedoMap = UNITY_SAMPLE_TEX2D(_MainTex, VRCHAT_TRANSFORM_ATLAS_TEX_MODE(uv0, _MainTex))
         * VRCHAT_GET_ATLAS_PROPERTY(_Color)
         * half4(i.color, 1);
     

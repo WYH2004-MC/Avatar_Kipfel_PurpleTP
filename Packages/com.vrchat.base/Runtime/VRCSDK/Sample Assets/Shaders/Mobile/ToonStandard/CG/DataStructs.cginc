@@ -20,6 +20,10 @@ struct v2f
     half4 tangent : TEXCOORD3;
     half3 viewDir : TEXCOORD4;
     half3 color : COLOR;
+    
+    #if defined(NEED_ALL_UV)
+    float4 uv23 : UV_2_3;
+    #endif
 
     #if !defined(UNITY_PASS_SHADOWCASTER)
         UNITY_LIGHTING_COORDS(5, 6)

@@ -77,6 +77,28 @@ Shader "VRChat/Mobile/Toon Standard"
         _ColorMaskEmissionStrength4("Color 4 Emission", Range(0,2)) = 0
         
         [Enum(Multiply, 0, Additive, 1)] _ColorMaskBlendMode("Color Mask Blend Mode", Int) = 0
+        
+        // AudioLink
+        [Enum(Pulse, 0, Scroll, 1, Bar, 2, UV Based (X), 3)]_AudioLinkMode("AudioLink Mode", Int) = 0
+        [Enum(Replace, 0, Additive, 1, Multiply, 2)]_ALBlendMode("Blend Mode", Int) = 0
+        _AudioLinkMask("AudioLink Mask", 2D) = "white" {}
+        _ALTint("AudioLink Tint", Color) = (0,0.8980392,0.627451,1)
+        _ALIntensity("AudioLink Intensity", Range(0,12)) = 1
+        [Enum(UV0, 0, UV1, 1, UV2, 2, UV3, 3)]_ALMaskUVChannel("Mask UV Channel", Int) = 0
+        [ToggleUI]_ALMaskByEmission("Mask By Emission Map", Int) = 1
+        [Enum(RGB, 0, R, 1, G, 2, B, 3, A, 4)]_ALMaskChannel("Mask Channel", Int) = 0
+        _ALRimMaskStrength("Rim Mask Strength", Range(-1,1)) = 0
+        _ALRimMaskSmoothing("Rim Mask Smoothing", Float) = 1
+        [Enum(Bass, 0, Mids, 1, Mid Highs, 2, Highs, 3, UV Based (Y), 4)]_ALBand("AudioLink Band", Int) = 0
+        [IntRange]_ALSmoothing("AudioLink Smoothing", Range(0, 15)) = 7
+        [ToggleUI]_ALEffectUseMask("Use Mask for Effects", Int) = 0
+        [Enum(R, 0, G, 1, B, 2, A, 3)]_ALEffectMaskChannel("Effect Mask Channel", Int) = 0
+        [Enum(UV0, 0, UV1, 1, UV2, 2, UV3, 3)]_ALEffectUVChannel("UV Channel", Int) = 0
+        [ToggleUI]_ALScrollCenterOut("Center-Out Scrolling", Int) = 0
+        _ALScrollScale("Scroll Scale", Float) = 1
+        _ALBarSmoothing("Bar Gradient Smoothing", Range(0.001, 0.99)) = 0.1
+        [ToggleUI]_ALEnableFallback("Enable Fallback", Int) = 0
+        _ALFallbackSpeed("Fallback Speed", Float) = 1
 
         //[Enum(UnityEngine.Rendering.BlendMode)]_SrcBlend ("__src", int) = 1
         //[Enum(UnityEngine.Rendering.BlendMode)]_DstBlend ("__dst", int) = 0
@@ -116,6 +138,8 @@ Shader "VRChat/Mobile/Toon Standard"
             #pragma shader_feature_local_fragment _ USE_DETAIL_MAPS
             #pragma shader_feature_local_fragment _ USE_NORMAL_MAPS
             #pragma shader_feature_local_fragment _ USE_OCCLUSION_MAP
+            // USE_AUDIOLINK conditionally changes v2f, so this cannot be scoped to _fragment
+            #pragma shader_feature_local _ USE_AUDIOLINK
             #pragma dynamic_branch_local_fragment _ USE_RIMLIGHT
             #pragma dynamic_branch_local_fragment _ USE_HUE_SHIFT
             #pragma dynamic_branch_local_fragment _ USE_COLOR_MASK
@@ -130,6 +154,10 @@ Shader "VRChat/Mobile/Toon Standard"
             #ifndef UNITY_PASS_FORWARDBASE
                 #define UNITY_PASS_FORWARDBASE
             #endif
+            
+            #if defined(USE_AUDIOLINK)
+                #define NEED_ALL_UV
+            #endif
 
             #include "UnityCG.cginc"
             #include "UnityPBSLighting.cginc"
@@ -139,6 +167,10 @@ Shader "VRChat/Mobile/Toon Standard"
             #include "./CG/DataStructs.cginc"
             #include "./CG/Definitions.cginc"
             #include "./CG/Helpers.cginc"
+            #if defined(USE_AUDIOLINK)
+            #include "./Dependencies/AudioLink.cginc"
+            #include "./CG/AudioLinkEffects.cginc"
+            #endif
             #include "./CG/Lighting.cginc"
             #include "./CG/VertexFragment.cginc"
             

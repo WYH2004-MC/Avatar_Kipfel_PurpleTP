@@ -57,6 +57,9 @@ namespace VRC.SDKBase
             get => (BuildTarget) SessionState.GetInt(MPB_NEXT_PLATFORM_KEY, (int) BuildTarget.NoTarget);
             set => SessionState.SetInt(MPB_NEXT_PLATFORM_KEY, (int) value);
         }
+
+        // Doesn't need to persist through assembly reloads
+        public static BuildTarget MPBCurrentPlatform { get; set; }
         
         public enum MultiPlatformBuildState
         {
@@ -76,6 +79,9 @@ namespace VRC.SDKBase
             get => SessionState.GetInt(MPB_BUILT_COUNT_KEY, 0);
             set => SessionState.SetInt(MPB_BUILT_COUNT_KEY, value);
         }
+        
+        // Doesn't need to persist through assembly reloads
+        public static int MPBUploadedCount { get; set; }
         
         public static int MPBProgress
         {
@@ -100,6 +106,8 @@ namespace VRC.SDKBase
             SessionState.EraseInt(MPB_PROGRESS_KEY);
             SessionState.EraseInt(MPB_BUILT_COUNT_KEY);
             SessionState.EraseString(MPB_CONTENT_IDENTIFIER);
+            MPBCurrentPlatform = BuildTarget.NoTarget;
+            MPBUploadedCount = 0;
         }
         
         private const int TOTAL_PER_PLATFORM_STEPS = 2;

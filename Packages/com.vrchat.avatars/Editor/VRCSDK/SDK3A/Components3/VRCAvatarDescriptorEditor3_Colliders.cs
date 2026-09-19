@@ -17,6 +17,8 @@ public partial class AvatarDescriptorEditor3 : Editor
 		{
 			UpdateAutoColliders();
 
+			Matrix4x4 avatarWorldToLocal = ((VRCAvatarDescriptor)target).transform.worldToLocalMatrix;
+
 			//Colliders
 			DrawElement("Head", serializedObject.FindProperty("collider_head"));
 			DrawElement("Torso", serializedObject.FindProperty("collider_torso"));
@@ -45,13 +47,13 @@ public partial class AvatarDescriptorEditor3 : Editor
 					DrawElement($"{displayName} R", configR, isFinger);
 				}
 				if (EditorGUI.EndChangeCheck() && isMirrored.boolValue)
-					MirrorCollider(configL, configR);
+					MirrorCollider(configL, configR, avatarWorldToLocal);
 			}
 		}
 		if (EditorPrefs.GetBool(_CollidersFoldoutPrefsKey) != prevFoldout)
 			EditorUtility.SetDirty(target); //Repaint
 	}
-	void MirrorCollider(SerializedProperty sourceProp, SerializedProperty destProp)
+	void MirrorCollider(SerializedProperty sourceProp, SerializedProperty destProp, Matrix4x4 avatarWorldToLocal)
 	{
 		destProp.FindPropertyRelative("state").enumValueIndex = sourceProp.FindPropertyRelative("state").enumValueIndex;
 		destProp.FindPropertyRelative("radius").floatValue = sourceProp.FindPropertyRelative("radius").floatValue;
@@ -64,16 +66,23 @@ public partial class AvatarDescriptorEditor3 : Editor
 
 		//Position
 		var position = sourceProp.FindPropertyRelative("position").vector3Value;
+		
 		position = sourceTransform.TransformPoint(position); //Move into world space
-		position = new Vector3(-position.x, position.y, position.z); //Mirror
-		position = destTransform.InverseTransformPoint(position); //Move into dest local space
+		position = avatarWorldToLocal.MultiplyPoint3x4(position); //...and then into avatar space
+		position = new Vector3(-position.x, position.y, position.z); //Mirror about avatar space
+		position = avatarWorldToLocal.inverse.MultiplyPoint3x4(position); //Move into world space
+		position = destTransform.InverseTransformPoint(position); //...and finally to destination's local space
 		destProp.FindPropertyRelative("position").vector3Value = position;
 
 		//Rotation
 		var rotation = sourceProp.FindPropertyRelative("rotation").quaternionValue;
-		var globalRotation = sourceTransform.rotation * rotation;
-		var euler = globalRotation.eulerAngles;
-		destProp.FindPropertyRelative("rotation").quaternionValue = Quaternion.Inverse(destTransform.rotation) * Quaternion.Euler(euler.x, -euler.y, -euler.z);
+
+		rotation = sourceTransform.rotation * rotation; //Move into world space
+		rotation = avatarWorldToLocal.rotation * rotation; //...and then into avatar space
+		rotation = Quaternion.Euler(rotation.eulerAngles.x, -rotation.eulerAngles.y, -rotation.eulerAngles.z); //Mirror about avatar space
+		rotation = Quaternion.Inverse(avatarWorldToLocal.rotation) * rotation; //Move back into world space
+		rotation = Quaternion.Inverse(destTransform.rotation) * rotation; //...and finally to destination's local space
+		destProp.FindPropertyRelative("rotation").quaternionValue = rotation;
 	}
 
 	void DrawElement(string title, SerializedProperty property, bool isFinger = false, bool mirror = false)
@@ -147,70 +156,68 @@ public partial class AvatarDescriptorEditor3 : Editor
 		}
 		EditorGUILayout.EndVertical();
 	}
-	void UpdateAutoColliders()
+	
+	// Do not remove. Popular community tooling is calling this private method directly via reflection.
+	private void UpdateAutoColliders()
 	{
-		var animator = avatarDescriptor.GetComponent<Animator>();
-		if (animator == null || !animator.isHuman)
-			return;
+		avatarDescriptor.UpdateAutoColliders();
+	}
 
-		//Head
-		// Assume a prefab scale of one. This parameter is normally used by the client to handle properly generating heads for eyeless avatars.
-		UpdateConfig(ref avatarDescriptor.collider_head, VRCAvatarDescriptor.CalcHeadCollider(animator, avatarDescriptor.ViewPosition, 1.0f));
+	private class MirroredHandle
+	{
+		public readonly string PropertyNameLeft;
+		public readonly string PropertyNameRight;
+		public readonly bool IsFinger;
+		public float? CachedLeftMinLength;
+		public Vector3? CachedLeftLocalNormal;
+		public float? CachedRightMinLength;
+		public Vector3? CachedRightLocalNormal;
 
-		//Torso
-		UpdateConfig(ref avatarDescriptor.collider_torso, VRCAvatarDescriptor.CalcTorsoCollider(animator));
-
-		//Palm
-		UpdateConfig(ref avatarDescriptor.collider_handL, VRCAvatarDescriptor.CalcPalmCollider(animator, true));
-		UpdateConfig(ref avatarDescriptor.collider_handR, VRCAvatarDescriptor.CalcPalmCollider(animator, false));
-
-		//Foot
-		UpdateConfig(ref avatarDescriptor.collider_footL, VRCAvatarDescriptor.CalcFootCollider(animator, true));
-		UpdateConfig(ref avatarDescriptor.collider_footR, VRCAvatarDescriptor.CalcFootCollider(animator, false));
-
-		//Fingers L
-		UpdateConfig(ref avatarDescriptor.collider_fingerIndexL, VRCAvatarDescriptor.CalcFingerCollider(animator, 0, true));
-		UpdateConfig(ref avatarDescriptor.collider_fingerMiddleL, VRCAvatarDescriptor.CalcFingerCollider(animator, 1, true));
-		UpdateConfig(ref avatarDescriptor.collider_fingerRingL, VRCAvatarDescriptor.CalcFingerCollider(animator, 2, true));
-		UpdateConfig(ref avatarDescriptor.collider_fingerLittleL, VRCAvatarDescriptor.CalcFingerCollider(animator, 3, true));
-
-		//Fingers R
-		UpdateConfig(ref avatarDescriptor.collider_fingerIndexR, VRCAvatarDescriptor.CalcFingerCollider(animator, 0, false));
-		UpdateConfig(ref avatarDescriptor.collider_fingerMiddleR, VRCAvatarDescriptor.CalcFingerCollider(animator, 1, false));
-		UpdateConfig(ref avatarDescriptor.collider_fingerRingR, VRCAvatarDescriptor.CalcFingerCollider(animator, 2, false));
-		UpdateConfig(ref avatarDescriptor.collider_fingerLittleR, VRCAvatarDescriptor.CalcFingerCollider(animator, 3, false));
-
-		void UpdateConfig(ref VRCAvatarDescriptor.ColliderConfig dest, VRCAvatarDescriptor.ColliderConfig config)
+		public MirroredHandle(string propLeft, string propRight, bool isFinger)
 		{
-			config.isMirrored = dest.isMirrored;
-			if (dest.state == VRCAvatarDescriptor.ColliderConfig.State.Automatic)
-				dest = config;
-			dest.transform = config.transform;
+			PropertyNameLeft = propLeft;
+			PropertyNameRight = propRight;
+			IsFinger = isFinger;
+
+			CachedLeftMinLength = null;
+			CachedLeftLocalNormal = null;
+			CachedRightMinLength = null;
+			CachedRightLocalNormal = null;
 		}
 	}
+	private readonly MirroredHandle _mirroredHandleHand = new MirroredHandle("collider_handL", "collider_handR", false);
+	private readonly MirroredHandle _mirroredHandleFoot = new MirroredHandle("collider_footL", "collider_footR", false);
+	private readonly MirroredHandle _mirroredHandleFingerIndex = new MirroredHandle("collider_fingerIndexL", "collider_fingerIndexR", true);
+	private readonly MirroredHandle _mirroredHandleFingerRing = new MirroredHandle("collider_fingerRingL", "collider_fingerRingR", true);
+	private readonly MirroredHandle _mirroredHandleFingerMiddle = new MirroredHandle("collider_fingerMiddleL", "collider_fingerMiddleR", true);
+	private readonly MirroredHandle _mirroredHandleFingerLittle = new MirroredHandle("collider_fingerLittleL", "collider_fingerLittleR", true);
 	void DrawScene_Colliders()
 	{
 		if (!EditorPrefs.GetBool(_CollidersFoldoutPrefsKey))
 			return;
 
+		Matrix4x4 avatarWorldToLocal = ((VRCAvatarDescriptor)target).transform.worldToLocalMatrix;
+
 		DrawHandle(serializedObject.FindProperty("collider_head"));
 		DrawHandle(serializedObject.FindProperty("collider_torso"));
-		DrawMirroredHandle(serializedObject.FindProperty("collider_handL"), serializedObject.FindProperty("collider_handR"));
-		DrawMirroredHandle(serializedObject.FindProperty("collider_footL"), serializedObject.FindProperty("collider_footR"));
-		DrawMirroredHandle(serializedObject.FindProperty("collider_fingerIndexL"), serializedObject.FindProperty("collider_fingerIndexR"), true);
-		DrawMirroredHandle(serializedObject.FindProperty("collider_fingerRingL"), serializedObject.FindProperty("collider_fingerRingR"), true);
-		DrawMirroredHandle(serializedObject.FindProperty("collider_fingerMiddleL"), serializedObject.FindProperty("collider_fingerMiddleR"), true);
-		DrawMirroredHandle(serializedObject.FindProperty("collider_fingerLittleL"), serializedObject.FindProperty("collider_fingerLittleR"), true);
+		DrawMirroredHandle(_mirroredHandleHand);
+		DrawMirroredHandle(_mirroredHandleFoot);
+		DrawMirroredHandle(_mirroredHandleFingerIndex);
+		DrawMirroredHandle(_mirroredHandleFingerRing);
+		DrawMirroredHandle(_mirroredHandleFingerMiddle);
+		DrawMirroredHandle(_mirroredHandleFingerLittle);
 
-		void DrawMirroredHandle(SerializedProperty configL, SerializedProperty configR, bool isFinger = false)
+		void DrawMirroredHandle(MirroredHandle handle)
 		{
+			SerializedProperty configL = serializedObject.FindProperty(handle.PropertyNameLeft);
+			SerializedProperty configR = serializedObject.FindProperty(handle.PropertyNameRight);
 			bool isMirrored = configL.FindPropertyRelative("isMirrored").boolValue;
 
 			EditorGUI.BeginChangeCheck();
-			if (isFinger)
+			if (handle.IsFinger)
 			{
-				DrawFingerHandle(configL);
-				DrawFingerHandle(configR);
+				DrawFingerHandle(configL, ref handle.CachedLeftMinLength, ref handle.CachedLeftLocalNormal);
+				DrawFingerHandle(configR, ref handle.CachedRightMinLength, ref handle.CachedRightLocalNormal);
 			}
 			else
 			{
@@ -219,7 +226,7 @@ public partial class AvatarDescriptorEditor3 : Editor
 			}
 			if (EditorGUI.EndChangeCheck() && isMirrored)
 			{
-				MirrorCollider(configL, configR);
+				MirrorCollider(configL, configR, avatarWorldToLocal);
 			}
 		}
 
@@ -274,7 +281,7 @@ public partial class AvatarDescriptorEditor3 : Editor
 				HandlesUtil.DrawWireCapsule(position.vector3Value, rotation.quaternionValue, clampedHeight, clampedRadius);
 			}
 		}
-		void DrawFingerHandle(SerializedProperty config)
+		void DrawFingerHandle(SerializedProperty config, ref float? cachedMinLength, ref Vector3? cachedLocalNormal)
 		{
 			var transform = (Transform)config.FindPropertyRelative("transform").objectReferenceValue;
 			var state = (VRCAvatarDescriptor.ColliderConfig.State)config.FindPropertyRelative("state").enumValueIndex;
@@ -286,16 +293,28 @@ public partial class AvatarDescriptorEditor3 : Editor
 
 			var scale = VRCAvatarDescriptor.MaxScale(transform.lossyScale);
 
-			var begin = transform.parent.position;
-			var end = transform.position;
-			var normal = (end - begin).normalized;
+			// Fingers are capsules that go dynamically from point to point. Exactly match how the shape is generated by the client...
 
-			var minLength = transform.localPosition.magnitude;
-			var globalHeight = height.floatValue * scale;
-			end = begin + normal * globalHeight;
-			var center = (end + begin) * 0.5f;
+			var scaledRadius = Mathf.Min(radius.floatValue * scale, VRCAvatarDescriptor.COLLIDER_MAX_SIZE * 0.5f);
 
-			var globalRadius = Mathf.Min(radius.floatValue * scale, VRCAvatarDescriptor.COLLIDER_MAX_SIZE * 0.5f);
+			if (!cachedMinLength.HasValue || !Application.isPlaying)
+			{
+				// In the client, these properties are only calculated once, when the avatar is loaded. Attempt to
+				// replicate that here by freezing the values in play mode.
+				var localPosition = transform.localPosition;
+				cachedMinLength = localPosition.magnitude;
+				cachedLocalNormal = Vector3.Normalize(localPosition);
+			}
+			var distalOffset = cachedLocalNormal!.Value * Mathf.Max(0f, height.floatValue - cachedMinLength.Value);
+
+			// end points of the capsule, in the center of each sphere
+			var pos0 = transform.parent.position;
+			var pos1 = transform.localToWorldMatrix.MultiplyPoint3x4(distalOffset);
+
+			// find the height, center and normal of the actual capsule
+			var capsuleEffectiveHeight = (pos1 - pos0).magnitude + scaledRadius * 2.0f; // adding the sphere on each end
+			var capsuleEffectiveCenter = (pos1 + pos0) * 0.5f;
+			var capsuleEffectiveNormal = (pos1 - pos0).normalized;
 
 			bool isActive = IsActiveProperty(config);
 			if (isActive)
@@ -303,23 +322,27 @@ public partial class AvatarDescriptorEditor3 : Editor
 				Handles.color = Color.green;
 				Handles.matrix = Matrix4x4.identity;
 
-				var outRadius = globalRadius;
-				var outHeight = globalHeight;
-				DrawCapsuleFingerHandle(begin, center, Quaternion.FromToRotation(Vector3.up, normal), ref outRadius, ref outHeight);
+				var outRadius = scaledRadius;
+				var outHeight = capsuleEffectiveHeight;
+				DrawCapsuleFingerHandle(pos0, capsuleEffectiveCenter, Quaternion.FromToRotation(Vector3.up, capsuleEffectiveNormal), ref outRadius, ref outHeight);
 
 				//Radius
-				if (!Approximately(globalRadius, outRadius))
+				if (!Approximately(scaledRadius, outRadius))
 					radius.floatValue = outRadius / scale;
 
 				//Height
-				if (!Approximately(outHeight, globalHeight))
-					height.floatValue = Mathf.Max(outHeight / scale, minLength);
+				if (!Approximately(capsuleEffectiveHeight, outHeight))
+				{
+					// Translate back to capsule height and assign back
+					outHeight -= outRadius * 2.0f;
+					height.floatValue = Mathf.Max(outHeight / scale, cachedMinLength.Value);
+				}
 			}
 			else
 			{
 				Handles.color = Color.white;
 				Handles.matrix = Matrix4x4.identity;
-				HandlesUtil.DrawWireCapsule(center, Quaternion.FromToRotation(Vector3.up, normal), globalHeight, globalRadius);
+				HandlesUtil.DrawWireCapsule(capsuleEffectiveCenter, Quaternion.FromToRotation(Vector3.up, capsuleEffectiveNormal), capsuleEffectiveHeight, scaledRadius);
 			}
 		}
 		/*void DrawFingerHandle(SerializedProperty config)

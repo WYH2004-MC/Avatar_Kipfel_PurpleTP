@@ -4,7 +4,7 @@ using GmgAvatarDescriptor =
 #if VRC_SDK_VRCSDK2 || VRC_SDK_VRCSDK3
     VRC.SDKBase.VRC_AvatarDescriptor;
 #else
-    UnityEngine.Component;
+    UnityEngine.UI.GraphicRaycaster;
 #endif
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -18,14 +18,14 @@ namespace BlackStartX.GestureManager.Data
         public string Name => !Avatar ? null : Avatar.name;
 
         private readonly Dictionary<HumanBodyBones, (Vector3, Quaternion)> _poseBones = new();
-
-        private readonly GmgAvatarDescriptor _avatarDescriptor;
+        private readonly Dictionary<HumanBodyBones, (Vector3, Quaternion)> _syncBones = new();
 
         private List<string> _errorList = new();
         private List<string> _warningList = new();
 
         public readonly GameObject Avatar;
         public readonly Animator AvatarAnimator;
+        public readonly GmgAvatarDescriptor AvatarDescriptor;
 
         private TransformData _beforeEmote;
         public bool PlayingCustomAnimation { get; private set; }
@@ -38,8 +38,7 @@ namespace BlackStartX.GestureManager.Data
 
         protected ModuleBase(GmgAvatarDescriptor avatarDescriptor)
         {
-            _avatarDescriptor = avatarDescriptor;
-
+            AvatarDescriptor = avatarDescriptor;
             Avatar = avatarDescriptor.gameObject;
             AvatarAnimator = Avatar.GetComponent<Animator>();
         }
@@ -57,7 +56,7 @@ namespace BlackStartX.GestureManager.Data
         protected abstract Animator OnCustomAnimationPlay(AnimationClip clip);
         protected abstract List<HumanBodyBones> PoseBones { get; }
 
-        public virtual bool IsInvalid() => !Avatar || !AvatarAnimator || !_avatarDescriptor;
+        public virtual bool IsInvalid() => !Avatar || !AvatarAnimator || !AvatarDescriptor;
 
         protected virtual List<string> CheckWarnings()
         {
@@ -72,7 +71,7 @@ namespace BlackStartX.GestureManager.Data
             if (!Avatar) errors.Add("- The GameObject has been deleted!");
             else if (!Avatar.activeInHierarchy) errors.Add("- The GameObject is disabled!");
             if (!AvatarAnimator) errors.Add("- The model doesn't have any animator!");
-            if (!_avatarDescriptor) errors.Add("- The VRC_AvatarDescriptor has been deleted!");
+            if (!AvatarDescriptor) errors.Add("- The VRC_AvatarDescriptor has been deleted!");
             return errors;
         }
 
@@ -91,6 +90,7 @@ namespace BlackStartX.GestureManager.Data
 
         public void SavePose(Animator animator)
         {
+            if (!animator.isHuman) return;
             foreach (var bodyBone in Bones)
             {
                 var boneTransform = animator.GetBoneTransform(bodyBone);
@@ -107,6 +107,19 @@ namespace BlackStartX.GestureManager.Data
                 var (boneVector, boneQuaternion) = _poseBones[bodyBone];
                 boneTransform.localRotation = boneQuaternion;
                 boneTransform.localPosition = boneVector;
+            }
+        }
+
+        protected void NetPose(Animator animator, float duration = 0.2f)
+        {
+            duration = duration <= 0f ? 1f : Time.deltaTime / Mathf.Min(0.2f, duration);
+            foreach (var bodyBone in _poseBones.Keys)
+            {
+                var boneTransform = animator.GetBoneTransform(bodyBone);
+                if (!boneTransform) continue;
+                var (boneVector, boneQuaternion) = _poseBones[bodyBone];
+                var (syncVector, syncQuaternion) = _syncBones.TryGetValue(bodyBone, out var tuple) ? tuple : (boneTransform.localPosition, boneTransform.localRotation);
+                _syncBones[bodyBone] = (boneTransform.localPosition = Vector3.Lerp(syncVector, boneVector, duration), boneTransform.localRotation = Quaternion.Slerp(syncQuaternion, boneQuaternion, duration));
             }
         }
 

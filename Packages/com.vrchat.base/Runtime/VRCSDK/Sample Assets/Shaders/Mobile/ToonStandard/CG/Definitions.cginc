@@ -1,32 +1,35 @@
 ﻿// Samplers
-sampler2D   _MainTex,
+UNITY_DECLARE_TEX2D(_MainTex);
 #if defined(USE_EMISSION_MAP)
-            _EmissionMap,
+sampler2D   _EmissionMap;
 #endif
 #if defined(USE_OCCLUSION_MAP)
-            _OcclusionMap,
+sampler2D   _OcclusionMap;
 #endif
 #if defined(USE_NORMAL_MAPS)
-            _BumpMap,
+sampler2D   _BumpMap;
 #endif
 #if defined(USE_SPECULAR)
-            _MetallicMap,
-            _GlossMap,
+sampler2D   _MetallicMap;
+sampler2D   _GlossMap;
 #endif
 #if defined(USE_DETAIL_MAPS)
-            _DetailAlbedoMap,
-            _DetailMask,
+sampler2D   _DetailAlbedoMap;
+sampler2D   _DetailMask;
     #if defined(USE_NORMAL_MAPS)
-            _DetailNormalMap,
+sampler2D   _DetailNormalMap;
     #endif
 #endif
 #if defined(USE_MATCAP)
-            _Matcap,
-            _MatcapMask,
+sampler2D   _Matcap;
+sampler2D   _MatcapMask;
 #endif
-            _HueShiftMask,
-            _Ramp,
-            _ColorMask;
+#if defined(USE_AUDIOLINK)
+UNITY_DECLARE_TEX2D_NOSAMPLER(_AudioLinkMask);
+#endif
+sampler2D   _HueShiftMask;
+sampler2D   _Ramp;
+sampler2D   _ColorMask;
 
 // Properties
 VRCHAT_DEFINE_ATLAS_PROPERTY(half4, _MainTex_ST);
@@ -69,6 +72,29 @@ VRCHAT_DEFINE_ATLAS_PROPERTY(half4, _Ramp_ST);
     VRCHAT_DEFINE_ATLAS_PROPERTY(uint, _MatcapMaskChannel);
     VRCHAT_DEFINE_ATLAS_PROPERTY(uint, _MatcapType);
     VRCHAT_DEFINE_ATLAS_PROPERTY(half, _MatcapStrength);
+#endif
+
+#if defined(USE_AUDIOLINK)
+VRCHAT_DEFINE_ATLAS_PROPERTY(uint, _AudioLinkMode);
+VRCHAT_DEFINE_ATLAS_PROPERTY(uint, _ALEnableFallback);
+VRCHAT_DEFINE_ATLAS_PROPERTY(float, _ALFallbackSpeed);
+VRCHAT_DEFINE_ATLAS_PROPERTY(half4, _AudioLinkMask_ST);
+VRCHAT_DEFINE_ATLAS_PROPERTY(uint, _ALBlendMode);
+VRCHAT_DEFINE_ATLAS_PROPERTY(half4, _ALTint);
+VRCHAT_DEFINE_ATLAS_PROPERTY(half, _ALIntensity);
+VRCHAT_DEFINE_ATLAS_PROPERTY(uint, _ALMaskUVChannel);
+VRCHAT_DEFINE_ATLAS_PROPERTY(uint, _ALMaskByEmission);
+VRCHAT_DEFINE_ATLAS_PROPERTY(uint, _ALMaskChannel);
+VRCHAT_DEFINE_ATLAS_PROPERTY(half, _ALRimMaskStrength);
+VRCHAT_DEFINE_ATLAS_PROPERTY(half, _ALRimMaskSmoothing);
+VRCHAT_DEFINE_ATLAS_PROPERTY(uint, _ALBand);
+VRCHAT_DEFINE_ATLAS_PROPERTY(half, _ALSmoothing);
+VRCHAT_DEFINE_ATLAS_PROPERTY(uint, _ALScrollCenterOut);
+VRCHAT_DEFINE_ATLAS_PROPERTY(half, _ALScrollScale);
+VRCHAT_DEFINE_ATLAS_PROPERTY(uint, _ALEffectUseMask);
+VRCHAT_DEFINE_ATLAS_PROPERTY(uint, _ALEffectMaskChannel);
+VRCHAT_DEFINE_ATLAS_PROPERTY(uint, _ALEffectUVChannel);
+VRCHAT_DEFINE_ATLAS_PROPERTY(half, _ALBarSmoothing);
 #endif
 
 VRCHAT_DEFINE_ATLAS_PROPERTY(half4, _ColorMask_ST);
@@ -167,4 +193,8 @@ VRCHAT_DEFINE_ATLAS_PROPERTY(uint, _ColorMaskBlendMode);
     #endif
 
     VRCHAT_DEFINE_ATLAS_TEXTUREMODE(_HueShiftMask);
+
+    #if defined(USE_AUDIOLINK)
+        VRCHAT_DEFINE_ATLAS_TEXTUREMODE(_AudioLinkMask);
+    #endif
 #endif

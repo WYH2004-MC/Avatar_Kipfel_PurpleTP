@@ -37,3 +37,16 @@
     margin-bottom: 0;
     margin-top: 0;
 }
+
+/* Small accent dot overlaid on a "⋮" options button to signal that
+   per-platform overrides are configured. Anchored top-right of an
+   absolutely-positioned container that wraps the options button. */
+.per-platform-active-marker {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: var(--unity-colors-label-text-focus);
+    top: 0;
+    right: 0;
+}

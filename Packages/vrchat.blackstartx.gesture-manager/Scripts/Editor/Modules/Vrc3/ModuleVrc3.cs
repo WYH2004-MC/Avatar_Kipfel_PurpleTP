@@ -1,5 +1,6 @@
 ﻿#if VRC_SDK_VRCSDK3
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -16,6 +17,8 @@ using BlackStartX.GestureManager.Editor.Modules.Vrc3.RadialSlices;
 using BlackStartX.GestureManager.Editor.Modules.Vrc3.Tools;
 using BlackStartX.GestureManager.Editor.Modules.Vrc3.Vrc3Debug.Avatar;
 using BlackStartX.GestureManager.Editor.Modules.Vrc3.Vrc3Debug.Osc;
+using BlackStartX.GestureManager.Library;
+using BlackStartX.GestureManager.Modules;
 using JetBrains.Annotations;
 using UnityEditor;
 using UnityEditor.Animations;
@@ -39,8 +42,9 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         internal static Camera MainCamera => Camera.allCameras.FirstOrDefault(CameraRule);
         private Camera Camera => !_camera ? _camera = MainCamera : _camera;
 
-        [PublicAPI] public readonly VRCAvatarDescriptor AvatarDescriptor;
+        [PublicAPI] public new readonly VRCAvatarDescriptor AvatarDescriptor;
 
+        private const HideFlags MemoryFlags = HideFlags.HideAndDontSave | HideFlags.HideInInspector;
         private const string OutputName = "Gesture Manager";
         private const int OutputValue = 0;
 
@@ -50,6 +54,11 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         internal RadialSliceControl.RadialSettings HeightSettings;
         private Vrc3AvatarDebugWindow _debugAvatarWindow;
         internal Vrc3OscDebugWindow DebugOscWindow;
+
+        private Vector3 _cloneOffset = new(-1, 0, 0);
+        private float _cloneSyncDelay = 0.1f;
+        private float _lastCloneSync;
+        private float _cloneDelay;
 
         private PlayableGraph _playableGraph;
         private string _paramFilter;
@@ -66,11 +75,14 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
 
         private readonly List<VRCAvatarDescriptor.AnimLayerType> _brokenLayers = new();
         private readonly List<Vrc3Warning> _warnings = new();
+        private readonly List<ModuleVrc3> _clones = new();
+        private readonly ModuleVrc3 _source;
         private readonly int _playerId;
 
         [PublicAPI] public readonly Dictionary<string, Vrc3Param> Params = new();
         internal Dictionary<string, Vrc3Param> UserFilteredParams = new();
         internal Dictionary<string, Vrc3Param> VrcFilteredParams = new();
+        private readonly List<Vrc3Param> _syncParams = new();
 
         internal readonly Dictionary<string, VRC_AnimatorTrackingControl.TrackingType> TrackingControls = ModuleVrc3Styles.Data.DefaultTrackingState;
         internal bool LocomotionDisabled;
@@ -79,17 +91,23 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         private readonly Dictionary<(Motion, VRCAvatarDescriptor.AnimLayerType), MotionItem> _motions = new();
         internal readonly Dictionary<int, VRCAvatarDescriptor.DebugHash> AnimationHashSet = new();
         private readonly Dictionary<VRCAvatarDescriptor.AnimLayerType, LayerData> _layers = new();
+        private readonly Dictionary<Transform, VRCHeadChop.HeadChopData> _scaleFactors = new();
+        private readonly Dictionary<ContactBase, DynamicsUsageFlags> _default = new();
         internal readonly HashSet<ContactReceiver> Receivers = new();
         private readonly HashSet<VRCPhysBoneBase> _physBones = new();
+        private readonly HashSet<ContactSender> _senders = new();
+        private readonly HashSet<VRCHeadChop> _headChops = new();
         private readonly HashSet<Animator> _animators = new();
         private readonly HashSet<Renderer> _renderers = new();
         private readonly HashSet<Cloth> _cloths = new();
 
+        internal readonly Vrc3Param HeadChop;
         internal readonly Vrc3Param PoseIK;
         internal readonly Vrc3Param PoseT;
 
         private const float CullingDiamondReferenceEyeHeight = 1.70f;
         private const float CullingDiamondYOffset = 0.05f;
+        private VRCAvatarDescriptor _memoryClone;
         private GameObject _cullingDiamond;
         private int _preCullCountdown;
         private bool _isCulled;
@@ -98,25 +116,26 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         internal int DebugToolBar;
         internal bool PoseMode;
         internal bool Broken;
-        internal string Edit;
+        internal bool Edit;
 
         private static readonly GUILayoutOption SizeOptions = GUILayout.Height(RadialMenu.Size);
         private static readonly GUILayoutOption[] Options = { GUILayout.ExpandWidth(true), SizeOptions };
 
-        private VRCExpressionParameters Parameters => AvatarDescriptor.expressionParameters;
-        internal PipelineManager Pipeline => Avatar.GetComponent<PipelineManager>();
-        private VRCExpressionsMenu Menu => AvatarDescriptor.expressionsMenu;
         internal IEnumerable<RadialMenu> Radials => _radialMenus.Values;
+        private VRCExpressionsMenu Menu => AvatarDescriptor.expressionsMenu;
+        private VRCExpressionParameters Parameters => AvatarDescriptor.expressionParameters;
+        internal PipelineManager Pipeline => AvatarDescriptor.GetComponent<PipelineManager>();
         internal float ViseAmount => AvatarDescriptor.lipSync == VRC_AvatarDescriptor.LipSyncStyle.VisemeBlendShape ? 14 : 100;
         protected override List<HumanBodyBones> PoseBones => Enum.GetValues(typeof(HumanBodyBones)).Cast<HumanBodyBones>().Where(bones => bones != HumanBodyBones.LastBone).ToList();
 
-        public ModuleVrc3(VRCAvatarDescriptor avatarDescriptor) : base(avatarDescriptor)
+        public ModuleVrc3(VRCAvatarDescriptor avatarDescriptor, ModuleVrc3 source = null) : base(avatarDescriptor)
         {
-            _playerId = avatarDescriptor.GetInstanceID();
-            AvatarDescriptor = avatarDescriptor;
+            AvatarDescriptor = (_source = source) == null ? avatarDescriptor : LinkToSource(avatarDescriptor);
+            _playerId = AvatarAnimator.GetInstanceID();
             AvatarTools = new AvatarTools();
             OscModule = new OscModule(this);
 
+            HeadChop = new Vrc3Param(null, AnimatorControllerParameterType.Bool, OnHeadChopChange);
             PoseIK = new Vrc3Param(null, AnimatorControllerParameterType.Bool, OnIKPoseChange);
             PoseT = new Vrc3Param(null, AnimatorControllerParameterType.Bool, OnTPoseChange);
         }
@@ -125,6 +144,7 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         {
             if (!EditorApplication.isPlaying || EditorApplication.isPlayingOrWillChangePlaymode)
             {
+                CloneUpdate();
                 if (Broken) return;
                 OscModule.Update();
                 AvatarTools.OnUpdate(this);
@@ -149,7 +169,10 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         public override void LateUpdate()
         {
             if (PoseMode) SetPose(AvatarAnimator);
+            if (_scaleFactors.Count != 0) ResetHeadChops();
             if (DummyMode == null) Avatar.transform.localScale = _baseScale * _scale;
+            if (HeadChop.BoolValue()) ApplyHeadChop(GetParam(Vrc3DefaultParams.VRMode));
+            foreach (var module in _clones) module.NetPose(module.AvatarAnimator, _cloneSyncDelay);
             AvatarTools.OnLateUpdate(this);
         }
 
@@ -157,6 +180,7 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
 
         public override void InitForAvatar()
         {
+            MemoryClone();
             StartVrcHooks();
 
             AvatarAnimator.applyRootMotion = false;
@@ -182,10 +206,17 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             _layers.Clear();
             _cloths.Clear();
             _motions.Clear();
+            _senders.Clear();
+            _default.Clear();
+            _headChops.Clear();
+            _renderers.Clear();
+            _physBones.Clear();
             _animators.Clear();
             _brokenLayers.Clear();
+            _scaleFactors.Clear();
 
             Receivers.Clear();
+            AnimationHashSet.Clear();
 
             for (var i = 1; i < intCount; i++)
             {
@@ -251,6 +282,7 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             Right = GetParam(Vrc3DefaultParams.GestureRight).IntValue();
 
             GetParam(Vrc3DefaultParams.Vise).SetOnChange(OnViseChange);
+            GetParam(Vrc3DefaultParams.VRMode).SetOnChange(OnVrModeChange);
             GetParam(Vrc3DefaultParams.Seated).SetOnChange(OnSeatedChange);
             GetParam(Vrc3DefaultParams.IsLocal).SetOnChange(OnIsLocalChange);
             GetParam(Vrc3DefaultParams.VelocityX).SetOnChange(OnVelocityChange);
@@ -258,6 +290,7 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             GetParam(Vrc3DefaultParams.VelocityZ).SetOnChange(OnVelocityChange);
             GetParam(Vrc3DefaultParams.GestureLeft).SetOnChange(OnGestureLeftChange);
             GetParam(Vrc3DefaultParams.GestureRight).SetOnChange(OnGestureRightChange);
+            GetParam(Vrc3DefaultParams.IsOnFriendsList).SetOnChange(OnIsOnFriendsListChange);
             GetParam(Vrc3DefaultParams.IsAnimatorEnabled).SetOnChange(OnAnimatorEnabledChange);
             GetParam(Vrc3DefaultParams.EyeHeightAsMeters).SetOnChange(OnEyeHeightAsMetersChange);
 
@@ -266,12 +299,22 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             foreach (var physBone in AvatarComponents<VRCPhysBoneBase>()) PhysBoneBaseSetup(physBone);
             foreach (var receiver in AvatarComponents<ContactReceiver>()) ReceiverBaseSetup(receiver);
             foreach (var coSender in AvatarComponents<ContactSender>()) SenderBaseSetup(coSender);
+            foreach (var headChop in AvatarComponents<VRCHeadChop>()) HeadChopBaseSetup(headChop);
+            foreach (var vRaycast in AvatarComponents<VRCRaycast>()) RaycastBaseSetup(vRaycast);
             foreach (var animator in AvatarComponents<Animator>()) AnimatorBaseSetup(animator);
             foreach (var renderer in AvatarComponents<Renderer>()) RendererBaseSetup(renderer);
             foreach (var cloth in AvatarComponents<Cloth>()) ClothBaseSetup(cloth);
+            HeadChopIfNotChopped(HumanBodyBones.Head);
             _animators.Add(AvatarAnimator);
 
             OscModule.Resume();
+        }
+
+        private void MemoryClone()
+        {
+            if (!_memoryClone) (_memoryClone = UnityEngine.Object.Instantiate(AvatarDescriptor)).gameObject.name = $"{Avatar.name} (Memory Clone)";
+            _memoryClone.gameObject.hideFlags = MemoryFlags;
+            _memoryClone.gameObject.SetActive(false);
         }
 
         protected override void Unlink()
@@ -283,6 +326,8 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             if (AvatarAnimator) ForgetAvatar();
             StopVisualElements();
             StopVrcHooks();
+            RemoveClones();
+            if (_memoryClone) UnityEngine.Object.DestroyImmediate(_memoryClone.gameObject);
         }
 
         public override void EditorHeader()
@@ -353,9 +398,9 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             return errorList;
         }
 
-        /*
-         * Editor GUI
-         */
+        /* ╭────────────────────────────╮ *
+         * │         Editor GUI         │ *
+         * ╰────────────────────────────╯ */
 
         private void EditorContentGesture(VisualElement element, Vrc3WeightController weightController)
         {
@@ -415,9 +460,127 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             GUILayout.Space(6);
         }
 
-        /*
-         * Functions
-         */
+        /* ╭────────────────────────────╮ *
+         * │           Clones           │ *
+         * ╰────────────────────────────╯ */
+
+        public void CloneGui()
+        {
+            GUILayout.Label(_clones.Count == 0 ? "Use the buttons above to create clones!" : "Clones", GestureManagerStyles.GuiHandTitle);
+            foreach (var module in _clones)
+                using (new GmgLayoutHelper.GuiBackground(module.GetParam(Vrc3DefaultParams.IsOnFriendsList).BoolValue() ? Color.yellow : Color.cyan))
+                using (new GUILayout.HorizontalScope(GestureManagerStyles.EmoteError))
+                    CloneGui(module);
+            CloneSettingsGui();
+        }
+
+        private void CloneSettingsGui(float leftValue = 0, float rightValue = 10)
+        {
+            if (_clones.Count != 0) GUILayout.Label("Settings", GestureManagerStyles.GuiHandTitle);
+            if (GmgLayoutHelper.Vector3Field("Clone Distance:", ref _cloneOffset)) ReorderClones();
+            _cloneSyncDelay = GmgLayoutHelper.Slider("Network Delay:", _cloneSyncDelay, leftValue, rightValue);
+        }
+
+        private void CloneGui(ModuleVrc3 module, string label = null, float leftValue = 0, float rightValue = 10)
+        {
+            using (new GUILayout.VerticalScope())
+            {
+                GUILayout.Label(module.Avatar.name);
+                using (new GUILayout.HorizontalScope())
+                {
+                    GUILayout.Label("Delay: ");
+                    module._cloneDelay = GmgLayoutHelper.Slider(label, module._cloneDelay, leftValue, rightValue);
+                }
+            }
+
+            var isOnFriendParam = module.GetParam(Vrc3DefaultParams.IsOnFriendsList);
+            if (GmgLayoutHelper.IconButton(ModuleVrc3Styles.IsOnFriendsList))
+            {
+                isOnFriendParam.Set(module, !isOnFriendParam.BoolValue());
+                module.Avatar.name = Clone(isOnFriendParam.BoolValue());
+            }
+
+            using (new GmgLayoutHelper.GuiBackground(Color.red))
+                if (GmgLayoutHelper.IconButton(ModuleVrc3Styles.Back))
+                    UnityEngine.Object.DestroyImmediate(module.AvatarDescriptor);
+        }
+
+        private VRCAvatarDescriptor LinkToSource(VRCAvatarDescriptor copy)
+        {
+            var data = new GameObject { hideFlags = MemoryFlags, name = Avatar.name };
+            var aPipeline = copy.GetComponent<PipelineManager>();
+            copy = GmgComponentUtility.MoveComponent(copy, data);
+            GmgComponentUtility.MoveComponent(aPipeline, data);
+            copy.gameObject.hideFlags = MemoryFlags;
+            _memoryClone = _source._memoryClone;
+            return copy;
+        }
+
+        internal void SpawnClone(ModuleSettings settings)
+        {
+            var cloneDescriptor = UnityEngine.Object.Instantiate(_memoryClone);
+            cloneDescriptor.gameObject.name = Clone(settings.isOnFriendsList);
+            cloneDescriptor.transform.position = NextClonePosition();
+            var module = new ModuleVrc3(cloneDescriptor, this);
+            module.Avatar.SetActive(true);
+            module.Connect(settings);
+            _clones.Add(module);
+        }
+
+        private string Clone(bool isOnFriendsList) => $"{Avatar.name} ({(isOnFriendsList ? "Friend" : "Remote")})";
+
+        private Vector3 NextClonePosition() => Avatar.transform.position + _cloneOffset * (_clones.Count + 1);
+
+        private void CloneUpdate()
+        {
+            var isSync = Time.time - _lastCloneSync > _cloneSyncDelay;
+            for (var index = 0; index < _clones.Count; index++)
+                if (_clones[index].IsCloneInvalid()) RemoveClone(index--);
+                else if (isSync) _clones[index].Sync();
+            if (isSync) _lastCloneSync = Time.time;
+        }
+
+        private void Sync()
+        {
+            SavePose(_source.AvatarAnimator);
+            AvatarDescriptor.StartCoroutine(SyncCoRoutine(_source._syncParams.Select(param => param.SyncValue()).ToArray(), Time.time));
+        }
+
+        private IEnumerator SyncCoRoutine(float[] valueArray, float startTime)
+        {
+            while (Time.time - startTime < _cloneDelay) yield return null;
+            for (var index = 0; index < valueArray.Length; index++) _syncParams[index].Set(this, valueArray[index]);
+        }
+
+        private bool IsCloneInvalid() => !Avatar || !AvatarAnimator || !AvatarDescriptor || _layers.Any(IsBroken);
+
+        private void RemoveClones()
+        {
+            foreach (var cloneModule in _clones) cloneModule.DestroyCloneObjects();
+            _clones.Clear();
+        }
+
+        private void RemoveClone(int index)
+        {
+            _clones[index].DestroyCloneObjects();
+            _clones.RemoveAt(index);
+            ReorderClones();
+        }
+
+        private void ReorderClones()
+        {
+            for (var index = 0; index < _clones.Count; index++) _clones[index].Avatar.transform.position = Avatar.transform.position + _cloneOffset * (index + 1);
+        }
+
+        private void DestroyCloneObjects()
+        {
+            if (AvatarDescriptor) UnityEngine.Object.Destroy(AvatarDescriptor.gameObject);
+            if (Avatar) UnityEngine.Object.Destroy(Avatar);
+        }
+
+        /* ╭────────────────────────────╮ *
+         * │          Function          │ *
+         * ╰────────────────────────────╯ */
 
         private IEnumerable<T> AvatarComponents<T>(bool includeInactive = true) where T : Component => Avatar.GetComponentsInChildren<T>(includeInactive);
 
@@ -466,12 +629,10 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             foreach (var menu in Radials) menu.StopRendering();
         }
 
-        internal void ReloadRadials()
+        internal void ReloadColors()
         {
-            foreach (var weight in _weightControllers.Values) weight.StopRendering();
-            foreach (var menu in Radials) menu.StopRendering();
-            _weightControllers.Clear();
-            _radialMenus.Clear();
+            foreach (var weight in _weightControllers.Values) weight.ReloadColors();
+            foreach (var menu in Radials) menu.ReloadColors();
         }
 
         private void SwitchDebugAvatarView() => _debugAvatarWindow = !_debugAvatarWindow ? Vrc3AvatarDebugWindow.Create(this) : Vrc3AvatarDebugWindow.Close(_debugAvatarWindow);
@@ -516,7 +677,9 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
                 GUILayout.Label(warning.Title, GestureManagerStyles.TextWarningHeader);
                 var rect = GUILayoutUtility.GetLastRect();
                 rect.x += rect.width - (rect.width = 30) / 2 - rect.y + (rect.y -= rect.height - (rect.height = 30) / 3) + 7;
-                if (warning.Closable && GUI.Button(rect, GestureManagerStyles.CloseTexture, GUI.skin.label)) TryRemoveWarning(warning);
+                using (new GmgLayoutHelper.GuiContent(GestureManagerStyles.IconContentColor))
+                    if (warning.Closable && GUI.Button(rect, GestureManagerStyles.CloseTexture, GUI.skin.label))
+                        TryRemoveWarning(warning);
 
                 GUILayout.Space(5);
                 using (new GUILayout.HorizontalScope())
@@ -570,6 +733,13 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         {
             if (_radialMenus.TryGetValue(editor, out var radial)) return radial;
 
+            if (TryGetFirst(_radialMenus, valuePair => !valuePair.Key, out var pair))
+            {
+                _radialMenus[editor] = pair.Value;
+                _radialMenus.Remove(pair.Key);
+                return _radialMenus[editor];
+            }
+
             _radialMenus[editor] = new RadialMenu(this, official);
             _radialMenus[editor].Set(Menu);
             return _radialMenus[editor];
@@ -579,6 +749,13 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         {
             if (_weightControllers.TryGetValue(editor, out var controller)) return controller;
 
+            if (TryGetFirst(_weightControllers, valuePair => !valuePair.Key, out var pair))
+            {
+                _weightControllers[editor] = pair.Value;
+                _weightControllers.Remove(pair.Key);
+                return _weightControllers[editor];
+            }
+
             _weightControllers[editor] = new Vrc3WeightController(this);
             return _weightControllers[editor];
         }
@@ -586,6 +763,13 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         private VisualEpContainer GetOrCreateOscContainer(ScriptableObject editor)
         {
             if (_oscContainers.TryGetValue(editor, out var container)) return container;
+
+            if (TryGetFirst(_oscContainers, valuePair => !valuePair.Key, out var pair))
+            {
+                _oscContainers[editor] = pair.Value;
+                _oscContainers.Remove(pair.Key);
+                return _oscContainers[editor];
+            }
 
             _oscContainers[editor] = new VisualEpContainer();
             return _oscContainers[editor];
@@ -606,6 +790,8 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         public void ResetAvatar()
         {
             ResetHeight();
+            ResetHeadChops();
+            ResetContactsFlags();
             AvatarAnimator.Rebind();
             InitForAvatar();
         }
@@ -617,12 +803,21 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
                 manager.RemovePose(pose);
         }
 
+        private void ResetContactsFlags(bool isRemote = false)
+        {
+            foreach (var sender in _senders) sender.contentTypes = ContactFlagsFor(isRemote, sender);
+            foreach (var receiver in Receivers) receiver.contentTypes = ContactFlagsFor(isRemote, receiver);
+        }
+
         public void ResetHeight() => GetParam(Vrc3DefaultParams.EyeHeightAsMeters).Set(this, _baseHeight);
 
         internal void ForgetAvatar()
         {
             RemoveVise();
             ResetHeight();
+            RemoveClones();
+            ResetHeadChops();
+            ResetContactsFlags();
             SetAvatarCulled(false);
             if (OscModule.Enabled) OscModule.Forget();
             AvatarAnimator.Rebind();
@@ -657,8 +852,7 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
                     return;
                 case VRC_AvatarDescriptor.LipSyncStyle.Default:
                 case VRC_AvatarDescriptor.LipSyncStyle.VisemeParameterOnly:
-                    return;
-                default: throw new ArgumentOutOfRangeException();
+                default: return;
             }
         }
 
@@ -669,6 +863,50 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             _ => null
         };
 
+        private void HeadChopIfNotChopped(HumanBodyBones bodyBone)
+        {
+            if (!AvatarAnimator.isHuman) return;
+            var boneTransform = AvatarAnimator.GetBoneTransform(bodyBone);
+            if (!boneTransform || _headChops.Any(chop => chop.targetBones.Any(bone => bone.transform == boneTransform))) return;
+            var headChop = boneTransform.gameObject.AddComponent<VRCHeadChop>();
+            headChop.targetBones = new[] { new VRCHeadChop.HeadChopBone { transform = boneTransform, scaleFactor = 0.0001f } };
+            headChop.hideFlags = HideFlags.HideAndDontSave;
+            _headChops.Add(headChop);
+        }
+
+        private void ApplyHeadChop(Vrc3Param vrParam)
+        {
+            _scaleFactors.Clear();
+            foreach (var chop in _headChops.Where(chopComp => (bool)chopComp)) chop.AppendDesiredTransformScaleFactors(_scaleFactors, vrParam.BoolValue(), Avatar.transform);
+            if (_scaleFactors.Count != 0) EvaluateHierarchyRecursive(Avatar.transform);
+        }
+
+        private void EvaluateHierarchyRecursive(Transform currentTransform, float accumulatedParentFactor = 1.0f)
+        {
+            if (_scaleFactors.TryGetValue(currentTransform, out var data))
+            {
+                currentTransform.localScale = data.OriginalLocalScale * (Mathf.Max(data.DesiredAppliedScaleFactor, 1e-6f) / Mathf.Max(accumulatedParentFactor, 1e-6f));
+                currentTransform.position = Avatar.transform.TransformPoint(data.OriginalRootSpacePosition);
+                accumulatedParentFactor = Mathf.Max(data.DesiredAppliedScaleFactor, 1e-6f);
+            }
+
+            for (var i = 0; i < currentTransform.childCount; i++) EvaluateHierarchyRecursive(currentTransform.GetChild(i), accumulatedParentFactor);
+        }
+
+        private void ResetHeadChops()
+        {
+            if (_scaleFactors.Count == 0) return;
+
+            foreach (var (dTransform, data) in _scaleFactors)
+            {
+                if (!dTransform) continue;
+                dTransform.localPosition = data.OriginalLocalPosition;
+                dTransform.localScale = data.OriginalLocalScale;
+            }
+
+            _scaleFactors.Clear();
+        }
+
         internal void EnableEditMode() => DummyMode = new Vrc3EditMode(this, _motions.Values);
 
         private void OnEditorPauseChange(PauseState obj) => OnEditorPauseChange(obj == PauseState.Paused, Vrc3Warning.PausedEditor);
@@ -677,9 +915,15 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
 
         private void OnIKPoseChange(Vrc3Param param, float state) => _layers[VRCAvatarDescriptor.AnimLayerType.IKPose].Weight.Set(state);
 
-        private void OnIsLocalChange(Vrc3Param param, float local) => Settings.isRemote = local < 0.5f;
+        private void OnIsOnFriendsListChange(Vrc3Param param, float isFriend) => Settings.isOnFriendsList = isFriend > 0.5f;
+
+        private void OnIsLocalChange(Vrc3Param param, float local) => ResetContactsFlags(Settings.isRemote = local < 0.5f);
+
+        private void OnVrModeChange(Vrc3Param param, float vrMode) => Settings.vrMode = vrMode > 0.5f;
 
         private void OnVelocityChange(Vrc3Param param, float velocity) => SetVelocityMag();
+
+        private void OnHeadChopChange(Vrc3Param param, float chops) => ResetHeadChops();
 
         private void OnGestureLeftChange(Vrc3Param param, float left)
         {
@@ -753,13 +997,23 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             _cullingDiamond.transform.localPosition = new Vector3(0, _baseHeight * 0.5f + CullingDiamondYOffset, 0);
         }
 
-        /*
-         * Params
-         */
+        /* ╭────────────────────────────╮ *
+         * │           Params           │ *
+         * ╰────────────────────────────╯ */
 
         private void InitParams(VRCExpressionParameters parameters)
         {
             Params.Clear();
+            _syncParams.Clear();
+            foreach (var (nameString, parameter) in Vrc3DefaultParams.Parameters)
+                if (!Params.ContainsKey(nameString))
+                    Params[nameString] = new Vrc3Param(parameter, parameter.SyncType);
+
+            if (parameters)
+                foreach (var parameter in parameters.parameters)
+                    if (!Params.ContainsKey(parameter.name))
+                        Params[parameter.name] = new Vrc3Param(parameter);
+
             foreach (var pair in _layers)
             foreach (var (parameter, index) in pair.Value.Parameters.Select((parameter, i) => (parameter, i)))
                 if (Params.TryGetValue(parameter.name, out var param)) param.Subscribe(pair.Value.Playable, index);
@@ -767,28 +1021,20 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
 
             if (parameters)
                 foreach (var parameter in parameters.parameters)
-                    if (!Params.ContainsKey(parameter.name))
-                        Params[parameter.name] = new Vrc3Param(parameter.name, ModuleVrc3Styles.Data.TypeOf[parameter.valueType]);
-
-            if (parameters)
-                foreach (var parameter in parameters.parameters)
                     Params[parameter.name].InternalSet(parameter.defaultValue);
 
-            foreach (var (nameString, type) in Vrc3DefaultParams.Parameters)
-                if (!Params.ContainsKey(nameString))
-                    Params[nameString] = new Vrc3Param(nameString, type);
+            if (Settings.loadStored) TryAddWarning(InitStored(Pipeline?.blueprintId));
 
-            if (Settings.loadStored) TryAddWarning(InitStored());
-
+            foreach (var param in Params.Values.Where(param => param.Sync != Vrc3DefaultParams.SyncType.No)) _syncParams.Add(param);
             FilterParam();
         }
 
-        private Vrc3Warning InitStored()
+        private Vrc3Warning InitStored(string blueprintId)
         {
-            if (string.IsNullOrEmpty(Pipeline.blueprintId)) return null;
+            if (string.IsNullOrEmpty(blueprintId)) return null;
             var localString = GestureManagerSettings.UserPath(Settings.userIndex);
             if (localString == null) return null;
-            var fileString = Path.Combine(localString, Pipeline.blueprintId);
+            var fileString = Path.Combine(localString, blueprintId);
             if (!File.Exists(fileString)) return Vrc3Warning.InitLoadUnexisting;
             var file = AvatarFile.LoadData(File.ReadAllText(fileString));
             if (file == null) return Vrc3Warning.InitLoadJsonError;
@@ -902,19 +1148,23 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
 
         private void FilterParam()
         {
-            UserFilteredParams = Params.Where(ParamMatch).Where(IsUserParam).ToDictionary(pair => pair.Key, pair => pair.Value);
-            VrcFilteredParams = Params.Where(ParamMatch).Where(IsVrcParam).ToDictionary(pair => pair.Key, pair => pair.Value);
+            UserFilteredParams = Params.Where(ParamMatch).Where(IsUserParam).OrderBy(pair => pair.Value.Type).ThenBy(pair => pair.Value.Name).ToDictionary(pair => pair.Key, pair => pair.Value);
+            VrcFilteredParams = Params.Where(ParamMatch).Where(IsVrcParam).OrderBy(pair => pair.Value.Type).ThenBy(pair => pair.Value.Name).ToDictionary(pair => pair.Key, pair => pair.Value);
         }
 
+        private static bool TryGetFirst<T>(IEnumerable<T> enumerable, Func<T, bool> predicate, out T first) => !(first = enumerable.FirstOrDefault(predicate))?.Equals(default(T)) ?? true;
+
         private bool ParamMatch(KeyValuePair<string, Vrc3Param> pair) => string.IsNullOrEmpty(_paramFilter) || pair.Key.IndexOf(_paramFilter, StringComparison.OrdinalIgnoreCase) >= 0;
+
+        private DynamicsUsageFlags ContactFlagsFor(bool isRemote, ContactBase c) => isRemote && c.localOnly ? DynamicsUsageFlags.Nothing : _default[c];
 
         private static bool IsUserParam(KeyValuePair<string, Vrc3Param> pair) => !Vrc3DefaultParams.Parameters.ContainsKey(pair.Key);
 
         private static bool IsVrcParam(KeyValuePair<string, Vrc3Param> pair) => Vrc3DefaultParams.Parameters.ContainsKey(pair.Key);
 
-        /*
-         * Vrc Hooks
-         */
+        /* ╭────────────────────────────╮ *
+         * │        VRChat Hooks        │ *
+         * ╰────────────────────────────╯ */
 
         private void StartVrcHooks()
         {
@@ -927,6 +1177,7 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
 
             ContactBase.OnInitialize += ContactBaseInit;
             VRCPhysBoneBase.OnInitialize += PhysBoneBaseInit;
+            VRCRaycast.OnInitializeParameters += RaycastInit;
 
             VRC_AnimatorPlayAudio.Initialize += AnimatorPlayAudioInit;
             VRC_AnimatorLayerControl.Initialize += AnimatorLayerControlInit;
@@ -948,6 +1199,7 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
 
             ContactBase.OnInitialize -= ContactBaseInit;
             VRCPhysBoneBase.OnInitialize -= PhysBoneBaseInit;
+            VRCRaycast.OnInitializeParameters -= RaycastInit;
 
             VRC_AnimatorPlayAudio.Initialize -= AnimatorPlayAudioInit;
             VRC_AnimatorLayerControl.Initialize -= AnimatorLayerControlInit;
@@ -961,9 +1213,9 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             _hooked = false;
         }
 
-        /*
-         * Vrc Hooks (Static)
-         */
+        /* ╭────────────────────────────╮ *
+         * │     Vrc Hooks (Static)     │ *
+         * ╰────────────────────────────╯ */
 
         private void AnimatorPlayAudioInit(VRC_AnimatorPlayAudio animatorPlayAudio)
         {
@@ -981,9 +1233,9 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
 
         private void AnimatorTemporaryPoseSpaceInit(VRC_AnimatorTemporaryPoseSpace animatorTemporaryPoseSpace) => animatorTemporaryPoseSpace.ApplySettings += AnimatorTemporaryPoseSpaceSettings;
 
-        /*
-         * Vrc Hooks (Dynamic)
-         */
+        /* ╭────────────────────────────╮ *
+         * │    Vrc Hooks (Dynamics)    │ *
+         * ╰────────────────────────────╯ */
 
         private void AnimatorPlayAudioEnterState(VRC_AnimatorPlayAudio audio, Animator animator)
         {
@@ -1024,6 +1276,7 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         private void AvatarParameterDriverSettings(VRC_AvatarParameterDriver driver, Animator animator)
         {
             if (!_hooked || !_animators.Contains(animator)) return;
+            if (driver.localOnly && Settings.isRemote) return;
 
             foreach (var parameter in driver.parameters)
             {
@@ -1044,7 +1297,7 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
                     case VRC_AvatarParameterDriver.ChangeType.Random:
                         param.Random(this, parameter.valueMin, parameter.valueMax, parameter.chance);
                         break;
-                    default: throw new ArgumentOutOfRangeException();
+                    default: continue;
                 }
             }
         }
@@ -1080,14 +1333,14 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             PoseSpace = poseSpace.enterPoseSpace;
         }
 
-        /*
-         * Vrc Hooks (Helpers)
-         */
+        /* ╭────────────────────────────╮ *
+         * │     Vrc Hooks (Helper)     │ *
+         * ╰────────────────────────────╯ */
 
         private bool ContactBaseInit(ContactBase contactBase)
         {
-            var animator = contactBase.GetComponentInParent<VRCAvatarDescriptor>()?.GetComponent<Animator>();
-            if (!_hooked || !animator || animator != AvatarAnimator) return true;
+            var animator = contactBase.GetComponentInParent<Animator>(includeInactive: true);
+            if (!_hooked || !animator || !_animators.Contains(animator)) return true;
 
             switch (contactBase)
             {
@@ -1105,10 +1358,27 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         {
             Receivers.Add(receiver);
             receiver.playerId = _playerId;
+            _default[receiver] = receiver.contentTypes;
+            receiver.contentTypes = ContactFlagsFor(Settings.isRemote, receiver);
             receiver.paramAccess = new AnimParameterAccessAvatarGmg(this, receiver.parameter);
         }
 
-        private void SenderBaseSetup(ContactSender sender) => sender.playerId = _playerId;
+        private void SenderBaseSetup(ContactSender sender)
+        {
+            _senders.Add(sender);
+            sender.playerId = _playerId;
+            _default[sender] = sender.contentTypes;
+            sender.contentTypes = ContactFlagsFor(Settings.isRemote, sender);
+        }
+
+        private void HeadChopBaseSetup(VRCHeadChop headChop) => _headChops.Add(headChop);
+
+        private void RaycastBaseSetup(VRCRaycast raycast)
+        {
+            raycast.param_Distance = new AnimParameterAccessAvatarGmg(this, raycast.Parameter + VRCRaycast.PARAM_DISTANCE);
+            raycast.param_Ratio = new AnimParameterAccessAvatarGmg(this, raycast.Parameter + VRCRaycast.PARAM_RATIO);
+            raycast.param_Hit = new AnimParameterAccessAvatarGmg(this, raycast.Parameter + VRCRaycast.PARAM_HIT);
+        }
 
         private void AudioSourcePlayAudio(AudioSource source, VRC_AnimatorPlayAudio audio, float delayValue = 0f)
         {
@@ -1146,10 +1416,18 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
 
         private void PhysBoneBaseInit(VRCPhysBoneBase vrcPhysBoneBase)
         {
-            if (string.IsNullOrEmpty(vrcPhysBoneBase.parameter)) return;
-            var animator = vrcPhysBoneBase.GetComponentInParent<VRCAvatarDescriptor>()?.GetComponent<Animator>();
-            if (!_hooked || !animator || animator != AvatarAnimator) return;
+            var animator = vrcPhysBoneBase.GetComponentInParent<Animator>(includeInactive: true);
+            if (!_hooked || !animator || !_animators.Contains(animator)) return;
+
             PhysBoneBaseSetup(vrcPhysBoneBase);
+        }
+
+        private void RaycastInit(VRCRaycast vrcRaycast)
+        {
+            var animator = vrcRaycast.GetComponentInParent<Animator>(includeInactive: true);
+            if (!_hooked || !animator || !_animators.Contains(animator)) return;
+
+            RaycastBaseSetup(vrcRaycast);
         }
 
         private void PhysBoneBaseSetup(VRCPhysBoneBase vrcPhysBoneBase)

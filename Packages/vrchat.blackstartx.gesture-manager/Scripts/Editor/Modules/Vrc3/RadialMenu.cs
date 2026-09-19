@@ -8,6 +8,8 @@ using BlackStartX.GestureManager.Editor.Modules.Vrc3.Params;
 using BlackStartX.GestureManager.Editor.Modules.Vrc3.RadialSlices;
 using BlackStartX.GestureManager.Editor.Modules.Vrc3.RadialPuppets.Base;
 using BlackStartX.GestureManager.Library;
+using BlackStartX.GestureManager.Library.VisualElements;
+using BlackStartX.GestureManager.Modules;
 using UnityEngine;
 using UnityEngine.UIElements;
 using VRC.SDK3.Avatars.ScriptableObjects;
@@ -48,15 +50,18 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
 
         private bool Puppet => _puppet != null;
         private BasePuppet _puppet;
+        private Action _radialMenuGui;
         private RadialDescription _radialDescription;
 
         private VisualElement _puppetHolder;
         private VisualElement _sliceHolder;
         private VisualElement _textHolder;
+        private GmgCircleElement _border;
         private VisualElement _radial;
 
         internal RadialSliceBase PressingButton;
         private RadialSliceBase[] _buttons;
+        private VisualElement[] _lines;
 
         private readonly bool _official;
 
@@ -68,9 +73,9 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             CreateRadial();
         }
 
-        /*
-         * Events
-         */
+        /* ╭────────────────────────────╮ *
+         * │           Events           │ *
+         * ╰────────────────────────────╯ */
 
         private void OnClickStart()
         {
@@ -88,9 +93,9 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             else ClosePuppet();
         }
 
-        /*
-         * Core
-         */
+        /* ╭────────────────────────────╮ *
+         * │            Core            │ *
+         * ╰────────────────────────────╯ */
 
         public override void Render(VisualElement root, Rect rect)
         {
@@ -103,9 +108,9 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
 
         protected override bool RenderCondition(ModuleVrc3 module, RadialMenu menu) => menu.ToolBar.Selected == 0;
 
-        /*
-         * Puppets
-         */
+        /* ╭────────────────────────────╮ *
+         * │           Puppet           │ *
+         * ╰────────────────────────────╯ */
 
         internal void OpenPuppet(BasePuppet puppet)
         {
@@ -133,22 +138,66 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             _cursor.Update(Event.current.mousePosition, _buttons, Puppet);
         }
 
-        /*
-         * Menu Prefabs
-         */
+        /* ╭────────────────────────────╮ *
+         * │        Menu Prefabs        │ *
+         * ╰────────────────────────────╯ */
 
         internal void MainMenuPrefab()
         {
             _menuPath.Clear();
-            var buttons = new RadialSliceBase[4];
+            var buttons = new RadialSliceBase[6];
             if (Module.DummyMode == null) buttons[0] = new RadialSliceButton(OptionMainMenuPrefab, "Options", ModuleVrc3Styles.Option);
             else buttons[0] = new RadialSliceButton(Module.DummyMode.StopExecution, Module.DummyMode.ExitDummyText, running: true);
             var isDisabled = Module.DummyMode != null || !_menu;
             buttons[1] = new RadialSliceButton(ExpressionsMenu, "Expressions", ModuleVrc3Styles.Expressions, enabled: !isDisabled);
-            buttons[2] = new RadialSliceButton(SupporterMenuPrefab, "Thanks to...", ModuleVrc3Styles.Emojis);
-            buttons[3] = new RadialSliceButton(ToolMenuPrefab, "Tools", ModuleVrc3Styles.Tools);
+            buttons[2] = new RadialSliceButton(LooksMenuPrefab, "Looks", ModuleVrc3Styles.Looks);
+            buttons[3] = new RadialSliceButton(SupporterMenuPrefab, "Thanks to...", ModuleVrc3Styles.Emojis);
+            buttons[4] = new RadialSliceButton(ClonesMenuPrefab, "Clones", ModuleVrc3Styles.Clones, enabled: Module.DummyMode == null);
+            buttons[5] = new RadialSliceButton(ToolMenuPrefab, "Tools", ModuleVrc3Styles.Tools);
             SetButtons(buttons);
             _radialDescription = Module.DummyMode?.DummyDescription();
+        }
+
+        private void ClonesMenuPrefab()
+        {
+            if (Module.DummyMode != null) return;
+            OpenCustom(new RadialSliceBase[]
+            {
+                new RadialSliceButton(AddNewRemote, "New Remote", ModuleVrc3Styles.SpawnRemoteUser),
+                new RadialSliceButton(AddNewFriend, "New Friend", ModuleVrc3Styles.SpawnRemoteFriend)
+            });
+            _radialMenuGui = Module.CloneGui;
+        }
+
+        private void AddNewRemote() => Module.SpawnClone(new ModuleSettings { isRemote = true });
+
+        private void AddNewFriend() => Module.SpawnClone(new ModuleSettings { isRemote = true, isOnFriendsList = true });
+
+        private void LooksMenuPrefab()
+        {
+            OpenCustom(new RadialSliceBase[]
+            {
+                new RadialSliceButton(MainColorMenu, "Main", ModuleVrc3Styles.CustomColorMain),
+                new RadialSliceButton(BorderColorMenu, "Border", ModuleVrc3Styles.CustomColorBorder),
+                new RadialSliceButton(SelectedColorMenu, "Selected", ModuleVrc3Styles.CustomColorSelected)
+            });
+        }
+
+        private void MainColorMenu() => CustomColorMenu(RadialMenuUtility.Colors.Custom.Main);
+
+        private void BorderColorMenu() => CustomColorMenu(RadialMenuUtility.Colors.Custom.Border);
+
+        private void SelectedColorMenu() => CustomColorMenu(RadialMenuUtility.Colors.Custom.Selected);
+
+        private void CustomColorMenu(RadialMenuUtility.Colors.CustomColor color)
+        {
+            OpenCustom(new[]
+            {
+                RadialMenuUtility.Buttons.RadialFromParam(this, "Hue", color.Hue, ModuleVrc3Styles.HuePicker),
+                RadialMenuUtility.Buttons.RadialFromParam(this, "Saturation", color.Sat, ModuleVrc3Styles.SaturationPicker),
+                RadialMenuUtility.Buttons.RadialFromParam(this, "Value", color.Val, ModuleVrc3Styles.ValuePicker)
+            });
+            _radialDescription = new RadialDescription("Don't like the new color? ", "Reset it to default", "!", _ => color.Color = color.Reset);
         }
 
         private void OptionMainMenuPrefab()
@@ -195,11 +244,12 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             OpenCustom(new[]
             {
                 RadialMenuUtility.Buttons.ToggleFromParam(this, "T Pose", Module.PoseT, ModuleVrc3Styles.PoseT),
+                RadialMenuUtility.Buttons.ToggleFromParam(this, "Head Chops", Module.HeadChop, ModuleVrc3Styles.HeadChops),
                 RadialMenuUtility.Buttons.ToggleFromParam(this, "AFK", GetParam(Vrc3DefaultParams.Afk), ModuleVrc3Styles.Afk),
                 RadialMenuUtility.Buttons.RadialFromParam(this, Vrc3DefaultParams.Vise, GetParam(Vrc3DefaultParams.Vise), ModuleVrc3Styles.Visemes, amplify: Module.ViseAmount),
                 RadialMenuUtility.Buttons.ToggleFromParam(this, "Seated", GetParam(Vrc3DefaultParams.Seated), ModuleVrc3Styles.Seated),
-                RadialMenuUtility.Buttons.ToggleFromParam(this, "IK Pose", Module.PoseIK, ModuleVrc3Styles.PoseIK),
-                RadialMenuUtility.Buttons.ToggleFromParam(this, "Avatar Culling", GetParam(Vrc3DefaultParams.IsAnimatorEnabled), ModuleVrc3Styles.IsAnimatorEnabled, offValue: 1f, activeValue: 0f, enabled: !Module.Settings.simulateCulling)
+                RadialMenuUtility.Buttons.ToggleFromParam(this, "Avatar Culling", GetParam(Vrc3DefaultParams.IsAnimatorEnabled), ModuleVrc3Styles.IsAnimatorEnabled, offValue: 1f, activeValue: 0f, enabled: !Module.Settings.simulateCulling),
+                RadialMenuUtility.Buttons.ToggleFromParam(this, "IK Pose", Module.PoseIK, ModuleVrc3Styles.PoseIK)
             });
         }
 
@@ -261,9 +311,9 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             else QuickActionsMenuPrefab();
         }
 
-        /*
-         * Menu
-         */
+        /* ╭────────────────────────────╮ *
+         * │            Menu            │ *
+         * ╰────────────────────────────╯ */
 
         internal void OpenMenu(VRCExpressionsMenu menu, Vrc3Param param, float value)
         {
@@ -286,9 +336,9 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             });
         }
 
-        /*
-         * Custom Menu
-         */
+        /* ╭────────────────────────────╮ *
+         * │        Custom Menus        │ *
+         * ╰────────────────────────────╯ */
 
         private void OpenCustom(IReadOnlyList<RadialSliceBase> controls)
         {
@@ -306,9 +356,9 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             });
         }
 
-        /*
-         * Menu Actions
-         */
+        /* ╭────────────────────────────╮ *
+         * │        Menu Actions        │ *
+         * ╰────────────────────────────╯ */
 
         private void OpenToolPage(string s)
         {
@@ -330,9 +380,9 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             param?.Set(Module, 0);
         }
 
-        /*
-         * Radial Button Creation Types
-         */
+        /* ╭────────────────────────────╮ *
+         * │     Radial Button Type     │ *
+         * ╰────────────────────────────╯ */
 
         private void ButtonCreationDefault(int index, float progress, float dCurrent, float pCurrent)
         {
@@ -340,13 +390,13 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             slice.Progress = progress;
 
             _sliceHolder.MyAdd(new VisualElement().With(slice)).transform.rotation = Quaternion.Euler(0, 0, dCurrent);
-            _sliceHolder.MyAdd(RadialMenuUtility.Prefabs.NewBorder(MaxSize)).transform.rotation = Quaternion.Euler(0, 0, dCurrent - 90);
+            _sliceHolder.MyAdd(_lines[index] = RadialMenuUtility.Prefabs.NewBorder(MaxSize)).transform.rotation = Quaternion.Euler(0, 0, dCurrent - 90);
             _textHolder.MyAdd(slice.DataHolder).transform.position = new Vector3(Mathf.Sin(pCurrent) * Size / 3, Mathf.Cos(pCurrent) * Size / 3, 0);
         }
 
-        /*
-         * Radial Stuff
-         */
+        /* ╭────────────────────────────╮ *
+         * │        Radial Stuff        │ *
+         * ╰────────────────────────────╯ */
 
         public Vrc3Param GetParam(string paramName) => Module.GetParam(paramName);
 
@@ -354,6 +404,7 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         {
             GUILayout.Space(10);
             _radialDescription?.Show();
+            _radialMenuGui?.Invoke();
         }
 
         public void Set(VRCExpressionsMenu menu)
@@ -371,7 +422,7 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
 
             Add(_radial = new VisualElement { pickingMode = PickingMode.Ignore, style = { justifyContent = Justify.Center, position = UIEPosition.Absolute, alignItems = Align.Center } });
             _radial.Add(_sliceHolder = new VisualElement { pickingMode = PickingMode.Ignore, style = { position = UIEPosition.Absolute } });
-            _radial.Add(RadialMenuUtility.Prefabs.NewCircle(InnerSize, RadialMenuUtility.Colors.RadialInner, RadialMenuUtility.Colors.CustomBorder, UIEPosition.Absolute));
+            _radial.Add(_border = RadialMenuUtility.Prefabs.NewCircle(InnerSize, RadialMenuUtility.Colors.RadialInner, RadialMenuUtility.Colors.CustomBorder, UIEPosition.Absolute));
             _radial.Add(_textHolder = new VisualElement { pickingMode = PickingMode.Ignore, style = { position = UIEPosition.Absolute } });
             _radial.Add(_puppetHolder = new VisualElement { pickingMode = PickingMode.Ignore, style = { position = UIEPosition.Absolute } });
             _radial.Add(_cursor);
@@ -385,6 +436,7 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         {
             _cursor.UpdateSelection(_buttons, deSel);
             _buttons = buttons;
+            _lines = new VisualElement[buttons.Length];
             SetButtons(buttons.Length, ButtonCreationDefault);
             _cursor.Selection = _cursor.GetChoice(buttons.Length, Puppet);
             if (_cursor.Selection != deSel) RadialCursor.Sel(_buttons[_cursor.Selection]);
@@ -395,6 +447,7 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         private void SetButtons(int len, float radCurrent, float piCurrent, Action<int, float, float, float> create)
         {
             _radialDescription = null;
+            _radialMenuGui = null;
             _sliceHolder.Clear();
             _textHolder.Clear();
             AddButtons(len, radCurrent, piCurrent, create);
@@ -434,6 +487,17 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             for (var iInt = list.Count; iInt < _menuPath.Count; iInt++) RemoveMenu(list.Count);
             _menuPath[^1].Open();
             return true;
+        }
+
+        public void ReloadColors()
+        {
+            UpdateRunning();
+            _cursor.ReloadColors();
+            _puppet?.ReloadColors();
+            foreach (var page in _menuPath) page.ReloadColors();
+            foreach (var slice in _buttons) slice.ReloadColors();
+            _border.BorderColor = RadialMenuUtility.Colors.CustomBorder;
+            foreach (var visual in _lines) visual.style.backgroundColor = RadialMenuUtility.Colors.CustomBorder;
         }
 
         internal void UpdateRunning()

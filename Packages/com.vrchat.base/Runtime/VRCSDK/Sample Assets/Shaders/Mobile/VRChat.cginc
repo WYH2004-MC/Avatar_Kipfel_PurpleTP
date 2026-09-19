@@ -23,12 +23,36 @@
 // Use our squeezed BRDF on mobile
 // In general we want FLOAT_MIN to be the smallest value such that (1.0f + FLOAT_MIN) != FLOAT_MIN
 #if defined(SHADER_API_MOBILE)
-    #define VRC_BRDF_PBS BRDF2_VRC_PBS 
+    #define VRC_BRDF_PBS BRDF2_VRC_PBS
     #define FLOAT_MIN 1e-4
 #else
     #define VRC_BRDF_PBS UNITY_BRDF_PBS
     #define FLOAT_MIN 1e-6
 #endif
+
+#define SDF_RANGE 4.0
+
+// Converts encoded SDF alpha to coverage value for antialiased rendering at any scale.
+// Uses fwidth() on the SDF value itself to measure actual screen-space gradient,
+// making this agnostic to mip level selection (works correctly with anisotropic filtering).
+inline float CalculateSDFCoverage(float encodedAlpha)
+{
+    float sdf = (encodedAlpha - 0.5) * SDF_RANGE * 2.0;
+    float sdfGradient = fwidth(sdf);
+    float smoothing = max(sdfGradient, 0.0001);
+    return saturate(sdf / smoothing + 0.5);
+}
+
+// returns (minTileCorner.x, minTileCorner.y, maxTileCorner.x, maxTileCorner.y)
+float4 computeTileCorners(float2 texSize2, half4 atlasPosScale)
+{
+    // 1/atlasPosScale.zw the x and y res of the tile
+    // snap to the nearest pixel if e.g. texCoords.x < one_pixel/2
+    // texcoords is already in atlas-space though
+    float2 halfPixelSize = 0.5 / texSize2;
+    return float4(atlasPosScale.xy + halfPixelSize,
+                  atlasPosScale.xy + atlasPosScale.zw - halfPixelSize);
+}
 
 #if defined(_BICUBIC)
     float BakeryBicubic_w0(float a)

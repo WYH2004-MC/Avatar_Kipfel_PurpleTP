@@ -98,6 +98,15 @@ namespace VRC.SDKBase.Editor.Elements
             }
         }
 
+        public void UnregisterValueChangedCallback(EventCallback<ChangeEvent<T>> callback)
+        {
+            _popupField?.UnregisterValueChangedCallback(callback);
+            if (_changeCallback == callback)
+            {
+                _changeCallback = null;
+            }
+        }
+
         private void PingField()
         {
             if (_popupField == null) return;

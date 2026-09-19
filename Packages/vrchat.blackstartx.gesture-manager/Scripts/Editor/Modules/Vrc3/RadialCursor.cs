@@ -17,6 +17,9 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         private const float MiddleSize = CursorSize / 1.5f;
         private const float SmallSize = CursorSize / 4f;
 
+        private readonly VisualElement _middle;
+        private readonly VisualElement _small;
+
         private float _clampReset;
         private float _clamp;
         private float _min;
@@ -28,13 +31,13 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         public RadialCursor()
         {
             RadialMenuUtility.Prefabs.SetCircle(this, CursorSize, RadialMenuUtility.Colors.Cursor, RadialMenuUtility.Colors.CursorBorder)
-                .MyAdd(RadialMenuUtility.Prefabs.NewCircleBorder(MiddleSize, RadialMenuUtility.Colors.CursorBorder))
-                .Add(RadialMenuUtility.Prefabs.NewCircleBorder(SmallSize, RadialMenuUtility.Colors.CursorBorder));
+                .MyAdd(_middle = RadialMenuUtility.Prefabs.NewCircleBorder(MiddleSize, RadialMenuUtility.Colors.CursorBorder))
+                .Add(_small = RadialMenuUtility.Prefabs.NewCircleBorder(SmallSize, RadialMenuUtility.Colors.CursorBorder));
         }
 
-        /*
-         * Data
-         */
+        /* ╭────────────────────────────╮ *
+         * │            Data            │ *
+         * ╰────────────────────────────╯ */
 
         private void SetParent(VisualElement referenceLayout)
         {
@@ -83,9 +86,17 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             newElement.VertexColor = newElement.SelectedBorderColor;
         }
 
-        /*
-         * Static
-         */
+        public void ReloadColors()
+        {
+            VertexColor = CenterColor = RadialMenuUtility.Colors.Cursor;
+            _middle.MyBorder(RadialMenuUtility.Colors.CursorBorder);
+            _small.MyBorder(RadialMenuUtility.Colors.CursorBorder);
+            BorderColor = RadialMenuUtility.Colors.CursorBorder;
+        }
+
+        /* ╭────────────────────────────╮ *
+         * │           Static           │ *
+         * ╰────────────────────────────╯ */
 
         private static float GetAngle(Vector2 mouse) => -Mathf.Atan2(mouse.x, mouse.y) * 180f / Mathf.PI + 180f;
 
@@ -126,9 +137,9 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
             return (int)((GetAngle(mouse) + 180f / elements) % 360 / (360f / elements));
         }
 
-        /*
-         * Listeners
-         */
+        /* ╭────────────────────────────╮ *
+         * │          Listener          │ *
+         * ╰────────────────────────────╯ */
 
         [PublicAPI] public int GetChoice(int elements, bool puppet) => puppet ? -1 : GetChoice(_position, _min, _max, elements);
 
@@ -138,9 +149,9 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
 
         internal bool Get4Axis(float range, out Vector4 axis) => Get4Axis(_position, range, out axis);
 
-        /*
-         * Cursor Position
-         */
+        /* ╭────────────────────────────╮ *
+         * │      Cursor Positions      │ *
+         * ╰────────────────────────────╯ */
 
         private void SetCursorPosition(float x, float y) => SetCursorPosition(new Vector2(x, y));
 

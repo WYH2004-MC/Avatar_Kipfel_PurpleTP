@@ -10,11 +10,14 @@ namespace VRC.SDK3.Dynamics
     /// </summary>
     public static class DynamicsSetup
     {
-        [InitializeOnLoadMethod]
-        private static void EditorInit()
+        internal static void EditorInit()
         {
             VRCConstraintManager.CanExecuteConstraintJobsInEditMode = VRC.SDKBase.Editor.VRCSettings.VrcConstraintsInEditMode;
+            EditorApplication.playModeStateChanged -= HandlePlayModeStateChanged;
             EditorApplication.playModeStateChanged += HandlePlayModeStateChanged;
+
+            AssemblyReloadEvents.beforeAssemblyReload -= HandlePreAssemblyReload;
+            AssemblyReloadEvents.beforeAssemblyReload += HandlePreAssemblyReload;
         }
 
         private static void HandlePlayModeStateChanged(PlayModeStateChange stateChange)
@@ -28,35 +31,94 @@ namespace VRC.SDK3.Dynamics
             }
         }
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-        private static void RuntimeInit()
+        private static void HandlePreAssemblyReload()
         {
-            //Create singleton MonoBehaviours needed by dynamics
+            // Don't leak
+
+            if (ContactManager.Inst != null)
+            {
+                ContactManager.Inst.Dispose();
+                ContactManager.Inst = null;
+            }
+            foreach (ContactBase contact in Object.FindObjectsByType<ContactBase>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+            {
+                contact.ClearInit();
+            }
+
+            if (PhysBoneManager.Inst != null)
+            {
+                PhysBoneManager.Inst.Dispose();
+                PhysBoneManager.Inst = null;
+            }
+        }
+
+        internal static void RuntimeInit(bool invokedFromDomainReload)
+        {
+            SetupDynamicsManagers(invokedFromDomainReload);
+        }
+
+        private static void SetupDynamicsManagers(bool invokedFromDomainReload)
+        {
+            //Create or recover singleton MonoBehaviours needed by dynamics
 
             //Contact Manager
             if (ContactManager.Inst == null)
             {
-                var obj = new GameObject("ContactManager");
-                UnityEngine.Object.DontDestroyOnLoad(obj);
-                ContactManager.Inst = obj.AddComponent<ContactManager>();
+                ContactManager contactManager = Object.FindAnyObjectByType<ContactManager>();
+                bool gotExistingContactManager = contactManager != null;
+                if (contactManager == null)
+                {
+                    var obj = new GameObject("ContactManager");
+                    Object.DontDestroyOnLoad(obj);
+                    obj.hideFlags = HideFlags.HideInHierarchy;
 
-                obj.hideFlags = HideFlags.HideInHierarchy;
+                    contactManager = obj.AddComponent<ContactManager>();
+                }
+
+                ContactManager.Inst = contactManager;
+                ContactManager.Inst.Init();
+
+                if (invokedFromDomainReload && gotExistingContactManager)
+                {
+                    // Manually prompt all contacts to register themselves again because Start() does not run in response to domain reloads.
+                    ContactBase[] contacts = Object.FindObjectsByType<ContactBase>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+                    foreach (ContactBase contact in contacts)
+                    {
+                        contact.Start();
+                    }
+                }
             }
 
             //PhysBone Manager
             if (PhysBoneManager.Inst == null)
             {
-                var obj = new GameObject("PhysBoneManager");
-                UnityEngine.Object.DontDestroyOnLoad(obj);
+                PhysBoneManager physBoneManager = Object.FindAnyObjectByType<PhysBoneManager>();
+                bool gotExistingPhysBoneManager = physBoneManager != null;
+                if (physBoneManager == null)
+                {
+                    var obj = new GameObject("PhysBoneManager");
+                    Object.DontDestroyOnLoad(obj);
+                    obj.hideFlags = HideFlags.HideInHierarchy;
 
-                PhysBoneManager.Inst = obj.AddComponent<PhysBoneManager>();
+                    physBoneManager = obj.AddComponent<PhysBoneManager>();
+                }
+
+                PhysBoneManager.Inst = physBoneManager;
                 PhysBoneManager.Inst.IsSDK = true;
                 PhysBoneManager.Inst.Init();
 
-                obj.hideFlags = HideFlags.HideInHierarchy;
+                if (invokedFromDomainReload && gotExistingPhysBoneManager)
+                {
+                    // Manually prompt all contacts to register themselves again because Start() does not run in response to domain reloads.
+                    VRCPhysBoneBase[] physBones = Object.FindObjectsByType<VRCPhysBoneBase>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+                    foreach (VRCPhysBoneBase physBone in physBones)
+                    {
+                        physBone.Init();
+                    }
+                }
             }
 
-            //Constraint Manager is not a MonoBehaviour
+            //Constraint Manager is not a MonoBehaviour and serves itself
         }
     }
 }

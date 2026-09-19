@@ -11,6 +11,7 @@ using System.Text.RegularExpressions;
 namespace VRC.Core
 {
     [Obsolete("Use the new VRCApi class from VRC.SDKBase.Editor.Api")]
+    [AddComponentMenu("")]
     public class ApiFileHelper : MonoBehaviour
     {
         private static readonly int kMultipartUploadChunkSize = 100 * 1024 * 1024; // 100 MB

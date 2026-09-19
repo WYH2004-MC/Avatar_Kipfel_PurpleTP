@@ -45,6 +45,10 @@
     #if defined(USE_MATCAP)
         ApplyMatcap(surface, lightVectors, worldNormal, /* inout */ albedo.rgb);
     #endif
+    
+    #if defined(USE_AUDIOLINK) && defined(UNITY_PASS_FORWARDBASE)
+        ApplyAudioLink(i, dotProducts, surface, /* inout */ emission);
+    #endif
 
     half3 vertexLightDiff = 0;
     half3 vertexLightSpec = 0;

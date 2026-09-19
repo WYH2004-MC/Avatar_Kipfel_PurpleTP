@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Reflection;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
@@ -40,6 +41,7 @@ using VRC.Utility;
 using Object = UnityEngine.Object;
 using Progress = UnityEditor.Progress;
 using VRCStation = VRC.SDK3.Avatars.Components.VRCStation;
+
 
 [assembly: VRCSdkControlPanelBuilder(typeof(VRCSdkControlPanelAvatarBuilder))]
 namespace VRC.SDK3A.Editor
@@ -182,15 +184,19 @@ namespace VRC.SDK3A.Editor
         // This creates a unique identifier via the hierarchy path which differentiates between siblings
         private string GetAvatarSceneIdentifier(GameObject target)
         {
+            StringBuilder sb = new StringBuilder();
             var transform = target.transform;
-            var hierarchyPath = transform.name + $"[{transform.GetSiblingIndex()}]";
+            // Build the hierarchy path
+            sb.Append(transform.name);
+            sb.Append($"[{transform.GetSiblingIndex()}]");
             while (transform.parent != null)
             {
                 transform = transform.parent;
                 // Since any characters can be valid in a path - avoid using the regular path separator
-                hierarchyPath = transform.name + IDENTIFIER_SEPARATOR + hierarchyPath;
+                sb.Insert(0, IDENTIFIER_SEPARATOR);
+                sb.Insert(0, transform.name);
             }
-            return hierarchyPath;
+            return sb.ToString();
         }
         
         private GameObject GetAvatarFromSceneIdentifier(string identifier)
@@ -209,18 +215,19 @@ namespace VRC.SDK3A.Editor
                 return targetRoot.name == targetName ? targetRoot : null;
             }
 
+            if (chunks.Count > 1)
             {
                 var root = sceneRoots.FirstOrDefault(root => root.name == chunks[0]);
-                var target = chunks[chunks.Count];
-                
-                chunks.RemoveAt(0);
-                chunks.RemoveAt(chunks.Count);
-                
                 if (root == null) return null;
-                foreach (var chunk in chunks)
+
+                var target = chunks[chunks.Count - 1];
+                
+                // Cycle interstitial chunks from root down to target
+                for (int i = 1; i < chunks.Count - 1; i++)
                 {
-                    root = root.transform.Find(chunk)?.gameObject;
-                    if (root == null) return null;    
+                    Transform chunkTransform = root.transform.Find(chunks[i]);
+                    root = chunkTransform != null ? chunkTransform.gameObject : null;
+                    if (root == null) return null;
                 }
 
                 var siblingIndexPosition = target.LastIndexOf("[", StringComparison.InvariantCulture);
@@ -407,6 +414,7 @@ namespace VRC.SDK3A.Editor
                             delegate { Selection.activeObject = avatar.gameObject; }, null);
                 }
 
+
                 VRCHeadChop[] customHeadChops = avatar.GetComponentsInChildren<VRCHeadChop>(true);
                 if (customHeadChops != null && customHeadChops.Length > 0)
                 {
@@ -441,6 +449,60 @@ namespace VRC.SDK3A.Editor
             }
 
             ValidateFeatures(avatar, anim, perfStats);
+
+            PipelineManager[] pipelineManagers = avatar.GetComponentsInChildren<PipelineManager>(true);
+            if (pipelineManagers.Length > 1)
+            {
+                _builder.OnGUIError(avatar, "There are multiple pipeline manager components on this avatar. There should only be one at the avatar's root. Click Auto Fix to remove all pipeline managers except for the first one found on the avatar root.",
+                    () =>
+                    {
+                        using (ListPool.Get(out List<Object> pipelineManagerObjects))
+                        {
+                            foreach (PipelineManager pm in pipelineManagers)
+                            {
+                                pipelineManagerObjects.Add(pm.gameObject);
+                            }
+
+                            Selection.objects = pipelineManagerObjects.ToArray();
+                        }
+                    },
+                    () =>
+                    {
+                        Undo.SetCurrentGroupName("Remove Excess Pipeline Managers");
+                        int undoGroup = Undo.GetCurrentGroup();
+                        try
+                        {
+                            bool avatarRootHandled = false;
+                            for (int i = 0; i < pipelineManagers.Length; i++)
+                            {
+                                PipelineManager pm = pipelineManagers[i];
+                                if (!avatarRootHandled && pm.gameObject == avatar.gameObject)
+                                {
+                                    avatarRootHandled = true;
+                                    continue; // Keep this one
+                                }
+                                Undo.DestroyObjectImmediate(pm);
+                            }
+                        }
+                        finally
+                        {
+                            Undo.CollapseUndoOperations(undoGroup);
+                        }
+                    });
+            }
+            else if (pipelineManagers.Length == 0)
+            {
+                // Very unlikely this could happen but let's cover it anyway.
+                _builder.OnGUIError(avatar, "This avatar has no pipeline manager component. Click Auto Fix to add one.",
+                    delegate
+                    {
+                        Selection.activeObject = avatar.gameObject;
+                    },
+                    delegate
+                    {
+                        Undo.AddComponent<PipelineManager>(avatar.gameObject);
+                    });
+            }
 
             PipelineManager pm = avatar.GetComponent<PipelineManager>();
 
@@ -607,6 +669,38 @@ namespace VRC.SDK3A.Editor
                 }
             }
 
+            //Remove orphan sub menu references
+            if (avatarSDK3 != null)
+            {
+                List<VRCExpressionsMenu> menuStack = new List<VRCExpressionsMenu>();
+                RemoveOrphanReferences(avatarSDK3.expressionsMenu);
+
+                void RemoveOrphanReferences(VRCExpressionsMenu menu)
+                {
+                    if (menu == null || menuStack.Contains(menu)) //Prevent recursive menu searching
+                        return;
+                    menuStack.Add(menu);
+
+                    //Check controls
+                    foreach (VRCExpressionsMenu.Control control in menu.controls)
+                    {
+                        if (control.subMenu != null)
+                        {
+                            if (control.type == VRCExpressionsMenu.Control.ControlType.SubMenu)
+                            {
+                                // Valid submenu, search down it
+                                RemoveOrphanReferences(control.subMenu);
+                            }
+                            else
+                            {
+                                // Orphaned submenu on this control
+                                control.subMenu = null;
+                            }
+                        }
+                    }
+                }
+            }
+
             //Expression menu images
             if (avatarSDK3 != null)
             {
@@ -673,7 +767,7 @@ namespace VRC.SDK3A.Editor
                                 AddTexture(label.icon);
                         }
 
-                        if (control.subMenu != null)
+                        if (control.type == VRCExpressionsMenu.Control.ControlType.SubMenu && control.subMenu != null)
                             FindTextures(control.subMenu);
                     }
 
@@ -754,8 +848,10 @@ namespace VRC.SDK3A.Editor
                                 }
                             }
 
-                            if (control.subMenu != null)
+                            if (control.type == VRCExpressionsMenu.Control.ControlType.SubMenu && control.subMenu != null)
+                            {
                                 FindParameters(control.subMenu);
+                            }
                         }
 
                         void AddParameter(VRCExpressionsMenu.Control.Parameter parameter)
@@ -874,6 +970,26 @@ namespace VRC.SDK3A.Editor
                     {
                         toRemoveSilently.AddRange(dbcList);
                     }
+                }
+
+                //Global collider count limit
+                VRCPhysBoneColliderBase[] physBoneColliders = avatar.gameObject.GetComponentsInChildren<VRCPhysBoneColliderBase>(true);
+                List<Object> globalColliderObjects = new List<Object>();
+                for (int i = 0; i < physBoneColliders.Length; i++)
+                {
+                    if (physBoneColliders[i].globalCollision != VRCPhysBoneBase.AdvancedBool.False)
+                    {
+                        globalColliderObjects.Add(physBoneColliders[i].gameObject);
+                    }
+                }
+                if (globalColliderObjects.Count > AvatarValidation.MAX_AVD_GLOBAL_COLLIDERS_PER_AVATAR)
+                {
+                    _builder.OnGUIError(avatar, $"This avatar contains a total of {globalColliderObjects.Count} global PhysBone colliders, but the maximum number allowed per avatar is {AvatarValidation.MAX_AVD_GLOBAL_COLLIDERS_PER_AVATAR}. " +
+                                                "Reduce the global collider count by switching Global Collision to False.",
+                        () =>
+                        {
+                            Selection.objects = globalColliderObjects.ToArray();
+                        });
                 }
 
                 //Unity constraints upgrade
@@ -1463,6 +1579,10 @@ namespace VRC.SDK3A.Editor
                                 _avatarData = await VRCApi.SetAvatarAsFallback(_avatarData.ID, _avatarData);
                                 CurrentFallbackStatus = FallbackStatus.Selected;
                             }
+                            catch (ApiModeratedException e)
+                            {
+                                ShowModeratedNotification(e.Fields);
+                            }
                             catch (ApiErrorException apiError)
                             {
                                 await _builder.ShowBuilderNotification("Failed to set fallback",
@@ -1538,8 +1658,8 @@ namespace VRC.SDK3A.Editor
                 "Visibility", 
                 new List<string> {"private", "public"},
                 "private",
-                selected => selected.Substring(0,1).ToUpper() + selected.Substring(1), 
-                item => item.Substring(0,1).ToUpper() + item.Substring(1)
+                selected => selected != null ? selected.Substring(0,1).ToUpper() + selected.Substring(1) : null, 
+                item => item != null ? item.Substring(0,1).ToUpper() + item.Substring(1) : null
             );
             _visibilityPopupBlock.Add(_visibilityPopup);
 
@@ -1616,6 +1736,8 @@ namespace VRC.SDK3A.Editor
             _discardChangesButton.clicked -= HandleDiscardChangesClick;
             _saveChangesButton.clicked -= HandleSaveChangesClick;
             _contentWarningsField.OnToggleOption -= HandleToggleTag;
+            _primaryStyleField?.UnregisterValueChangedCallback(HandlePrimaryStyleChange);
+            _secondaryStyleField?.UnregisterValueChangedCallback(HandleSecondaryStyleChange);
             root.schedule.Execute(CheckBlueprintChanges).Pause();
 
             // Load the avatar data
@@ -1651,7 +1773,7 @@ namespace VRC.SDK3A.Editor
             var avatarId = pm.blueprintId;
             _lastBlueprintId = avatarId;
             _avatarData = new VRCAvatar();
-            bool hasRemoteAvatarRecord;
+            bool hasRemoteAvatarRecord = true; // Has remote record (either complete or incomplete) until proven otherwise.
             if (string.IsNullOrWhiteSpace(avatarId))
             {
                 IsNewAvatar = true;
@@ -1665,6 +1787,7 @@ namespace VRC.SDK3A.Editor
                     if (APIUser.CurrentUser != null && _avatarData.AuthorId != APIUser.CurrentUser?.id)
                     {
                         ClearAvatarData(pm);
+                        hasRemoteAvatarRecord = false; // Not owned by this user
                     }
                 }
                 catch (TaskCanceledException)
@@ -1684,13 +1807,13 @@ namespace VRC.SDK3A.Editor
                     {
                         Debug.LogError(ex.ErrorMessage);
                     }
+                    hasRemoteAvatarRecord = false; // Not owned by this user
                 }
                 catch (Exception ex)
                 {
                     Debug.LogException(ex);
+                    hasRemoteAvatarRecord = false;
                 }
-
-                hasRemoteAvatarRecord = true; // Either complete or incomplete.
 
                 // Treat this as a new avatar if the container appears to be incomplete.
                 // This may happen if a previous upload process was interrupted, meaning we reserved an
@@ -1753,9 +1876,12 @@ namespace VRC.SDK3A.Editor
                 _fallbackInfo.parent.RemoveFromClassList("d-none");
 
                 var platforms = new HashSet<string>();
-                foreach (var p in _avatarData.UnityPackages.Select(p => VRCSdkControlPanel.CONTENT_PLATFORMS_MAP[p.Platform]))
+                if (_avatarData.UnityPackages != null)
                 {
-                    platforms.Add(p);
+                    foreach (var p in _avatarData.UnityPackages.Select(p => VRCSdkControlPanel.CONTENT_PLATFORMS_MAP[p.Platform]))
+                    {
+                        platforms.Add(p);
+                    }
                 }
                 platformsBlock.text = string.Join(", ", platforms);
                 
@@ -1833,8 +1959,8 @@ namespace VRC.SDK3A.Editor
             // Do not clear blueprint IDs during a build or upload
             if (_buildState != SdkBuildState.Building && _uploadState != SdkUploadState.Uploading)
             {
-                Core.Logger.LogError("Loaded data for an avatar we do not own, clearing blueprint ID");
-                Undo.RecordObject(pm, "Cleared the blueprint ID we do not own");
+                Core.Logger.LogWarning("Loaded data for an avatar we do not own, clearing blueprint ID");
+                Undo.RecordObject(pm, "Clear Unowned Blueprint ID");
                 pm.blueprintId = "";
                 _lastBlueprintId = "";
             }
@@ -2169,6 +2295,11 @@ namespace VRC.SDK3A.Editor
                             _avatarUploadCancellationToken);
                     }
                 }
+                catch (ApiModeratedException e)
+                {
+                    ModeratedError(e.Fields, e.ErrorMessage);
+                    return;
+                }
                 catch (ApiErrorException e)
                 {
                     InfoUpdateError(this, e.ErrorMessage);
@@ -2195,9 +2326,30 @@ namespace VRC.SDK3A.Editor
                     Text = "Saving Avatar Changes...",
                     Progress = 1f
                 });
+
                 Core.Logger.Log("Updating avatar");
-                var updatedAvatar = await VRCApi.UpdateAvatarInfo(_avatarData.ID, _avatarData, _avatarUploadCancellationToken);
+                VRCAvatar updatedAvatar;
+                try
+                {
+                    updatedAvatar = await VRCApi.UpdateAvatarInfo(_avatarData.ID, _avatarData, _avatarUploadCancellationToken);
+                }
+                catch (ApiModeratedException e)
+                {
+                    ModeratedError(e.Fields, e.ErrorMessage);
+                    return;
+                }
+                catch (ApiErrorException e)
+                {
+                    InfoUpdateError(this, e.ErrorMessage);
+                    return;
+                }
+                catch (Exception e)
+                {
+                    InfoUpdateError(this, e.Message);
+                    return;
+                }
                 Core.Logger.Log("Updated avatar");
+
                 _avatarData = updatedAvatar;
                 _originalAvatarData = updatedAvatar;
                 _contentWarningsField.OriginalOptions = _originalAvatarData.Tags = new List<string>(_avatarData.Tags ?? new List<string>());
@@ -2812,6 +2964,7 @@ namespace VRC.SDK3A.Editor
             }
 
             VRC_SdkBuilder.shouldBuildUnityPackage = false;
+            VRC_SdkBuilder.SetCurrentBuilder<ISDKAvatarBuilder>();
             VRC_SdkBuilder.ClearCallbacks();
 
             var successTask = new TaskCompletionSource<string>();
@@ -3190,6 +3343,11 @@ namespace VRC.SDK3A.Editor
                     throw await HandleUploadError(new UploadException("Request Cancelled", e));
                 }
             }
+            catch (ApiModeratedException e)
+            {
+                AnalyticsSDK.AvatarUploadFailed(pM.blueprintId, !firstTimeCreation);
+                throw await HandleUploadError(e);
+            }
             catch (ApiErrorException e)
             {
                 AnalyticsSDK.AvatarUploadFailed(pM.blueprintId, !firstTimeCreation);
@@ -3218,6 +3376,9 @@ namespace VRC.SDK3A.Editor
 
         private async Task<Exception> HandleUploadError(Exception exception)
         {
+            if (exception is ApiModeratedException e)
+                ModeratedError(e.Fields, e.Message);
+                
             OnSdkUploadError?.Invoke(this, exception.Message);
             _uploadState = SdkUploadState.Failure;
             OnSdkUploadStateChange?.Invoke(this, _uploadState);
@@ -3409,7 +3570,11 @@ namespace VRC.SDK3A.Editor
             HandleAvatarSwitch(_visualRoot);
         }
         private async void UploadError(object sender, string error)
-        {
+        { 
+            // Since we only have access to the text of the error here - we short circuit based on that. The actual error notification is handled from `HandleUploadError`
+            if (error.Contains(typeof(ApiModeratedException).Name))
+                return;
+
             Core.Logger.Log("Failed to upload avatar!");
             Core.Logger.LogError(error);
             
@@ -3456,6 +3621,32 @@ namespace VRC.SDK3A.Editor
                 new GenericBuilderNotification(error),
                 "red"
             );
+        }
+
+        private async void ShowModeratedNotification(string[] fields)
+        {
+            await _builder.ShowBuilderNotification(
+                "Content Guidelines Check",
+                new ModeratedNotification(_builder, fields),
+                "white");
+        }
+
+        private async void ModeratedError(string[] fields, string error)
+        {
+            await Task.Delay(100);
+            _builderProgress.SetCancelButtonVisibility(false);
+            _builderProgress.HideProgress();
+            UiEnabled = true;
+            _thumbnail.Loading = false;
+            RevertThumbnail();
+            
+            if (Progress.Exists(_platformProgressId))
+            {
+                Progress.Report(_platformProgressId, 2, 2, error);
+                Progress.Finish(_platformProgressId, Progress.Status.Failed);
+            }
+            
+            ShowModeratedNotification(fields);
         }
         
         private void MultiPlatformUploadError(object sender, string error)
@@ -3600,7 +3791,23 @@ namespace VRC.SDK3A.Editor
 
             if (firstTimeCreation)
             {
-                avatar = await VRCApi.CreateAvatarRecord(avatar, (status, percentage) => { OnSdkUploadProgress?.Invoke(this, (status, percentage)); }, cancellationToken);
+                try
+                {
+                    avatar = await VRCApi.CreateAvatarRecord(avatar, (status, percentage) => { OnSdkUploadProgress?.Invoke(this, (status, percentage)); }, cancellationToken);
+                }
+                catch (ApiModeratedException e)
+                {
+                    throw await HandleUploadError(e);
+                }
+                catch (ApiErrorException e)
+                {
+                    throw await HandleUploadError(new UploadException(e.ErrorMessage, e));
+                }
+                catch (Exception e)
+                {
+                    throw await HandleUploadError(new UploadException(e.Message, e));
+                }
+
                 if (string.IsNullOrEmpty(avatar.ID))
                 {
                     throw await HandleBuildError(new BuilderException("Failed to reserve an avatar ID"));

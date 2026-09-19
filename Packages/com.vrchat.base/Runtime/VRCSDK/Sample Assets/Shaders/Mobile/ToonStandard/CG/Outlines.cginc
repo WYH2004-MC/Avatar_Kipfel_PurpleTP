@@ -81,7 +81,7 @@ half4 frag_outline (v2f_outline i) : SV_Target
 
     UNITY_BRANCH if (outlineFromAlbedo)
     {
-        half3 albedo = tex2D(_MainTex, VRCHAT_TRANSFORM_ATLAS_TEX_MODE(i.uv, _MainTex)).rgb;
+        half3 albedo = UNITY_SAMPLE_TEX2D(_MainTex, VRCHAT_TRANSFORM_ATLAS_TEX_MODE(i.uv, _MainTex)).rgb;
         albedo *= VRCHAT_GET_ATLAS_PROPERTY(_Color).rgb;
         albedo *= i.color;
         color = lerp(color, albedo, outlineFromAlbedo);

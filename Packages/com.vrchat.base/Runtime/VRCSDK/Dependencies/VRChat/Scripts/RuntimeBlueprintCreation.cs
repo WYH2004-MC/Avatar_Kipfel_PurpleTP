@@ -11,6 +11,7 @@ namespace VRCSDK2
 {
 #if UNITY_EDITOR
     [Obsolete("Runtime uploads are deprecated. Use methods provided by the VRC.SDKBase.Editor.Api.VRCApi class for uploads")]
+    [AddComponentMenu("")]
     public class RuntimeBlueprintCreation : RuntimeAPICreation
     {
         public GameObject waitingPanel;

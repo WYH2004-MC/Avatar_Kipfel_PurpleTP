@@ -275,9 +275,11 @@ namespace VRC.SDKBase.Editor.Api {
             {
                 if (result.Content.Headers.ContentLength > 0)
                 {
+                    string errorContent = null;
                     try
                     {
-                        throw new ApiErrorException(result, await result.Content.ReadAsStringAsync());
+                        errorContent = await result.Content.ReadAsStringAsync();
+                        throw new ApiErrorException(result, errorContent);
                     }
                     catch (ApiErrorException ex)
                     {
@@ -287,13 +289,17 @@ namespace VRC.SDKBase.Editor.Api {
                         {
                             Core.Logger.LogError("Unauthorized, try logging out and in again");
                         }
+                        else if (ex.StatusCode == HttpStatusCode.UnprocessableEntity) // Moderated
+                        {
+                            throw new ApiModeratedException(result, errorContent);
+                        }
                         throw;
                     }
                     catch
                     {
                         // Fall-through to the generic error exception if encountered non-api exception 
                     }
-                    Core.Logger.LogError($"Error data {await result.Content.ReadAsStringAsync()}", API.LOG_CATEGORY);
+                    Core.Logger.LogError($"Error data {errorContent}", API.LOG_CATEGORY);
                 }
                 throw new RequestFailedException($"Failed to perform a request to VRChat API for {uri} and data {JsonConvert.SerializeObject(body, JSON_OPTIONS)}", result, result.StatusCode);
             }
@@ -459,7 +465,7 @@ namespace VRC.SDKBase.Editor.Api {
             var fileName = "World - " + data.Name + " - Image - " + Application.unityVersion + "_" + ApiWorld.VERSION.ApiVersion +
                            "_" + VRC.Tools.Platform + "_" + API.GetServerEnvironmentForApiUrl();
             var fileId = ApiFile.ParseFileIdFromFileAPIUrl(data.ImageUrl);
-            var newImageUrl = await UploadFile(pathToImage, fileId, fileName, onProgress, cancellationToken);
+            var newImageUrl = await UploadFile(pathToImage, fileId, fileName, onProgress: onProgress, cancellationToken: cancellationToken);
             if (string.IsNullOrWhiteSpace(newImageUrl))
             {
                 Debug.Log("new image url is empty, aborting");
@@ -490,12 +496,12 @@ namespace VRC.SDKBase.Editor.Api {
             // new platform
             if (string.IsNullOrWhiteSpace(currentAssetUrl))
             {
-                newBundleUrl = await UploadFile(pathToBundle, "", fileName, onProgress, cancellationToken);
+                newBundleUrl = await UploadFile(pathToBundle, "", fileName, onProgress: onProgress, cancellationToken: cancellationToken);
             }
             else
             {
                 var fileId = ApiFile.ParseFileIdFromFileAPIUrl(currentAssetUrl);
-                newBundleUrl = await UploadFile(pathToBundle, fileId, fileName, onProgress, cancellationToken);
+                newBundleUrl = await UploadFile(pathToBundle, fileId, fileName, onProgress: onProgress, cancellationToken: cancellationToken);
             }
             if (string.IsNullOrWhiteSpace(newBundleUrl))
             {
@@ -532,7 +538,7 @@ namespace VRC.SDKBase.Editor.Api {
             var newBundleUrl = await UploadFile(pathToBundle, "", fileName, onProgress: (status, percentage) =>
             {
                 onProgress?.Invoke(status, percentage * 0.5f);
-            }, cancellationToken);
+            }, cancellationToken: cancellationToken);
             if (string.IsNullOrWhiteSpace(newBundleUrl))
             {
                 Core.Logger.LogError("New bundle url is empty, aborting");
@@ -543,7 +549,7 @@ namespace VRC.SDKBase.Editor.Api {
             var newImageUrl = await UploadFile(pathToImage, "", imageFileName, onProgress: (status, percentage) =>
             {
                 onProgress?.Invoke(status, 0.5f + percentage * 0.5f);
-            }, cancellationToken);
+            }, cancellationToken: cancellationToken);
             if (string.IsNullOrWhiteSpace(newImageUrl))
             {
                 Core.Logger.LogError("New image url is empty, aborting");
@@ -553,12 +559,12 @@ namespace VRC.SDKBase.Editor.Api {
             {
                 {"id", id},
                 {"name", data.Name},
-                {"description", data.Description},
+                {"description", data.Description ?? string.Empty},
                 {"assetUrl", newBundleUrl},
                 {"imageUrl", newImageUrl},
                 {"platform", Tools.Platform},
                 {"unityVersion", Tools.UnityVersion.ToString()},
-                {"tags", data.Tags},
+                {"tags", data.Tags ?? new List<string>()},
                 {"capacity", data.Capacity},
                 {"recommendedCapacity", data.RecommendedCapacity},
                 {"previewYoutubeId", data.PreviewYoutubeId},
@@ -600,7 +606,7 @@ namespace VRC.SDKBase.Editor.Api {
             var fileName = "Avatar - " + data.Name + " - Image - " + Application.unityVersion + "_" + ApiAvatar.VERSION.ApiVersion +
                            "_" + VRC.Tools.Platform + "_" + API.GetServerEnvironmentForApiUrl();
             var fileId = ApiFile.ParseFileIdFromFileAPIUrl(data.ImageUrl);
-            var newImageUrl = await UploadFile(pathToImage, fileId, fileName, onProgress, cancellationToken);
+            var newImageUrl = await UploadFile(pathToImage, fileId, fileName, onProgress: onProgress, cancellationToken: cancellationToken);
             if (string.IsNullOrWhiteSpace(newImageUrl))
             {
                 Core.Logger.LogError("New image url is empty, aborting", API.LOG_CATEGORY);
@@ -631,12 +637,12 @@ namespace VRC.SDKBase.Editor.Api {
             // new platform
             if (string.IsNullOrWhiteSpace(currentAssetUrl))
             {
-                newBundleUrl = await UploadFile(pathToBundle, "", fileName, onProgress, cancellationToken);
+                newBundleUrl = await UploadFile(pathToBundle, "", fileName, onProgress: onProgress, cancellationToken: cancellationToken);
             }
             else
             {
                 var fileId = ApiFile.ParseFileIdFromFileAPIUrl(currentAssetUrl);
-                newBundleUrl = await UploadFile(pathToBundle, fileId, fileName, onProgress, cancellationToken);
+                newBundleUrl = await UploadFile(pathToBundle, fileId, fileName, onProgress: onProgress, cancellationToken: cancellationToken);
             }
             if (string.IsNullOrWhiteSpace(newBundleUrl))
             {
@@ -671,8 +677,8 @@ namespace VRC.SDKBase.Editor.Api {
             var newAvatarData = new Dictionary<string, object>
             {
                 {"name", data.Name},
-                {"description", data.Description},
-                {"tags", data.Tags},
+                {"description", data.Description ?? string.Empty},
+                {"tags", data.Tags ?? new List<string>()},
                 {"releaseStatus", data.ReleaseStatus},
                 {"platform", Tools.Platform},
                 {"unityVersion", Tools.UnityVersion.ToString()},
@@ -691,7 +697,7 @@ namespace VRC.SDKBase.Editor.Api {
                 Core.Logger.LogError("Both bundle and image paths must be provided");
                 return data;
             }
-            
+
             var remoteData = await VRCApi.GetAvatar(id, forceRefresh: true, cancellationToken);
             if (!remoteData.PendingUpload)
             {
@@ -703,7 +709,7 @@ namespace VRC.SDKBase.Editor.Api {
             var newBundleUrl = await UploadFile(pathToBundle, "", fileName, onProgress: (status, percentage) =>
             {
                 onProgress?.Invoke(status, percentage * 0.5f);
-            }, cancellationToken);
+            }, cancellationToken: cancellationToken);
             if (string.IsNullOrWhiteSpace(newBundleUrl))
             {
                 Core.Logger.LogError("New bundle url is empty, aborting");
@@ -715,7 +721,7 @@ namespace VRC.SDKBase.Editor.Api {
             var newImageUrl = await UploadFile(pathToImage, "", imageFileName, onProgress: (status, percentage) =>
             {
                 onProgress?.Invoke(status, 0.5f + percentage * 0.5f);
-            }, cancellationToken);
+            }, cancellationToken: cancellationToken);
             if (string.IsNullOrWhiteSpace(newImageUrl))
             {
                 Core.Logger.LogError("New image url is empty, aborting");
@@ -724,10 +730,10 @@ namespace VRC.SDKBase.Editor.Api {
             var newAvatarData = new Dictionary<string, object>
             {
                 {"name", data.Name},
-                {"description", data.Description},
+                {"description", data.Description ?? string.Empty},
                 {"assetUrl", newBundleUrl},
                 {"imageUrl", newImageUrl},
-                {"tags", data.Tags},
+                {"tags", data.Tags ?? new List<string>()},
                 {"releaseStatus", data.ReleaseStatus},
                 {"platform", Tools.Platform},
                 {"unityVersion", Tools.UnityVersion.ToString()},
@@ -785,6 +791,11 @@ namespace VRC.SDKBase.Editor.Api {
             }, forceRefresh: true);
         }
 
+        internal static async Task ContestModeration()
+        {
+            await Post<EmptyResponse, EmptyResponse>("auth/user/moderations/contest", null);
+        }
+
         internal static async Task SubmitAssetReviewNotes(string id, string notes)
         {
             var avatarData = await GetAvatar(id, forceRefresh: true);
@@ -824,7 +835,8 @@ namespace VRC.SDKBase.Editor.Api {
         
         #region VRC API Internals
 
-        private static async Task<string> UploadFile(string filename, string fileId, string friendlyFileName, Action<string, float> onProgress = null, CancellationToken cancellationToken = default)
+        private static async Task<string> UploadFile(string filename, string fileId, string friendlyFileName,
+            bool skipFinalWait = false, Action<string, float> onProgress = null, CancellationToken cancellationToken = default)
         {
             // This setting often gets cleared on assembly reload, so we re-enable it here
             if (UnityEditor.EditorPrefs.GetBool("apiLoggingEnabled"))
@@ -1123,16 +1135,17 @@ namespace VRC.SDKBase.Editor.Api {
             
             Core.Logger.Log("waiting for file to finish processing", API.LOG_CATEGORY);
             onProgress?.Invoke("Refreshing data...", 0.99f);
-            Core.Logger.Log("waiting for 5s", API.LOG_CATEGORY);
-            await Task.Delay(5000, cancellationToken);
             
-            Core.Logger.Log("Everything should be good now", API.LOG_CATEGORY);
+            if (!skipFinalWait)
+            {
+                Core.Logger.Log("waiting for 5s", API.LOG_CATEGORY);
+                await Task.Delay(5000, cancellationToken);
+                Core.Logger.Log("Everything should be good now", API.LOG_CATEGORY);
+                currentFile = await Get<VRCFile>($"file/{currentFile.ID}", forceRefresh: true, cancellationToken: cancellationToken);
+            }
 
             onProgress?.Invoke($"Cleaning up Temp Files...", 0.99f);
             await VRCTools.CleanupTempFiles(currentFile.ID);
-
-            currentFile = await Get<VRCFile>($"file/{currentFile.ID}", forceRefresh: true, cancellationToken: cancellationToken);
-            
             onProgress?.Invoke("File upload finished", 1.0f);
 
             return currentFile.Versions[currentFile.GetLatestVersion()].File.URL;

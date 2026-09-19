@@ -34,6 +34,9 @@ public class VRC_AnimatorPlayAudioEditor : UnityEditor.Editor
 
 	private void OnEnable()
 	{
+		if (target == null)
+			return;
+
 		sourcePath = serializedObject.FindProperty(nameof(VRCAnimatorPlayAudio.SourcePath));
 		playbackOrder = serializedObject.FindProperty(nameof(VRCAnimatorPlayAudio.PlaybackOrder));
 		parameterName = serializedObject.FindProperty(nameof(VRCAnimatorPlayAudio.ParameterName));

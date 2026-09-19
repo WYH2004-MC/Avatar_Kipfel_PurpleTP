@@ -5,6 +5,7 @@ using VRC.SDK3.Avatars.Components;
 using static VRC.SDKBase.VRC_AvatarParameterDriver;
 using System;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 
 [CustomEditor(typeof(VRCAvatarParameterDriver))]
 public class AvatarParameterDriverEditor : Editor
@@ -36,19 +37,16 @@ public class AvatarParameterDriverEditor : Editor
 		}
 	}
 
-	static UnityEditor.Animations.AnimatorController GetCurrentController()
+	AnimatorController GetCurrentController()
 	{
-		UnityEditor.Animations.AnimatorController controller = null;
-		var toolType = Type.GetType("UnityEditor.Graphs.AnimatorControllerTool, UnityEditor.Graphs");
-		var tool = EditorWindow.GetWindow(toolType);
-		var controllerProperty = toolType.GetProperty("animatorController", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
-		if(controllerProperty != null)
+		VRCAvatarParameterDriver driver = (VRCAvatarParameterDriver)target;
+		StateMachineBehaviourContext[] contexts = AnimatorController.FindStateMachineBehaviourContext(driver);
+		if (contexts != null && contexts.Length > 0)
 		{
-			controller = controllerProperty.GetValue(tool, null) as UnityEditor.Animations.AnimatorController;
+			return contexts[0].animatorController;
 		}
-		else
-			Debug.LogError("Unable to find animator window.", tool);
-		return controller;
+
+		return null;
 	}
 
 	public override void OnInspectorGUI()

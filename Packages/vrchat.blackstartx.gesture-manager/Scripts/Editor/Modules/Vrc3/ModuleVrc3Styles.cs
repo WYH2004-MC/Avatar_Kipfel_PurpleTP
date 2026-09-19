@@ -63,13 +63,24 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         private static Texture2D _velocity;
         private static Texture2D _visemes;
         private static Texture2D _vRMode;
+        private static Texture2D _headChops;
         private static Texture2D _afk;
         private static Texture2D _fourPoint;
         private static Texture2D _uninitialized;
         private static Texture2D _isLocal;
         private static Texture2D _extras;
+        private static Texture2D _clones;
+        private static Texture2D _looks;
+        private static Texture2D _huePicker;
+        private static Texture2D _valuePicker;
+        private static Texture2D _saturationPicker;
+        private static Texture2D _customColorMain;
+        private static Texture2D _customColorBorder;
+        private static Texture2D _customColorSelected;
         private static Texture2D _isOnFriendsList;
         private static Texture2D _isAnimatorEnabled;
+        private static Texture2D _spawnRemoteFriend;
+        private static Texture2D _spawnRemoteUser;
 
         internal static GUIStyle Url => _url ??= new GUIStyle(GUI.skin.label) { padding = new RectOffset(-6, -6, 1, 0), normal = { textColor = Color.blue } };
         internal static GUIStyle UrlPro => _urlPro ??= new GUIStyle(GUI.skin.label) { padding = new RectOffset(-6, -6, 1, 0), normal = { textColor = Color.cyan } };
@@ -121,12 +132,23 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3
         internal static Texture2D Visemes => !_visemes ? _visemes = Resources.Load<Texture2D>("Vrc3/BSX_GM_Visemes") : _visemes;
         internal static Texture2D VRMode => !_vRMode ? _vRMode = Resources.Load<Texture2D>("Vrc3/BSX_GM_VRMode") : _vRMode;
         internal static Texture2D Afk => !_afk ? _afk = Resources.Load<Texture2D>("Vrc3/BSX_GM_AFK") : _afk;
+        internal static Texture2D HeadChops => !_headChops ? _headChops = Resources.Load<Texture2D>("Vrc3/BSX_GM_HeadChop") : _headChops;
         internal static Texture2D FourPoint => !_fourPoint ? _fourPoint = Resources.Load<Texture2D>("Vrc3/BSX_GM_FourPoint") : _fourPoint;
         internal static Texture2D Uninitialized => !_uninitialized ? _uninitialized = Resources.Load<Texture2D>("Vrc3/BSX_GM_Uninitialized") : _uninitialized;
         internal static Texture2D IsLocal => !_isLocal ? _isLocal = Resources.Load<Texture2D>("Vrc3/BSX_GM_IsLocal") : _isLocal;
         internal static Texture2D Extras => !_extras ? _extras = Resources.Load<Texture2D>("Vrc3/BSX_GM_Extras") : _extras;
+        internal static Texture2D Clones => !_clones ? _clones = Resources.Load<Texture2D>("Vrc3/BSX_GM_Clones") : _clones;
+        internal static Texture2D Looks => !_looks ? _looks = Resources.Load<Texture2D>("Vrc3/BSX_GM_Looks") : _looks;
+        internal static Texture2D HuePicker => !_huePicker ? _huePicker = Resources.Load<Texture2D>("Vrc3/BSX_GM_HuePicker") : _huePicker;
+        internal static Texture2D ValuePicker => !_valuePicker ? _valuePicker = Resources.Load<Texture2D>("Vrc3/BSX_GM_ValuePicker") : _valuePicker;
+        internal static Texture2D SaturationPicker => !_saturationPicker ? _saturationPicker = Resources.Load<Texture2D>("Vrc3/BSX_GM_SaturationPicker") : _saturationPicker;
+        internal static Texture2D CustomColorMain => !_customColorMain ? _customColorMain = Resources.Load<Texture2D>("Vrc3/BSX_GM_CustomColorMain") : _customColorMain;
+        internal static Texture2D CustomColorBorder => !_customColorBorder ? _customColorBorder = Resources.Load<Texture2D>("Vrc3/BSX_GM_CustomColorBorder") : _customColorBorder;
+        internal static Texture2D CustomColorSelected => !_customColorSelected ? _customColorSelected = Resources.Load<Texture2D>("Vrc3/BSX_GM_CustomColorSelected") : _customColorSelected;
         internal static Texture2D IsOnFriendsList => !_isOnFriendsList ? _isOnFriendsList = Resources.Load<Texture2D>("Vrc3/BSX_GM_IsOnFriendsList") : _isOnFriendsList;
+        internal static Texture2D SpawnRemoteUser => !_spawnRemoteUser ? _spawnRemoteUser = Resources.Load<Texture2D>("Vrc3/BSX_GM_SpawnRemoteUser") : _spawnRemoteUser;
         internal static Texture2D IsAnimatorEnabled => !_isAnimatorEnabled ? _isAnimatorEnabled = Resources.Load<Texture2D>("Vrc3/BSX_GM_IsAnimatorEnabled") : _isAnimatorEnabled;
+        internal static Texture2D SpawnRemoteFriend => !_spawnRemoteFriend ? _spawnRemoteFriend = Resources.Load<Texture2D>("Vrc3/BSX_GM_SpawnRemoteFriend") : _spawnRemoteFriend;
 
         public static class Data
         {

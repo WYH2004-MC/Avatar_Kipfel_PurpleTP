@@ -126,6 +126,8 @@ namespace VRC.SDKBase.Validation
 
         public const int MAX_AVD_PHYSBONES_PER_AVATAR = 256;
         public const int MAX_AVD_COLLIDERS_PER_AVATAR = 256;
+        public const int MAX_AVD_GLOBAL_COLLIDERS_PER_AVATAR = 4;
+        public const int MAX_AVD_GLOBAL_COLLIDERS_PER_PROP = 4;
         public const int MAX_AVD_CONTACTS_PER_AVATAR = 256;
         public const int MAX_AVD_CONSTRAINTS_PER_AVATAR = 2000;
     }

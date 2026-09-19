@@ -193,8 +193,16 @@ namespace VRC.SDK3A.Editor.Elements
             BindValueFields();
         }
 
-        private void ControlTypeChanged(ChangeEvent<System.Enum> _)
+        private void ControlTypeChanged(ChangeEvent<System.Enum> evt)
         {
+            bool fromChangeCallback = evt != null;
+
+            int undoGroup = 0;
+            if (fromChangeCallback)
+            {
+                undoGroup = Undo.GetCurrentGroup();
+            }
+
             ExpressionControl.ControlType controlType =
                 (ExpressionControl.ControlType)propControl.FindPropertyRelative(nameof(ExpressionControl.type))
                     .enumValueFlag;
@@ -317,6 +325,20 @@ namespace VRC.SDK3A.Editor.Elements
                         Menu.Parameters,
                         false);
                     break;
+            }
+
+            if (controlType != ExpressionControl.ControlType.SubMenu)
+            {
+                // Clear the submenu reference. This avoids unused submenus being dragged into asset builds
+                // and avoids validation checking through stale submenus that are actually unused.
+                propSubMenu.objectReferenceValue = null;
+                propControl.serializedObject.ApplyModifiedProperties();
+            }
+
+            if (fromChangeCallback)
+            {
+                // Collapse into the undo operation before this one, as the type change has already happened.
+                Undo.CollapseUndoOperations(undoGroup - 1);
             }
 
             RefreshControlHelpBox();

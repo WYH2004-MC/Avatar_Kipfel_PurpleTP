@@ -3,6 +3,15 @@
     return idx == 0 ? fullUV.xy : fullUV.zw;
 }
 
+float2 SelectUV(float4 fullUV, float4 fullUV23, uint idx)
+{
+    if (idx > 1)
+    {
+        return idx == 2 ? fullUV23.xy : fullUV23.zw;
+    }
+    return idx == 0 ? fullUV.xy : fullUV.zw;
+}
+
 half3 MaybeSaturate(half3 value, bool apply)
 {
     return apply ? saturate(value) : value;

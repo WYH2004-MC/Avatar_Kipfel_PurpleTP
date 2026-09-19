@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.Playables;
+using VRC.SDK3.Avatars.ScriptableObjects;
 using VRC.SDKBase;
 
 namespace BlackStartX.GestureManager.Editor.Modules.Vrc3.Params
@@ -12,25 +13,31 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3.Params
     public class Vrc3Param
     {
         private readonly Dictionary<AnimatorControllerPlayable, PlayableParam> _controllers = new();
+        private readonly VRCExpressionParameters.ValueType? _vrcType;
+        private readonly int _hashId;
 
         public readonly AnimatorControllerParameterType Type;
-        private readonly int _hashId;
+        public readonly Vrc3DefaultParams.SyncType Sync;
         public readonly string Name;
+
         public int LastUpdate;
 
         private float _value;
         private Action<Vrc3Param, float> _onChange;
 
-        public Vrc3Param(string name, AnimatorControllerParameterType type, Action<Vrc3Param, float> onChange = null)
+        public Vrc3Param(string name, AnimatorControllerParameterType type, Action<Vrc3Param, float> onChange = null, Vrc3DefaultParams.SyncType sync = Vrc3DefaultParams.SyncType.No)
         {
             Name = name;
             Type = type;
+            Sync = sync;
             LastUpdate = Time;
             _onChange = onChange;
             _hashId = Animator.StringToHash(Name);
         }
 
         public Vrc3Param(string name, AnimatorControllerParameterType type, AnimatorControllerPlayable playable, int index) : this(name, type) => Subscribe(playable, index);
+
+        public Vrc3Param(VRCExpressionParameters.Parameter vrcParam, Vrc3DefaultParams.SyncType? sync = null) : this(vrcParam.name, ModuleVrc3Styles.Data.TypeOf[vrcParam.valueType], sync: sync ?? SyncFor(vrcParam)) => _vrcType = vrcParam.valueType;
 
         public void Set(ModuleVrc3 module, float value, object source = null)
         {
@@ -86,6 +93,16 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3.Params
 
         public bool BoolValue() => FloatValue() != 0f;
 
+        public float SyncValue() => Sync == Vrc3DefaultParams.SyncType.Ik ? FloatValue() : PlayableSyncValue();
+
+        private float PlayableSyncValue() => _vrcType switch
+        {
+            VRCExpressionParameters.ValueType.Int => ClampI(IntValue()),
+            VRCExpressionParameters.ValueType.Bool => BoolValue() ? 1f : 0f,
+            VRCExpressionParameters.ValueType.Float => (sbyte)Mathf.Round(ClampF(FloatValue()) * 127f) / 127f,
+            _ => 0
+        };
+
         protected internal virtual void InternalSet(float value, object source = null)
         {
             _value = value;
@@ -109,7 +126,7 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3.Params
                 case AnimatorControllerParameterType.Trigger:
                     Set(module, floatValue != 0f);
                     break;
-                default: throw new ArgumentOutOfRangeException();
+                default: return;
             }
         }
 
@@ -131,9 +148,15 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3.Params
                 case AnimatorControllerParameterType.Trigger:
                     Set(module, UnityEngine.Random.Range(0.0f, 1.0f) < chance);
                     break;
-                default: throw new ArgumentOutOfRangeException();
+                default: return;
             }
         }
+
+        private static int ClampI(int value, int min = 0, int max = 255) => Mathf.Clamp(value, min, max);
+
+        private static float ClampF(float value, float min = -1, float max = 1) => Mathf.Clamp(value, min, max);
+
+        private static Vrc3DefaultParams.SyncType SyncFor(VRCExpressionParameters.Parameter param) => param.networkSynced ? Vrc3DefaultParams.SyncType.Playable : Vrc3DefaultParams.SyncType.No;
 
         private class PlayableParam
         {
@@ -178,7 +201,7 @@ namespace BlackStartX.GestureManager.Editor.Modules.Vrc3.Params
                     case AnimatorControllerParameterType.Bool:
                         _playable.SetBool(_hashId, value != 0f);
                         break;
-                    default: throw new ArgumentOutOfRangeException();
+                    default: return;
                 }
             }
         }

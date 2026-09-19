@@ -72,6 +72,8 @@ namespace VRC.Editor
             "UnityEngine.XR.OpenXR.OpenXRLoader",
         };
 
+        private const int DefaultShaderChunkSizeMb = 4;
+
         private static bool _requestConfigureSettings = true;
 
         private static readonly Lazy<string> _debugCategoryName = new Lazy<string>(InitializeLogging);
@@ -938,8 +940,6 @@ namespace VRC.Editor
 
         public static FogSettings GetFogSettings()
         {
-            VRC.Core.Logger.Log("Force-enabling Fog", DebugCategoryName);
-
             const string graphicsSettingsAssetPath = "ProjectSettings/GraphicsSettings.asset";
             SerializedObject graphicsManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath(graphicsSettingsAssetPath)[0]);
 
@@ -962,8 +962,6 @@ namespace VRC.Editor
 
         public static void SetFogSettings(FogSettings fogSettings)
         {
-            VRC.Core.Logger.Log("Force-enabling Fog", DebugCategoryName);
-
             const string graphicsSettingsAssetPath = "ProjectSettings/GraphicsSettings.asset";
             SerializedObject graphicsManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath(graphicsSettingsAssetPath)[0]);
 
@@ -1011,7 +1009,6 @@ namespace VRC.Editor
             }
 
             audioManagerSerializedObject.ApplyModifiedPropertiesWithoutUndo();
-            AssetDatabase.SaveAssets();
         }
         
         private static void SetSpatializerPluginSettings()
@@ -1102,20 +1099,41 @@ namespace VRC.Editor
 
             NamedBuildTarget namedBuildTarget = NamedBuildTarget.FromBuildTargetGroup(EditorUserBuildSettings.selectedBuildTargetGroup);
             PlayerSettings.SetIl2CppCompilerConfiguration(namedBuildTarget, Il2CppCompilerConfiguration.Release);
-            
+
+            PlayerSettings.SetDefaultShaderChunkSizeInMB(DefaultShaderChunkSizeMb);
+
             XRGeneralSettingsPerBuildTarget generalSettings;
             if (!EditorBuildSettings.TryGetConfigObject(
                     XRGeneralSettings.k_SettingsKey, out generalSettings))
             { 
+                // Create into Packages/com.vrchat.base/Editor if possible, else create into Assets
                 generalSettings = ScriptableObject.CreateInstance<XRGeneralSettingsPerBuildTarget>();
-                if(!AssetDatabase.IsValidFolder("Assets/XR"))
-                    AssetDatabase.CreateFolder("Assets", "XR");
-                AssetDatabase.CreateAsset(generalSettings, "Assets/XR/XRGeneralSettings.asset");
+                string baseGeneralSettingsPath = "Packages/com.vrchat.base/Editor";
+                if(!AssetDatabase.IsValidFolder(baseGeneralSettingsPath))
+                {
+                    baseGeneralSettingsPath = "Assets";
+                }
+                if(!AssetDatabase.IsValidFolder($"{baseGeneralSettingsPath}/XR"))
+                    AssetDatabase.CreateFolder(baseGeneralSettingsPath, "XR");
+                AssetDatabase.CreateAsset(generalSettings, $"{baseGeneralSettingsPath}/XR/XRGeneralSettings.asset");
                 AssetDatabase.SaveAssets();
                 EditorBuildSettings.AddConfigObject(XRGeneralSettings.k_SettingsKey, generalSettings, true);
                 
                 // Re-retrieve the config object so it won't crash CreateDefaultSettingsForBuildTarget
                 EditorBuildSettings.TryGetConfigObject(XRGeneralSettings.k_SettingsKey, out generalSettings);
+            }
+            else
+            {
+                // We have an existing config object, move it out of assets if that's where it is.
+                string generalSettingsAssetPath = AssetDatabase.GetAssetPath(generalSettings);
+                if (generalSettingsAssetPath.StartsWith("Assets/XR") && AssetDatabase.IsValidFolder("Packages/com.vrchat.base/Editor"))
+                {
+                    if (!AssetDatabase.IsValidFolder("Packages/com.vrchat.base/Editor/XR"))
+                    {
+                        AssetDatabase.CreateFolder("Packages/com.vrchat.base/Editor", "XR");
+                    }
+                    AssetDatabase.MoveAsset(generalSettingsAssetPath, "Packages/com.vrchat.base/Editor/XR/XRGeneralSettings.asset");
+                }
             }
             
             if(!generalSettings.HasSettingsForBuildTarget(BuildTargetGroup.Standalone))
@@ -1189,6 +1207,54 @@ namespace VRC.Editor
             il2CppArgs.Add($"--linker-flags=\"{string.Join(" ", linkerArgs)}\"");
             PlayerSettings.SetAdditionalIl2CppArgs(string.Join(" ", il2CppArgs));
 
+            // If XR Settings and/or Loaders directories are in Assets/XR, move them to the com.vrchat.base package.
+            // This must be a separate move step because Unity hard-codes to that path in Assets. There's no API to override them.
+            // Delaying the call is necessary because the folders are created asynchronously via AssignLoader().
+            EditorApplication.delayCall += () =>
+            {
+                MigrateXrDirectory("Settings", "OculusSettings.asset");
+                MigrateXrDirectory("Loaders", "OculusLoader.asset");
+
+                if (AssetDatabase.IsValidFolder("Assets/XR") && AssetDatabase.FindAssets("", new[] {"Assets/XR"}).Length == 0)
+                {
+                    AssetDatabase.DeleteAsset("Assets/XR");
+                }
+
+                void MigrateXrDirectory(string directoryName, string fileName)
+                {
+                    string fromPath = $"Assets/XR/{directoryName}/{fileName}";
+                    string toPath = $"Packages/com.vrchat.base/Editor/XR/{directoryName}/{fileName}";
+                    if (!AssetDatabase.GUIDFromAssetPath(fromPath).Empty() && AssetDatabase.IsValidFolder("Packages/com.vrchat.base/Editor"))
+                    {
+                        if (!AssetDatabase.IsValidFolder("Packages/com.vrchat.base/Editor/XR"))
+                        {
+                            AssetDatabase.CreateFolder("Packages/com.vrchat.base/Editor", "XR");
+                        }
+                        
+                        if (!AssetDatabase.IsValidFolder($"Packages/com.vrchat.base/Editor/XR/{directoryName}"))
+                        {
+                            AssetDatabase.CreateFolder("Packages/com.vrchat.base/Editor/XR", directoryName);
+                        }
+
+                        if (!AssetDatabase.GUIDFromAssetPath(toPath).Empty())
+                        {
+                            AssetDatabase.DeleteAsset(toPath);
+                        }
+
+                        string err = AssetDatabase.MoveAsset(fromPath, toPath);
+                        if (!string.IsNullOrEmpty(err))
+                        {
+                            Debug.LogError(err);
+                        }
+
+                        if (AssetDatabase.FindAssets("", new[] {$"Assets/XR/{directoryName}"}).Length == 0)
+                        {
+                            AssetDatabase.DeleteAsset($"Assets/XR/{directoryName}");
+                        }
+                    }
+                }
+            };
+
             SetActiveSDKDefines();
 
             EnableBatching(true);
@@ -1254,6 +1320,8 @@ namespace VRC.Editor
             {
                 defines.Remove("VRC_ENABLE_PLAYER_PERSISTENCE");
             }
+
+            definesChanged = Tools.SetupExtraSDKDefines(ref defines, definesChanged);
             
             if(definesChanged)
             {
