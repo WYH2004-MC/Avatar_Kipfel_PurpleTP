@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FX - Eye Tracking
+  m_Controller: {fileID: 9100000, guid: fb1c0df1b28aa8140bd49c80a80927cd, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 09e823306c0bcaa46b9964a1190d7a5c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 967e7f155f6cfa14b81dc03a85d0b146, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9fbbd7a26f8a78d45acdb4d8e085c3a1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8b357ec28300c6e45b5fda2dc67b1605, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d28874a94e4f3ec4bbcd5e617b46af00, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 10ecc9b290b863749b3d54be5c94b64d, type: 2}

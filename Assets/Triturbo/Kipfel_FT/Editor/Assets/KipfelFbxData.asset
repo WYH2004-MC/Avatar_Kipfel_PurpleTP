@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e38c0d01e5b6e46aa151a34b05d60c, type: 3}
+  m_Name: KipfelFbxData
+  m_EditorClassIdentifier: 
+  m_FbxObjects:
+  - m_Tag: 
+    m_Fbx: {fileID: 919132149155446097, guid: 7078d86f15dd32d4bb4540ac2ff9e0ac, type: 3}
+    m_FbxVersionings:
+    - m_Version: Kipfel Ver1.0.2
+      m_Sha256: 96281ac4cc71c932f5a15cdbe3aa41d5c6f7aaeb0d41f04c271b2c2d1aa12108
+      m_Unsupported: 1
+      m_BlendShapeData: {fileID: 0}
+    - m_Version: Kipfel Ver1.0.3
+      m_Sha256: e0e733bb70006996097dd71a3b29490c6dba4824ac5ab8e22a659554768382fb
+      m_Unsupported: 0
+      m_BlendShapeData: {fileID: 11400000, guid: 0dd28532746d5724d9183e84df5da0ae, type: 2}
+    - m_Version: Kipfel Ver1.1.0
+      m_Sha256: 1627620b3a5787aa86682ec6fcd8a41c679505b2f5ea63013ef86ee368ff41f2
+      m_Unsupported: 0
+      m_BlendShapeData: {fileID: 11400000, guid: 0dd28532746d5724d9183e84df5da0ae, type: 2}
+    - m_Version: Kipfel Ver1.2.0
+      m_Sha256: 686d0f82dcfcdfa3460a51e779bae3c00482d3f355eb8c2c48b730a6065be4ce
+      m_Unsupported: 0
+      m_BlendShapeData: {fileID: 11400000, guid: 0dd28532746d5724d9183e84df5da0ae, type: 2}

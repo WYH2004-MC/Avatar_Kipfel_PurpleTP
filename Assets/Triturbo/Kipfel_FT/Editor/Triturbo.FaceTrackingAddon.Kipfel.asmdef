@@ -1,0 +1,24 @@
+{
+    "name": "Triturbo.FaceTrackingAddon.Kipfel",
+    "rootNamespace": "",
+    "references": [
+        "GUID:91565544133f18541bfc3d274182b039"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.triturbo.facetrackingframework",
+            "expression": "",
+            "define": "ENABLE_TFTF"
+        }
+    ],
+    "noEngineReferences": false
+}

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1d31e580afe43314e8493f7d9068982e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_MainBanner: {fileID: 2800000, guid: cb927a4278706c54ebb6015f6569c218, type: 3}
+  - m_AddonRootFolder: {instanceID: 0}
+  - m_MenuInstallerPrefab: {instanceID: 0}
+  - m_FbxVersionInfo: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

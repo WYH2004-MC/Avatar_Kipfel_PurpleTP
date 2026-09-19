@@ -1,0 +1,32 @@
+{
+    "name": "triturbo.ftframework.edtor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:4feda1a33aee28c4589cee5c0a9335ec",
+        "GUID:62ced99b048af7f4d8dfe4bed8373d76",
+        "GUID:fc900867c0f47cd49b6e2ae4ef907300",
+        "GUID:5106b3bb337e9b8428ff600b827ed38f"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "nadena.dev.modular-avatar",
+            "expression": "1.9",
+            "define": "ENABLE_MA"
+        },
+        {
+            "name": "nadena.dev.ndmf",
+            "expression": "",
+            "define": "ENABLE_NDMF"
+        }
+    ],
+    "noEngineReferences": false
+}

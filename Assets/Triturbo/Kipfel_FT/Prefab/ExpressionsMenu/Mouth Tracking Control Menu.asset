@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: Mouth Tracking Control Menu
+  m_EditorClassIdentifier: 
+  Parameters: {fileID: 11400000, guid: fd312c5dfb44add41907320769fec5be, type: 2}
+  controls:
+  - name: Mouth Tracking
+    icon: {fileID: 2800000, guid: f570a05ce38204348a15d0f4fdb65d2f, type: 3}
+    type: 102
+    parameter:
+      name: MouthTrackingEnable
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Tongue
+    icon: {fileID: 2800000, guid: 1a11be4cf903bb745984937671ad74ca, type: 3}
+    type: 201
+    parameter:
+      name: TongueControlActive
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: TongueXControl
+    - name: TongueYControl
+    labels:
+    - name: 
+      icon: {fileID: 0}
+    - name: 
+      icon: {fileID: 0}
+    - name: 
+      icon: {fileID: 0}
+    - name: 
+      icon: {fileID: 0}

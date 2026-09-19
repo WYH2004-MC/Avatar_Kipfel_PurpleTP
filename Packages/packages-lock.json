@@ -33,6 +33,13 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "com.autodesk.fbx": {
+      "version": "4.2.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.github.kurotu.vrc-quest-tools": {
       "version": "file:com.github.kurotu.vrc-quest-tools",
       "depth": 0,
@@ -43,6 +50,20 @@
     },
     "com.poiyomi.toon": {
       "version": "file:com.poiyomi.toon",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.triturbo.blendshare": {
+      "version": "file:com.triturbo.blendshare",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.autodesk.fbx": "4.2.1"
+      }
+    },
+    "com.triturbo.facetrackingframework": {
+      "version": "file:com.triturbo.facetrackingframework",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}

@@ -1,0 +1,250 @@
+﻿{
+  "lang": "語言",
+  "addon_version": "面部捕捉擴充套件版本：{0}",
+
+  "avatar_field": "Avatar",
+  "avatar_field.tooltip": "將您的 Avatar 遊戲物件或預製體(Prefab)拖到這裡",
+
+  "fbx_not_found": "未找到原始 FBX 檔。請重新匯入。",
+  "fbx_version": "FBX 版本：{0}",
+  "fbx_unknown": "無法自動檢測FBX版本。原因：未知或已修改的FBX文件。",
+  "fbx_missing": "無法自動檢測FBX版本。原因：缺少網格或該網格非來自FBX文件。",
+  
+  "fbx_unsupported": "此FBX文件不受支持。請選擇其他預製件。",
+  "update_mesh": "更新網格",
+  "update_mesh.tooltip": "生成的網格已過時。請點擊「更新網格」重新生成。",
+  "dialog_mesh_updated": "網格已更新。\n{0}",
+
+  "fbx_target": "目標 FBX",
+  "fbx_target.tooltip": "您的 Avatar 使用了非原始 FBX 檔案作為網格。請選擇用於生成網格的目標。\n若編輯過的 FBX 檔案頂點順序不一致，添加的型態鍵可能會出現問題。",
+
+  
+  "original": "原始 FBX",
+  "current_in_use": "Avatar 正在使用的 FBX",
+  "ft_exist": "似乎已存在一個面部捕捉擴充套件。\n請確保在新增擴充套件之前刪除舊套件。",
+  "memory_cost": "目前 Avatar 參數用量：{0} 比特",
+  "eye_tracking": "眼睛捕捉",
+  "lip_tracking": "嘴部捕捉",
+  "memory_cost_title": "參數用量：{0} 比特",
+  "ft_addon": "面部捕捉擴充套件",
+  "ft_cost": "面部捕捉擴充套件：{0} 比特",
+  "total": "合計：{0} 比特",
+  "memory_not_enough": "參數空間不足！",
+  "synced_limit": "您已超出 VRChat 中同步參數的限制：{0} > 256 比特。",
+
+  "ft_make": "在原 Avatar 應用面部捕捉擴充套件",
+  "ft_make_new": "以新 Avatar 應用面部捕捉擴充套件",
+  "ft_avatar": "面部捕捉 Avatar",
+  "blueprint_warning": "警告: Blueprint ID 已存在。上傳時將嘗試刪除 OSC 配置。如果出現同步問題，請在 VRChat 中重設 OSC 配置，或使用新的 Blueprint ID 上傳您的 Avatar，以確保 VRCFT 正常運作。",
+  "ft_installed": "面部捕捉擴充套件已安裝完成。",
+  "done": "完成",
+  "blend_share_error": "BlendShare(≥ v1.0.1) 未安裝。請導入BlendShare以繼續操作。",
+  "source_fbx_ver": "來源 FBX 版本",
+  "source_fbx_ver_help": "目前 FBX 檔案已編輯，無法自動偵測其版本。請手動選擇此已編輯 FBX 的正確來源版本。",
+  "installation_guide": "安裝指南",
+  
+  "qpc.avatar_parameters": "Avatar 參數: {0} 比特",
+  "qpc.parameters": "參數占用: {0} 比特",
+  "qpc.parameters.tooltip": "此量化參數所需的同步參數空間占用。",
+
+  "qpc.not_sync": "不同步",
+
+  "qpc.combined_remote": "整合遠端參數",
+  "qpc.combined_local": "整合本地參數",
+  "qpc.combined_remote.tooltip": "僅在遠端合併參數。選擇此選項可以減少同步參數要求的一半。",
+  "qpc.combined_local.tooltip": "僅在本地合併參數。選擇此選項不會影響同步參數的要求。",
+  
+  "qpc.resolution": "解析度",
+  "qpc.resolution.tooltip": "調整同步參數的精確度。較高的解析度提供遠端更精確數值，但會佔用更多參數空間。調整此項不影響本地的精確度。",
+
+  "qpc.scale_factor": "縮放",
+  "qpc.scale_factor.tooltip": "調整參數的縮放比例。增加縮放因子可以提高參數的敏感度，而減少它則會使參數變得不那麼敏感。",
+
+  "qpc.installing_layers": "安裝動畫層",
+  "qpc.installing_layers.tooltip": "用於安裝量化參數生成器動畫的 VRChat Playable 層。",
+
+  
+  "qpc.enable_layer_selection": "啟用動畫層選擇",
+  "qpc.enable_layer_selection.tooltip": "是否啟用動畫層選擇，若不啟用則安裝至FX",
+
+
+  "eye_tracking_settings.eye_weight": "眼睛權重",
+  "eye_tracking_settings.eye_weight.tooltip": "眼動追蹤中的閉眼型態鍵強度",
+  "eye_tracking_settings.reset": "{0} 重設權重",
+  "eye_tracking_settings.reset.tooltip": "眼睛完全閉合時將 {0} 型態鍵重設為0的強度",
+  
+  "eye_tracking_settings.eye_closed": "閉眼幅度預覽",
+
+  "tracking_settings.preview": "預覽",
+  "tracking_settings.end_preview": "結束預覽",
+
+  "mouth_tracking_settings.jaw_strength": "下顎幅度",
+  "mouth_tracking_settings.jaw_strength.tooltip": "張開嘴時，下顎下降的幅度。",
+  "mouth_tracking_settings.reset_weight": "重設權重",
+  "mouth_tracking_settings.reset_weight.tooltip": "當嘴巴張開時，將表情型態鍵重設為0的權重。",
+
+
+  "ue.JawOpen": "JawOpen: 張開嘴",
+  "ue.JawOpen.tooltip": "張開嘴和下顎",
+
+  "ue.MouthClosed": "MouthClosed: 閉上嘴",
+  "ue.MouthClosed.tooltip": "張開下顎時閉上嘴，其數值不會超過 'JawOpen'。",
+
+  "ue.JawForward": "JawForward: 下顎前移",
+  "ue.JawForward.tooltip": "下顎的前移。",
+
+  "ue.JawX": "JawX: 下顎左右移動",
+  "ue.JawX.tooltip": "將下顎左右移動。",
+
+  "ue.MouthX": "MouthX: 嘴巴左右移動",
+  "ue.MouthX.tooltip": "將嘴巴左右移動。",
+
+  "ue.MouthUpperUp": "MouthUpperUp: 上嘴唇抬起",
+  "ue.MouthUpperUp.tooltip": "抬起上嘴唇。",
+
+  "ue.MouthUpperUpLeft": "MouthUpperUpLeft: 上嘴唇左抬",
+  "ue.MouthUpperUpLeft.tooltip": "抬起上嘴唇左邊部分。",
+
+  "ue.MouthUpperUpRight": "MouthUpperUpRight: 上嘴唇右抬",
+  "ue.MouthUpperUpRight.tooltip": "抬起上嘴唇右邊部分。",
+
+  "ue.MouthLowerDown": "MouthLowerDown: 下嘴唇向下",
+  "ue.MouthLowerDown.tooltip": "下嘴唇向下。",
+
+  "ue.MouthLowerDownLeft": "MouthLowerDownLeft: 下嘴唇左向下",
+  "ue.MouthLowerDownLeft.tooltip": "下嘴唇左邊部分向下。",
+
+  "ue.MouthLowerDownRight": "MouthLowerDownRight: 下嘴唇右向下",
+  "ue.MouthLowerDownRight.tooltip": "下嘴唇右邊部分向下。",
+
+  "ue.MouthStretch": "MouthStretch: 嘴巴拉伸",
+  "ue.MouthStretch.tooltip": "將嘴巴水平拉伸，常見於傷心時。 (支援Quest和Pico；不支援Vive。)",
+
+  "ue.MouthStretchLeft": "MouthStretchLeft: 嘴巴左側拉伸",
+  "ue.MouthStretchLeft.tooltip": "將嘴巴左側拉伸，常見於傷心時。 (支援Quest和Pico；不支援Vive。)",
+
+  "ue.MouthStretchRight": "MouthStretchRight: 嘴巴右側拉伸",
+  "ue.MouthStretchRight.tooltip": "將嘴巴右側拉伸，常見於傷心時。 (支援Quest和Pico；不支援Vive。)",
+
+  "ue.MouthDimple": "MouthDimple: 嘴巴酒窩",
+  "ue.MouthDimple.tooltip": "在嘴巴兩側創造酒窩，通常出現在微笑時。 (支援Quest和Pico；不支援Vive。)",
+
+  "ue.MouthDimpleLeft": "MouthDimpleLeft: 左側嘴巴酒窩",
+  "ue.MouthDimpleLeft.tooltip": "在嘴巴左側創造酒窩，通常出現在微笑時。 (支援Quest和Pico；不支援Vive。)",
+
+  "ue.MouthDimpleRight": "MouthDimpleRight: 右側嘴巴酒窩",
+  "ue.MouthDimpleRight.tooltip": "在嘴巴右側創造酒窩，通常出現在微笑時。 (支援Quest和Pico；不支援Vive。)",
+
+  "ue.MouthRaiser": "MouthRaiser: 嘴巴上提",
+  "ue.MouthRaiser.tooltip": "將嘴巴上提。",
+
+  "ue.MouthRaiserUpper": "MouthRaiserUpper: 上嘴唇上提",
+  "ue.MouthRaiserUpper.tooltip": "將上嘴唇上提。",
+
+  "ue.MouthRaiserLower": "MouthRaiserLower: 下嘴唇上提",
+  "ue.MouthRaiserLower.tooltip": "將下嘴唇上提。",
+
+  "ue.LipFunnel": "LipFunnel: 嘴唇漏斗形狀",
+  "ue.LipFunnel.tooltip": "將嘴唇形狀變為小 'O' 形。",
+
+  "ue.LipPucker": "LipPucker: 嘴唇噘起",
+  "ue.LipPucker.tooltip": "將嘴唇噘起。",
+
+  "ue.LipSuck": "LipSuck: 抿嘴唇",
+  "ue.LipSuck.tooltip": "抿起嘴唇。",
+
+  "ue.LipSuckUpper": "LipSuckUpper: 抿上嘴唇",
+  "ue.LipSuckUpper.tooltip": "抿起上嘴唇。",
+
+  "ue.LipSuckLower": "LipSuckLower: 抿下嘴唇",
+  "ue.LipSuckLower.tooltip": "抿起下嘴唇。",
+
+  "ue.SmileFrown": "SmileFrown: 嘴微笑・傷心",
+  "ue.SmileFrown.tooltip": "呈現微笑或傷心表情。",
+
+  "ue.SmileFrownLeft": "SmileFrownLeft: 左側嘴微笑・傷心",
+  "ue.SmileFrownLeft.tooltip": "在左側呈現微笑或傷心表情。",
+
+  "ue.SmileFrownRight": "SmileFrownRight: 右側嘴微笑・傷心",
+  "ue.SmileFrownRight.tooltip": "在右側呈現微笑或傷心表情。",
+
+  "ue.CheekPuffSuck": "CheekPuffSuck: 臉頰鼓起・吸入",
+  "ue.CheekPuffSuck.tooltip": "鼓起或吸入臉頰。",
+
+  "ue.CheekPuffSuckLeft": "CheekPuffSuckLeft: 左側臉頰鼓起・吸入",
+  "ue.CheekPuffSuckLeft.tooltip": "鼓起或吸入左側臉頰。",
+
+  "ue.CheekPuffSuckRight": "CheekPuffSuckRight: 右側臉頰鼓起・吸入",
+  "ue.CheekPuffSuckRight.tooltip": "鼓起或吸入右側臉頰。",
+
+  "ue.TongueOut": "TongueOut: 伸出舌頭",
+  "ue.TongueOut.tooltip": "伸出舌頭。",
+
+  "ue.TongueX": "TongueX: 舌頭左右",
+  "ue.TongueX.tooltip": "將舌頭向左或向右移動。(支援Vive；不支援Quest和Pico。)",
+
+  "ue.TongueY": "TongueY: 舌頭上下",
+  "ue.TongueY.tooltip": "將舌頭向上或向下移動。(支援Vive；不支援Quest和Pico。)",
+
+  "ue.TongueRoll": "TongueRoll: 舌頭捲曲",
+  "ue.TongueRoll.tooltip": "將舌頭捲曲。(支援Vive；不支援Quest和Pico。)",
+
+  "ue.NoseSneer": "NoseSneer: 皺鼻子",
+  "ue.NoseSneer.tooltip": "將鼻子皺起。(支援Quest和Pico；不支援Vive。)",
+
+  "ue.NoseSneerLeft": "NoseSneerLeft: 皺左側鼻子",
+  "ue.NoseSneerLeft.tooltip": "將左側鼻子皺起。(支援Quest和Pico；不支援Vive。)",
+
+  "ue.NoseSneerRight": "NoseSneerRight: 皺右側鼻子",
+  "ue.NoseSneerRight.tooltip": "將右側鼻子皺起。(支援Quest和Pico；不支援Vive。)",
+
+  "ue.EyeLid": "EyeLid: 眼瞼開合",
+  "ue.EyeLid.tooltip": "眼瞼的開合程度。",
+
+  "ue.EyeLidLeft": "EyeLidLeft: 左眼瞼開合",
+  "ue.EyeLidLeft.tooltip": "左眼瞼的開合程度。",
+
+  "ue.EyeLidRight": "EyeLidRight: 右眼瞼開合",
+  "ue.EyeLidRight.tooltip": "右眼瞼的開合程度。",
+
+  "ue.EyeSquint": "EyeSquint: 眼睛眯起",
+  "ue.EyeSquint.tooltip": "將眼睛眯起。",
+
+  "ue.EyeSquintLeft": "EyeSquintLeft: 左眼眯起",
+  "ue.EyeSquintLeft.tooltip": "將左眼眯起。",
+
+  "ue.EyeSquintRight": "EyeSquintRight: 右眼眯起",
+  "ue.EyeSquintRight.tooltip": "將右眼眯起。",
+
+  "ue.EyeX": "EyeX: 眼睛左・右移動",
+  "ue.EyeX.tooltip": "眼睛向左或向右移動",
+
+  "ue.EyeLeftX": "EyeLeftX: 左眼左・右移動",
+  "ue.EyeLeftX.tooltip": "左眼向左或向右移動",
+
+  "ue.EyeRightX": "EyeRightX: 右眼左・右移動",
+  "ue.EyeRightX.tooltip": "右眼向左或向右移動",
+
+  "ue.EyeY": "EyeY: 眼睛上下移動",
+  "ue.EyeY.tooltip": "眼睛向上或向下移動",
+
+  "ue.EyeLeftY": "EyeLeftY: 左眼上下移動",
+  "ue.EyeLeftY.tooltip": "左眼向上或向下移動",
+
+  "ue.EyeRightY": "EyeRightY: 右眼上下移動",
+  "ue.EyeRightY.tooltip": "右眼向上或向下移動",
+
+  "ue.PupilDilation": "PupilDilation: 瞳孔擴張・收縮",
+  "ue.PupilDilation.tooltip": "擴張或收縮瞳孔。 (支援Vive；不支援Quest和Pico。)",
+
+  "ue.BrowExpression": "BrowExpression: 眉毛表情",
+  "ue.BrowExpression.tooltip": "抬高或降低眉毛。 (支援Quest和Pico；不支援Vive。)",
+
+  "ue.BrowExpressionLeft": "BrowExpressionLeft: 左眉毛表情",
+  "ue.BrowExpressionLeft.tooltip": "抬高或降低左眉毛。 (支援Quest和Pico；不支援Vive。)",
+
+  "ue.BrowExpressionRight": "BrowExpressionRight: 右眉毛表情",
+  "ue.BrowExpressionRight.tooltip": "抬高或降低右眉毛。 (支援Quest和Pico；不支援Vive。)"
+
+
+}

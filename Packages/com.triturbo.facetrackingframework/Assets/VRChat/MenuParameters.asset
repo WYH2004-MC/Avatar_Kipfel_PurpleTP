@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1506855854, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: MenuParameters
+  m_EditorClassIdentifier: 
+  isEmpty: 0
+  parameters:
+  - name: MouthTrackingEnable
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: VisemesEnable
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: EyeTrackingEnable
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: EyeDilationEnable
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: FacialExpressionsDisabled
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: ForceTongueOutSync
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: ForceTongueOutToggle
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 0
+  - name: TongueControlActive
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 0
+  - name: TongueXControl
+    valueType: 1
+    saved: 0
+    defaultValue: 0
+    networkSynced: 0
+  - name: TongueYControl
+    valueType: 1
+    saved: 0
+    defaultValue: 0
+    networkSynced: 0
+  - name: FT/EyelidSync
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: FT/Local/EyeLidSmoother
+    valueType: 1
+    saved: 1
+    defaultValue: 0.08
+    networkSynced: 0
+  - name: FT/Local/EyeLookSmoother
+    valueType: 1
+    saved: 1
+    defaultValue: 0.08
+    networkSynced: 0
+  - name: FT/Local/MouthSmoother
+    valueType: 1
+    saved: 1
+    defaultValue: 0.08
+    networkSynced: 0
+  - name: FT/Local/TongueSmoother
+    valueType: 1
+    saved: 1
+    defaultValue: 0.08
+    networkSynced: 0

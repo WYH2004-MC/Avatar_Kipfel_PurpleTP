@@ -1,0 +1,230 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445ee76ea8ddc084881a0ebd3b0b176f, type: 3}
+  m_Name: MouthTracking_SRanipal
+  m_EditorClassIdentifier: 
+  m_Prefix: Drive/
+  m_Parameters:
+  - m_ParameterName: FT/v2/JawOpen
+    m_Symmetric: 0
+    m_Resolution: 7
+    m_DefaultValue: 0
+    m_SubParameters: []
+    m_LinkedParameters:
+    - m_ParameterName: FT/MouthOpenness
+      m_Weight: 1
+      m_Absolute: 0
+    - m_ParameterName: FT/VisemeCompensate
+      m_Weight: 1
+      m_Absolute: 0
+    m_LocalSmootherIndex: 0
+    m_RemoteSmootherIndex: 0
+  - m_ParameterName: FT/v2/JawForward
+    m_Symmetric: 0
+    m_Resolution: 3
+    m_DefaultValue: 0
+    m_SubParameters: []
+    m_LinkedParameters: []
+    m_LocalSmootherIndex: 0
+    m_RemoteSmootherIndex: 0
+  - m_ParameterName: FT/v2/JawX
+    m_Symmetric: 1
+    m_Resolution: 3
+    m_DefaultValue: 0
+    m_SubParameters: []
+    m_LinkedParameters: []
+    m_LocalSmootherIndex: 0
+    m_RemoteSmootherIndex: 0
+  - m_ParameterName: FT/v2/MouthClosed
+    m_Symmetric: 0
+    m_Resolution: 4
+    m_DefaultValue: 0
+    m_SubParameters: []
+    m_LinkedParameters:
+    - m_ParameterName: FT/MouthOpenness
+      m_Weight: -1
+      m_Absolute: 0
+    - m_ParameterName: FT/VisemeCompensate
+      m_Weight: -1
+      m_Absolute: 0
+    m_LocalSmootherIndex: 0
+    m_RemoteSmootherIndex: 0
+  - m_ParameterName: FT/v2/MouthX
+    m_Symmetric: 1
+    m_Resolution: 4
+    m_DefaultValue: 0
+    m_SubParameters: []
+    m_LinkedParameters: []
+    m_LocalSmootherIndex: 0
+    m_RemoteSmootherIndex: 0
+  - m_ParameterName: FT/v2/MouthUpperUp
+    m_Symmetric: 0
+    m_Resolution: 3
+    m_DefaultValue: 0
+    m_SubParameters:
+    - m_ParameterName: FT/v2/MouthUpperUpLeft
+      m_LinkedParameters:
+      - m_ParameterName: Drive/FT/v2/NoseSneerLeft
+        m_Weight: 1
+        m_Absolute: 0
+    - m_ParameterName: FT/v2/MouthUpperUpRight
+      m_LinkedParameters:
+      - m_ParameterName: Drive/FT/v2/NoseSneerRight
+        m_Weight: 1
+        m_Absolute: 0
+    m_LinkedParameters:
+    - m_ParameterName: FT/VisemeCompensate
+      m_Weight: 0.5
+      m_Absolute: 0
+    m_LocalSmootherIndex: 0
+    m_RemoteSmootherIndex: 0
+  - m_ParameterName: FT/v2/MouthLowerDown
+    m_Symmetric: 0
+    m_Resolution: 3
+    m_DefaultValue: 0
+    m_SubParameters:
+    - m_ParameterName: FT/v2/MouthLowerDownLeft
+      m_LinkedParameters: []
+    - m_ParameterName: FT/v2/MouthLowerDownRight
+      m_LinkedParameters: []
+    m_LinkedParameters:
+    - m_ParameterName: FT/VisemeCompensate
+      m_Weight: 0.5
+      m_Absolute: 0
+    m_LocalSmootherIndex: 0
+    m_RemoteSmootherIndex: 0
+  - m_ParameterName: FT/v2/MouthRaiserLower
+    m_Symmetric: 0
+    m_Resolution: 3
+    m_DefaultValue: 0
+    m_SubParameters:
+    - m_ParameterName: FT/v2/MouthRaiserUpper
+      m_LinkedParameters: []
+    - m_ParameterName: FT/v2/MouthRaiserLower
+      m_LinkedParameters: []
+    m_LinkedParameters: []
+    m_LocalSmootherIndex: 0
+    m_RemoteSmootherIndex: 0
+  - m_ParameterName: FT/v2/LipFunnel
+    m_Symmetric: 0
+    m_Resolution: 3
+    m_DefaultValue: 0
+    m_SubParameters: []
+    m_LinkedParameters:
+    - m_ParameterName: FT/VisemeCompensate
+      m_Weight: 1
+      m_Absolute: 0
+    m_LocalSmootherIndex: 0
+    m_RemoteSmootherIndex: 0
+  - m_ParameterName: FT/v2/LipPucker
+    m_Symmetric: 0
+    m_Resolution: 3
+    m_DefaultValue: 0
+    m_SubParameters: []
+    m_LinkedParameters:
+    - m_ParameterName: FT/VisemeCompensate
+      m_Weight: 0.5
+      m_Absolute: 0
+    m_LocalSmootherIndex: 0
+    m_RemoteSmootherIndex: 0
+  - m_ParameterName: FT/v2/LipSuck
+    m_Symmetric: 0
+    m_Resolution: 3
+    m_DefaultValue: 0
+    m_SubParameters:
+    - m_ParameterName: FT/v2/LipSuckUpper
+      m_LinkedParameters: []
+    - m_ParameterName: FT/v2/LipSuckLower
+      m_LinkedParameters: []
+    m_LinkedParameters: []
+    m_LocalSmootherIndex: 0
+    m_RemoteSmootherIndex: 0
+  - m_ParameterName: FT/v2/SmileFrown
+    m_Symmetric: 1
+    m_Resolution: 4
+    m_DefaultValue: 0
+    m_SubParameters:
+    - m_ParameterName: FT/v2/SmileFrownLeft
+      m_LinkedParameters:
+      - m_ParameterName: Drive/FT/v2/MouthDimpleLeft
+        m_Weight: 1
+        m_Absolute: 0
+      - m_ParameterName: Drive/FT/v2/MouthStretchLeft
+        m_Weight: -1
+        m_Absolute: 0
+      - m_ParameterName: Drive/FT/v2/CheekSquintLeft
+        m_Weight: 1
+        m_Absolute: 0
+    - m_ParameterName: FT/v2/SmileFrownRight
+      m_LinkedParameters:
+      - m_ParameterName: Drive/FT/v2/MouthDimpleRight
+        m_Weight: 1
+        m_Absolute: 0
+      - m_ParameterName: Drive/FT/v2/MouthStretchRight
+        m_Weight: -1
+        m_Absolute: 0
+      - m_ParameterName: Drive/FT/v2/CheekSquintRight
+        m_Weight: 1
+        m_Absolute: 0
+    m_LinkedParameters: []
+    m_LocalSmootherIndex: 0
+    m_RemoteSmootherIndex: 0
+  - m_ParameterName: FT/v2/CheekPuffSuck
+    m_Symmetric: 1
+    m_Resolution: 3
+    m_DefaultValue: 0
+    m_SubParameters:
+    - m_ParameterName: FT/v2/CheekPuffSuckLeft
+      m_LinkedParameters: []
+    - m_ParameterName: FT/v2/CheekPuffSuckRight
+      m_LinkedParameters: []
+    m_LinkedParameters: []
+    m_LocalSmootherIndex: 0
+    m_RemoteSmootherIndex: 0
+  - m_ParameterName: FT/v2/TongueOut
+    m_Symmetric: 0
+    m_Resolution: 3
+    m_DefaultValue: 0
+    m_SubParameters: []
+    m_LinkedParameters: []
+    m_LocalSmootherIndex: 1
+    m_RemoteSmootherIndex: 1
+  - m_ParameterName: FT/v2/TongueX
+    m_Symmetric: 1
+    m_Resolution: 3
+    m_DefaultValue: 0
+    m_SubParameters: []
+    m_LinkedParameters: []
+    m_LocalSmootherIndex: 1
+    m_RemoteSmootherIndex: 1
+  - m_ParameterName: FT/v2/TongueY
+    m_Symmetric: 1
+    m_Resolution: 3
+    m_DefaultValue: 0
+    m_SubParameters: []
+    m_LinkedParameters: []
+    m_LocalSmootherIndex: 1
+    m_RemoteSmootherIndex: 1
+  - m_ParameterName: FT/v2/TongueRoll
+    m_Symmetric: 0
+    m_Resolution: 0
+    m_DefaultValue: 0
+    m_SubParameters: []
+    m_LinkedParameters: []
+    m_LocalSmootherIndex: 1
+    m_RemoteSmootherIndex: 1
+  m_LocalSmoothers:
+  - FT/Local/MouthSmoother
+  - FT/Local/TongueSmoother
+  m_RemoteSmoothers:
+  - FT/Remote/MouthSmoother
+  - FT/Remote/TongueSmoother

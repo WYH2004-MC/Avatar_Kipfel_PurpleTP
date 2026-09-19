@@ -1,0 +1,233 @@
+{
+  "lang": "Language",
+  "addon_version": "Face Tracking Addon Version: {0}",
+
+  "avatar_field": "Avatar",
+  "avatar_field.tooltip": "Drag your Avatar GameObject or Prefab here",
+  
+  "fbx_not_found": "Original FBX Not Found. Please reimport it.",
+  "fbx_version": "FBX Version: {0}",
+
+  "fbx_unknown": "The FBX version could not be automatically detected. Reason: Unknown or modified FBX file.",
+  "fbx_missing": "The FBX version could not be automatically detected. Reason: Mesh is missing or not sourced from an FBX file.",
+  "source_fbx_ver": "Source FBX Version",
+  "source_fbx_ver.tooltip": "Please manually select the correct source version.",
+  "fbx_unsupported": "This FBX file is not supported. Please select a different prefab.",
+  
+  "fbx_target": "FBX Target",
+  "fbx_target.tooltip": "Your avatar is using a non-original FBX file for the mesh. Please select the target used to generate the mesh.\nIf the vertex order is inconsistent in edited FBX file, issues may occur when adding blendshapes.",
+
+  "original": "Original FBX",
+  "current_in_use": "FBX Currently in use by the avatar",
+  
+  "ft_exist": "It appears that there is already an existing Face Tracking Addon.\n Please ensure that you delete the old addon before adding the new one.",
+  
+  "update_mesh": "Update Mesh",
+  "update_mesh.tooltip": "The generated mesh is outdated. Click 'Update Mesh' to regenerate it.",
+  "dialog_mesh_updated": "Mesh updated.\n{0}",
+
+
+  "memory_cost": "Current Avatar Parameter Memory Cost: {0} bits",
+  "eye_tracking": "Eye Tracking",
+  "lip_tracking": "Mouth Tracking",
+  "memory_cost_title": "Memory Cost: {0} bits",
+  "ft_addon": "Face Tracking Addon",
+  "ft_cost": "Face Tracking Addon: {0} bits",
+  "total": "Total: {0} bits",
+  "memory_not_enough": "Parameters Memory Not Enough!",
+  "synced_limit": "You have exceeded the limit for synced parameters in VRChat: {0} > 256 bits",
+  "ft_make": "Apply Face Tracking Addon",
+  "ft_make_new": "Apply Face Tracking as new Avatar",
+  "ft_avatar": "Face Tracking Avatar",
+  "blueprint_warning": "Warning: Blueprint ID Already Exists. Attempting to delete OSC config during upload. If sync issues arise, please reset the OSC config in VRChat or upload your avatar with a new Blueprint ID to ensure proper functionality of VRCFT.",
+  "ft_installed": "Face tracking addon installed.",
+  "done": "Done",
+  "blend_share_error": "BlendShare(≥ v1.0.1) is not installed. Please import BlendShare to proceed",
+  "installation_guide": "Installation Guide",
+
+  "qpc.avatar_parameters": "Avatar Parameters: {0} bits",
+  "qpc.parameters": "Parameters: {0} bits",
+  "qpc.parameters.tooltip": "The sync expression parameters memory needed for this quantization parameter",
+  
+  "qpc.not_sync": "Not synced",
+
+  "qpc.combined_remote": "Combined Remote",
+  "qpc.combined_remote.tooltip": "Only combines parameters remotely. Selecting this option can halve the sync parameter requirements.",
+  "qpc.combined_local": "Combined Local",
+  "qpc.combined_local.tooltip": "Only combines parameters locally. Selecting this option does not affect sync parameter requirements.",
+
+  "qpc.resolution": "Resolution",
+  "qpc.resolution.tooltip": "Adjusts the precision of the sync parameters. Higher resolution provides more precise values remotely but requires more parameter space. Adjusting this does not affect the local precision.",
+
+  "qpc.scale_factor": "Scale Factor",
+  "qpc.scale_factor.tooltip": "Adjusts the scale of the parameters. Increasing the scale factor can enhance the sensitive of the parameter value, while reducing it can make the value less sensitive.",
+  "qpc.installing_layers": "Installing Layers",
+  "qpc.installing_layers.tooltip": "The VRChat playable layers to install the quantization parameter generator animation.",
+
+  "qpc.enable_layer_selection": "Enable Layer Selection",
+  "qpc.enable_layer_selection.tooltip": "Enable animation layer selection. If disabled, it will be installed to FX.",
+
+
+  "eye_tracking_settings.eye_weight": "Eye Weight",
+  "eye_tracking_settings.eye_weight.tooltip": "The weight of EyeClosed blendshape from face tracking.",
+  "eye_tracking_settings.reset": "Reset {0}",
+  "eye_tracking_settings.reset.tooltip": "The weight of blending expression {0} blendshapes to 0 when eye is closed.",
+  "eye_tracking_settings.eye_closed": "Eye Closed Preview",
+
+  "tracking_settings.preview": "Preview",
+  
+  "tracking_settings.end_preview": "End Preview",
+
+
+  "mouth_tracking_settings.jaw_strength": "Jaw Strength",
+  "mouth_tracking_settings.jaw_strength.tooltip": "The strength of Jaw Drop when mouth is opened.",
+  "mouth_tracking_settings.reset_weight": "Reset Weight",
+  "mouth_tracking_settings.reset_weight.tooltip": "The weight of blending expression blendshapes to 0 when mouth is opened.",
+  
+  
+  "ue.JawOpen": "JawOpen",
+  "ue.JawOpen.tooltip": "Open the mouth and jaw",
+
+  "ue.MouthClosed": "MouthClosed",
+  "ue.MouthClosed.tooltip": "Closing the mouth while jaw dropping. The value should not be greater than 'JawOpen'.",
+
+  "ue.JawForward": "JawForward",
+  "ue.JawForward.tooltip": "Forward movement of the jaw.",
+
+  
+  "ue.JawX": "JawLeft・JawRight",
+  "ue.JawX.tooltip": "Move the jaw left or right.",
+  
+  "ue.MouthX": "MouthLeft・MouthRight",
+  "ue.MouthX.tooltip": "Move the mouth left or right.",
+
+  "ue.MouthUpperUp": "MouthUpperUp",
+  "ue.MouthUpperUp.tooltip": "Raise the upper part of the lip.",
+
+  "ue.MouthUpperUpLeft": "MouthUpperUpLeft",
+  "ue.MouthUpperUpLeft.tooltip": "Raise the upper left part of the lip.",
+
+  "ue.MouthUpperUpRight": "MouthUpperUpRight",
+  "ue.MouthUpperUpRight.tooltip": "Raise the upper right part of the lip.",
+
+  "ue.MouthLowerDown": "MouthLowerDown",
+  "ue.MouthLowerDown.tooltip": "Lower the lower part of the lip.",
+  "ue.MouthLowerDownLeft": "MouthLowerDownLeft",
+  "ue.MouthLowerDownLeft.tooltip": "Lower the lower left part of the lip.",
+  "ue.MouthLowerDownRight": "MouthLowerDownRight",
+  "ue.MouthLowerDownRight.tooltip": "Lower the lower right part of the lip.",
+
+  
+  "ue.MouthStretch": "MouthStretch",
+  "ue.MouthStretch.tooltip": "Stretch the mouth horizontally, often appearing with a frown. (Supported on Quest and Pico; not supported on Vive.)",
+  "ue.MouthStretchLeft": "MouthStretchLeft",
+  "ue.MouthStretchLeft.tooltip": "Stretch the left side of the mouth, often appearing with a frown. (Supported on Quest and Pico; not supported on Vive.)",
+  "ue.MouthStretchRight": "MouthStretchRight",
+  "ue.MouthStretchRight.tooltip": "Stretch the right side of the mouth, often appearing with a frown. (Supported on Quest and Pico; not supported on Vive.)",
+
+
+  "ue.MouthDimple": "MouthDimple",
+  "ue.MouthDimple.tooltip": "Create dimples on the sides of the mouth, often appearing with a smile. (Supported on Quest and Pico; not supported on Vive.)",
+  "ue.MouthDimpleLeft": "MouthDimpleLeft",
+  "ue.MouthDimpleLeft.tooltip": "Create a dimple on the left side of the mouth, often appearing with a smile. (Supported on Quest and Pico; not supported on Vive.)",
+  "ue.MouthDimpleRight": "MouthDimpleRight",
+  "ue.MouthDimpleRight.tooltip": "Create a dimple on the right side of the mouth, often appearing with a smile. (Supported on Quest and Pico; not supported on Vive.)",
+
+
+  "ue.MouthRaiser": "MouthRaiser",
+  "ue.MouthRaiser.tooltip": "Raise the mouth.",
+  "ue.MouthRaiserUpper": "MouthRaiserUpper",
+  "ue.MouthRaiserUpper.tooltip": "Raise the upper part of the mouth.",
+  "ue.MouthRaiserLower": "MouthRaiserLower",
+  "ue.MouthRaiserLower.tooltip": "Raise the lower part of the mouth.",
+
+  "ue.LipFunnel": "LipFunnel",
+  "ue.LipFunnel.tooltip": "Create a small 'O' shape with the lips.",
+
+  "ue.LipPucker": "LipPucker",
+  "ue.LipPucker.tooltip": "Pucker the lips.",
+
+  "ue.LipSuck": "LipSuck",
+  "ue.LipSuck.tooltip": "Suck in the lips.",
+  "ue.LipSuckUpper": "LipSuckUpper",
+  "ue.LipSuckUpper.tooltip": "Suck in the upper lip.",
+  "ue.LipSuckLower": "LipSuckLower",
+  "ue.LipSuckLower.tooltip": "Suck in the lower lip.",
+
+  "ue.SmileFrown": "SmileFrown",
+  "ue.SmileFrown.tooltip": "Create a smile or frown expression.",
+  "ue.SmileFrownLeft": "SmileFrownLeft",
+  "ue.SmileFrownLeft.tooltip": "Smile or frown on the left side.",
+  "ue.SmileFrownRight": "SmileFrownRight",
+  "ue.SmileFrownRight.tooltip": "Smile or frown on the right side.",
+
+
+  "ue.CheekPuffSuck": "CheekPuffSuck",
+  "ue.CheekPuffSuck.tooltip": "Puff or suck in the cheeks.",
+
+  "ue.CheekPuffSuckLeft": "CheekPuffSuckLeft",
+  "ue.CheekPuffSuckLeft.tooltip": "Puff or suck in the left cheek.",
+
+  "ue.CheekPuffSuckRight": "CheekPuffSuckRight",
+  "ue.CheekPuffSuckRight.tooltip": "Puff or suck in the right cheek.",
+
+
+  "ue.TongueOut": "TongueOut",
+  "ue.TongueOut.tooltip": "Extend the tongue out.",
+  "ue.TongueX": "TongueLeft・TongueRight",
+  "ue.TongueX.tooltip": "Move the tongue left or right. (Supported on Vive; not supported on Quest and Pico.)",
+  "ue.TongueY": "TongueUp・TongueDown",
+  "ue.TongueY.tooltip": "Move the tongue up or down. (Supported on Vive; not supported on Quest and Pico.)",
+  "ue.TongueRoll": "TongueRoll",
+  "ue.TongueRoll.tooltip": "Roll the tongue. (Supported on Vive; not supported on Quest and Pico.)",
+
+
+  "ue.NoseSneer": "NoseSneer",
+  "ue.NoseSneer.tooltip": "Sneer the nose. (Supported on Quest and Pico; not supported on Vive.)",
+  "ue.NoseSneerLeft": "NoseSneerLeft",
+  "ue.NoseSneerLeft.tooltip": "Sneer the left side of the nose. (Supported on Quest and Pico; not supported on Vive.)",
+  "ue.NoseSneerRight": "NoseSneerRight",
+  "ue.NoseSneerRight.tooltip": "Sneer the right side of the nose. (Supported on Quest and Pico; not supported on Vive.)",
+
+  
+  "ue.EyeLid": "EyeLid",
+  "ue.EyeLid.tooltip": "Eyelid openness",
+  "ue.EyeLidLeft": "EyeLidLeft",
+  "ue.EyeLidLeft.tooltip": "Openness of the left eyelid.",
+  "ue.EyeLidRight": "EyeLidRight",
+  "ue.EyeLidRight.tooltip": "Openness of the right eyelid.",
+
+  "ue.EyeSquint": "EyeSquint",
+  "ue.EyeSquint.tooltip": "Squint the eyes.",
+  "ue.EyeSquintLeft": "EyeSquintLeft",
+  "ue.EyeSquintLeft.tooltip": "Squint the left eye.",
+  "ue.EyeSquintRight": "EyeSquintRight",
+  "ue.EyeSquintRight.tooltip": "Squint the right eye.",
+
+  "ue.EyeX": "EyeX",
+  "ue.EyeX.tooltip": " Eye look left and right ",
+  "ue.EyeLeftX": "EyeLeftX",
+  "ue.EyeLeftX.tooltip": " Left eye look left and right ",
+
+  "ue.EyeRightX": "EyeRightX",
+  "ue.EyeRightX.tooltip": "Right eye look left and right ",
+
+  "ue.EyeY": "EyeY",
+  "ue.EyeY.tooltip": "Eye look up and down ",
+  "ue.EyeLeftY": "EyeLeftY",
+  "ue.EyeLeftY.tooltip": "Left eye look up and down ",
+
+  "ue.EyeRightY": "EyeRightY",
+  "ue.EyeRightY.tooltip": "Right eye look up and down ",
+
+  "ue.PupilDilation": "PupilDilation",
+  "ue.PupilDilation.tooltip": "Dilate or constrict the pupils. (Supported on Vive; not supported on Quest and Pico.)",
+
+  "ue.BrowExpression": "BrowExpression",
+  "ue.BrowExpression.tooltip": "Raises or lowers the eyebrow. (Supported on Quest and Pico; not supported on Vive.)",
+
+  "ue.BrowExpressionLeft": "BrowExpressionLeft",
+  "ue.BrowExpressionLeft.tooltip": "Raises or lowers the left eyebrow. (Supported on Quest and Pico; not supported on Vive.)",
+  "ue.BrowExpressionRight": "BrowExpressionRight",
+  "ue.BrowExpressionRight.tooltip": "Raises or lowers the right eyebrow. (Supported on Quest and Pico; not supported on Vive.)"
+}

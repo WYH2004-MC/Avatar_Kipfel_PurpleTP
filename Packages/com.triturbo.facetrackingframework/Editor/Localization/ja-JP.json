@@ -1,0 +1,256 @@
+﻿{
+  "lang": "言語",
+  "addon_version": "フェイストラッキング　アドオン　バージョン：{0}",
+  
+  "avatar_field": "アバター",
+  "avatar_field.tooltip": "アバターゲームオブジェクトまたはプレハブをここにドラッグ",
+
+  "fbx_not_found": "元のFBXが見つかりません。再インポートしてください。",
+  
+  
+  "fbx_version": "FBX バージョン：{0}",
+  "fbx_unknown": "FBXのバージョンを自動検出できませんでした。理由: 不明または変更されたFBXファイル。",
+  "fbx_missing": "FBXのバージョンを自動検出できませんでした。理由: メッシュが存在しない、またはFBXファイル由来ではありません。",
+
+  "fbx_target": "FBX ターゲット",
+  "fbx_target.tooltip": "アバターが非オリジナルのFBXファイルをメッシュに使用しています。メッシュ生成に使用される対象を選択してください。\n編集されたFBXファイルで頂点の順序が一致しない場合、シェイプキーを追加する際に問題が発生する可能性があります。",
+  
+  
+  "fbx_unsupported": "このFBXファイルはサポートされていません。別のプレハブを選択してください。",
+
+  "original": "オリジナルFBX",
+  "current_in_use": "アバターが使用中のFBX",
+  "ft_exist": "既に存在するフェイストラッキングアドオンがありそうです。\n新しいアドオンを追加する前に、古いアドオンを削除してください。",
+
+
+  "update_mesh": "メッシュを更新",
+  "update_mesh.tooltip": "生成されたメッシュが古くなっています。「メッシュを更新」をクリックして再生成してください。",
+  "dialog_mesh_updated": "メッシュを更新しました。\n{0}",
+  
+  
+  
+  "memory_cost": "現在のアバターパラメータ使用量：{0} ビット",
+  "eye_tracking": "アイ　トラッキング",
+  "lip_tracking": "リップ　トラッキング",
+  "memory_cost_title": "パラメータ使用量：{0} ビット",
+  "ft_addon": "フェイストラッキングアドオン",
+  "ft_cost": "フェイストラッキングアドオン：{0} ビット",
+  "total": "合計：{0} ビット",
+  "memory_not_enough": "パラメータメモリが不足しています！",
+  "synced_limit": "VRChat の同期パラメータの制限を超えました：{0} > 256 ビット。",
+
+  "ft_make": "元のアバターにフェイストラを作成する",
+  "ft_make_new": "新しいアバターにフェイストラを作成する",
+  "ft_avatar": "フェイストラッキングアバター ",
+  "blueprint_warning": "警告: Blueprint ID がすでに存在します。アップロード時に OSC 設定を削除しようとします。同期の問題が発生した場合は、VRChat で OSC 設定をリセットするか、新しい Blueprint ID でアバターをアップロードして、VRCFT が正常に機能することを確認してください。",
+  "ft_installed": "フェイストラッキングアドオンがインストールされました。",
+  "done": "完了",
+  "blend_share_error": "BlendShare(≥ v1.0.1) がインストールされていません。続行するには、BlendShareをインポートしてください。",
+  
+  "source_fbx_ver": "元のFBXバージョン",
+  "source_fbx_ver.tooltip": "現在のFBXファイルは編集されているため、バージョンを自動検出することができません。この編集済みFBXの正しい元バージョンを手動で選択してください。",
+  "installation_guide": "インストールガイド",
+  
+  
+  "qpc.avatar_parameters": "Avatar パラメータ: {0} ビット",
+  "qpc.parameters": "パラメータ占有: {0} ビット",
+  "qpc.parameters.tooltip": "この量子化パラメータに必要な同期パラメータ空間の占有。",
+
+  "qpc.not_sync": "非同期",
+
+  "qpc.combined_remote": "統合リモートパラメータ",
+  "qpc.combined_local": "統合ローカルパラメータ",
+  "qpc.combined_remote.tooltip": "リモートでのみパラメータを統合します。このオプションを選択すると、同期パラメータ要件を半分に減らすことができます。",
+  "qpc.combined_local.tooltip": "ローカルでのみパラメータを統合します。このオプションを選択しても同期パラメータの要件に影響しません。",
+
+  "qpc.resolution": "解像度",
+  "qpc.resolution.tooltip": "同期パラメータの精度を調整します。より高い解像度はリモートでより精密な値を提供しますが、より多くのパラメータ空間を使用します。ローカルの精度には影響しません。",
+
+  "qpc.scale_factor": "スケール",
+  "qpc.scale_factor.tooltip": "パラメータのスケール比率を調整します。スケールファクタを増やすとパラメータの感度が向上し、減らすと感度が低下します。",
+
+  "qpc.installing_layers": "アニメーションレイヤのインストール",
+  "qpc.installing_layers.tooltip": "VRChat Playable レイヤーに量子化パラメータ生成アニメーションをインストールします。",
+
+  "qpc.enable_layer_selection": "アニメーションレイヤ選択の有効化",
+  "qpc.enable_layer_selection.tooltip": "アニメーションレイヤの選択を有効にするかどうか。無効にすると、FX にインストールされます。",
+
+  "eye_tracking_settings.eye_weight": "目のウェイト",
+  "eye_tracking_settings.eye_weight.tooltip": "目のトラッキング中の閉じた形態のキーストレングス",
+  "eye_tracking_settings.reset": "{0} リセットウェイト",
+  "eye_tracking_settings.reset.tooltip": "目が完全に閉じたときに {0} 形態キーを0にリセットする強度",
+
+  "eye_tracking_settings.eye_closed": "閉じた目のプレビュー",
+
+  "tracking_settings.preview": "プレビュー",
+  "tracking_settings.end_preview": "プレビュー終了",
+
+  "mouth_tracking_settings.jaw_strength": "下顎の強度",
+  "mouth_tracking_settings.jaw_strength.tooltip": "口を開けたときの下顎の下降量。",
+  "mouth_tracking_settings.reset_weight": "リセットウェイト",
+  "mouth_tracking_settings.reset_weight.tooltip": "口を開けたときに表情ブレンドシェイプのウェイトを0にリセットします。",
+
+  "ue.JawOpen": "JawOpen: 口を開く",
+  "ue.JawOpen.tooltip": "口を開けて下顎を動かす。",
+
+  "ue.MouthClosed": "MouthClosed: 口を閉じる",
+  "ue.MouthClosed.tooltip": "下顎を開いて口を閉じる。値は 'JawOpen' を超えません。",
+
+  "ue.JawForward": "JawForward: 下顎を前に動かす",
+  "ue.JawForward.tooltip": "下顎を前に動かす。",
+
+  "ue.JawX": "JawX: 下顎を左右に動かす",
+  "ue.JawX.tooltip": "下顎を左右に動かす。",
+
+  "ue.MouthX": "MouthX: 口を左右に動かす",
+  "ue.MouthX.tooltip": "口を左右に動かす。",
+
+  "ue.MouthUpperUp": "MouthUpperUp: 上唇を持ち上げ",
+  "ue.MouthUpperUp.tooltip": "上唇を上げる。",
+
+  "ue.MouthUpperUpLeft": "MouthUpperUpLeft: 左上唇を持ち上げ",
+  "ue.MouthUpperUpLeft.tooltip": "左側の上唇を上げる。",
+
+  "ue.MouthUpperUpRight": "MouthUpperUpRight: 右上唇を持ち上げ",
+  "ue.MouthUpperUpRight.tooltip": "右側の上唇を上げる。",
+
+  "ue.MouthLowerDown": "MouthLowerDown: 下唇を引き下げ",
+  "ue.MouthLowerDown.tooltip": "下唇を下げる。",
+
+  "ue.MouthLowerDownLeft": "MouthLowerDownLeft: 左下唇を引き下げ",
+  "ue.MouthLowerDownLeft.tooltip": "左側の下唇を下げる。",
+
+  "ue.MouthLowerDownRight": "MouthLowerDownRight: 右下唇を引き下げ",
+  "ue.MouthLowerDownRight.tooltip": "右側の下唇を下げる。",
+
+  "ue.MouthStretch": "MouthStretch: 口角を横に伸ばす",
+  "ue.MouthStretch.tooltip": "口角を引き下げつつ横に伸ばす。悲しいときによく見られます。 (Quest と Pico に対応；Vive には非対応。)",
+
+  "ue.MouthStretchLeft": "MouthStretchLeft: 左口角を横に伸ばす",
+  "ue.MouthStretchLeft.tooltip": "左口角を引き下げつつ横に伸ばす。悲しいときによく見られます。 (Quest と Pico に対応；Vive には非対応。)",
+
+  "ue.MouthStretchRight": "MouthStretchRight: 右口角を横に伸ばす",
+  "ue.MouthStretchRight.tooltip": "右口角を引き下げつつ横に伸ばす。悲しいときによく見られます。 (Quest と Pico に対応；Vive には非対応。)",
+
+  "ue.MouthDimple": "MouthDimple: えくぼ",
+  "ue.MouthDimple.tooltip": "笑顔のときに口の両側にくぼみを作ります。 (Quest と Pico に対応；Vive には非対応。)",
+
+  "ue.MouthDimpleLeft": "MouthDimpleLeft: 左えくぼ",
+  "ue.MouthDimpleLeft.tooltip": "笑顔のときに左口のくぼみを作ります。 (Quest と Pico に対応；Vive には非対応。)",
+
+  "ue.MouthDimpleRight": "MouthDimpleRight: 右えくぼ",
+  "ue.MouthDimpleRight.tooltip": "笑顔のときに右口のくぼみを作ります。 (Quest と Pico に対応；Vive には非対応。)",
+
+  "ue.MouthRaiser": "MouthRaiser: 口を上げる",
+  "ue.MouthRaiser.tooltip": "口を上げます。",
+
+  "ue.MouthRaiserUpper": "MouthRaiserUpper: 上唇を上げる",
+  "ue.MouthRaiserUpper.tooltip": "上唇をぎゅっと上げます。",
+
+  "ue.MouthRaiserLower": "MouthRaiserLower: 下唇を上げる",
+  "ue.MouthRaiserLower.tooltip": "下唇をぎゅっと上げます。",
+
+  "ue.LipFunnel": "LipFunnel: 唇を尖らす",
+  "ue.LipFunnel.tooltip": "唇を小さな 'O' 形にする。",
+
+  "ue.LipPucker": "LipPucker: 唇をすぼめる",
+  "ue.LipPucker.tooltip": "唇をすぼめる。",
+
+  "ue.LipSuck": "LipSuck: 唇を結ぶ",
+  "ue.LipSuck.tooltip": "唇を結んで吸う。",
+
+  "ue.LipSuckUpper": "LipSuckUpper: 上唇を結ぶ",
+  "ue.LipSuckUpper.tooltip": "上唇を巻き込む。",
+
+  "ue.LipSuckLower": "LipSuckLower: 下唇を結ぶ",
+  "ue.LipSuckLower.tooltip": "下唇を巻き込む。",
+
+  "ue.SmileFrown": "SmileFrown: 微笑み・しかめっ面",
+  "ue.SmileFrown.tooltip": "微笑みまたはしかめっ面の表情。",
+
+  "ue.SmileFrownLeft": "SmileFrownLeft: 左の微笑み・しかめっ面",
+  "ue.SmileFrownLeft.tooltip": "左側で微笑みまたはしかめっ面の表情。",
+
+  "ue.SmileFrownRight": "SmileFrownRight: 右の微笑み・しかめっ面",
+  "ue.SmileFrownRight.tooltip": "右側で微笑みまたはしかめっ面の表情。",
+
+  "ue.CheekPuffSuck": "CheekPuffSuck: 頬を膨らませる・吸う",
+  "ue.CheekPuffSuck.tooltip": "頬を膨らませたり吸ったりする。",
+
+  "ue.CheekPuffSuckLeft": "CheekPuffSuckLeft: 左の頬を膨らませる・吸う",
+  "ue.CheekPuffSuckLeft.tooltip": "左側の頬を膨らませたり吸ったりする。",
+
+  "ue.CheekPuffSuckRight": "CheekPuffSuckRight: 右の頬を膨らませる・吸う",
+  "ue.CheekPuffSuckRight.tooltip": "右側の頬を膨らませたり吸ったりする。",
+
+  "ue.TongueOut": "TongueOut: 舌を出す",
+  "ue.TongueOut.tooltip": "舌を出す。",
+
+  "ue.TongueX": "TongueX: 舌を左右に動かす",
+  "ue.TongueX.tooltip": "舌を左または右に動かす。(Viveに対応; QuestとPicoには非対応)",
+
+  "ue.TongueY": "TongueY: 舌を上下に動かす",
+  "ue.TongueY.tooltip": "舌を上または下に動かす。(Viveに対応; QuestとPicoには非対応)",
+
+  "ue.TongueRoll": "TongueRoll: 舌を巻く",
+  "ue.TongueRoll.tooltip": "舌を巻く。(Viveに対応; QuestとPicoには非対応)",
+
+  "ue.NoseSneer": "NoseSneer: 鼻をしかめる",
+  "ue.NoseSneer.tooltip": "鼻をしかめる。(QuestとPicoに対応; Viveには非対応)",
+
+  "ue.NoseSneerLeft": "NoseSneerLeft: 左の鼻をしかめる",
+  "ue.NoseSneerLeft.tooltip": "左側の鼻をしかめる。(QuestとPicoに対応; Viveには非対応)",
+
+  "ue.NoseSneerRight": "NoseSneerRight: 右の鼻をしかめる",
+  "ue.NoseSneerRight.tooltip": "右側の鼻をしかめる。(QuestとPicoに対応; Viveには非対応)",
+
+  "ue.EyeLid": "EyeLid: まぶたの開閉",
+  "ue.EyeLid.tooltip": "まぶたの開閉具合。",
+
+  "ue.EyeLidLeft": "EyeLidLeft: 左目のまぶたの開閉",
+  "ue.EyeLidLeft.tooltip": "左目のまぶたの開閉具合。",
+
+  "ue.EyeLidRight": "EyeLidRight: 右目のまぶたの開閉",
+  "ue.EyeLidRight.tooltip": "右目のまぶたの開閉具合。",
+
+  "ue.EyeSquint": "EyeSquint: 目を細める",
+  "ue.EyeSquint.tooltip": "目を細める。",
+
+  "ue.EyeSquintLeft": "EyeSquintLeft: 左目を細める",
+  "ue.EyeSquintLeft.tooltip": "左目を細める。",
+
+  "ue.EyeSquintRight": "EyeSquintRight: 右目を細める",
+  "ue.EyeSquintRight.tooltip": "右目を細める。",
+
+  "ue.EyeX": "EyeX: 目を左右に動かす",
+  "ue.EyeX.tooltip": "目を左または右に動かす。",
+
+  "ue.EyeLeftX": "EyeLeftX: 左目を左右に動かす",
+  "ue.EyeLeftX.tooltip": "左目を左または右に動かす。",
+
+  "ue.EyeRightX": "EyeRightX: 右目を左右に動かす",
+  "ue.EyeRightX.tooltip": "右目を左または右に動かす。",
+
+  "ue.EyeY": "EyeY: 目を上下に動かす",
+  "ue.EyeY.tooltip": "目を上または下に動かす。",
+
+  "ue.EyeLeftY": "EyeLeftY: 左目を上下に動かす",
+  "ue.EyeLeftY.tooltip": "左目を上または下に動かす。",
+
+  "ue.EyeRightY": "EyeRightY: 右目を上下に動かす",
+  "ue.EyeRightY.tooltip": "右目を上または下に動かす。",
+
+  "ue.PupilDilation": "PupilDilation: 瞳孔の拡大・収縮",
+  "ue.PupilDilation.tooltip": "瞳孔を拡大または収縮させる。(Viveに対応; QuestとPicoには非対応)",
+
+  "ue.BrowExpression": "BrowExpression: 眉の表情",
+  "ue.BrowExpression.tooltip": "眉を上げるまたは下げる。(QuestとPicoに対応; Viveには非対応)",
+
+  "ue.BrowExpressionLeft": "BrowExpressionLeft: 左眉の表情",
+  "ue.BrowExpressionLeft.tooltip": "左眉を上げるまたは下げる。(QuestとPicoに対応; Viveには非対応)",
+
+  "ue.BrowExpressionRight": "BrowExpressionRight: 右眉の表情",
+  "ue.BrowExpressionRight.tooltip": "右眉を上げるまたは下げる。(QuestとPicoに対応; Viveには非対応)"
+  
+  
+}

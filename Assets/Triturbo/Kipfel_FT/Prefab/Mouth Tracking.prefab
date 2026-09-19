@@ -1,0 +1,458 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1648172412801774481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6499687609039782967}
+  - component: {fileID: 7098181238165246080}
+  - component: {fileID: 7065221012859479319}
+  - component: {fileID: 6034421698986272168}
+  - component: {fileID: 5303335082565769227}
+  - component: {fileID: 9200549576886308207}
+  - component: {fileID: 8425646293200618879}
+  m_Layer: 0
+  m_Name: Mouth Tracking Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6499687609039782967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648172412801774481}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5984806169746686097}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7098181238165246080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648172412801774481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb122659f724ebf85fe095ac02dc339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 9100000, guid: b89b37d238fc95c46b55e98df7275355, type: 2}
+  layerType: 5
+  deleteAttachedAnimator: 0
+  pathMode: 1
+  matchAvatarWriteDefaults: 0
+  relativePathRoot:
+    referencePath: 
+    targetObject: {fileID: 0}
+  layerPriority: 0
+--- !u!114 &7065221012859479319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648172412801774481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb122659f724ebf85fe095ac02dc339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 9100000, guid: 119b059c096bcdd478f482301d520e5b, type: 2}
+  layerType: 5
+  deleteAttachedAnimator: 0
+  pathMode: 1
+  matchAvatarWriteDefaults: 0
+  relativePathRoot:
+    referencePath: 
+    targetObject: {fileID: 0}
+  layerPriority: 0
+--- !u!114 &6034421698986272168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648172412801774481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb122659f724ebf85fe095ac02dc339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 9100000, guid: ca7b53d4e614e0246853361a5979344d, type: 2}
+  layerType: 5
+  deleteAttachedAnimator: 0
+  pathMode: 1
+  matchAvatarWriteDefaults: 0
+  relativePathRoot:
+    referencePath: 
+    targetObject: {fileID: 0}
+  layerPriority: 0
+--- !u!114 &5303335082565769227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648172412801774481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71a96d4ea0c344f39e277d82035bf9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameters:
+  - nameOrPrefix: MouthTrackingEnable
+    remapTo: 
+    internalParameter: 0
+    isPrefix: 0
+    syncType: 3
+    localOnly: 0
+    defaultValue: 1
+    saved: 1
+    hasExplicitDefaultValue: 1
+    m_overrideAnimatorDefaults: 0
+  - nameOrPrefix: VisemesEnable
+    remapTo: 
+    internalParameter: 0
+    isPrefix: 0
+    syncType: 3
+    localOnly: 0
+    defaultValue: 1
+    saved: 1
+    hasExplicitDefaultValue: 1
+    m_overrideAnimatorDefaults: 0
+  - nameOrPrefix: ForceTongueOutToggle
+    remapTo: 
+    internalParameter: 0
+    isPrefix: 0
+    syncType: 3
+    localOnly: 1
+    defaultValue: 1
+    saved: 1
+    hasExplicitDefaultValue: 1
+    m_overrideAnimatorDefaults: 0
+  - nameOrPrefix: ForceTongueOutSync
+    remapTo: 
+    internalParameter: 0
+    isPrefix: 0
+    syncType: 3
+    localOnly: 0
+    defaultValue: 0
+    saved: 0
+    hasExplicitDefaultValue: 0
+    m_overrideAnimatorDefaults: 0
+  - nameOrPrefix: TongueControlActive
+    remapTo: 
+    internalParameter: 0
+    isPrefix: 0
+    syncType: 3
+    localOnly: 1
+    defaultValue: 0
+    saved: 0
+    hasExplicitDefaultValue: 0
+    m_overrideAnimatorDefaults: 0
+  - nameOrPrefix: TongueXControl
+    remapTo: 
+    internalParameter: 0
+    isPrefix: 0
+    syncType: 2
+    localOnly: 1
+    defaultValue: 0
+    saved: 0
+    hasExplicitDefaultValue: 0
+    m_overrideAnimatorDefaults: 0
+  - nameOrPrefix: TongueYControl
+    remapTo: 
+    internalParameter: 0
+    isPrefix: 0
+    syncType: 2
+    localOnly: 1
+    defaultValue: 0
+    saved: 0
+    hasExplicitDefaultValue: 0
+    m_overrideAnimatorDefaults: 0
+  - nameOrPrefix: FT/Local/MouthSmoother
+    remapTo: 
+    internalParameter: 0
+    isPrefix: 0
+    syncType: 2
+    localOnly: 1
+    defaultValue: 0.08
+    saved: 1
+    hasExplicitDefaultValue: 1
+    m_overrideAnimatorDefaults: 0
+  - nameOrPrefix: FT/Local/TongueSmoother
+    remapTo: 
+    internalParameter: 0
+    isPrefix: 0
+    syncType: 2
+    localOnly: 1
+    defaultValue: 0.08
+    saved: 1
+    hasExplicitDefaultValue: 1
+    m_overrideAnimatorDefaults: 0
+  - nameOrPrefix: FT/Remote/MouthSmoother
+    remapTo: 
+    internalParameter: 0
+    isPrefix: 0
+    syncType: 0
+    localOnly: 1
+    defaultValue: 0.7
+    saved: 0
+    hasExplicitDefaultValue: 1
+    m_overrideAnimatorDefaults: 0
+  - nameOrPrefix: FT/Remote/TongueSmoother
+    remapTo: 
+    internalParameter: 0
+    isPrefix: 0
+    syncType: 0
+    localOnly: 1
+    defaultValue: 0.7
+    saved: 0
+    hasExplicitDefaultValue: 1
+    m_overrideAnimatorDefaults: 0
+--- !u!114 &9200549576886308207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648172412801774481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ef83cb0c23d4d7c9d41021e544a1978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuToAppend: {fileID: 11400000, guid: 4ba8f3462b87710449faaa02a3057d25, type: 2}
+  installTargetMenu: {fileID: 11400000, guid: 3cbe6e71587de80479b160c729fb381e, type: 2}
+--- !u!114 &8425646293200618879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648172412801774481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ef83cb0c23d4d7c9d41021e544a1978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuToAppend: {fileID: 11400000, guid: 6341a3bc228dfac4db4e0e75b6fd0ccc, type: 2}
+  installTargetMenu: {fileID: 11400000, guid: 2767e4289a7c4b1448be96c34546d502, type: 2}
+--- !u!1 &3340130265194044396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5984806169746686097}
+  - component: {fileID: 6901632575075009837}
+  m_Layer: 0
+  m_Name: Mouth Tracking
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5984806169746686097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3340130265194044396}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6499687609039782967}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6901632575075009837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3340130265194044396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb2338d9be7a37499cf7d07f9493a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_QuantizationParameters: {fileID: 11400000, guid: 960cea2eac4a51b4c84e6f9d50b1bd71, type: 2}
+  m_OverrideSettings:
+  - m_ParameterName: FT/v2/JawOpen
+    m_Resolution: 7
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/JawForward
+    m_Resolution: 3
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/JawX
+    m_Resolution: 3
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/MouthClosed
+    m_Resolution: 4
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/MouthX
+    m_Resolution: 4
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/MouthUpperUp
+    m_Resolution: 3
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/MouthLowerDown
+    m_Resolution: 3
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/MouthStretch
+    m_Resolution: 2
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/MouthDimple
+    m_Resolution: 2
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/MouthRaiser
+    m_Resolution: 3
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/LipFunnel
+    m_Resolution: 3
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/LipPucker
+    m_Resolution: 3
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/LipSuck
+    m_Resolution: 3
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/SmileFrown
+    m_Resolution: 4
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/CheekPuffSuck
+    m_Resolution: 3
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/TongueOut
+    m_Resolution: 3
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/TongueX
+    m_Resolution: 3
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/TongueY
+    m_Resolution: 3
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/TongueRoll
+    m_Resolution: 0
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  - m_ParameterName: FT/v2/NoseSneer
+    m_Resolution: 2
+    m_ScaleFactor: 1
+    m_CombinedLocal: 0
+    m_CombinedRemote: 0
+    m_LinkedParameters: []
+    m_InstallingLayers: 16
+  m_QuantizationParameterDrivers:
+  - m_Target: FT/v2/TongueX
+    m_Controller: TongueXControl
+    m_Toggle: TongueControlActive
+  - m_Target: FT/v2/TongueY
+    m_Controller: TongueYControl
+    m_Toggle: TongueControlActive
+  m_EnableLayerSelection: 0
+  m_LocalBlendTrees:
+  - {fileID: -4423123175320869353, guid: 7ac7fe1976ba5d6449f0766dc5df5963, type: 2}
+  m_RemoteBlendTrees:
+  - {fileID: -1229052692461263593, guid: 7ac7fe1976ba5d6449f0766dc5df5963, type: 2}
+  m_RemoteSmoothnessList:
+  - 0.7
+  - 0.7
+  m_LocalSmoothnessList:
+  - 0.08
+  - 0.08

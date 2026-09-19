@@ -1,0 +1,253 @@
+﻿{
+  "lang": "언어",
+  "addon_version": "페이스 트래킹 애드온 버전: {0}",
+
+  "avatar_field": "아바타",
+  "avatar_field.tooltip": "아바타 게임 오브젝트 또는 프리팹을 여기에 드래그하세요.",
+
+  "fbx_not_found": "원본 FBX를 찾을 수 없습니다. 다시 가져오세요.",
+  "fbx_version": "FBX 버전: {0}",
+
+  "fbx_unknown": "FBX 버전을 자동으로 감지할 수 없습니다. 이유: 알 수 없거나 수정된 FBX 파일입니다.",
+  "fbx_missing": "FBX 버전을 자동으로 감지할 수 없습니다. 이유: 메시가 없거나 FBX 파일에서 가져오지 않았습니다.",
+  "source_fbx_ver": "원본 FBX 버전",
+  "source_fbx_ver.tooltip": "이 FBX 파일이 수정되었으므로 버전을 자동으로 감지할 수 없습니다. 올바른 원본 버전을 수동으로 선택하세요.",
+  "fbx_unsupported": "이 FBX 파일은 지원되지 않습니다. 다른 프리팹을 선택하세요.",
+
+  "fbx_target": "FBX 대상",
+  "fbx_target.tooltip": "아바타가 원본이 아닌 FBX 파일을 메쉬로 사용하고 있습니다. 메쉬를 생성할 때 사용된 대상을 선택하세요.\n편집된 FBX 파일에서 정점 순서가 일치하지 않으면 블렌드셰이프를 추가할 때 문제가 발생할 수 있습니다.",
+
+  "original": "원본 FBX",
+  "current_in_use": "아바타에서 사용 중인 FBX",
+
+  "ft_exist": "이미 페이스 트래킹 애드온이 설치된 것 같습니다.\n새 애드온을 추가하기 전에 기존 애드온을 삭제했는지 확인하세요.",
+
+  "update_mesh": "메시 업데이트",
+  "update_mesh.tooltip": "생성된 메시가 오래되었습니다. '메시 업데이트'를 클릭하여 다시 생성하세요.",
+  "dialog_mesh_updated": "메시가 업데이트되었습니다.\n{0}",
+
+  "memory_cost": "현재 아바타 파라미터 메모리 비용: {0}비트",
+  "eye_tracking": "눈 추적",
+  "lip_tracking": "입 추적",
+  "memory_cost_title": "메모리 비용: {0}비트",
+  "ft_addon": "페이스 트래킹 애드온",
+  "ft_cost": "페이스 트래킹 애드온: {0}비트",
+  "total": "총합: {0}비트",
+  "memory_not_enough": "파라미터 메모리가 부족합니다!",
+  "synced_limit": "VRChat에서 동기화된 파라미터의 한도를 초과했습니다: {0} > 256비트",
+
+  "ft_make": "페이스 트래킹 애드온 적용",
+  "ft_make_new": "새 아바타로 페이스 트래킹 적용",
+  "ft_avatar": "페이스 트래킹 아바타",
+
+  "blueprint_warning": "경고: Blueprint ID가 이미 존재합니다. 업로드 중에 OSC 구성을 삭제하려고 시도합니다. 동기화 문제가 발생하면 VRChat에서 OSC 구성을 재설정하거나 새로운 Blueprint ID로 아바타를 업로드하여 VRCFT가 올바르게 작동하는지 확인하세요.",
+
+  "ft_installed": "페이스 트래킹 애드온이 설치되었습니다.",
+  "done": "완료",
+
+  "blend_share_error": "BlendShare(≥ v1.0.1) 가 설치되지 않았습니다. 계속하려면 BlendShare를 가져오세요.",
+  "installation_guide": "설치 가이드",
+  
+  
+  
+  "qpc.avatar_parameters": "아바타 파라미터: {0} 비트",
+  "qpc.parameters": "파라미터 사용: {0} 비트",
+  "qpc.parameters.tooltip": "이 양자화된 파라미터가 필요한 동기화 파라미터 공간 사용량입니다.",
+
+  "qpc.not_sync": "동기화되지 않음",
+
+  "qpc.combined_remote": "원격 파라미터 결합",
+  "qpc.combined_local": "로컬 파라미터 결합",
+  "qpc.combined_remote.tooltip": "원격에서만 파라미터를 결합합니다. 이 옵션을 선택하면 동기화 파라미터 요구 사항을 절반으로 줄일 수 있습니다.",
+  "qpc.combined_local.tooltip": "로컬에서만 파라미터를 결합합니다. 이 옵션은 동기화 파라미터 요구 사항에 영향을 주지 않습니다.",
+
+  "qpc.resolution": "해상도",
+  "qpc.resolution.tooltip": "동기화 파라미터의 정확도를 조정합니다. 더 높은 해상도는 원격에서 더 정확한 값을 제공하지만 더 많은 파라미터 공간을 차지합니다. 이 항목을 조정해도 로컬의 정확도에는 영향을 주지 않습니다.",
+
+  "qpc.scale_factor": "스케일 팩터",
+  "qpc.scale_factor.tooltip": "파라미터의 스케일 비율을 조정합니다. 스케일 팩터를 증가시키면 파라미터의 민감도가 높아지고, 이를 줄이면 파라미터의 민감도가 덜해집니다.",
+
+  "qpc.installing_layers": "애니메이션 레이어 설치",
+  "qpc.installing_layers.tooltip": "양자화된 파라미터 생성기 애니메이션에 사용되는 VRChat Playable 레이어입니다.",
+
+  "qpc.enable_layer_selection": "애니메이션 레이어 선택 활성화",
+  "qpc.enable_layer_selection.tooltip": "애니메이션 레이어 선택을 활성화할지 여부입니다. 비활성화 시 FX에 설치됩니다.",
+
+  "eye_tracking_settings.eye_weight": "눈 무게",
+  "eye_tracking_settings.eye_weight.tooltip": "눈동자 추적 시 눈을 감은 형태 키 강도입니다.",
+  "eye_tracking_settings.reset": "{0} 초기화 무게",
+  "eye_tracking_settings.reset.tooltip": "눈을 완전히 감으면 {0} 형태 키의 강도를 0으로 초기화합니다.",
+
+  "eye_tracking_settings.eye_closed": "눈 감기 정도 미리보기",
+
+  "tracking_settings.preview": "미리보기",
+  "tracking_settings.end_preview": "미리보기 종료",
+
+  "mouth_tracking_settings.jaw_strength": "하악 강도",
+  "mouth_tracking_settings.jaw_strength.tooltip": "입을 열 때 하악이 내려가는 정도입니다.",
+  "mouth_tracking_settings.reset_weight": "초기화 무게",
+  "mouth_tracking_settings.reset_weight.tooltip": "입을 열 때 표정 혼합형태의 무게를 0으로 초기화합니다.",
+
+
+  "ue.JawOpen": "JawOpen: 입 열기",
+  "ue.JawOpen.tooltip": "입 열기 및 아래턱",
+
+  "ue.MouthClosed": "MouthClosed: 입 닫기",
+  "ue.MouthClosed.tooltip": "아래턱을 열 때 입을 닫음. 값은 'JawOpen'을 초과하지 않습니다.",
+
+  "ue.JawForward": "JawForward: 아래턱 앞으로 이동",
+  "ue.JawForward.tooltip": "아래턱을 앞으로 이동시킴.",
+
+  "ue.JawX": "JawX: 아래턱 좌우 이동",
+  "ue.JawX.tooltip": "아래턱을 좌우로 이동시킴.",
+
+  "ue.MouthX": "MouthX: 입 좌우 이동",
+  "ue.MouthX.tooltip": "입을 좌우로 이동시킴.",
+
+  "ue.MouthUpperUp": "MouthUpperUp: 위 입술 올리기",
+  "ue.MouthUpperUp.tooltip": "위 입술을 올림.",
+
+  "ue.MouthUpperUpLeft": "MouthUpperUpLeft: 왼쪽 위 입술 올리기",
+  "ue.MouthUpperUpLeft.tooltip": "왼쪽 위 입술을 올림.",
+
+  "ue.MouthUpperUpRight": "MouthUpperUpRight: 오른쪽 위 입술 올리기",
+  "ue.MouthUpperUpRight.tooltip": "오른쪽 위 입술을 올림.",
+
+  "ue.MouthLowerDown": "MouthLowerDown: 아래 입술 내리기",
+  "ue.MouthLowerDown.tooltip": "아래 입술을 내림.",
+
+  "ue.MouthLowerDownLeft": "MouthLowerDownLeft: 왼쪽 아래 입술 내리기",
+  "ue.MouthLowerDownLeft.tooltip": "왼쪽 아래 입술을 내림.",
+
+  "ue.MouthLowerDownRight": "MouthLowerDownRight: 오른쪽 아래 입술 내리기",
+  "ue.MouthLowerDownRight.tooltip": "오른쪽 아래 입술을 내림.",
+
+  "ue.MouthStretch": "MouthStretch: 입 스트레칭",
+  "ue.MouthStretch.tooltip": "입을 수평으로 스트레칭, 슬플 때 자주 발생. (Quest 및 Pico 지원; Vive는 지원하지 않음.)",
+
+  "ue.MouthStretchLeft": "MouthStretchLeft: 왼쪽 입 스트레칭",
+  "ue.MouthStretchLeft.tooltip": "입 왼쪽을 스트레칭, 슬플 때 자주 발생. (Quest 및 Pico 지원; Vive는 지원하지 않음.)",
+
+  "ue.MouthStretchRight": "MouthStretchRight: 오른쪽 입 스트레칭",
+  "ue.MouthStretchRight.tooltip": "입 오른쪽을 스트레칭, 슬플 때 자주 발생. (Quest 및 Pico 지원; Vive는 지원하지 않음.)",
+
+  "ue.MouthDimple": "MouthDimple: 입술 보조개",
+  "ue.MouthDimple.tooltip": "입술 양쪽에 보조개를 만들기, 미소 짓을 때 자주 나타남. (Quest 및 Pico 지원; Vive는 지원하지 않음.)",
+
+  "ue.MouthDimpleLeft": "MouthDimpleLeft: 왼쪽 입술 보조개",
+  "ue.MouthDimpleLeft.tooltip": "입술 왼쪽에 보조개를 만들기, 미소 짓을 때 자주 나타남. (Quest 및 Pico 지원; Vive는 지원하지 않음.)",
+
+  "ue.MouthDimpleRight": "MouthDimpleRight: 오른쪽 입술 보조개",
+  "ue.MouthDimpleRight.tooltip": "입술 오른쪽에 보조개를 만들기, 미소 짓을 때 자주 나타남. (Quest 및 Pico 지원; Vive는 지원하지 않음.)",
+
+  "ue.MouthRaiser": "MouthRaiser: 입술 올리기",
+  "ue.MouthRaiser.tooltip": "입술을 올림.",
+
+  "ue.MouthRaiserUpper": "MouthRaiserUpper: 위 입술 올리기",
+  "ue.MouthRaiserUpper.tooltip": "위 입술을 올림.",
+
+  "ue.MouthRaiserLower": "MouthRaiserLower: 아래 입술 올리기",
+  "ue.MouthRaiserLower.tooltip": "아래 입술을 올림.",
+
+  "ue.LipFunnel": "LipFunnel: 입을 쭉 내밀다",
+  "ue.LipFunnel.tooltip": "입술을 작은 'O' 모양으로 변형.",
+
+  "ue.LipPucker": "LipPucker: 입술 내밀기",
+  "ue.LipPucker.tooltip": "입술을 내밀기.",
+
+  "ue.LipSuck": "LipSuck: 입술 빨기",
+  "ue.LipSuck.tooltip": "입술을 빨기.",
+
+  "ue.LipSuckUpper": "LipSuckUpper: 위 입술 빨기",
+  "ue.LipSuckUpper.tooltip": "위 입술을 빨기.",
+
+  "ue.LipSuckLower": "LipSuckLower: 아래 입술 빨기",
+  "ue.LipSuckLower.tooltip": "아래 입술을 빨기.",
+
+  "ue.SmileFrown": "SmileFrown: 미소・찡그림",
+  "ue.SmileFrown.tooltip": "미소 또는 찡그린 표정.",
+
+  "ue.SmileFrownLeft": "SmileFrownLeft: 왼쪽 미소・찡그림",
+  "ue.SmileFrownLeft.tooltip": "왼쪽에서 미소 또는 찡그린 표정.",
+
+  "ue.SmileFrownRight": "SmileFrownRight: 오른쪽 미소・찡그림",
+  "ue.SmileFrownRight.tooltip": "오른쪽에서 미소 또는 찡그린 표정.",
+
+  "ue.CheekPuffSuck": "CheekPuffSuck: 볼 부풀리기・흡입",
+  "ue.CheekPuffSuck.tooltip": "볼을 부풀리거나 흡입.",
+
+  "ue.CheekPuffSuckLeft": "CheekPuffSuckLeft: 왼쪽 볼 부풀리기・흡입",
+  "ue.CheekPuffSuckLeft.tooltip": "왼쪽 볼을 부풀리거나 흡입.",
+
+  "ue.CheekPuffSuckRight": "CheekPuffSuckRight: 오른쪽 볼 부풀리기・흡입",
+  "ue.CheekPuffSuckRight.tooltip": "오른쪽 볼을 부풀리거나 흡입.",
+
+  "ue.TongueOut": "TongueOut: 혀 내밀기",
+  "ue.TongueOut.tooltip": "혀를 내밀기.",
+
+  "ue.TongueX": "TongueX: 혀 좌우 이동",
+  "ue.TongueX.tooltip": "혀를 좌우로 이동. (Vive 지원; Quest 및 Pico는 지원하지 않음.)",
+
+  "ue.TongueY": "TongueY: 혀 상하 이동",
+  "ue.TongueY.tooltip": "혀를 상하로 이동. (Vive 지원; Quest 및 Pico는 지원하지 않음.)",
+
+  "ue.TongueRoll": "TongueRoll: 혀 말기",
+  "ue.TongueRoll.tooltip": "혀를 말기. (Vive 지원; Quest 및 Pico는 지원하지 않음.)",
+
+  "ue.NoseSneer": "NoseSneer: 코 찡그리기",
+  "ue.NoseSneer.tooltip": "코를 찡그리기. (Quest 및 Pico 지원; Vive는 지원하지 않음.)",
+
+  "ue.NoseSneerLeft": "NoseSneerLeft: 왼쪽 코 찡그리기",
+  "ue.NoseSneerLeft.tooltip": "왼쪽 코를 찡그리기. (Quest 및 Pico 지원; Vive는 지원하지 않음.)",
+
+  "ue.NoseSneerRight": "NoseSneerRight: 오른쪽 코 찡그리기",
+  "ue.NoseSneerRight.tooltip": "오른쪽 코를 찡그리기. (Quest 및 Pico 지원; Vive는 지원하지 않음.)",
+
+  "ue.EyeLid": "EyeLid: 눈꺼풀 열기・닫기",
+  "ue.EyeLid.tooltip": "눈꺼풀의 열림 정도.",
+
+  "ue.EyeLidLeft": "EyeLidLeft: 왼쪽 눈꺼풀 열기・닫기",
+  "ue.EyeLidLeft.tooltip": "왼쪽 눈꺼풀의 열림 정도.",
+
+  "ue.EyeLidRight": "EyeLidRight: 오른쪽 눈꺼풀 열기・닫기",
+  "ue.EyeLidRight.tooltip": "오른쪽 눈꺼풀의 열림 정도.",
+
+  "ue.EyeSquint": "EyeSquint: 눈 찡그리기",
+  "ue.EyeSquint.tooltip": "눈을 찡그리기.",
+
+  "ue.EyeSquintLeft": "EyeSquintLeft: 왼쪽 눈 찡그리기",
+  "ue.EyeSquintLeft.tooltip": "왼쪽 눈을 찡그리기.",
+
+  "ue.EyeSquintRight": "EyeSquintRight: 오른쪽 눈 찡그리기",
+  "ue.EyeSquintRight.tooltip": "오른쪽 눈을 찡그리기.",
+
+  "ue.EyeX": "EyeX: 눈 좌우 이동",
+  "ue.EyeX.tooltip": "눈을 좌우로 이동.",
+
+  "ue.EyeLeftX": "EyeLeftX: 왼쪽 눈 좌우 이동",
+  "ue.EyeLeftX.tooltip": "왼쪽 눈을 좌우로 이동.",
+
+  "ue.EyeRightX": "EyeRightX: 오른쪽 눈 좌우 이동",
+  "ue.EyeRightX.tooltip": "오른쪽 눈을 좌우로 이동.",
+
+  "ue.EyeY": "EyeY: 눈 상하 이동",
+  "ue.EyeY.tooltip": "눈을 상하로 이동.",
+
+  "ue.EyeLeftY": "EyeLeftY: 왼쪽 눈 상하 이동",
+  "ue.EyeLeftY.tooltip": "왼쪽 눈을 상하로 이동.",
+
+  "ue.EyeRightY": "EyeRightY: 오른쪽 눈 상하 이동",
+  "ue.EyeRightY.tooltip": "오른쪽 눈을 상하로 이동.",
+
+  "ue.PupilDilation": "PupilDilation: 동공 확장・수축",
+  "ue.PupilDilation.tooltip": "동공을 확장하거나 수축. (Vive 지원; Quest 및 Pico는 지원하지 않음.)",
+
+  "ue.BrowExpression": "BrowExpression: 눈썹 표정",
+  "ue.BrowExpression.tooltip": "눈썹을 올리거나 내리기. (Quest 및 Pico 지원; Vive는 지원하지 않음.)",
+
+  "ue.BrowExpressionLeft": "BrowExpressionLeft: 왼쪽 눈썹 표정",
+  "ue.BrowExpressionLeft.tooltip": "왼쪽 눈썹을 올리거나 내리기. (Quest 및 Pico 지원; Vive는 지원하지 않음.)",
+
+  "ue.BrowExpressionRight": "BrowExpressionRight: 오른쪽 눈썹 표정",
+  "ue.BrowExpressionRight.tooltip": "오른쪽 눈썹을 올리거나 내리기. (Quest 및 Pico 지원; Vive는 지원하지 않음.)"
+}

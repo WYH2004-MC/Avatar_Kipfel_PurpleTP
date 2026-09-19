@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f26a2ce4169f23c44b75dbdefaf1a9da, type: 3}
+  m_Name: KipfelExpressionBlendShapes
+  m_EditorClassIdentifier: 
+  m_ExpressionBlendShapes:
+  - m_Combined: eye_close
+    m_Left: eye_close_left
+    m_Right: eye_close_right
+  - m_Combined: eye_joy
+    m_Left: eye_joy_left
+    m_Right: eye_joy_right
+  - m_Combined: eye_joy2
+    m_Left: eye_joy2_left
+    m_Right: eye_joy2_right
+  - m_Combined: eye_joy3
+    m_Left: eye_joy3_left
+    m_Right: eye_joy3_right
+  - m_Combined: eye_nagomi
+    m_Left: eye_nagomi_left
+    m_Right: eye_nagomi_right
+  - m_Combined: eye_nagomi2
+    m_Left: eye_nagomi2_left
+    m_Right: eye_nagomi2_right
+  - m_Combined: eye_jitome
+    m_Left: eye_jitome_left
+    m_Right: eye_jitome_right
+  - m_Combined: eye_jitome2
+    m_Left: eye_jitome2_left
+    m_Right: eye_jitome2_right
+  - m_Combined: eye_happy
+    m_Left: eye_happy_left
+    m_Right: eye_happy_right
+  - m_Combined: eye_angry
+    m_Left: eye_angry_left
+    m_Right: eye_angry_right
+  - m_Combined: eye_sad
+    m_Left: eye_sad_left
+    m_Right: eye_sad_right
+  - m_Combined: eye_sleepy
+    m_Left: eye_sleepy_left
+    m_Right: eye_sleepy_right
+  - m_Combined: eye_open
+    m_Left: eye_open_left
+    m_Right: eye_open_right
+  - m_Combined: eye_open2
+    m_Left: eye_open2_left
+    m_Right: eye_open2_right
+  - m_Combined: eye_round
+    m_Left: eye_round_left
+    m_Right: eye_round_right
+  - m_Combined: eye_round2
+    m_Left: eye_round2_left
+    m_Right: eye_round2_right
+  - m_Combined: eye_round3
+    m_Left: eye_round3_left
+    m_Right: eye_round3_right
+  - m_Combined: eye_turi
+    m_Left: eye_turi_left
+    m_Right: eye_turi_right
+  - m_Combined: eye_turi2
+    m_Left: eye_turi2_left
+    m_Right: eye_turi2_right
+  - m_Combined: eye_turi3
+    m_Left: eye_turi3_left
+    m_Right: eye_turi3_right
+  - m_Combined: eye_tare
+    m_Left: eye_tare_left
+    m_Right: eye_tare_right
+  - m_Combined: eye_tare2
+    m_Left: eye_tare2_left
+    m_Right: eye_tare2_right
+  - m_Combined: eye_under_up
+    m_Left: eye_under_up_left
+    m_Right: eye_under_up_right
+  - m_Combined: eye_under_down
+    m_Left: eye_under_down_left
+    m_Right: eye_under_down_right
+  - m_Combined: eye_highlight_main_center
+    m_Left: eye_highlight_main_left
+    m_Right: eye_highlight_main_right
+  - m_Combined: eyebrow_joy
+    m_Left: eyebrow_joy_left
+    m_Right: eyebrow_joy_right
+  - m_Combined: eyebrow_angry
+    m_Left: eyebrow_angry_left
+    m_Right: eyebrow_angry_right
+  - m_Combined: eyebrow_sad
+    m_Left: eyebrow_sad_left
+    m_Right: eyebrow_sad_right
+  - m_Combined: eyebrow_straight
+    m_Left: eyebrow_straight_left
+    m_Right: eyebrow_straight_right
+  - m_Combined: eyebrow_trouble
+    m_Left: eyebrow_trouble_left
+    m_Right: eyebrow_trouble_right
+  - m_Combined: eyebrow_surprised
+    m_Left: eyebrow_surprised_left
+    m_Right: eyebrow_surprised_right
+  - m_Combined: eyebrow_serious
+    m_Left: eyebrow_serious_left
+    m_Right: eyebrow_serious_right
+  - m_Combined: eyebrow_~
+    m_Left: eyebrow_~_left
+    m_Right: eyebrow_~_right
+  - m_Combined: eyebrow_turi
+    m_Left: eyebrow_turi_left
+    m_Right: eyebrow_turi_right
+  - m_Combined: eyebrow_tare
+    m_Left: eyebrow_tare_left
+    m_Right: eyebrow_tare_right
+  - m_Combined: eyebrow_center
+    m_Left: eyebrow_center_left
+    m_Right: eyebrow_center_right
+  - m_Combined: eyebrow_up
+    m_Left: eyebrow_up_left
+    m_Right: eyebrow_up_right
+  - m_Combined: eyebrow_down
+    m_Left: eyebrow_down_left
+    m_Right: eyebrow_down_right
+  - m_Combined: eyebrow_front
+    m_Left: eyebrow_front_left
+    m_Right: eyebrow_front_right
+  - m_Combined: eyebrow_back
+    m_Left: eyebrow_back_left
+    m_Right: eyebrow_back_right

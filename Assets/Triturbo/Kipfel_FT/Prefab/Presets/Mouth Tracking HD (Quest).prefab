@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1069614912773039608
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3340130265194044396, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_Name
+      value: Mouth Tracking HD (Quest)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984806169746686097, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984806169746686097, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984806169746686097, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984806169746686097, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984806169746686097, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984806169746686097, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984806169746686097, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984806169746686097, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984806169746686097, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984806169746686097, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984806169746686097, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6499687609039782967, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_QuantizationParameters
+      value: 
+      objectReference: {fileID: 11400000, guid: 92e7c80a78255854da53aca0ca33b620, type: 2}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[0].m_Resolution
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[1].m_Resolution
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[3].m_Resolution
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[4].m_Resolution
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[7].m_Resolution
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[8].m_Resolution
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[10].m_Resolution
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[13].m_Resolution
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[14].m_Resolution
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[15].m_Resolution
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[16].m_Resolution
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[17].m_Resolution
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[18].m_Resolution
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[5].m_CombinedRemote
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[6].m_CombinedRemote
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[9].m_CombinedRemote
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[10].m_CombinedRemote
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[15].m_CombinedRemote
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901632575075009837, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}
+      propertyPath: m_OverrideSettings.Array.data[19].m_CombinedRemote
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fc1e84d23d79add4b8e46e72fa47515f, type: 3}

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FX - Eye Ear Motion
+  m_Controller: {fileID: 9100000, guid: 5bd4412d48d43b04ba0b904fd9d8c11d, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 0235fab077dadd544ac6df51a33a47d3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 558d34d48e5408a4f8a94da6d2e2b566, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2ec73a945f5b45046935a30450bd529e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 50728c046e49539419808b6075d3a16f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0c3736b2d3c89d243b96b2c9452e94f3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 832d6808e4c354344a9e3151481b9f4a, type: 2}
