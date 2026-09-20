@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:engine="UnityEngine.UIElements"
+	xmlns:editor="UnityEditor.UIElements"
+	xmlns:local="Suzuryg.FaceEmo.Detail.View"
+	xsi:noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd"
+	xsi:schemaLocation="UnityEngine.UIElements ../../../../../UIElementsSchema/UnityEngine.UIElements.xsd
+						UnityEditor.UIElements ../../../../../UIElementsSchema/UnityEditor.UIElements.xsd"
+>
+	<engine:VisualElement name="RootGrid">
+		<engine:VisualElement name="TopRow">
+			<engine:Label name="TitleLabel"/>
+
+			<engine:VisualElement name="TopRow_Controls">
+				<engine:Toggle name="SimplifyToggle"/>
+				<engine:IMGUIContainer name="PresetContainer"/>
+				<engine:Button name="OpenGestureTableWindowButton" class="Button"/>
+
+				<engine:Button name="AddBranchButton" class="Button"/>
+				<engine:Button name="CopyBranchButton" class="Button"/>
+				<engine:Button name="RemoveBranchButton" class="Button"/>
+			</engine:VisualElement>
+		</engine:VisualElement>
+		<engine:IMGUIContainer name="BranchListContainer"/>
+	</engine:VisualElement>
+</engine:UXML>

@@ -365,6 +365,12 @@
         "com.unity.nuget.newtonsoft-json": "3.0.0"
       }
     },
+    "jp.suzuryg.face-emo": {
+      "version": "file:jp.suzuryg.face-emo",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "lyuma.av3emulator": {
       "version": "file:lyuma.av3emulator",
       "depth": 0,

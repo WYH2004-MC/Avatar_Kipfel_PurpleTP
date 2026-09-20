@@ -53,6 +53,9 @@
     },
     "com.github.kurotu.vrc-quest-tools": {
       "version": "2.11.7"
+    },
+    "jp.suzuryg.face-emo": {
+      "version": "1.7.0"
     }
   },
   "locked": {
@@ -161,6 +164,10 @@
       "dependencies": {
         "com.vrchat.avatars": "^3.3.0"
       }
+    },
+    "jp.suzuryg.face-emo": {
+      "version": "1.7.0",
+      "dependencies": {}
     }
   }
 }

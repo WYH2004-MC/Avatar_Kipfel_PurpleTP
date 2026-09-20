@@ -1,0 +1,16 @@
+{
+    "name": "jp.suzuryg.face-emo.usecase.Runtime",
+    "references": [
+        "jp.suzuryg.face-emo.external.neuecc.unirx.Runtime",
+        "jp.suzuryg.face-emo.domain.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
