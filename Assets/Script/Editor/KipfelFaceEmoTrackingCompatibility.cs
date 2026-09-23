@@ -26,7 +26,11 @@ public sealed class KipfelFaceEmoTrackingCompatibility : Plugin<KipfelFaceEmoTra
             .Run("Separate expression and face tracking channels", context =>
         {
             var modifier = context.AvatarRootObject.GetComponentInChildren<EmoteLayersModifierComponent>();
-            if (modifier == null || !modifier.isActiveAndEnabled || modifier.m_Parameter != SwitchParameter) return;
+            // Apply-on-Play runs from the avatar root's Awake, before child
+            // MonoBehaviours finish activation. isActiveAndEnabled can still be
+            // false there even for an enabled modifier on an active object.
+            if (modifier == null || !modifier.enabled || modifier.m_Parameter != SwitchParameter) return;
+            Debug.Log($"[Kipfel FaceEmo/FT] Preparing {context.AvatarRootObject.name}; modifier enabled={modifier.enabled}, activeInHierarchy={modifier.gameObject.activeInHierarchy}, isActiveAndEnabled={modifier.isActiveAndEnabled}.");
             var merges = context.AvatarRootObject.GetComponentsInChildren<ModularAvatarMergeAnimator>();
             var faceEmo = merges.FirstOrDefault(m => m.layerType == VRCAvatarDescriptor.AnimLayerType.FX &&
                 m.animator is AnimatorController controller &&
@@ -52,6 +56,12 @@ public sealed class KipfelFaceEmoTrackingCompatibility : Plugin<KipfelFaceEmoTra
             faceEmo.layerPriority = Math.Max(faceEmo.layerPriority, tracking.Max(m => m.layerPriority) + 1);
             installation.LayerNames = new HashSet<string>(
                 ((AnimatorController)faceEmo.animator).layers.Select(l => l.name));
+            var repairedMesh = RepairNativeToothMorph(body.sharedMesh);
+            if (repairedMesh != body.sharedMesh)
+            {
+                body.sharedMesh = repairedMesh;
+                context.AssetSaver.SaveAsset(repairedMesh);
+            }
         });
 
         InPhase(BuildPhase.Transforming).AfterPlugin("nadena.dev.modular-avatar")
@@ -71,6 +81,63 @@ public sealed class KipfelFaceEmoTrackingCompatibility : Plugin<KipfelFaceEmoTra
         public HashSet<string> LayerNames;
         public string MeshPath;
         public HashSet<string> TrackingProperties;
+    }
+
+    internal static Mesh RepairNativeToothMorph(Mesh mesh)
+    {
+        int toothIndex = mesh.GetBlendShapeIndex("mouth_tooth");
+        if (toothIndex < 0 || mesh.GetBlendShapeIndex("-----FT-----") < 0) return mesh;
+        var sourcePath = AssetDatabase.GUIDToAssetPath("7078d86f15dd32d4bb4540ac2ff9e0ac");
+        var original = AssetDatabase.LoadAllAssetsAtPath(sourcePath).OfType<Mesh>()
+            .FirstOrDefault(m => m.name == "Body");
+        if (original == null || original.vertexCount != mesh.vertexCount ||
+            !original.bindposes.SequenceEqual(mesh.bindposes) || !original.triangles.SequenceEqual(mesh.triangles))
+        {
+            Debug.LogWarning("[Kipfel FaceEmo/FT] Cannot match the original Body mesh; skipped the native tooth correction.");
+            return mesh;
+        }
+        int originalTooth = original.GetBlendShapeIndex("mouth_tooth");
+        if (originalTooth < 0 || original.GetBlendShapeFrameCount(originalTooth) != 1 ||
+            mesh.GetBlendShapeFrameCount(toothIndex) != 1 ||
+            original.GetBlendShapeFrameWeight(originalTooth, 0) != 100 ||
+            mesh.GetBlendShapeFrameWeight(toothIndex, 0) != 100) return mesh;
+
+        var nativeDelta = new Vector3[mesh.vertexCount];
+        var currentDelta = new Vector3[mesh.vertexCount];
+        original.GetBlendShapeFrameVertices(originalTooth, 0, nativeDelta, null, null);
+        mesh.GetBlendShapeFrameVertices(toothIndex, 0, currentDelta, null, null);
+        // Only repair the unchanged original morph. A corrected or customized
+        // tooth morph must not receive the compensation a second time.
+        if (!nativeDelta.SequenceEqual(currentDelta)) return mesh;
+        var nativeVertices = original.vertices;
+        var ftVertices = mesh.vertices;
+        var shiftedTeeth = Enumerable.Range(0, mesh.vertexCount).Where(i =>
+            nativeDelta[i].sqrMagnitude > 1e-12f &&
+            (nativeVertices[i] - ftVertices[i]).sqrMagnitude > 1e-12f).ToArray();
+        if (shiftedTeeth.Length == 0) return mesh;
+
+        // FT bakes a different rest position into these teeth. The stock reveal
+        // morph still contains the original displacement, which moves them below
+        // the chin. Compensate that displacement only while mouth_tooth is used;
+        // the neutral mesh and every device-driven FT morph remain unchanged.
+        var result = UnityEngine.Object.Instantiate(mesh);
+        result.name = mesh.name + " (native teeth compatible)";
+        result.ClearBlendShapes();
+        var deltaVertices = new Vector3[mesh.vertexCount];
+        var deltaNormals = new Vector3[mesh.vertexCount];
+        var deltaTangents = new Vector3[mesh.vertexCount];
+        for (int shape = 0; shape < mesh.blendShapeCount; shape++)
+        for (int frame = 0; frame < mesh.GetBlendShapeFrameCount(shape); frame++)
+        {
+            mesh.GetBlendShapeFrameVertices(shape, frame, deltaVertices, deltaNormals, deltaTangents);
+            if (shape == toothIndex)
+                foreach (int vertex in shiftedTeeth)
+                    deltaVertices[vertex] += nativeVertices[vertex] - ftVertices[vertex];
+            result.AddBlendShapeFrame(mesh.GetBlendShapeName(shape), mesh.GetBlendShapeFrameWeight(shape, frame),
+                deltaVertices, deltaNormals, deltaTangents);
+        }
+        Debug.Log($"[Kipfel FaceEmo/FT] Corrected {shiftedTeeth.Length} vertices in the native tooth expression.");
+        return result;
     }
 
     private static void Apply(AnimatorController fx, Installation installation)
