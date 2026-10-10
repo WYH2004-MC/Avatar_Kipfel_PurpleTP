@@ -49,16 +49,11 @@ MonoBehaviour:
     saved: 0
     defaultValue: 0
     networkSynced: 1
-  - name: EmoteList/1
-    valueType: 2
-    saved: 1
-    defaultValue: 1
-    networkSynced: 1
-  - name: EmoteList/2
-    valueType: 2
+  - name: EmoteList
+    valueType: 0
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: KipfelSync/Ear0
     valueType: 2
     saved: 0
@@ -85,6 +80,16 @@ MonoBehaviour:
     defaultValue: 0
     networkSynced: 1
   - name: KipfelSync/Tail2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: KipfelSync/EmoteList0
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: KipfelSync/EmoteList1
     valueType: 2
     saved: 0
     defaultValue: 0
