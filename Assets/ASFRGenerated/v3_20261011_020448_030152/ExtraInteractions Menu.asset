@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: ExtraInteractions Menu
+  m_EditorClassIdentifier: 
+  Parameters: {fileID: 0}
+  controls:
+  - name: Allow Others
+    icon: {fileID: 2800000, guid: 32f0a3f5e859b814eb7d9a7f6b75decf, type: 3}
+    type: 102
+    parameter:
+      name: ASFR/AllowOthers
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Petrify Others
+    icon: {fileID: 2800000, guid: 458c6e4470d16dd49bb008c91152db65, type: 3}
+    type: 102
+    parameter:
+      name: ASFR/PetrifyOthers
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Allow Statue Grab
+    icon: {fileID: 2800000, guid: b575e4af5976c8c4d98e46a8a7a0b4b7, type: 3}
+    type: 102
+    parameter:
+      name: ASFR/StatueGrabbable
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Statue Camera View
+    icon: {fileID: 2800000, guid: 44603ab4b55afc1489457a0689b5441e, type: 3}
+    type: 102
+    parameter:
+      name: ASFR/StatueCamera
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Hide Grab Ball
+    icon: {fileID: 2800000, guid: b38e7cf550947f341af8aca80af47374, type: 3}
+    type: 102
+    parameter:
+      name: ASFR/HideGrabBall
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []

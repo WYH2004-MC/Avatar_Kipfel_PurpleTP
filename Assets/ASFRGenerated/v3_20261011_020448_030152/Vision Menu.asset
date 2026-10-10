@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: Vision Menu
+  m_EditorClassIdentifier: 
+  Parameters: {fileID: 0}
+  controls:
+  - name: Vision overlay
+    icon: {fileID: 2800000, guid: 97f5c7120fc93ca4fb323f152bdc76b5, type: 3}
+    type: 102
+    parameter:
+      name: ASFR/VisionEnabled
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Darkness
+    icon: {fileID: 2800000, guid: 92f6e5f221dce3748b28766d839ddd20, type: 3}
+    type: 102
+    parameter:
+      name: ASFR/VisionMode
+    value: 0
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Ice
+    icon: {fileID: 2800000, guid: 8e50f27a227178644b0ac1c5d5b45c9d, type: 3}
+    type: 102
+    parameter:
+      name: ASFR/VisionMode
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Custom Texture
+    icon: {fileID: 2800000, guid: 480a5a6283c9b86439aff9756aab9a86, type: 3}
+    type: 102
+    parameter:
+      name: ASFR/VisionMode
+    value: 2
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Intensity
+    icon: {fileID: 2800000, guid: 16c01a9309d69844c9391afe06f06aad, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: ASFR/VisionStrength
+    labels: []
