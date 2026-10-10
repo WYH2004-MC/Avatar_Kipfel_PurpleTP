@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bb122659f724ebf85fe095ac02dc339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 9100000, guid: 442aea57027a4d1499601744a80b9385, type: 2}
+  animator: {fileID: 9100000, guid: 3da5b89e6bfff441aac16be3c5afb99b, type: 2}
   layerType: 5
   deleteAttachedAnimator: 1
   pathMode: 1
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef83cb0c23d4d7c9d41021e544a1978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuToAppend: {fileID: 11400000, guid: dfd5b36895d79894c903e2c16620ac91, type: 2}
+  menuToAppend: {fileID: 11400000, guid: 73013cd00351247229a4ee041ddab30f, type: 2}
   installTargetMenu: {fileID: 0}
 --- !u!114 &6043540811510326104
 MonoBehaviour:
