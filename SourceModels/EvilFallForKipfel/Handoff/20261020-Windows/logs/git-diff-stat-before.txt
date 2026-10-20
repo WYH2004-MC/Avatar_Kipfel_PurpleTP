@@ -1,0 +1,6 @@
+ Assets/HierarchyDecorator/Settings.asset           |  1359 +-
+ Assets/MOCHIYAMA/Kipfel/Kipfel.unity               | 34450 +++++++++++++++----
+ .../NENEKUMA/Material/NENEKUMA_01_Red.mat          |   824 +-
+ .../NENEKUMA/Texture/NENEKUMA_02_Purple.png.meta   |    28 +-
+ Thry/presets_known_materials.txt                   |  1687 +-
+ 5 files changed, 28874 insertions(+), 9474 deletions(-)

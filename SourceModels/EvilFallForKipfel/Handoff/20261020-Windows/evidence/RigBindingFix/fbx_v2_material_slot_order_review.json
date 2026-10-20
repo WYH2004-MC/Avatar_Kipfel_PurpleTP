@@ -1,0 +1,740 @@
+{
+  "fbx": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/Exports/20261020-Unity/EvilFall_Kipfel_Fitted_v2.fbx",
+  "sha256": "57894c81e2d7ef1976c282e563da7ab38c7446d850536edd037e3325b0c89602",
+  "read_only": true,
+  "all38_slot_names_and_order_match": false,
+  "mismatch_count": 11,
+  "meshMaterialsInFBXOrder": {
+    "AnalToy": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "BreastPlug": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "CyberDick": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "CyberEgg": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "CyberLockedDick": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "CyberLockedDickTube": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "FaceMask": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvillFallTrans (Blender preview)"
+    ],
+    "FaceMaskGasFilter": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "FaceMaskV2": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "MainTrans"
+    ],
+    "GlassMain": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "MainTrans",
+      "Namelight"
+    ],
+    "HeadACC": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallTrans (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "HeadMask": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "LegRing": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "LegToyCollectionBottle": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallTrans (Blender preview)"
+    ],
+    "LegToyCollectionBottleLiquid1": [
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "LegToyCollectionBottleLiquiid2": [
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "LegToyCollectionTube": [
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "LegToyUrineCollector": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvillFallTrans (Blender preview)"
+    ],
+    "LegToyUrineCollectorLiquid": [
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "MainArmGlove": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallTrans (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "MainBodyBreast": [
+      "EvillFallTrans (Blender preview)"
+    ],
+    "MainBodySuit": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallTrans (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "MainBone": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallTrans (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "MainChestTube": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "MainCoat": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)",
+      "EvillFallTransJacket (Blender preview)"
+    ],
+    "MainCoatAcc": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "MainHipTube": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "MainLegHeel": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallTrans (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "MainNeckTube": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "MainSpinTube": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "PussyDotToy": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "PussyToy": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "Tail": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallTrans (Blender preview)"
+    ],
+    "UrineCollectTube": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "WeaponBaseHandle": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "WeaponMain": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "WeaponTube": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallTrans (Blender preview)"
+    ],
+    "WeaponeBladePart": [
+      "MainUVTrains"
+    ]
+  },
+  "meshes": {
+    "AnalToy": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "BreastPlug": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "CyberDick": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "CyberEgg": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "CyberLockedDick": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "CyberLockedDickTube": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "FaceMask": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvillFallTrans (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvillFallTrans (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "FaceMaskGasFilter": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "FaceMaskV2": {
+      "blender_source_slots": [
+        "MainTrans",
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "MainTrans"
+      ],
+      "same_order": false,
+      "same_multiset": true
+    },
+    "GlassMain": {
+      "blender_source_slots": [
+        "MainTrans",
+        "Namelight",
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "MainTrans",
+        "Namelight"
+      ],
+      "same_order": false,
+      "same_multiset": true
+    },
+    "HeadACC": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvillFallTrans (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallTrans (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "same_order": false,
+      "same_multiset": true
+    },
+    "HeadMask": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "LegRing": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "LegToyCollectionBottle": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvillFallTrans (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallTrans (Blender preview)"
+      ],
+      "same_order": false,
+      "same_multiset": true
+    },
+    "LegToyCollectionBottleLiquid1": {
+      "blender_source_slots": [
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "LegToyCollectionBottleLiquiid2": {
+      "blender_source_slots": [
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "LegToyCollectionTube": {
+      "blender_source_slots": [
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "LegToyUrineCollector": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvillFallTrans (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvillFallTrans (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "LegToyUrineCollectorLiquid": {
+      "blender_source_slots": [
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "MainArmGlove": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvillFallTrans (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallTrans (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "same_order": false,
+      "same_multiset": true
+    },
+    "MainBodyBreast": {
+      "blender_source_slots": [
+        "EvillFallTrans (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallTrans (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "MainBodySuit": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvillFallTrans (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallTrans (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "same_order": false,
+      "same_multiset": true
+    },
+    "MainBone": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvillFallTrans (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallTrans (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "same_order": false,
+      "same_multiset": true
+    },
+    "MainChestTube": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "MainCoat": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvillFallTransJacket (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)",
+        "EvillFallTransJacket (Blender preview)"
+      ],
+      "same_order": false,
+      "same_multiset": true
+    },
+    "MainCoatAcc": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "MainHipTube": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "MainLegHeel": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvillFallTrans (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallTrans (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "same_order": false,
+      "same_multiset": true
+    },
+    "MainNeckTube": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "MainSpinTube": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "PussyDotToy": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "PussyToy": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "Tail": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvillFallTrans (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallTrans (Blender preview)"
+      ],
+      "same_order": false,
+      "same_multiset": true
+    },
+    "UrineCollectTube": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "WeaponBaseHandle": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "WeaponMain": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallPlastcUV (Blender preview)"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    },
+    "WeaponTube": {
+      "blender_source_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvillFallTrans (Blender preview)",
+        "EvilFallMetail (Blender preview)"
+      ],
+      "fbx_connection_slots": [
+        "EvillFallPlastc (Blender preview)",
+        "EvillFallLight Type 1 (Blender preview)",
+        "EvilFallMetail (Blender preview)",
+        "EvillFallTrans (Blender preview)"
+      ],
+      "same_order": false,
+      "same_multiset": true
+    },
+    "WeaponeBladePart": {
+      "blender_source_slots": [
+        "MainUVTrains"
+      ],
+      "fbx_connection_slots": [
+        "MainUVTrains"
+      ],
+      "same_order": true,
+      "same_multiset": true
+    }
+  },
+  "recommendation": "Map Unity material by actual imported slot-name/FBX connection order, not source Blender slot order. FBX exporter remaps polygon material indices to its connection order."
+}

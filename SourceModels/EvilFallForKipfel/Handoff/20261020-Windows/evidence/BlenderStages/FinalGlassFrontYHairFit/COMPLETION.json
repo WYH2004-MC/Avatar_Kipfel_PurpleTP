@@ -1,0 +1,56 @@
+{
+  "status": "GLASS_FRONT_Y_HAIR_FIT_V2_COMPLETE",
+  "model_saved": true,
+  "selected_user_instruction": "那还是做成藏头发下吧",
+  "final_file": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassFrontYHairFit/EvilFall_Kipfel_GlassFrontYHairFit.blend",
+  "final_sha256": "ecc14f4e6db9a7a011d3c53ed7605579d9f821249d5782d86db0543f6945d829",
+  "latest_before_apply_backup": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/GlassFrontYHairFit/BeforeFinalGlassFrontYHairApply.blend",
+  "latest_before_apply_sha256": "61cc04c09c821ef43fe299fde323c5782756a0a44048a862b7ccb5a560d3373f",
+  "changed_object_only": "GlassMain",
+  "vertices": 715,
+  "polygons": 700,
+  "keys_preserved": [
+    "Basis",
+    "Wider",
+    "Narror",
+    "MiddleUp",
+    "RingOff",
+    "SideOff",
+    "GlassOff"
+  ],
+  "result": {
+    "user_central_front_Y_mm": 17.02083647251129,
+    "rear129_world_restored_to_pre_user_Y": true,
+    "front88_hair_edge_relief": true,
+    "sideframes_user_selected_under_hair": true,
+    "accepted_earphones_HeadACC5946_and_other50_meshes_exact": true,
+    "other_rigs_controls_weights_topology_UV_materials_preserved": true,
+    "native_saved_reopened_exact": true,
+    "final_actual_GPU_twelve_views_reviewed": true,
+    "post_capture_saved_live_exact": true,
+    "production_unchanged": true
+  },
+  "finite_validation": {
+    "seven_key_endpoints": "fullfront586 Body intersection0; lens88 Body and all5hair intersection0",
+    "fifteen_single_control_poses": "same body and lenshair scopes pass; rear129 no frontcontrol movement",
+    "minimum_lens_true_surface_gap_default_mm": 1.3767,
+    "minimum_lens_true_surface_gap_tested_pose_mm": 0.3614621012862371,
+    "saved_reopen": "full canonical and portable match actual saved snapshot"
+  },
+  "known_limits": [
+    "Side frames intentionally remain within Side/TwinTail hair as selected by user. Do not describe all586 vs allHair as intersection-free.",
+    "Side frames retain upper-earwire contacts: default176triangle/92polygon pairs vs earlier accepted168/88; no lens/connector vs ear line or ear ball intersection. Negative-side small newly touching polygon379 reviewed in actual GPU close: line partly occluded by side frame, no new sphere/socket damage. This Glass task does not clear every pre-existing headgear contact.",
+    "Seven endpoints and15single small control poses are finite tests; simultaneous arbitrary controls or different future hair are not certified.",
+    "V3 external side layout was previewed only and superseded by final user instruction; never installed."
+  ],
+  "evidence": {
+    "FinalGlassFrontYHairFit/native_install_report.json": "8ce38567b98e9ad1bbe21bdcc5f7d37381214f70f58fed3986b9f0f43d46f707",
+    "FinalGlassFrontYHairFit/saved_roundtrip_report.json": "b6cc06235dc06cfda1f64ab3c6636b7b7ce08b2980aade7fe33640f52869c747",
+    "FinalGlassFrontYHairFit/capture_restore_report.json": "13f3f1118668432ca16dca8b13112a1a6c02bc598aa8947149d0013525457649",
+    "FinalGlassFrontYHairFit/actual_live_after_capture_report.json": "3d36af0e7e0e24ae9db7c498b482d0f43a6d68726ad4300d04971611cc727af5",
+    "SourceContourSmoothFit/GlassFrontYHairFit/CandidateV2/FROZEN_FINAL_GLASS_FRONT_Y_HAIR_V2.json": "a4e190918f4a4f777006fc54e32385d5bb5aa74bfa9538a92b535edf641bb4ef",
+    "SourceContourSmoothFit/GlassFrontYHairFit/IndependentReview/FullV2/FROZEN_INDEPENDENT_GLASS_FRONT_Y_V2.json": "adee82401760517bb5ee1192dbb784696eb4d7edfd4306a254fa93d935e870fb",
+    "SourceContourSmoothFit/GlassFrontYHairFit/IndependentReview/V2EarSupplement/V2_SELECTED_SCOPE_AND_EAR_SUPPLEMENT.json": "2e446e94ac5c46dd42ad7e995e09cd1792aae05d26a0c14d9d9e358f148d6eb8"
+  },
+  "actual_GPU": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassFrontYHairFit/Preview/capture.json"
+}

@@ -1,0 +1,30 @@
+请接手这个从 macOS 搬迁到 Windows 的 Unity/VRChat 项目，继续完善 EvilFall 对 Kipfel 的适配。用户会同时提供原会话分享链接；链接用于理解历史，项目内当前文件及本次 handoff 的最终证据优先。
+
+先定位当前 Windows 项目根目录，再阅读：
+1. SourceModels/EvilFallForKipfel/Handoff/20261020-Windows/HANDOFF.md
+2. 同目录 CHANGELOG.md
+3. 同目录 WINDOWS_MIGRATION.md
+4. 同目录列出的文件校验/验证清单，以及其中引用的最新完成报告。
+
+开始时先核对项目、Unity 版本、依赖、关键文件哈希、现有 Git/未提交状态及用户迁移后的新改动；保留用户工作，不恢复旧场景或盲目覆盖当前文件。所有旧 macOS 绝对路径均需映射到本机实际项目路径。
+
+当前 Unity 交付入口：
+Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/EvilFall_Kipfel.prefab
+Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/EvilFall_Kipfel.fbx
+菜单入口为同目录 InstallMenu.asset。沿用原位资产和 GUID，不创建 _Fitted 等重复版本，不重新生成简化菜单。
+
+继续 Blender 几何时，从完整 accepted 源开始：
+SourceModels/EvilFallForKipfel/Exports/20261020-Unity/EvilFall_Kipfel_AcceptedForUnity.blend
+并先检查是否有用户更新的保存版本。SourceModels/EvilFallForKipfel/EvilFall_Kipfel.blend 是旧 production，不是最新成果。历史 Final* 为各阶段完整保存点；历史一次性 helper/安装脚本已经应用，禁止在当前文件重放或按历史顺序重新执行。FaceMaskV2 几何仍暂停，除非用户重新要求。
+
+已完成：面罩和管路、领口衣边、MainCoat 肩袖及黑粉框、眼镜后环/前组/侧框、耳机球与接线适配；Unity 骨跟随与鞋子/猫耳/尾巴反应补修；原版 5 组 32 项菜单、动画、互斥和相关组件恢复。详细范围与证据看文档。
+
+验证边界：已有 Blender 保存重开、实际视角及有限形态/姿态检查，Unity 原生 prefab 保存回读、1178 条动画绑定、181 条骨跟随路由等静态检查通过；没有完成 agent Play、完整 NDMF/Avatar 构建或运行时全功能验收。不要把这些静态 PASS 描述成运行测试通过。
+
+迁移后的首轮工作应先确认引用和依赖完整，再根据用户安排测试：
+- 衣服、眼镜、武器、鞋子随角色骨骼运动，原菜单动画路径和默认姿态正常。
+- 原版 5 组 32 项菜单逐项开关、默认值、互斥和组合，特别检查武器模式、物理骨及粒子效果。
+- 鞋子开启时 Body_Base 的 8 项 OFF 形态为 100；HeadACC 开启关闭 Cat_Ear；EvilFallTail 开启关闭 Cat_Tail，关闭后恢复关系正常。
+- 在实际动作、原宽窄/收起形态和当前发型下检查穿模；装配半嵌不能一概视作错误，也不能承诺所有姿态零穿模。
+
+用户可能继续提出调整。先核实新问题的真实对象、原版行为和当前现场，再作局部最小修复；必要测试与保存应记录结果，区分静态检查、Play 实测和构建结果。未经用户要求，不做 Git 提交、推送或无关资产整理。

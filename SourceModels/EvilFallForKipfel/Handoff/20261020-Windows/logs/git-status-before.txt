@@ -1,0 +1,14 @@
+ M Assets/HierarchyDecorator/Settings.asset
+ M Assets/MOCHIYAMA/Kipfel/Kipfel.unity
+ M Assets/SILVERBACK/NENEKUMA/Material/NENEKUMA_01_Red.mat
+ M Assets/SILVERBACK/NENEKUMA/Texture/NENEKUMA_02_Purple.png.meta
+ M Thry/presets_known_materials.txt
+?? Assets/WYH2004/Material/Hair_TwinTail_material_Purple.mat
+?? Assets/WYH2004/Material/Hair_TwinTail_material_Purple.mat.meta
+?? Assets/WYH2004/Material/Hair_material_Purple.mat
+?? Assets/WYH2004/Material/Hair_material_Purple.mat.meta
+?? Assets/WYH2004/Material/NENEKUMA.meta
+?? Assets/WYH2004/Material/NENEKUMA/
+?? Assets/YaokiSubWork.meta
+?? Assets/YaokiSubWork/
+?? SourceModels/

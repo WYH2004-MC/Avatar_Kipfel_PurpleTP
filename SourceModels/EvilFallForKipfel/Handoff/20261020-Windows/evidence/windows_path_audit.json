@@ -1,0 +1,178 @@
+{
+  "generated_at_utc": "2026-10-20T06:59:38.326293+00:00",
+  "project_root": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP",
+  "scope": [
+    "Assets",
+    "Packages",
+    "ProjectSettings",
+    "SourceModels"
+  ],
+  "excluded_directory_components": [
+    ".git",
+    "Cache",
+    "Caches",
+    "Library",
+    "Logs",
+    "Obj",
+    "Temp",
+    "__pycache__",
+    "cache",
+    "obj"
+  ],
+  "read_only": true,
+  "roots": {
+    "Assets": {
+      "exists": true,
+      "files": 6093,
+      "directories": 276,
+      "bytes": 689596575,
+      "symlink_files": 0,
+      "symlink_directories": 0,
+      "max_relative_path_chars": 127,
+      "max_relative_path_utf16_code_units": 127,
+      "excluded_directories": 0
+    },
+    "Packages": {
+      "exists": true,
+      "files": 12251,
+      "directories": 886,
+      "bytes": 447533723,
+      "symlink_files": 0,
+      "symlink_directories": 0,
+      "max_relative_path_chars": 175,
+      "max_relative_path_utf16_code_units": 175,
+      "excluded_directories": 3
+    },
+    "ProjectSettings": {
+      "exists": true,
+      "files": 34,
+      "directories": 5,
+      "bytes": 62780,
+      "symlink_files": 0,
+      "symlink_directories": 0,
+      "max_relative_path_chars": 71,
+      "max_relative_path_utf16_code_units": 71,
+      "excluded_directories": 0
+    },
+    "SourceModels": {
+      "exists": true,
+      "files": 10475,
+      "directories": 1144,
+      "bytes": 49294596223,
+      "symlink_files": 0,
+      "symlink_directories": 0,
+      "max_relative_path_chars": 238,
+      "max_relative_path_utf16_code_units": 238,
+      "excluded_directories": 103
+    }
+  },
+  "issues": {
+    "invalid_components": [],
+    "trailing_space_or_dot": [],
+    "reserved_names": [],
+    "casefold_path_collisions": [],
+    "relative_paths_over_220_chars": [
+      {
+        "path": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/TubeContactAudit/LowerUFrameFitFromAb6a/RearFrameAndC5InwardFromDdf/RearSkinEnvelopeReadOnly/actual_body_posterior_envelope_a10b_profiles_readonly.json",
+        "characters": 221,
+        "utf16_code_units": 221
+      },
+      {
+        "path": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/Review/CenterAbdomenWallContactFromStage68V2Review/FrozenPayload/CenterAbdomen_ModuleAndSmoothSpinContact_FromStage68_V2/center_contact_candidate_v2.json",
+        "characters": 223,
+        "utf16_code_units": 223
+      },
+      {
+        "path": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/Review/CenterAbdomenWallContactFromStage68V2Review/FrozenPayload/CenterAbdomen_ModuleAndSmoothSpinContact_FromStage68_V2/center_contact_candidate_v2.npz",
+        "characters": 222,
+        "utf16_code_units": 222
+      },
+      {
+        "path": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/Review/WaistSidePlateClothContactV7Review/FrozenPayload/waist_arrow37_38_complete_cloth_contact_arap_v7/waist_badge_cloth_contact_arap_candidate_v7.npz",
+        "characters": 221,
+        "utf16_code_units": 221
+      },
+      {
+        "path": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/Review/WaistSidePlateClothContactV7Review/FrozenPayload/waist_arrow37_38_complete_cloth_contact_arap_v7/waist_badge_cloth_contact_arap_candidate_v7.json",
+        "characters": 222,
+        "utf16_code_units": 222
+      },
+      {
+        "path": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/Review/CenterAbdomenWallContactFromStage68V1Review/FrozenPayload/CenterAbdomen_ModuleAndLongitudinalSpinContact_FromStage68_V1/center_contact_candidate_v1.npz",
+        "characters": 228,
+        "utf16_code_units": 228
+      },
+      {
+        "path": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/Review/CenterAbdomenWallContactFromStage68V1Review/FrozenPayload/CenterAbdomen_ModuleAndLongitudinalSpinContact_FromStage68_V1/center_contact_candidate_v1.json",
+        "characters": 229,
+        "utf16_code_units": 229
+      },
+      {
+        "path": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/Review/CenterAbdomenWallContactFromStage68V1Review/FrozenPayload/CenterAbdomen_ModuleAndLongitudinalSpinContact_FromStage68_V1/apply_center_contact_v1.py",
+        "characters": 223,
+        "utf16_code_units": 223
+      },
+      {
+        "path": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/Review/LowerWaistFlexibleEndpointAssemblyFrom196V3Review/FrozenPayload/LowerWaistFlexibleEndpointAssembly_From196_V3/flexible_front_assembly_candidate_v3.json",
+        "characters": 228,
+        "utf16_code_units": 228
+      },
+      {
+        "path": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/Review/LowerWaistFlexibleEndpointAssemblyFrom196V3Review/FrozenPayload/LowerWaistFlexibleEndpointAssembly_From196_V3/apply_flexible_front_assembly_v3.py",
+        "characters": 222,
+        "utf16_code_units": 222
+      },
+      {
+        "path": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/Review/LowerWaistFlexibleEndpointAssemblyFrom196V3Review/FrozenPayload/LowerWaistFlexibleEndpointAssembly_From196_V3/flexible_front_assembly_candidate_v3.npz",
+        "characters": 227,
+        "utf16_code_units": 227
+      },
+      {
+        "path": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/Review/LowerWaistFlexibleEndpointAssemblyFrom196FinalV4Review/FrozenPayload/LowerWaistFlexibleEndpointAssembly_From196_FinalV4/apply_flexible_front_assembly_v4.py",
+        "characters": 232,
+        "utf16_code_units": 232
+      },
+      {
+        "path": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/Review/LowerWaistFlexibleEndpointAssemblyFrom196FinalV4Review/FrozenPayload/LowerWaistFlexibleEndpointAssembly_From196_FinalV4/flexible_front_assembly_candidate_v4.json",
+        "characters": 238,
+        "utf16_code_units": 238
+      },
+      {
+        "path": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/Review/LowerWaistFlexibleEndpointAssemblyFrom196FinalV4Review/FrozenPayload/LowerWaistFlexibleEndpointAssembly_From196_FinalV4/flexible_front_assembly_candidate_v4.npz",
+        "characters": 237,
+        "utf16_code_units": 237
+      },
+      {
+        "path": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/Review/CenterAbdomenSourceModuleFromStage67V2Review/FrozenPayload/CenterAbdomen_Source07_ModuleLayersAndSpin_FromStage67_V2/center_module_candidate_v2.npz",
+        "characters": 224,
+        "utf16_code_units": 224
+      },
+      {
+        "path": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/Review/CenterAbdomenSourceModuleFromStage67V2Review/FrozenPayload/CenterAbdomen_Source07_ModuleLayersAndSpin_FromStage67_V2/center_module_candidate_v2.json",
+        "characters": 225,
+        "utf16_code_units": 225
+      }
+    ],
+    "directory_symlinks": [],
+    "file_symlinks": [],
+    "stat_errors": []
+  },
+  "notes": [
+    "Path scan is static only; no Unity build or Windows filesystem test was run.",
+    "A relative path longer than 220 characters is a migration risk indicator, not a proven failure; a short Windows checkout root plus long-path support can permit it.",
+    "Unicode casefold collisions are conservative indicators; actual NTFS casing behavior may differ.",
+    "Byte totals are apparent file sizes and exclude symlink targets; hard links, sparse allocation, and compression may affect transfer size."
+  ],
+  "issue_counts": {
+    "invalid_components": 0,
+    "trailing_space_or_dot": 0,
+    "reserved_names": 0,
+    "casefold_path_collisions": 0,
+    "relative_paths_over_220_chars": 16,
+    "directory_symlinks": 0,
+    "file_symlinks": 0,
+    "stat_errors": 0
+  },
+  "total_files": 28853,
+  "total_bytes": 50431789301
+}

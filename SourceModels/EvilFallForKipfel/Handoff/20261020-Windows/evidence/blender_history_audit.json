@@ -1,0 +1,143 @@
+{
+  "status": "read_only_history_draft",
+  "authority": "以上各阶段已按现场局部安装并完整另存；真正继续几何时从最新完整 FinalEarphoneCableHairClearance 或 AcceptedForUnity副本开始，不逐个重放helper。",
+  "current_geometry_authoritative_file": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalEarphoneCableHairClearance/EvilFall_Kipfel_EarphoneCableHairClearance.blend",
+  "current_geometry_current_resave_sha256_from_latest_RESUME": "bf43363dd6c81e47ea5b6aaf4523d6be0f5a383f082264d92dab390f9fea20ef",
+  "current_geometry_old_install_completion_sha256": "8298a3502a64b3d6cf847cc2378655a0d41d824dbd31155bbd4b8ae152f5cf36",
+  "old_production_file_not_latest": "SourceModels/EvilFallForKipfel/EvilFall_Kipfel.blend",
+  "old_production_sha256": "5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100",
+  "chronological": [
+    {
+      "date": "2026-10-18",
+      "change": "默认面罩轮廓/鼻沿/颊盘适配",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskNoseDisksHeadMaskFit/EvilFall_Kipfel_NoseDisksHeadMaskFit.blend",
+      "detail": "兼容HeadMask；保原独立控制、原形态键与FBX控制树，FaceMaskV2继续暂停。后续小件/管路修复累计继承。"
+    },
+    {
+      "date": "2026-10-19",
+      "change": "面罩球体/内管/颊盘整套定位",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskCheekSocketsFit/EvilFall_Kipfel_CheekSocketsFit.blend",
+      "detail": "球体对嘴、颊盘恢复Source侧脸插座逻辑、内部管延长；同步相关专控rest骨。"
+    },
+    {
+      "date": "2026-10-19",
+      "change": "中央模块恢复紧凑半嵌轮廓",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskCompactProfileFit/EvilFall_Kipfel_CompactProfileFit.blend",
+      "detail": "撤销此前用户否决的厚楔与过度外推；恢复Source侧面倾角/深度。"
+    },
+    {
+      "date": "2026-10-19",
+      "change": "中央模块缩小与管径统一",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskModuleTubeRefined/EvilFall_Kipfel_ModuleTubeRefined.blend",
+      "detail": "中央319点uniform0.90使顶尖收进鼻框，保形不拉裙；处理单管轴向粗细跳变，随后由Coaxial版本真正解决套筒轴线。"
+    },
+    {
+      "date": "2026-10-19",
+      "change": "内管与套筒同轴",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskCoaxialTubes/EvilFall_Kipfel_CoaxialTubes.blend",
+      "detail": "公共接口轴与首段切线统一，去斜看C形悬唇，隐藏mouth ring收至R2.19，其余露出管恢复既有R2.4；保盘端、球、其他服装。"
+    },
+    {
+      "date": "2026-10-19",
+      "change": "外颈管统一管径/平顺走线",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskOuterNeckTubes/EvilFall_Kipfel_OuterNeckTubes.blend",
+      "detail": "MainNeckTube外露pink管按后颈出口D5.7064mm，左右严格镜像，去中段三波；8个相关rest骨同步。隐藏接头仍为插座尺寸，不把所有接头称同径。"
+    },
+    {
+      "date": "2026-10-19",
+      "change": "前领接口复插与斜管顺直",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalCollarSocketFit/EvilFall_Kipfel_CollarSockets.blend",
+      "detail": "用户称袖口的红圈实际owner为MainBodySuit前领银套；银套轻嵌黑座，粉条/直管/夹块一同顺直，邻衣边跟随。"
+    },
+    {
+      "date": "2026-10-19",
+      "change": "衣边尖褶与自由唇复位",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalCollarEdgeSeatFit/EvilFall_Kipfel_CollarEdgeSeated.blend",
+      "detail": "MainBodyBreast局部53点及7原键共同delta；尖褶公平化后再将真实自由唇嵌回完整管壳，修纯侧视脱座。"
+    },
+    {
+      "date": "2026-10-19",
+      "change": "MainCoat原版轮廓/袖口/肩套",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalMainCoatShoulderFit/EvilFall_Kipfel_MainCoatShoulderFit.blend",
+      "detail": "先参考原FBX恢复两key共同连续场，删32原袖末封盖quad形成真开口并腕fit；后包覆固定MainArmGlove银环/透明Shield，去肩袖银锯齿。"
+    },
+    {
+      "date": "2026-10-19",
+      "change": "MainCoat四条黑粉框连续修复",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalMainCoatPinkFramesFit/EvilFall_Kipfel_MainCoatPinkFramesFit.blend",
+      "detail": "四饰框32长面各分4段，新96点按共同连续变形场采样；原3549点/2keys/weights原样。最终3645v/3556poly/7124nativeTri，保宽/斜尾/内返壁。"
+    },
+    {
+      "date": "2026-10-19",
+      "change": "眼镜后环大头适配与前组上提",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassHeadFit/EvilFall_Kipfel_GlassHeadFit.blend",
+      "detail": "后环129点升高40mm并两侧再宽缓抬4mm和扩径，避当前五件头发；前组586点整体上提8mm，适配Narror/Wider控制语义。GlassMain仍715v/700p/7keys。"
+    },
+    {
+      "date": "2026-10-20",
+      "change": "耳机球入耳与原版紧凑接线",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalWiredEarphonesFit/EvilFall_Kipfel_WiredEarphonesFit.blend",
+      "detail": "保用户指定球位置，对侧镜像；球适度嵌耳而不从耳背露出，线接球孔，Source上301点接口圈组完整刚体运输，圈距/8.8905mm总长不拆散，宽缓U走线。HeadACC5946v/5916p。"
+    },
+    {
+      "date": "2026-10-20",
+      "change": "眼镜仅前组用户Y与前镜避发",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassFrontYHairFit/EvilFall_Kipfel_GlassFrontYHairFit.blend",
+      "detail": "中央保用户+Y17.020836mm，后环恢复原acceptedY；侧框按当时选择藏发，前镜局部避发。后续SideHairClearance替代侧框允许交线的旧结论。"
+    },
+    {
+      "date": "2026-10-20",
+      "change": "侧框缩小与镜片保弧延长",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassArcExtensionFit/EvilFall_Kipfel_GlassArcExtensionFit.blend",
+      "detail": "侧框先缩85%再按用户指定实际尺寸；镜片/金属桥整域X×1.06向两侧各延约3.3mm，保原Y/Z避免掰折。此文件曾被用户指出侧上沿穿发，故只是中间保存点，不再是最终完整入口。"
+    },
+    {
+      "date": "2026-10-20",
+      "change": "最终眼镜侧框避发",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassSideHairClearance/EvilFall_Kipfel_GlassSideHairClearance.blend",
+      "detail": "保镜片原弧/长度与后环所有raw/7keys；Side382保持用户尺寸整体刚体调位，金属桥完整仿射接回，无harmonic尖三角。Basis/Wider/Narror整个front586对Body+ALL5Hair+Ear交线0；静态min发距0.462722mm。"
+    },
+    {
+      "date": "2026-10-20",
+      "change": "最终耳机管线避全部五件头发",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalEarphoneCableHairClearance/EvilFall_Kipfel_EarphoneCableHairClearance.blend",
+      "detail": "选空间圆弧V3，去尖V和发内贯穿；仅HeadACC2042点改，球/孔内下接头/36站以下下段固定，管径不变，上301圈组紧凑接c8。五hair交线0，min2.183942mm；对Glass7端点交线0，min22.870107mm。"
+    },
+    {
+      "date": "2026-10-20",
+      "change": "保存accepted完整副本并导出Unity",
+      "checkpoint": "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/../../Exports/20261020-Unity/EvilFall_Kipfel_AcceptedForUnity.blend",
+      "detail": "完整最终Blender另存后SHA bf43363dd6c81e47ea5b6aaf4523d6be0f5a383f082264d92dab390f9fea20ef；49导出对象/38mesh/9rig431骨进入原ForKipfel FBX。Unity跟随/菜单后续单独修复，未改FBX几何。"
+    }
+  ],
+  "discarded_or_superseded": [
+    "FinalFaceMaskSourceContourFit 中央厚楔/长后裙被用户否决，后被CompactProfile取代。",
+    "FinalFaceMaskAxialTubeFit轴向管径修正仍有偏轴悬唇，被Coaxial V2取代。",
+    "CollarSocket V1短过渡弯折、V2根部浅窗口，采用V3；CollarCloth仅Y平峰仍自由唇脱座，采用CollarEdgeSeat V2。",
+    "MainCoat shoulder V2/V3削孔细条弃用，采用V4包覆；原粉条被袖筒截断由PinkFrames补修。",
+    "Earphone早V1..V6均非最终；圈组被拆远、上部折角方案被用户否决。最终原版圈组紧贴接口和球孔。",
+    "GlassFrontYHair V3外露侧框仅预览未装；SideUserSize/G3两翼外摆导致镜片折角被否决；LensContourRestore V1 harmonic桥灰尖弃用。",
+    "FinalGlassArcExtensionFit 曾COMPLETE但用户否决侧上沿穿发，已加USER_REJECTED_SIDE_HAIR_INTERSECTION.json；最终SideHairClearance替代。",
+    "EarphoneCableHairClearance V1/V2虽数值clear但投影尖V被拒，采用空间圆弧V3。",
+    "FaceMaskV2仍暂停未做，不安装任何旧V2候选。"
+  ],
+  "validation_scope": [
+    "已完阶段有原生局部应用、完整另存、独立真正重开，canonical/portable快照等保存回读与实际GPU多角度/临时状态恢复；完成证据见各Final目录COMPLETION或native_install_report/saved_roundtrip_report/Preview/capture.json。",
+    "MainCoat两keys/6有限诊断姿态Body0；最终玻璃仅Basis/Wider/Narror静态端点，最终耳线为五hair及7Glass端点，没有新pose全扫。",
+    "插座半嵌、封在耳球内的原下接口和衣物内层装配交线有明确保留；不能说全场景所有部件交线0。",
+    "所有已验证均为当前发型/形态及有限pose；新动作、任意形态组合/未来发型需Windows复测；Unity无Play/全NDMF build结论。",
+    "最新完整点已累积此前改动，旧Final文件是阶段回退备份而非应依次打开安装的补丁；helper带基线SHA且已应用，重放会损坏后续工作。"
+  ],
+  "source_evidence": [
+    "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FaceMasksEyeChinFitFromStage75/RESUME.md",
+    "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalMainCoatShoulderFit/COMPLETION.json",
+    "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalMainCoatPinkFramesFit/COMPLETION.json",
+    "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassHeadFit/COMPLETION.json",
+    "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalWiredEarphonesFit/COMPLETION.json",
+    "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassFrontYHairFit/COMPLETION.json",
+    "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassSideFrameScaleFit/COMPLETION.json",
+    "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassArcExtensionFit/COMPLETION.json",
+    "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassSideHairClearance/COMPLETION.json",
+    "SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalEarphoneCableHairClearance/COMPLETION.json"
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "blender_version": "3.6.23",
+  "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalEarphoneCableHairClearance/EvilFall_Kipfel_EarphoneCableHairClearance.blend",
+  "is_dirty": true,
+  "frame": 207,
+  "external_libraries": [],
+  "images": [
+    {
+      "name": "1.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/1.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/1.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "2.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/2.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/2.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "3.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/3.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/3.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "4.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/4.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/4.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "BukiyoTwinTail_Gradation02.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/MOCHIYAMA_Clothes/BukiyouTwinTail/Texture/SubTexture/BukiyoTwinTail_Gradation02.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/MOCHIYAMA_Clothes/BukiyouTwinTail/Texture/SubTexture/BukiyoTwinTail_Gradation02.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "BukiyouTwinTail.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/MOCHIYAMA_Clothes/BukiyouTwinTail/Texture/BukiyouTwinTail.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/MOCHIYAMA_Clothes/BukiyouTwinTail/Texture/BukiyouTwinTail.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "BukiyouTwinTail_Mask_Outline.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/MOCHIYAMA_Clothes/BukiyouTwinTail/Texture/SubTexture/BukiyouTwinTail_Mask_Outline.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/MOCHIYAMA_Clothes/BukiyouTwinTail/Texture/SubTexture/BukiyouTwinTail_Mask_Outline.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "FaceMaskV2 Text.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/FaceMaskV2 Text.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/FaceMaskV2 Text.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "FaceMaskV2 Trans.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/FaceMaskV2 Trans.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/FaceMaskV2 Trans.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "gradation.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/WYH2004/Texture/Mask/gradation.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/WYH2004/Texture/Mask/gradation.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "Gradient.jpg",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/Gradient.jpg",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/Gradient.jpg",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "Gradient2.jpg",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/Gradient2.jpg",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/Gradient2.jpg",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "kipfel_base_real.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/WYH2004/Texture/kipfel_base_real.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/WYH2004/Texture/kipfel_base_real.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "kipfel_body_alpha.png.001",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/MOCHIYAMA/Kipfel/Texture/PC/kipfel_body_alpha.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/MOCHIYAMA/Kipfel/Texture/PC/kipfel_body_alpha.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "kipfel_body_eye.png.001",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/MOCHIYAMA/Kipfel/Texture/PC/kipfel_body_eye.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/MOCHIYAMA/Kipfel/Texture/PC/kipfel_body_eye.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "kipfel_body_skin.png.001",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/MOCHIYAMA/Kipfel/Texture/PC/kipfel_body_skin.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/MOCHIYAMA/Kipfel/Texture/PC/kipfel_body_skin.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "kipfel_hair.png.001",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/MOCHIYAMA/Kipfel/Texture/PC/kipfel_hair.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/MOCHIYAMA/Kipfel/Texture/PC/kipfel_hair.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "kipfel_silver.png.001",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/MOCHIYAMA/Kipfel/Texture/PC/kipfel_silver.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/MOCHIYAMA/Kipfel/Texture/PC/kipfel_silver.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "MainMask.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MainMask.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MainMask.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "MainMaskEX.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MainMaskEX.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MainMaskEX.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "MainNormal.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MainNormal.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MainNormal.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "mask.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/WYH2004/Texture/Mask/mask.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/WYH2004/Texture/Mask/mask.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "T_InvertedHex_Noise.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/T_InvertedHex_Noise.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/T_InvertedHex_Noise.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "T_Matcap_MC (2).png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/T_Matcap_MC (2).png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/T_Matcap_MC (2).png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "TransAlpha.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransAlpha.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransAlpha.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "TransBase.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransBase.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransBase.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "TransMask.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransMask.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransMask.png",
+      "packed": true,
+      "exists": true
+    },
+    {
+      "name": "TransNormal.png",
+      "source": "FILE",
+      "filepath": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransNormal.png",
+      "absolute": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransNormal.png",
+      "packed": true,
+      "exists": true
+    }
+  ],
+  "scope": "Live Blender read-only inspection; accepted disk geometry is separately hash-pinned. Unsaved state archived as a review-only copy."
+}

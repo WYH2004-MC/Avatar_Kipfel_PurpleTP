@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "scope": "Read-only disk audit; no Unity operations or Play/build testing",
+  "prefabSHA256": "b5cc9d70fca94a900696c18aa3a625b52da24ccb7137a007f426a4387b6dfa27",
+  "controllerSHA256": "daf6894196fada55ba7452fcfd0cb3ee6787bc373b357b4c6b3af6d224abdb8a",
+  "originalControllerSHA256": "91247bba7ba2e63186e4be6c02225dea758556205b544d72efd28bfaba328a7a",
+  "normalizedControllerGraphExact": true,
+  "graph": {
+    "parameters": 32,
+    "allBool": true,
+    "layers": 26,
+    "states": 60,
+    "transitions": 67,
+    "conditionCount": 77,
+    "parameterDrivers": 12,
+    "distinctMotions": 59
+  },
+  "normalizationsOnly": [
+    "EvilFallKipfel/ to EvilFall/",
+    "State m_Motion references mapped to corresponding adapted clip",
+    "Unity parameter owner backlink m_Controller 9100000 to 0",
+    "VRChat SDK adds preventRepeats: 0 on 20 Set-parameter records"
+  ],
+  "motionReferencesOnlyForKipfelOriginalAnimations": true,
+  "stateMotionNamesMatchOriginal": 60,
+  "savedBindings": {
+    "clipCount": 59,
+    "bindingCount": 1178,
+    "types": {
+      "1": 107,
+      "114": 40,
+      "4": 937,
+      "137": 29,
+      "198": 65
+    },
+    "blendShapesCheckedAgainstUnchangedExportManifest": 29,
+    "unresolved": [],
+    "avatarExternalBodyBaseBindings": []
+  },
+  "sourceClipPayloadsUnchangedAgainstPreTaskSnapshot": {
+    "count": 59,
+    "allEqual": true,
+    "snapshot": "/tmp/evilfall-controller-audit-20261020/audit.json",
+    "mismatches": []
+  },
+  "acceptedWeaponPayloadsUnchangedAgainstPreTaskSnapshot": {
+    "count": 4,
+    "files": [
+      {
+        "path": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/Accessory_Weapon_3.anim",
+        "beforeCurveSnapshotEqual": true,
+        "currentSHA256": "93ef20babc59725f584e827f38ba9480cf22a0f5c7f3a428a6dfe7abeec4cc1c",
+        "mtimeUTC": "2026-10-10T23:59:39.289053+00:00"
+      },
+      {
+        "path": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/Accessory_Weapon_2.anim",
+        "beforeCurveSnapshotEqual": true,
+        "currentSHA256": "ee4309973b5995fdf7bc26c992d74e7c1f2410f8b8adb440aec9019586f66d0f",
+        "mtimeUTC": "2026-10-10T23:59:39.185950+00:00"
+      },
+      {
+        "path": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/Accessory_Weapon_1.anim",
+        "beforeCurveSnapshotEqual": true,
+        "currentSHA256": "7d08721fe868fc90ec145ae730cdc07de4174b93a31b913f7fa48acf6180bd1d",
+        "mtimeUTC": "2026-10-10T23:59:39.079911+00:00"
+      },
+      {
+        "path": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/Accessory_Weapon_0.anim",
+        "beforeCurveSnapshotEqual": true,
+        "currentSHA256": "66021f125222c37f4d1292d520de16f481c7df638b87d62e3be1013c0be69af8",
+        "mtimeUTC": "2026-10-10T23:59:38.978214+00:00"
+      }
+    ]
+  },
+  "protectedByteHashComparisons": {
+    "count": 20,
+    "mismatches": []
+  },
+  "sourceClipHashEvidenceLimit": "Pre-task clip snapshot stores bindings, key times and values, not byte hashes. Byte-level protection is proven for the protected source controller/menu/prefab/FBX and their meta files; current clip hashes are recorded and curve payloads match the pre-task read.",
+  "sourceClipCurrentSHA256ByFile": {
+    "EvilFall_ 51 BreastToyUp Lime.anim": "98333337ba98e4f41d036469fdda0846ee02afeb9a692167481621d981e8edcf",
+    "EvilFall_ 3 Tail Off.anim": "300832ac4f2339c2f9e4b633ce9d9eb1bf307fe7e59b7d912ca712eb10aab205",
+    "EvilFall_ 46 BackToy On.anim": "d4514cb18d01a0bcc91782330a50df1f91d65a07e4525a2ea294b1d3e60685ac",
+    "EvilFall_ 35  LegToyTube on.anim": "3606d5b3eddfe6530ca4a4ce7d3a9d2cdd48b9a083c1235bc3374cf81e98cf61",
+    "EvilFall_ 52 BreastToyOn Lime.anim": "555935a05e4ff07e2a5b8c440766fe6ab22b827deaf1669b2367cd1e5b7cd3cf",
+    "EvilFall_ 42 FrontToy Up Lime.anim": "2ec9909d05aa4c9ea55958691b3f2f2512ab31539070a7fa6026d63902bf7da0",
+    "EvilFall_ 47 BackToy Off.anim": "409069b7701318be0e86726c7b816e6244314092b08a47b3b6f05890e7503d5e",
+    "EvilFall_ 16 BodyTube on.anim": "b9dc4f5860e1c6da9ed4a163a69a3189efd4a37c657cf229cdf005a071622755",
+    "EvilFall_ 10 BodySuit On.anim": "b16b915f4e1d2bd0e180d42c63bed887cef94c103fac34e6b11531de5d9c9135",
+    "EvilFall_ 14 Shoes On.anim": "d110cf4d9c83c166685159d7060ae0e338c3f548b96c59e166a3adf435190839",
+    "EvilFall_ 37 Weapon State 1.anim": "925d2c919e52d54cdc204dd5861ad228694d676748e2d791ffa63f56eec39055",
+    "EvilFall_ 40 Weapon tube off.anim": "d1d422d566581672c393c17d5dbf6795a6f1d0ded90acd6b43bc5aaadcb25c6d",
+    "EvilFall_ 55 Glass Off.anim": "652ba8cceb31a13073cad6e4036634b9738af30c5a4e14961031ca99cadf4286",
+    "EvilFall_ 6 Jacket On.anim": "625edf4b7ec9f255b7e03f232a9a5bedf9e37d0ed81dcce62239dfef59acc4ad",
+    "EvilFall_ 43 FrontToy On Lime.anim": "04546328f7530db8434f2b3c109a82529214f329bb616144dff3ff7c9dc1767b",
+    "EvilFall_.anim": "725af091339825c6330d468176d1081a1e9146fc57ea5ec8fce970a9cd8c73f3",
+    "EvilFall_ 49 DotToyOn.anim": "d46626c0eb79059d81bdfa0cd492dfb93127dd829d106cb540e6651f8aa506da",
+    "EvilFall_ 22 GasMask on.anim": "797df285a0273dc7cf42a60d6a70b0b6263dc5576784310bfc37d6031980039c",
+    "EvilFall_ 21 GasMask off.anim": "8c7d1b30d006553f75f3a6722b25f7a287a72432921129eaaecb05762113350b",
+    "EvilFall_ 18 FaceMask on.anim": "b02c214e5d332e3a6d2f5a8f2a54bdb08ed9caae468f8ea93ee2c26e8e7b13e7",
+    "EvilFall_ 41 Weapon tube on.anim": "4a0f15165dea10394c8950d94034a32ac4f624743ec443ed2ac5619ddd5c0366",
+    "EvilFall_ 28 Dick On.anim": "8800ce5470c724530682a693a9562149f9fc936651fdda8377530b4996abba36",
+    "EvilFall_ 25 GagBall off.anim": "2e1b134e113d9b770ac2dc572280a5513d720e5bc1424ea5192eaa0849274149",
+    "EvilFall_ 13 Shoes Off.anim": "4a4c3222c80119b2f74d63cfb9aaeabe3ac4d9e0eb5f680d6a6c0935d63a0e09",
+    "EvilFall_ 5 Jacket Off.anim": "50ee2ef02a343b55418b37a280ff837677d929b29fa410fcfac9898d65b4f6ae",
+    "EvilFall_ 11 Glove Off.anim": "7000d9d292a2e10418d3b2ccdb603a9ab9504e782beff6d48e307f344d7ecbba",
+    "EvilFall_ 1 HeadACC Off.anim": "0ba45a6cce17fa1c9762a6458fb042d492ffc19966a0542d5b0a744c8050dd6f",
+    "EvilFall_ 31 UrineCollector on.anim": "e69b6a8e7679d7887d4994372319c5bf70cfdbfb06e35614d835788dd1c0bcdf",
+    "EvilFall_ 27 Dick off.anim": "6ea26379fefb6861c855eeec865765ed6664cec0b7e5a93d9ef63a0d1e9beea8",
+    "EvilFall_ 54 Glass On.anim": "afbc2cfc7ea9607c709f057db3ecd02024d164af88bc332c0ca2e80f07c89feb",
+    "EvilFall_ 7 Jacket ACC off.anim": "4889e919fb27b21d0b1e3f1034de5afde366423a266a7db802da140825131889",
+    "EvilFall_ 9 Bodysuit off.anim": "2c9174349fe48ac52c911861bedb6efa6a37715531aca63fceec8f17ee71ca1e",
+    "EvilFall_ 20 HeadMask on.anim": "a9859c759a452b3e1c0c4a9703b4f2bb788c970e734c2154c809c09186b55193",
+    "EvilFall_ 39 Weapon State 3.anim": "77aa6336e4291c9a8a8cf94096168d39562e80f41c2e7d3a5a3df1165030911d",
+    "EvilFall_ 45 BackToy Up.anim": "713322e0fa4b0088e4674d972a7bf993a299bfc117816614eabe11550923cd26",
+    "EvilFall_ 58 Maks Tube off.anim": "805a50b3188350ef9b2b94e22162df74cf383286f9b64e58f97d073c07dd546f",
+    "EvilFall_ 24 Gag on.anim": "c8490659bdebe8634d5c01c47ed0032dc80abf227d23e5cdd58a513c0cc5d5ed",
+    "EvilFall_ 12 Glove On.anim": "d773c10c3d70f6ac61bde44fe371cbc87a222306e5f24be3532748b5c235985a",
+    "EvilFall_ 8 Jacket ACC on.anim": "4987fe088901e97c6a2280a557471eccbb505de9bd64aa94cd4f861fa7bba964",
+    "EvilFall_ 33 PussyCollector on.anim": "138459ad321fdc9e640586d8f8bce1ddf6152dfb8f665dfe057f5972302dd315",
+    "EvilFall_ 2 HeadACC On.anim": "17f8c62e4f63bd88a6da13b80fd1efd1a540acc048977c000ab840f034c1fe5c",
+    "EvilFall_ 17 FaceMask off.anim": "3d5b4ddf019c6afe2ac3eff57a774ac93b1bf47b176803578550e2f2537b5a8f",
+    "EvilFall_ 38 Weapon State 2.anim": "4169126f9535b63cc7246163d9801e64a8842f7647f15615e38fc007577c5724",
+    "EvilFall_ 23 Gag off.anim": "91df6d52e554381186a7c3e5dc7530555c9abe2a930c7eb558e9ae6d39211cd7",
+    "EvilFall_ 50 DotToyOff.anim": "c7c23e142b111803c3ed4f96006207031507e631251ad31757eb7507c8a24ccd",
+    "EvilFall_ 4 Tail On.anim": "26a18aee707e14e1dfb5b14e20bf713e95397023c14d9e5cd193c67f60540293",
+    "EvilFall_ 19 HeadMask off.anim": "db69f1f2083f25a53d6596a60ba7da7d2aeb7cbf1f1f8850ec5fe3606193042f",
+    "EvilFall_ 34 LegToyTube off.anim": "5cc0186f66cb166258acd0665acc79259cf2f3829c7d20b0d6d539c696619743",
+    "EvilFall_ 32 PussyCollector off.anim": "7565c6e98e5be46490e91b7a50f782b1d8f560a1799b09528009e72af8029031",
+    "EvilFall_ 53 BreastToyoff Lime.anim": "4d671285afe22a2ce72d1fcd121903859309d7df996e548548c1baf13341ecf1",
+    "EvilFall_ 15 BodyTube off.anim": "3a960e431bd88b88f4eea8dc9a1d0534e3033f98996886425e78d84d2fc4f69a",
+    "EvilFall_ 30 UrineCollector off.anim": "199dec31948a7f4407b0e017fa45301c48dab1f23665f4f09375c687224e55a6",
+    "EvilFall_ 56 Mask V2 off.anim": "fa618e4665d1aa28b517f7c22808e91e244c7bb1140cfd9748ac7458c73fcb07",
+    "EvilFall_ 44 FrontToy off.anim": "d8e212ee88e0a6ef930f1756f86cc961c8b8a7c5909f26f36ad8c936620e463e",
+    "EvilFall_ 26 GagBall on.anim": "c6f3b3307d26e7e6e02b696f40a1adda4b76db99e1e2c0211143d9f11e8f0c0e",
+    "EvilFall_ 36 Weapon off.anim": "ce2cfb2ff528305b1787248685693a2bae34e6ed5aecb57f7fbd985b35217fa2",
+    "EvilFall_ 48 DotToyUp.anim": "bf32b5ff26f0d2bd07f4aa8a2c37996f0a071520c6f1765696700ce7e1194def",
+    "EvilFall_ 29 Dick locked.anim": "6915edd92b6fb94973b157a1942d71e81f5514874ea2844b677042a56e6d31db",
+    "EvilFall_ 57 Mask V2 on Lime.anim": "0b0a59d8965e5584941702306c5497a6b6b6fde34ef6259d5a181f1239fe119b"
+  }
+}

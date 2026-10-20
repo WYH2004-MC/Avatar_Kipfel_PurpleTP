@@ -1,0 +1,103 @@
+{
+  "scope": "Disk working tree only; preserved in archive, not staged over the user-owned live files",
+  "files": [
+    {
+      "project_path": "Assets/HierarchyDecorator/Settings.asset",
+      "archive_path": "user-work/Assets/HierarchyDecorator/Settings.asset",
+      "size": 105293,
+      "sha256": "8ed4570689a5176edd159824e1b5945560aa2a299cf94dddb55e9596fcdea840",
+      "committed_as_live_project_file": false
+    },
+    {
+      "project_path": "Assets/MOCHIYAMA/Kipfel/Kipfel.unity",
+      "archive_path": "user-work/Assets/MOCHIYAMA/Kipfel/Kipfel.unity",
+      "size": 1129030,
+      "sha256": "28e99517778492f09caa6a5cf4b42c8c966d440654094dc825577fcca72ff770",
+      "committed_as_live_project_file": false
+    },
+    {
+      "project_path": "Assets/SILVERBACK/NENEKUMA/Material/NENEKUMA_01_Red.mat",
+      "archive_path": "user-work/Assets/SILVERBACK/NENEKUMA/Material/NENEKUMA_01_Red.mat",
+      "size": 1505,
+      "sha256": "ae559d4b27255faff8d540a8255b5b356830792e5683360e9d1c7a09943cbf30",
+      "committed_as_live_project_file": false
+    },
+    {
+      "project_path": "Assets/SILVERBACK/NENEKUMA/Texture/NENEKUMA_02_Purple.png.meta",
+      "archive_path": "user-work/Assets/SILVERBACK/NENEKUMA/Texture/NENEKUMA_02_Purple.png.meta",
+      "size": 3304,
+      "sha256": "5fbe2b3d9480b76c7e28d808ef9d1c94e1f4f9fbd50a41e5085162e51343ff21",
+      "committed_as_live_project_file": false
+    },
+    {
+      "project_path": "Thry/presets_known_materials.txt",
+      "archive_path": "user-work/Thry/presets_known_materials.txt",
+      "size": 30921,
+      "sha256": "59e1eee1e1fa62b843961643207a839307a2aec863f83f3ad38da8bdbde383ea",
+      "committed_as_live_project_file": false
+    },
+    {
+      "project_path": "Assets/WYH2004/Material/Hair_TwinTail_material_Purple.mat",
+      "archive_path": "user-work/Assets/WYH2004/Material/Hair_TwinTail_material_Purple.mat",
+      "size": 22613,
+      "sha256": "b8ebb8abc11b52efadc5a4c4ed06d7f52807d9773986aa097c21198f6a4d1076",
+      "committed_as_live_project_file": false
+    },
+    {
+      "project_path": "Assets/WYH2004/Material/Hair_TwinTail_material_Purple.mat.meta",
+      "archive_path": "user-work/Assets/WYH2004/Material/Hair_TwinTail_material_Purple.mat.meta",
+      "size": 188,
+      "sha256": "22961a7a95b96fb0b62deef9fd2a36d582c64818c575c7133f536ebfb4bc4a4a",
+      "committed_as_live_project_file": false
+    },
+    {
+      "project_path": "Assets/WYH2004/Material/Hair_material_Purple.mat",
+      "archive_path": "user-work/Assets/WYH2004/Material/Hair_material_Purple.mat",
+      "size": 22621,
+      "sha256": "6090c9fbfda781db5c511c3ca284ed0f3734917e18e2733989490b4ad2118d0d",
+      "committed_as_live_project_file": false
+    },
+    {
+      "project_path": "Assets/WYH2004/Material/Hair_material_Purple.mat.meta",
+      "archive_path": "user-work/Assets/WYH2004/Material/Hair_material_Purple.mat.meta",
+      "size": 188,
+      "sha256": "66e66a23d69faa38e2aedc9839f6f341c347b3709d2a17ac79470af84d50ca5f",
+      "committed_as_live_project_file": false
+    },
+    {
+      "project_path": "Assets/WYH2004/Material/NENEKUMA.meta",
+      "archive_path": "user-work/Assets/WYH2004/Material/NENEKUMA.meta",
+      "size": 172,
+      "sha256": "5c8e8b109e1327510c3499f0b42aa426decad653b3528c80674d3dbdee38f833",
+      "committed_as_live_project_file": false
+    },
+    {
+      "project_path": "Assets/WYH2004/Material/NENEKUMA/NENEKUMA_01_Purple 1.mat",
+      "archive_path": "user-work/Assets/WYH2004/Material/NENEKUMA/NENEKUMA_01_Purple 1.mat",
+      "size": 26200,
+      "sha256": "36c4a91865a4505704f53c5cc72a78954535b97f538ef2a1d1b87b6312507139",
+      "committed_as_live_project_file": false
+    },
+    {
+      "project_path": "Assets/WYH2004/Material/NENEKUMA/NENEKUMA_01_Purple 1.mat.meta",
+      "archive_path": "user-work/Assets/WYH2004/Material/NENEKUMA/NENEKUMA_01_Purple 1.mat.meta",
+      "size": 188,
+      "sha256": "ca9f8261a26422942017c0263b29d21d849e88cecc969d66db78b02476c31594",
+      "committed_as_live_project_file": false
+    },
+    {
+      "project_path": "Assets/WYH2004/Material/NENEKUMA/NENEKUMA_02_Purple 1.mat",
+      "archive_path": "user-work/Assets/WYH2004/Material/NENEKUMA/NENEKUMA_02_Purple 1.mat",
+      "size": 26366,
+      "sha256": "4a552de6f2c5207b8672624707f9ca880a6fa75c7f8abf22d2d1ceda6753356f",
+      "committed_as_live_project_file": false
+    },
+    {
+      "project_path": "Assets/WYH2004/Material/NENEKUMA/NENEKUMA_02_Purple 1.mat.meta",
+      "archive_path": "user-work/Assets/WYH2004/Material/NENEKUMA/NENEKUMA_02_Purple 1.mat.meta",
+      "size": 188,
+      "sha256": "a931d208722587509ffcaee57b3799964fb56a9eab019e198ca4662dda7e0315",
+      "committed_as_live_project_file": false
+    }
+  ]
+}

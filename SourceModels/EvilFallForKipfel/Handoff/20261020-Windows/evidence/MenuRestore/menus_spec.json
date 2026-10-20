@@ -1,0 +1,2544 @@
+{
+  "schema_version": 1,
+  "menus": [
+    {
+      "source_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/EvilFallMenu.asset",
+      "target_asset": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/InstallMenu.asset",
+      "source_guid": "d2acdca3a7c1b6b43b7b70da669833bb",
+      "target_guid": "d8e3d66e902dc41deb2bba9e94654c2e",
+      "source_sha256": "8f0967c107acb25e2e641bebcf29b0806d8fd370c52294b178086753acb63b4b",
+      "controls": [
+        {
+          "source": {
+            "name": "EvilFall",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "53d487c9c490a804291023b84b0e6488",
+              "type": 3
+            },
+            "type": 103,
+            "parameter": {
+              "name": ""
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000,
+              "guid": "2ddeac8ef9f00cf468243c121c430b1e",
+              "type": 2
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "EvilFall",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "53d487c9c490a804291023b84b0e6488",
+              "type": 3
+            },
+            "type": 103,
+            "parameter": {
+              "name": ""
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000,
+              "guid": "2ddeac8ef9f00cf468243c121c430b1e",
+              "type": 2
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/1.png",
+          "source_sub_menu_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/EvilFallSubMenu.asset",
+          "target_sub_menu_asset": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/AccessoriesMenu.asset"
+        }
+      ]
+    },
+    {
+      "source_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/EvilFallSubMenu.asset",
+      "target_asset": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/AccessoriesMenu.asset",
+      "source_guid": "2ddeac8ef9f00cf468243c121c430b1e",
+      "target_guid": "13f6556bb262d43b9b8f6597e7729a37",
+      "source_sha256": "2ab5c0f475ad9c01c5f457cc27c4f77965c144c0530c4ab779a9691cb9fe3d22",
+      "controls": [
+        {
+          "source": {
+            "name": "Outfit",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "5eca4d0a0dcafd544a159fbf4e98f0d7",
+              "type": 3
+            },
+            "type": 103,
+            "parameter": {
+              "name": ""
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000,
+              "guid": "328b45ce2b599b24fa62e1f2a108e56b",
+              "type": 2
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Outfit",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "5eca4d0a0dcafd544a159fbf4e98f0d7",
+              "type": 3
+            },
+            "type": 103,
+            "parameter": {
+              "name": ""
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000,
+              "guid": "328b45ce2b599b24fa62e1f2a108e56b",
+              "type": 2
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/2.png",
+          "source_sub_menu_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/EvilFallSubMenu Outfit.asset",
+          "target_sub_menu_asset": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/ClothingMenu.asset"
+        },
+        {
+          "source": {
+            "name": "Face",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "9d7140e65bf7a064f9bf9a0b3b2ac5d2",
+              "type": 3
+            },
+            "type": 103,
+            "parameter": {
+              "name": ""
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000,
+              "guid": "49f5eba0183e0994ea313c6df76ab7b6",
+              "type": 2
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Face",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "9d7140e65bf7a064f9bf9a0b3b2ac5d2",
+              "type": 3
+            },
+            "type": 103,
+            "parameter": {
+              "name": ""
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000,
+              "guid": "49f5eba0183e0994ea313c6df76ab7b6",
+              "type": 2
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/3.png",
+          "source_sub_menu_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/EvilFallSubMenu Face.asset",
+          "target_sub_menu_asset": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/FaceMenu.asset"
+        },
+        {
+          "source": {
+            "name": "Weapon",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "ebff6b98d6d58d94496d69711bc55614",
+              "type": 3
+            },
+            "type": 103,
+            "parameter": {
+              "name": ""
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000,
+              "guid": "b2c0258f32fc0d54eb417aeb4533f374",
+              "type": 2
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Weapon",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "ebff6b98d6d58d94496d69711bc55614",
+              "type": 3
+            },
+            "type": 103,
+            "parameter": {
+              "name": ""
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000,
+              "guid": "b2c0258f32fc0d54eb417aeb4533f374",
+              "type": 2
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/4.png",
+          "source_sub_menu_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/EvilFallSubMenu Weapon.asset",
+          "target_sub_menu_asset": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/WeaponMenu.asset"
+        },
+        {
+          "source": {
+            "name": "R18Toy",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "a244d3ea395d08241b75afa93bc7bbe5",
+              "type": 3
+            },
+            "type": 103,
+            "parameter": {
+              "name": ""
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000,
+              "guid": "6157d721841f01d459ab2de5d04ad876",
+              "type": 2
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "R18Toy",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "a244d3ea395d08241b75afa93bc7bbe5",
+              "type": 3
+            },
+            "type": 103,
+            "parameter": {
+              "name": ""
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000,
+              "guid": "6157d721841f01d459ab2de5d04ad876",
+              "type": 2
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/5.png",
+          "source_sub_menu_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/EvilFallSubMenu R18Toy.asset",
+          "target_sub_menu_asset": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/R18ToyMenu.asset"
+        },
+        {
+          "source": {
+            "name": "PlugToy",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "013f4a4a72db8324f9a681978aa9fb9d",
+              "type": 3
+            },
+            "type": 103,
+            "parameter": {
+              "name": ""
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000,
+              "guid": "dc8f12e010adb944c8879dde206aa214",
+              "type": 2
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "PlugToy",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "013f4a4a72db8324f9a681978aa9fb9d",
+              "type": 3
+            },
+            "type": 103,
+            "parameter": {
+              "name": ""
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000,
+              "guid": "dc8f12e010adb944c8879dde206aa214",
+              "type": 2
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/6.png",
+          "source_sub_menu_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/EvilFallSubMenu PlugToy.asset",
+          "target_sub_menu_asset": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/PlugToyMenu.asset"
+        }
+      ]
+    },
+    {
+      "source_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/EvilFallSubMenu Outfit.asset",
+      "target_asset": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/ClothingMenu.asset",
+      "source_guid": "328b45ce2b599b24fa62e1f2a108e56b",
+      "target_guid": "41f4886e0aae8445f938fddc98714729",
+      "source_sha256": "115631f6c25d3fe15582571175e9867a7d163b76feabbbe7879130d8faa28766",
+      "controls": [
+        {
+          "source": {
+            "name": "Head",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "c36889a7dcb53eb448cab113a3d818e5",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/HeadAcc"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Head",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "c36889a7dcb53eb448cab113a3d818e5",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/HeadAcc"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/12.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "Tail",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "9beba3ef1bd912541bf5f093a663b9a9",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/Tail"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Tail",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "9beba3ef1bd912541bf5f093a663b9a9",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/Tail"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/13.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "Jacket",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "186a0392fb38b26499b8b6b90de489e8",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/Jacket"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Jacket",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "186a0392fb38b26499b8b6b90de489e8",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/Jacket"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/14.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "JacketAcc",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "c853df55d41d66d4c96f077f55f0f315",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/JacketACC"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "JacketAcc",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "c853df55d41d66d4c96f077f55f0f315",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/JacketACC"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/15.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "Bodysuit",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "2c7719a116545624693e88d47314b82d",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/Bodysuit"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Bodysuit",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "2c7719a116545624693e88d47314b82d",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/Bodysuit"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/16.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "Glove",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "90fddf019417ed141932a0e926a56caa",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/Glove"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Glove",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "90fddf019417ed141932a0e926a56caa",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/Glove"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/18.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "Shoes",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "4eac388556c6a8a4a9b307393d8b9746",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/Shoes"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Shoes",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "4eac388556c6a8a4a9b307393d8b9746",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/Shoes"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/19.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "Tube",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "5637a68f5a04a864187a1bc7b14a4bf4",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/BodyTube"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Tube",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "5637a68f5a04a864187a1bc7b14a4bf4",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/BodyTube"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/17.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        }
+      ]
+    },
+    {
+      "source_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/EvilFallSubMenu Face.asset",
+      "target_asset": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/FaceMenu.asset",
+      "source_guid": "49f5eba0183e0994ea313c6df76ab7b6",
+      "target_guid": "2028a639999a047a6bc94b9b93a8b226",
+      "source_sha256": "5d28f28076416bf1a031e5059d1870903c0a0865a42f8538af27c90c27b1b2f7",
+      "controls": [
+        {
+          "source": {
+            "name": "HeadMask",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "9d9ee3f4f4c32bb4b8f45900fd5f88e7",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/HeadMask"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "HeadMask",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "9d9ee3f4f4c32bb4b8f45900fd5f88e7",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/HeadMask"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/7.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "FaceMask",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "bb4e30f02ef3a7b41a964765fbfab1c5",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/FaceMask"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "FaceMask",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "bb4e30f02ef3a7b41a964765fbfab1c5",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/FaceMask"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/8.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "GasMask",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "6fd7d64386d5ada439daa0268b607afe",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/GasMask"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "GasMask",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "6fd7d64386d5ada439daa0268b607afe",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/GasMask"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/9.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "Gag",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "4e2a66e384d71e94db7bf6091c25257d",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/Gag"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Gag",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "4e2a66e384d71e94db7bf6091c25257d",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/Gag"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/10.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "GagBall",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "5d0581b1251184b49a5588d1349fb0e2",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/GagBall"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "GagBall",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "5d0581b1251184b49a5588d1349fb0e2",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/GagBall"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/11.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "Glass",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "7008ca503f7572b4cabc82c7d77cd1b9",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/Glass"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Glass",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "7008ca503f7572b4cabc82c7d77cd1b9",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/Glass"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/39.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "FaceMaskV2",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "9db8418b00cb8c64091337ff04c0f76f",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/MaskV2"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "FaceMaskV2",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "9db8418b00cb8c64091337ff04c0f76f",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/MaskV2"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/38.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        }
+      ]
+    },
+    {
+      "source_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/EvilFallSubMenu Weapon.asset",
+      "target_asset": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/WeaponMenu.asset",
+      "source_guid": "b2c0258f32fc0d54eb417aeb4533f374",
+      "target_guid": "c2607815b3b194db7bd3709ec84c4085",
+      "source_sha256": "63b8db099610096c9200ea1d2ecf3083b8b0f6d345fc5d23454fdfabe4f7868b",
+      "controls": [
+        {
+          "source": {
+            "name": "off",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "cea5d6e8acb03d8439b242ba2cf36470",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/WeaponOff"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "off",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "cea5d6e8acb03d8439b242ba2cf36470",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/WeaponOff"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/25.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "Blade",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "bd2950c3b4a363046bdf48009de6b5ed",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/WeaponState1"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Blade",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "bd2950c3b4a363046bdf48009de6b5ed",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/WeaponState1"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/26.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "Gun",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "87f5b36e658a7274794841fc1b035a53",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/WeaponState2"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Gun",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "87f5b36e658a7274794841fc1b035a53",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/WeaponState2"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/27.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "Knife",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "09be625c655eb7249b92145be63482a8",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/WeaponState3"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Knife",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "09be625c655eb7249b92145be63482a8",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/WeaponState3"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/28.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        }
+      ]
+    },
+    {
+      "source_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/EvilFallSubMenu R18Toy.asset",
+      "target_asset": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/R18ToyMenu.asset",
+      "source_guid": "6157d721841f01d459ab2de5d04ad876",
+      "target_guid": null,
+      "source_sha256": "a736a26c3c4d91a0cdf751dd5110212369563a911d2a1522968d3af63986ee23",
+      "controls": [
+        {
+          "source": {
+            "name": "Dick",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "83c6e22555642504ab5a976c714df973",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/Dick"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Dick",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "83c6e22555642504ab5a976c714df973",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/Dick"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/20.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "LockedDick",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "974201bf1a8c0354487a9ba319aab343",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/DickLock"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "LockedDick",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "974201bf1a8c0354487a9ba319aab343",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/DickLock"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/21.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "UrineCollector",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "1eb03814b0440484aa1e121374481bde",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/UrineCollector"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "UrineCollector",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "1eb03814b0440484aa1e121374481bde",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/UrineCollector"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/22.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "PussyCollector",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "3e04c150933625f4abfe9ef97e63b850",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/PussyLiquidCollector"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "PussyCollector",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "3e04c150933625f4abfe9ef97e63b850",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/PussyLiquidCollector"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/23.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "Tube",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "88edc99c78f1a9a40a92ab98ce9fe7af",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/ToyTube"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "Tube",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "88edc99c78f1a9a40a92ab98ce9fe7af",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/ToyTube"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/24.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        }
+      ]
+    },
+    {
+      "source_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/EvilFallSubMenu PlugToy.asset",
+      "target_asset": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/PlugToyMenu.asset",
+      "source_guid": "dc8f12e010adb944c8879dde206aa214",
+      "target_guid": null,
+      "source_sha256": "63f59b850fa4ac7a4cab268f2518c452f0ac46e7dc0e0cdc43376b8b6f1a49ef",
+      "controls": [
+        {
+          "source": {
+            "name": "PussyOn",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "5253f3b2cbe28b440b1f8784bcd8c1d8",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/FrontToyOpen"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "PussyOn",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "5253f3b2cbe28b440b1f8784bcd8c1d8",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/FrontToyOpen"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 11400000
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/35.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "PussyOff",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "88c3f2608bc2cae41a2b129cbe71842c",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/FrontToyOhHand"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "PussyOff",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "88c3f2608bc2cae41a2b129cbe71842c",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/FrontToyOhHand"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/32.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "AnalOn",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "627fe8d6b1142104295a44ade3f2bc98",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/BackToyOpen"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "AnalOn",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "627fe8d6b1142104295a44ade3f2bc98",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/BackToyOpen"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/34.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "AnalOff",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "56f54b0139101e048a7a0ec955cd9801",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/BackToyOhHand"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "AnalOff",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "56f54b0139101e048a7a0ec955cd9801",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/BackToyOhHand"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/33.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "DotOn",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "27ac737e2b18ed84aaf827826901d22a",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/FrontDotToyOpen"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "DotOn",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "27ac737e2b18ed84aaf827826901d22a",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/FrontDotToyOpen"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/36.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "DotOff",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "2fcb4f0eb5c0120409e19bd155f608a4",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/FrontDotToyUp"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "DotOff",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "2fcb4f0eb5c0120409e19bd155f608a4",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/FrontDotToyUp"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/31.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "BoobOn",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "0b17121c8ccd38846af5f2e70a307cf8",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/BreastToyOpen"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "BoobOn",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "0b17121c8ccd38846af5f2e70a307cf8",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/BreastToyOpen"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/30.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        },
+        {
+          "source": {
+            "name": "BoofOff",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "71be706ad8242604496b3d9faec57e76",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFall/BreastToyUp"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "target": {
+            "name": "BoofOff",
+            "icon": {
+              "fileID": 2800000,
+              "guid": "71be706ad8242604496b3d9faec57e76",
+              "type": 3
+            },
+            "type": 102,
+            "parameter": {
+              "name": "EvilFallKipfel/BreastToyUp"
+            },
+            "value": 1,
+            "style": 0,
+            "subMenu": {
+              "fileID": 0
+            },
+            "subParameters": [],
+            "labels": []
+          },
+          "icon_asset": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/MenuIco/29.png",
+          "source_sub_menu_asset": null,
+          "target_sub_menu_asset": null
+        }
+      ]
+    }
+  ],
+  "parameter_source_prefab": "Assets/YaokiSubWork/EvilFallFullSet/ForLime&Chiffin/prefabe/Lime_EvilFall S breast.prefab",
+  "source_parameter_entries": [
+    {
+      "nameOrPrefix": "EvilFall/BackToyOhHand",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/BackToyOpen",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/Bodysuit",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/BodyTube",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/BreastToyOpen",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/BreastToyUp",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/Dick",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/DickLock",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/FaceMask",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/FrontDotToyOpen",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/FrontDotToyUp",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/FrontToyOhHand",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/FrontToyOpen",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/Gag",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/GagBall",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/Glove",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/GasMask",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/HeadAcc",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/HeadMask",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/Jacket",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/JacketACC",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/PussyLiquidCollector",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/Shoes",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/Tail",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/UrineCollector",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/ToyTube",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/WeaponOff",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/WeaponState1",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/WeaponState2",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/WeaponState3",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/Glass",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFall/MaskV2",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    }
+  ],
+  "target_parameter_entries": [
+    {
+      "nameOrPrefix": "EvilFallKipfel/BackToyOhHand",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/BackToyOpen",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/Bodysuit",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/BodyTube",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/BreastToyOpen",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/BreastToyUp",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/Dick",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/DickLock",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/FaceMask",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/FrontDotToyOpen",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/FrontDotToyUp",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/FrontToyOhHand",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/FrontToyOpen",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/Gag",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/GagBall",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/Glove",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/GasMask",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/HeadAcc",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/HeadMask",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/Jacket",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/JacketACC",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/PussyLiquidCollector",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/Shoes",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/Tail",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/UrineCollector",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/ToyTube",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/WeaponOff",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/WeaponState1",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/WeaponState2",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/WeaponState3",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/Glass",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 1,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    },
+    {
+      "nameOrPrefix": "EvilFallKipfel/MaskV2",
+      "remapTo": "",
+      "internalParameter": 0,
+      "isPrefix": 0,
+      "syncType": 3,
+      "localOnly": 0,
+      "defaultValue": 0,
+      "saved": 1,
+      "hasExplicitDefaultValue": 1,
+      "m_overrideAnimatorDefaults": 0
+    }
+  ],
+  "source_prefab_comparison": [
+    {
+      "prefab": "Assets/YaokiSubWork/EvilFallFullSet/ForLime&Chiffin/prefabe/Chiffin_EvilFall L breast.prefab",
+      "same_as_Lime_S": true,
+      "parameter_count": 32,
+      "differences": []
+    },
+    {
+      "prefab": "Assets/YaokiSubWork/EvilFallFullSet/ForLime&Chiffin/prefabe/Chiffin_EvilFall M breast.prefab",
+      "same_as_Lime_S": true,
+      "parameter_count": 32,
+      "differences": []
+    },
+    {
+      "prefab": "Assets/YaokiSubWork/EvilFallFullSet/ForLime&Chiffin/prefabe/Chiffin_EvilFall S breast.prefab",
+      "same_as_Lime_S": true,
+      "parameter_count": 32,
+      "differences": []
+    },
+    {
+      "prefab": "Assets/YaokiSubWork/EvilFallFullSet/ForLime&Chiffin/prefabe/Lime_EvilFall L breast.prefab",
+      "same_as_Lime_S": true,
+      "parameter_count": 32,
+      "differences": []
+    },
+    {
+      "prefab": "Assets/YaokiSubWork/EvilFallFullSet/ForLime&Chiffin/prefabe/Lime_EvilFall M breast.prefab",
+      "same_as_Lime_S": true,
+      "parameter_count": 32,
+      "differences": []
+    },
+    {
+      "prefab": "Assets/YaokiSubWork/EvilFallFullSet/ForLime&Chiffin/prefabe/Lime_EvilFall S breast.prefab",
+      "same_as_Lime_S": true,
+      "parameter_count": 32,
+      "differences": []
+    }
+  ],
+  "leaf_control_count": 32,
+  "menu_asset_count": 7,
+  "notes": [
+    "Original menu leaf controls all Toggle=102,value=1,style=0,empty subParameters and labels",
+    "SubMenu controls type=103; target subMenu GUID should be resolved from target_sub_menu_asset",
+    "WeaponTube animation assets exist but neither original controller parameter list nor menus expose WeaponTube"
+  ]
+}

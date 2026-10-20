@@ -1,0 +1,1227 @@
+{
+  "status": "PASS",
+  "readOnlyIndependentAudit": true,
+  "prefab": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/EvilFall_Kipfel.prefab",
+  "prefabSHA256": "b5cc9d70fca94a900696c18aa3a625b52da24ccb7137a007f426a4387b6dfa27",
+  "nativeSavedSHAExact": true,
+  "authorityRoutesChecked": 181,
+  "all181AuthorityRoutesExact": true,
+  "maCount": 30,
+  "internalMAWithDirectTarget": 29,
+  "maModel": "Package GetBonesMapping child-by-child zip; skip nested MA children; include nested root merge pair",
+  "mappingConflicts": [],
+  "smrCount": 38,
+  "smrs": [
+    {
+      "renderer": "MainHipTube",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "LegToyCollectionBottle/LegToyCollectionBottleLiquid1",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/WeaponMain",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "LegToyUrineCollector/CyberLockedDickTube",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/WeaponBaseHandle",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "MainNeckTube",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "LegToyCollectionBottle/LegToyCollectionBottleLiquiid2",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "MainBodySuit/MainBodyBreast",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "LegToyCollectionBottle",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "MainSpinTube",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "HeadACC",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "armature/Hips/AnalToyMain/AnalToy",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "LegToyUrineCollector/LegToyUrineCollectorLiquid",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "MainChestTube",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "MainLegHeel",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "MainBodySuit",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "MainArmGlove",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "FaceMask",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "EvilFallTail",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "MainCoat",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "EvilFallMaskV2/FaceMaskV2",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "MainCoat/MainCoatAcc",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "LegToyUrineCollector",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/WeaponTube",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "armature/Hips/CyberDickSet/CyberLockedDick",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "PussyDotToy",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "armature/Hips/CyberDickSet/CyberEgg",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "LegToyCollectionBottle/LegToyCollectionTube",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "armature/Hips/CyberDickSet/CyberDick",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "HeadMask",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/WeaponeBladePart",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "LegRing",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "LegToyUrineCollector/UrineCollectTube",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "EvilFallMaskV2/GlassMain",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "armature/BreastPlugMain/BreastPlug",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "armature/Hips/PussyToyMain/PussyToy",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "FaceMaskGasFilter",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    },
+    {
+      "renderer": "MainBone",
+      "bones": 431,
+      "danglingBoneRefs": [],
+      "rootBone": "armature/Hips"
+    }
+  ],
+  "particleSystems": 20,
+  "physBones": 19,
+  "pbBlockers": 2,
+  "effectsLocalReferencesChecked": 69,
+  "reactions": {
+    "HeadACC": {
+      "path": "Cat_Ear",
+      "active": 0
+    },
+    "MainLegHeel": [
+      [
+        "Body_Base",
+        "0",
+        "Knee_OFF_left",
+        "1",
+        "100"
+      ],
+      [
+        "Body_Base",
+        "0",
+        "Knee_OFF_right",
+        "1",
+        "100"
+      ],
+      [
+        "Body_Base",
+        "0",
+        "Foot_OFF_left",
+        "1",
+        "100"
+      ],
+      [
+        "Body_Base",
+        "0",
+        "Foot_OFF_right",
+        "1",
+        "100"
+      ],
+      [
+        "Body_Base",
+        "0",
+        "Toe_OFF_left",
+        "1",
+        "100"
+      ],
+      [
+        "Body_Base",
+        "0",
+        "Toe_OFF_right",
+        "1",
+        "100"
+      ],
+      [
+        "Body_Base",
+        "0",
+        "Lower_leg_01_OFF",
+        "1",
+        "100"
+      ],
+      [
+        "Body_Base",
+        "0",
+        "Lower_leg_02_OFF",
+        "1",
+        "100"
+      ]
+    ],
+    "EvilFallTail": {
+      "path": "Cat_Tail",
+      "active": 0
+    }
+  },
+  "routes": [
+    {
+      "source": "EvilFall_SourceRig/Hips",
+      "target": "armature/Hips",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallDress.L.001",
+      "target": "armature/Hips/EvilFallDress.L.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallDress.L.001/EvilFallDress.L.002",
+      "target": "armature/Hips/EvilFallDress.L.001/EvilFallDress.L.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallDress.R.001",
+      "target": "armature/Hips/EvilFallDress.R.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallDress.R.001/EvilFallDress.R.002",
+      "target": "armature/Hips/EvilFallDress.R.001/EvilFallDress.R.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallHipTube",
+      "target": "armature/Hips/EvilFallHipTube",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallHipTube/EvilFallHipTube.L",
+      "target": "armature/Hips/EvilFallHipTube/EvilFallHipTube.L",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallHipTube/EvilFallHipTube.L/EvilFallHipTube.L.001",
+      "target": "armature/Hips/EvilFallHipTube/EvilFallHipTube.L/EvilFallHipTube.L.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallHipTube/EvilFallHipTube.L/EvilFallHipTube.L.001/EvilFallHipTube.L.002",
+      "target": "armature/Hips/EvilFallHipTube/EvilFallHipTube.L/EvilFallHipTube.L.001/EvilFallHipTube.L.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallHipTube/EvilFallHipTube.L/EvilFallHipTube.L.001/EvilFallHipTube.L.002/EvilFallHipTube.L.003",
+      "target": "armature/Hips/EvilFallHipTube/EvilFallHipTube.L/EvilFallHipTube.L.001/EvilFallHipTube.L.002/EvilFallHipTube.L.003",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallHipTube/EvilFallHipTube.R",
+      "target": "armature/Hips/EvilFallHipTube/EvilFallHipTube.R",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallHipTube/EvilFallHipTube.R/EvilFallHipTube.R.001",
+      "target": "armature/Hips/EvilFallHipTube/EvilFallHipTube.R/EvilFallHipTube.R.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallHipTube/EvilFallHipTube.R/EvilFallHipTube.R.001/EvilFallHipTube.R.002",
+      "target": "armature/Hips/EvilFallHipTube/EvilFallHipTube.R/EvilFallHipTube.R.001/EvilFallHipTube.R.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallHipTube/EvilFallHipTube.R/EvilFallHipTube.R.001/EvilFallHipTube.R.002/EvilFallHipTube.R.003",
+      "target": "armature/Hips/EvilFallHipTube/EvilFallHipTube.R/EvilFallHipTube.R.001/EvilFallHipTube.R.002/EvilFallHipTube.R.003",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine",
+      "target": "armature/Hips/Spine",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest",
+      "target": "armature/Hips/Spine/Chest",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallChestTube",
+      "target": "armature/Hips/Spine/Chest/EvilFallChestTube",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallChestTube/EvilFallChestTube.L",
+      "target": "armature/Hips/Spine/Chest/EvilFallChestTube/EvilFallChestTube.L",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallChestTube/EvilFallChestTube.L/EvilFallChestTube.L.001",
+      "target": "armature/Hips/Spine/Chest/EvilFallChestTube/EvilFallChestTube.L/EvilFallChestTube.L.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallChestTube/EvilFallChestTube.L/EvilFallChestTube.L.001/EvilFallChestTube.L.002",
+      "target": "armature/Hips/Spine/Chest/Breast_L_Root/Breast_L.001/Breast_L.002/BreastToy.L/PlugBase.L.001/PlugBase.L.002/PlugBase.PB/PlugBase.PBEnd/PlugBase.L.002Plug/EvilFallChestTube.L.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallChestTube/EvilFallChestTube.L/EvilFallChestTube.L.001/EvilFallChestTube.L.002/EvilFallChestTube.L.003",
+      "target": "armature/Hips/Spine/Chest/Breast_L_Root/Breast_L.001/Breast_L.002/BreastToy.L/PlugBase.L.001/PlugBase.L.002/PlugBase.PB/PlugBase.PBEnd/PlugBase.L.002Plug/EvilFallChestTube.L.002/EvilFallChestTube.L.003",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallChestTube/EvilFallChestTube.L/EvilFallChestTube.L.001/EvilFallChestTube.L.002/EvilFallChestTube.L.003/EvilFallChestTube.L.004",
+      "target": "armature/Hips/Spine/Chest/Breast_L_Root/Breast_L.001/Breast_L.002/BreastToy.L/PlugBase.L.001/PlugBase.L.002/PlugBase.PB/PlugBase.PBEnd/PlugBase.L.002Plug/EvilFallChestTube.L.002/EvilFallChestTube.L.003/EvilFallChestTube.L.004",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallChestTube/EvilFallChestTube.R",
+      "target": "armature/Hips/Spine/Chest/EvilFallChestTube/EvilFallChestTube.R",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallChestTube/EvilFallChestTube.R/EvilFallChestTube.R.001",
+      "target": "armature/Hips/Spine/Chest/EvilFallChestTube/EvilFallChestTube.R/EvilFallChestTube.R.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallChestTube/EvilFallChestTube.R/EvilFallChestTube.R.001/EvilFallChestTube.R.002",
+      "target": "armature/Hips/Spine/Chest/Breast_R_Root/Breast_R.001/Breast_R.002/BreastToy.R/PlugBase.R.001/PlugBase.R.002/PlugBase.PB/PlugBase.PBEnd/PlugBase.R.002Plug/EvilFallChestTube.R.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallChestTube/EvilFallChestTube.R/EvilFallChestTube.R.001/EvilFallChestTube.R.002/EvilFallChestTube.R.003",
+      "target": "armature/Hips/Spine/Chest/Breast_R_Root/Breast_R.001/Breast_R.002/BreastToy.R/PlugBase.R.001/PlugBase.R.002/PlugBase.PB/PlugBase.PBEnd/PlugBase.R.002Plug/EvilFallChestTube.R.002/EvilFallChestTube.R.003",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallChestTube/EvilFallChestTube.R/EvilFallChestTube.R.001/EvilFallChestTube.R.002/EvilFallChestTube.R.003/EvilFallChestTube.R.004",
+      "target": "armature/Hips/Spine/Chest/Breast_R_Root/Breast_R.001/Breast_R.002/BreastToy.R/PlugBase.R.001/PlugBase.R.002/PlugBase.PB/PlugBase.PBEnd/PlugBase.R.002Plug/EvilFallChestTube.R.002/EvilFallChestTube.R.003/EvilFallChestTube.R.004",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacket",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacket",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.002",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.002/EvilFallJacket.003",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.002/EvilFallJacket.003",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.002/EvilFallJacket.003/EvilFallJacket.004",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.002/EvilFallJacket.003/EvilFallJacket.004",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.L.004",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.L.004",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.L.004/EvilFallJacket.L.006",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.L.004/EvilFallJacket.L.006",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.L.004/EvilFallJacket.L.006/EvilFallJacket.L.008",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.L.004/EvilFallJacket.L.006/EvilFallJacket.L.008",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.L.005",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.L.005",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.L.005/EvilFallJacket.L.007",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.L.005/EvilFallJacket.L.007",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.L.005/EvilFallJacket.L.007/EvilFallJacket.L.009",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.L.005/EvilFallJacket.L.007/EvilFallJacket.L.009",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.R.004",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.R.004",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.R.004/EvilFallJacket.R.006",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.R.004/EvilFallJacket.R.006",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.R.004/EvilFallJacket.R.006/EvilFallJacket.R.008",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.R.004/EvilFallJacket.R.006/EvilFallJacket.R.008",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.R.005",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.R.005",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.R.005/EvilFallJacket.R.007",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.R.005/EvilFallJacket.R.007",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.R.005/EvilFallJacket.R.007/EvilFallJacket.R.009",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacket/EvilFallJacket.R.005/EvilFallJacket.R.007/EvilFallJacket.R.009",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005/EvilFallJacketAcc.M.003",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005/EvilFallJacketAcc.M.003",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005/EvilFallJacketAcc.M.003/EvilFallJacketAcc.M.007",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005/EvilFallJacketAcc.M.003/EvilFallJacketAcc.M.007",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005/EvilFallJacketAcc.M.003/EvilFallJacketAcc.M.007/EvilFallJacketAcc.M.002",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005/EvilFallJacketAcc.M.003/EvilFallJacketAcc.M.007/EvilFallJacketAcc.M.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005/EvilFallJacketAcc.M.003/EvilFallJacketAcc.M.007/EvilFallJacketAcc.M.002/EvilFallJacketAcc.M.006",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005/EvilFallJacketAcc.M.003/EvilFallJacketAcc.M.007/EvilFallJacketAcc.M.002/EvilFallJacketAcc.M.006",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005/EvilFallJacketAcc.M.003/EvilFallJacketAcc.M.007/EvilFallJacketAcc.M.002/EvilFallJacketAcc.M.006/EvilFallJacketAcc.M.004",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005/EvilFallJacketAcc.M.003/EvilFallJacketAcc.M.007/EvilFallJacketAcc.M.002/EvilFallJacketAcc.M.006/EvilFallJacketAcc.M.004",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005/EvilFallJacketAcc.M.003/EvilFallJacketAcc.M.007/EvilFallJacketAcc.M.002/EvilFallJacketAcc.M.006/EvilFallJacketAcc.M.004/EvilFallJacketAcc.M.008",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005/EvilFallJacketAcc.M.003/EvilFallJacketAcc.M.007/EvilFallJacketAcc.M.002/EvilFallJacketAcc.M.006/EvilFallJacketAcc.M.004/EvilFallJacketAcc.M.008",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005/EvilFallJacketAcc.M.003/EvilFallJacketAcc.M.007/EvilFallJacketAcc.M.002/EvilFallJacketAcc.M.006/EvilFallJacketAcc.M.004/EvilFallJacketAcc.M.008/EvilFallJacketAcc.M.009",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005/EvilFallJacketAcc.M.003/EvilFallJacketAcc.M.007/EvilFallJacketAcc.M.002/EvilFallJacketAcc.M.006/EvilFallJacketAcc.M.004/EvilFallJacketAcc.M.008/EvilFallJacketAcc.M.009",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005/EvilFallJacketAcc.M.003/EvilFallJacketAcc.M.007/EvilFallJacketAcc.M.002/EvilFallJacketAcc.M.006/EvilFallJacketAcc.M.004/EvilFallJacketAcc.M.008/EvilFallJacketAcc.M.009/EvilFallJacketAcc.M.010",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc.M/EvilFallJacketAcc.M.001/EvilFallJacketAcc.M.005/EvilFallJacketAcc.M.003/EvilFallJacketAcc.M.007/EvilFallJacketAcc.M.002/EvilFallJacketAcc.M.006/EvilFallJacketAcc.M.004/EvilFallJacketAcc.M.008/EvilFallJacketAcc.M.009/EvilFallJacketAcc.M.010",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005/EvilFallJacketAcc1.L.003",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005/EvilFallJacketAcc1.L.003",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005/EvilFallJacketAcc1.L.003/EvilFallJacketAcc1.L.007",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005/EvilFallJacketAcc1.L.003/EvilFallJacketAcc1.L.007",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005/EvilFallJacketAcc1.L.003/EvilFallJacketAcc1.L.007/EvilFallJacketAcc1.L.002",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005/EvilFallJacketAcc1.L.003/EvilFallJacketAcc1.L.007/EvilFallJacketAcc1.L.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005/EvilFallJacketAcc1.L.003/EvilFallJacketAcc1.L.007/EvilFallJacketAcc1.L.002/EvilFallJacketAcc1.L.006",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005/EvilFallJacketAcc1.L.003/EvilFallJacketAcc1.L.007/EvilFallJacketAcc1.L.002/EvilFallJacketAcc1.L.006",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005/EvilFallJacketAcc1.L.003/EvilFallJacketAcc1.L.007/EvilFallJacketAcc1.L.002/EvilFallJacketAcc1.L.006/EvilFallJacketAcc1.L.004",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005/EvilFallJacketAcc1.L.003/EvilFallJacketAcc1.L.007/EvilFallJacketAcc1.L.002/EvilFallJacketAcc1.L.006/EvilFallJacketAcc1.L.004",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005/EvilFallJacketAcc1.L.003/EvilFallJacketAcc1.L.007/EvilFallJacketAcc1.L.002/EvilFallJacketAcc1.L.006/EvilFallJacketAcc1.L.004/EvilFallJacketAcc1.L.008",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005/EvilFallJacketAcc1.L.003/EvilFallJacketAcc1.L.007/EvilFallJacketAcc1.L.002/EvilFallJacketAcc1.L.006/EvilFallJacketAcc1.L.004/EvilFallJacketAcc1.L.008",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005/EvilFallJacketAcc1.L.003/EvilFallJacketAcc1.L.007/EvilFallJacketAcc1.L.002/EvilFallJacketAcc1.L.006/EvilFallJacketAcc1.L.004/EvilFallJacketAcc1.L.008/EvilFallJacketAcc1.L.009",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005/EvilFallJacketAcc1.L.003/EvilFallJacketAcc1.L.007/EvilFallJacketAcc1.L.002/EvilFallJacketAcc1.L.006/EvilFallJacketAcc1.L.004/EvilFallJacketAcc1.L.008/EvilFallJacketAcc1.L.009",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005/EvilFallJacketAcc1.L.003/EvilFallJacketAcc1.L.007/EvilFallJacketAcc1.L.002/EvilFallJacketAcc1.L.006/EvilFallJacketAcc1.L.004/EvilFallJacketAcc1.L.008/EvilFallJacketAcc1.L.009/EvilFallJacketAcc1.L.010",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.L/EvilFallJacketAcc1.L.001/EvilFallJacketAcc1.L.005/EvilFallJacketAcc1.L.003/EvilFallJacketAcc1.L.007/EvilFallJacketAcc1.L.002/EvilFallJacketAcc1.L.006/EvilFallJacketAcc1.L.004/EvilFallJacketAcc1.L.008/EvilFallJacketAcc1.L.009/EvilFallJacketAcc1.L.010",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005/EvilFallJacketAcc1.R.003",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005/EvilFallJacketAcc1.R.003",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005/EvilFallJacketAcc1.R.003/EvilFallJacketAcc1.R.007",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005/EvilFallJacketAcc1.R.003/EvilFallJacketAcc1.R.007",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005/EvilFallJacketAcc1.R.003/EvilFallJacketAcc1.R.007/EvilFallJacketAcc1.R.002",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005/EvilFallJacketAcc1.R.003/EvilFallJacketAcc1.R.007/EvilFallJacketAcc1.R.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005/EvilFallJacketAcc1.R.003/EvilFallJacketAcc1.R.007/EvilFallJacketAcc1.R.002/EvilFallJacketAcc1.R.006",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005/EvilFallJacketAcc1.R.003/EvilFallJacketAcc1.R.007/EvilFallJacketAcc1.R.002/EvilFallJacketAcc1.R.006",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005/EvilFallJacketAcc1.R.003/EvilFallJacketAcc1.R.007/EvilFallJacketAcc1.R.002/EvilFallJacketAcc1.R.006/EvilFallJacketAcc1.R.004",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005/EvilFallJacketAcc1.R.003/EvilFallJacketAcc1.R.007/EvilFallJacketAcc1.R.002/EvilFallJacketAcc1.R.006/EvilFallJacketAcc1.R.004",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005/EvilFallJacketAcc1.R.003/EvilFallJacketAcc1.R.007/EvilFallJacketAcc1.R.002/EvilFallJacketAcc1.R.006/EvilFallJacketAcc1.R.004/EvilFallJacketAcc1.R.008",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005/EvilFallJacketAcc1.R.003/EvilFallJacketAcc1.R.007/EvilFallJacketAcc1.R.002/EvilFallJacketAcc1.R.006/EvilFallJacketAcc1.R.004/EvilFallJacketAcc1.R.008",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005/EvilFallJacketAcc1.R.003/EvilFallJacketAcc1.R.007/EvilFallJacketAcc1.R.002/EvilFallJacketAcc1.R.006/EvilFallJacketAcc1.R.004/EvilFallJacketAcc1.R.008/EvilFallJacketAcc1.R.009",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005/EvilFallJacketAcc1.R.003/EvilFallJacketAcc1.R.007/EvilFallJacketAcc1.R.002/EvilFallJacketAcc1.R.006/EvilFallJacketAcc1.R.004/EvilFallJacketAcc1.R.008/EvilFallJacketAcc1.R.009",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005/EvilFallJacketAcc1.R.003/EvilFallJacketAcc1.R.007/EvilFallJacketAcc1.R.002/EvilFallJacketAcc1.R.006/EvilFallJacketAcc1.R.004/EvilFallJacketAcc1.R.008/EvilFallJacketAcc1.R.009/EvilFallJacketAcc1.R.010",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc1.R/EvilFallJacketAcc1.R.001/EvilFallJacketAcc1.R.005/EvilFallJacketAcc1.R.003/EvilFallJacketAcc1.R.007/EvilFallJacketAcc1.R.002/EvilFallJacketAcc1.R.006/EvilFallJacketAcc1.R.004/EvilFallJacketAcc1.R.008/EvilFallJacketAcc1.R.009/EvilFallJacketAcc1.R.010",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005/EvilFallJacketAcc2.L.003",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005/EvilFallJacketAcc2.L.003",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005/EvilFallJacketAcc2.L.003/EvilFallJacketAcc2.L.007",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005/EvilFallJacketAcc2.L.003/EvilFallJacketAcc2.L.007",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005/EvilFallJacketAcc2.L.003/EvilFallJacketAcc2.L.007/EvilFallJacketAcc2.L.002",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005/EvilFallJacketAcc2.L.003/EvilFallJacketAcc2.L.007/EvilFallJacketAcc2.L.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005/EvilFallJacketAcc2.L.003/EvilFallJacketAcc2.L.007/EvilFallJacketAcc2.L.002/EvilFallJacketAcc2.L.006",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005/EvilFallJacketAcc2.L.003/EvilFallJacketAcc2.L.007/EvilFallJacketAcc2.L.002/EvilFallJacketAcc2.L.006",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005/EvilFallJacketAcc2.L.003/EvilFallJacketAcc2.L.007/EvilFallJacketAcc2.L.002/EvilFallJacketAcc2.L.006/EvilFallJacketAcc2.L.004",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005/EvilFallJacketAcc2.L.003/EvilFallJacketAcc2.L.007/EvilFallJacketAcc2.L.002/EvilFallJacketAcc2.L.006/EvilFallJacketAcc2.L.004",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005/EvilFallJacketAcc2.L.003/EvilFallJacketAcc2.L.007/EvilFallJacketAcc2.L.002/EvilFallJacketAcc2.L.006/EvilFallJacketAcc2.L.004/EvilFallJacketAcc2.L.008",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005/EvilFallJacketAcc2.L.003/EvilFallJacketAcc2.L.007/EvilFallJacketAcc2.L.002/EvilFallJacketAcc2.L.006/EvilFallJacketAcc2.L.004/EvilFallJacketAcc2.L.008",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005/EvilFallJacketAcc2.L.003/EvilFallJacketAcc2.L.007/EvilFallJacketAcc2.L.002/EvilFallJacketAcc2.L.006/EvilFallJacketAcc2.L.004/EvilFallJacketAcc2.L.008/EvilFallJacketAcc2.L.009",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005/EvilFallJacketAcc2.L.003/EvilFallJacketAcc2.L.007/EvilFallJacketAcc2.L.002/EvilFallJacketAcc2.L.006/EvilFallJacketAcc2.L.004/EvilFallJacketAcc2.L.008/EvilFallJacketAcc2.L.009",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005/EvilFallJacketAcc2.L.003/EvilFallJacketAcc2.L.007/EvilFallJacketAcc2.L.002/EvilFallJacketAcc2.L.006/EvilFallJacketAcc2.L.004/EvilFallJacketAcc2.L.008/EvilFallJacketAcc2.L.009/EvilFallJacketAcc2.L.010",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.L/EvilFallJacketAcc2.L.001/EvilFallJacketAcc2.L.005/EvilFallJacketAcc2.L.003/EvilFallJacketAcc2.L.007/EvilFallJacketAcc2.L.002/EvilFallJacketAcc2.L.006/EvilFallJacketAcc2.L.004/EvilFallJacketAcc2.L.008/EvilFallJacketAcc2.L.009/EvilFallJacketAcc2.L.010",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005/EvilFallJacketAcc2.R.003",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005/EvilFallJacketAcc2.R.003",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005/EvilFallJacketAcc2.R.003/EvilFallJacketAcc2.R.007",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005/EvilFallJacketAcc2.R.003/EvilFallJacketAcc2.R.007",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005/EvilFallJacketAcc2.R.003/EvilFallJacketAcc2.R.007/EvilFallJacketAcc2.R.002",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005/EvilFallJacketAcc2.R.003/EvilFallJacketAcc2.R.007/EvilFallJacketAcc2.R.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005/EvilFallJacketAcc2.R.003/EvilFallJacketAcc2.R.007/EvilFallJacketAcc2.R.002/EvilFallJacketAcc2.R.006",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005/EvilFallJacketAcc2.R.003/EvilFallJacketAcc2.R.007/EvilFallJacketAcc2.R.002/EvilFallJacketAcc2.R.006",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005/EvilFallJacketAcc2.R.003/EvilFallJacketAcc2.R.007/EvilFallJacketAcc2.R.002/EvilFallJacketAcc2.R.006/EvilFallJacketAcc2.R.004",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005/EvilFallJacketAcc2.R.003/EvilFallJacketAcc2.R.007/EvilFallJacketAcc2.R.002/EvilFallJacketAcc2.R.006/EvilFallJacketAcc2.R.004",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005/EvilFallJacketAcc2.R.003/EvilFallJacketAcc2.R.007/EvilFallJacketAcc2.R.002/EvilFallJacketAcc2.R.006/EvilFallJacketAcc2.R.004/EvilFallJacketAcc2.R.008",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005/EvilFallJacketAcc2.R.003/EvilFallJacketAcc2.R.007/EvilFallJacketAcc2.R.002/EvilFallJacketAcc2.R.006/EvilFallJacketAcc2.R.004/EvilFallJacketAcc2.R.008",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005/EvilFallJacketAcc2.R.003/EvilFallJacketAcc2.R.007/EvilFallJacketAcc2.R.002/EvilFallJacketAcc2.R.006/EvilFallJacketAcc2.R.004/EvilFallJacketAcc2.R.008/EvilFallJacketAcc2.R.009",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005/EvilFallJacketAcc2.R.003/EvilFallJacketAcc2.R.007/EvilFallJacketAcc2.R.002/EvilFallJacketAcc2.R.006/EvilFallJacketAcc2.R.004/EvilFallJacketAcc2.R.008/EvilFallJacketAcc2.R.009",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005/EvilFallJacketAcc2.R.003/EvilFallJacketAcc2.R.007/EvilFallJacketAcc2.R.002/EvilFallJacketAcc2.R.006/EvilFallJacketAcc2.R.004/EvilFallJacketAcc2.R.008/EvilFallJacketAcc2.R.009/EvilFallJacketAcc2.R.010",
+      "target": "armature/Hips/Spine/Chest/EvilFallJacketAcc/EvilFallJacketAcc2.R/EvilFallJacketAcc2.R.001/EvilFallJacketAcc2.R.005/EvilFallJacketAcc2.R.003/EvilFallJacketAcc2.R.007/EvilFallJacketAcc2.R.002/EvilFallJacketAcc2.R.006/EvilFallJacketAcc2.R.004/EvilFallJacketAcc2.R.008/EvilFallJacketAcc2.R.009/EvilFallJacketAcc2.R.010",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/GasTubeMain",
+      "target": "armature/Hips/Spine/Chest/GasTubeMain",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck",
+      "target": "armature/Hips/Spine/Chest/Neck",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head",
+      "target": "armature/Hips/Spine/Chest/Neck/Head",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GasMaskTube.L.001",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GasMaskTube.L.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GasMaskTube.L.001/GasMaskTube.L.002",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GasMaskTube.L.001/GasMaskTube.L.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GasMaskTube.R.001",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GasMaskTube.R.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GasMaskTube.R.001/GasMaskTube.R.002",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GasMaskTube.R.001/GasMaskTube.R.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GasMask.L.001",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GasMask.L.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GasMask.R.001",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GasMask.R.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GasMaskMain",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GasMaskMain",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GagMain",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/EvilFall_FaceBranch_Rig/GagMain",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GagTube.L.001",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/EvilFall_FaceBranch_Rig/GagTube.L.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/GagTube.R.001",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallFaceMask/EvilFall_FaceBranch_Rig/GagTube.R.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/HornAcc.L",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/HornAcc.L",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/HornAcc.R",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/HornAcc.R",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/BrainWashEarRoot.L",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/BrainWashEarRoot.L",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/BrainWashEarRoot.L/BrainWashEar.L",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/BrainWashEarRoot.L/BrainWashEar.L",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/BrainWashEarRoot.R",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/BrainWashEarRoot.R",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/BrainWashEarRoot.R/BrainWashEar.R",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/BrainWashEarRoot.R/BrainWashEar.R",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/Ear.L.001",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/Ear.L/Ear.L.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/Ear.L.001/Ear.L.002",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/Ear.L/Ear.L.001/Ear.L.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/Ear.R.001",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/Ear.R/Ear.R.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/Ear.R.001/Ear.R.002",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallHeadACC/Ear.R/Ear.R.001/Ear.R.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Neck/Head/EvilFallHeadMask",
+      "target": "armature/Hips/Spine/Chest/Neck/Head/EvilFallHeadMask",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Shoulder.L",
+      "target": "armature/Hips/Spine/Chest/Shoulder.L",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Shoulder.L/UpperArm.L",
+      "target": "armature/Hips/Spine/Chest/Shoulder.L/UpperArm.L",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L",
+      "target": "armature/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L",
+      "target": "armature/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/MiddleProximal.L",
+      "target": "armature/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/MiddleProxima.L",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Shoulder.R",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Shoulder.R/UpperArm.R",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/MiddleProximal.R",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/MiddleProxima.R",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/UpperLeg.L",
+      "target": "armature/Hips/UpperLeg.L",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/UpperLeg.L/LowerLeg.L",
+      "target": "armature/Hips/UpperLeg.L/LowerLeg.L",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/UpperLeg.L/LowerLeg.L/Foot.L",
+      "target": "armature/Hips/UpperLeg.L/LowerLeg.L/foot.L",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/UpperLeg.L/LowerLeg.L/Foot.L/Toe.L",
+      "target": "armature/Hips/UpperLeg.L/LowerLeg.L/foot.L/Toe.L",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/UpperLeg.R",
+      "target": "armature/Hips/UpperLeg.R",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/UpperLeg.R/LowerLeg.R",
+      "target": "armature/Hips/UpperLeg.R/LowerLeg.R",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/UpperLeg.R/LowerLeg.R/Foot.R",
+      "target": "armature/Hips/UpperLeg.R/LowerLeg.R/foot.R",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/UpperLeg.R/LowerLeg.R/Foot.R/Toe.R",
+      "target": "armature/Hips/UpperLeg.R/LowerLeg.R/foot.R/Toe.R",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallTail",
+      "target": "armature/Hips/EvilFallTail",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallTail/EvilFallTail.001",
+      "target": "armature/Hips/EvilFallTail/EvilFallTail.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002",
+      "target": "armature/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003",
+      "target": "armature/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004",
+      "target": "armature/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005",
+      "target": "armature/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006",
+      "target": "armature/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006/EvilFallTail.007",
+      "target": "armature/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006/EvilFallTail.007",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006/EvilFallTail.007/EvilFallTail.008",
+      "target": "armature/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006/EvilFallTail.007/EvilFallTail.008",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006/EvilFallTail.007/EvilFallTail.008/EvilFallTail.009",
+      "target": "armature/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006/EvilFallTail.007/EvilFallTail.008/EvilFallTail.009",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006/EvilFallTail.007/EvilFallTail.008/EvilFallTail.009/EvilFallTail.010",
+      "target": "armature/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006/EvilFallTail.007/EvilFallTail.008/EvilFallTail.009/EvilFallTail.010",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006/EvilFallTail.007/EvilFallTail.008/EvilFallTail.009/EvilFallTail.010/EvilFallTail.011",
+      "target": "armature/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006/EvilFallTail.007/EvilFallTail.008/EvilFallTail.009/EvilFallTail.010/EvilFallTail.011",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006/EvilFallTail.007/EvilFallTail.008/EvilFallTail.009/EvilFallTail.010/EvilFallTail.011/EvilFallTail.012",
+      "target": "armature/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006/EvilFallTail.007/EvilFallTail.008/EvilFallTail.009/EvilFallTail.010/EvilFallTail.011/EvilFallTail.012",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006/EvilFallTail.007/EvilFallTail.008/EvilFallTail.009/EvilFallTail.010/EvilFallTail.011/EvilFallTail.012/EvilFallTail.013",
+      "target": "armature/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006/EvilFallTail.007/EvilFallTail.008/EvilFallTail.009/EvilFallTail.010/EvilFallTail.011/EvilFallTail.012/EvilFallTail.013",
+      "exact": true
+    },
+    {
+      "source": "EvilFall_SourceRig/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006/EvilFallTail.007/EvilFallTail.008/EvilFallTail.009/EvilFallTail.010/EvilFallTail.011/EvilFallTail.012/EvilFallTail.013/EvilFallTail.014",
+      "target": "armature/Hips/EvilFallTail/EvilFallTail.001/EvilFallTail.002/EvilFallTail.003/EvilFallTail.004/EvilFallTail.005/EvilFallTail.006/EvilFallTail.007/EvilFallTail.008/EvilFallTail.009/EvilFallTail.010/EvilFallTail.011/EvilFallTail.012/EvilFallTail.013/EvilFallTail.014",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main/MainGun",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main/MainGun",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main/MainGun/MainBlade",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main/MainGun/MainBlade",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main/MainGun/MainBlade/MainBladeSide",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main/MainGun/MainBlade/MainBladeSide",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main/MainGun/MainBlade/MainBladeSide/MainBladeSideEnd",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main/MainGun/MainBlade/MainBladeSide/MainBladeSideEnd",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main/MainGun/MainGunShield",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main/MainGun/MainGunShield",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main/MainGun/WeaponTube",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main/MainGun/WeaponTubeBone/WeaponTubeHand/WeaponTube",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main/MainGun/WeaponTube/WeaponTube.001",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main/MainGun/WeaponTubeBone/WeaponTubeHand/WeaponTube.001",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main/MainGun/WeaponTube/WeaponTube.001/WeaponTube.002",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main/MainGun/WeaponTubeBone/WeaponTubeHand/WeaponTube.002",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main/MainGun/WeaponTube/WeaponTube.001/WeaponTube.002/WeaponTube.003",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main/MainGun/WeaponTubeBone/WeaponTubeLowerArm/WeaponTube.003",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main/MainGun/WeaponTube/WeaponTube.001/WeaponTube.002/WeaponTube.003/WeaponTube.004",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main/MainGun/WeaponTubeBone/WeaponTubeUpperArm/WeaponTube.004",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main/MainGun/WeaponTube/WeaponTube.001/WeaponTube.002/WeaponTube.003/WeaponTube.004/WeaponTube.005",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main/MainGun/WeaponTubeBone/WeaponTubeUpperArm/WeaponTube.005",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main/MainGun/WeaponTube/WeaponTube.001/WeaponTube.002/WeaponTube.003/WeaponTube.004/WeaponTube.005/WeaponTube.006",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main/MainGun/WeaponTubeBone/WeaponTube.006",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main/MainGun/WeaponTube/WeaponTube.001/WeaponTube.002/WeaponTube.003/WeaponTube.004/WeaponTube.005/WeaponTube.006/WeaponTube.007",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main/MainGun/WeaponTubeBone/WeaponTube.007",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main/MainGun/WeaponTube/WeaponTube.001/WeaponTube.002/WeaponTube.003/WeaponTube.004/WeaponTube.005/WeaponTube.006/WeaponTube.007/WeaponTube.008",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main/MainGun/WeaponTubeBone/WeaponTube.008",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main/MainGun/WeaponTube/WeaponTube.001/WeaponTube.002/WeaponTube.003/WeaponTube.004/WeaponTube.005/WeaponTube.006/WeaponTube.007/WeaponTube.008/WeaponTube.009",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main/MainGun/WeaponTubeBone/WeaponTube.009",
+      "exact": true
+    },
+    {
+      "source": "EvilFallBlade/Main/MainGun/WeaponTube/WeaponTube.001/WeaponTube.002/WeaponTube.003/WeaponTube.004/WeaponTube.005/WeaponTube.006/WeaponTube.007/WeaponTube.008/WeaponTube.009/WeaponTubeEnd",
+      "target": "armature/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/EvilFallBlade/Main/MainGun/WeaponTubeBone/WeaponTube.009/WeaponTubeEnd",
+      "exact": true
+    },
+    {
+      "source": "armature/Hips/Spine/Chest/Base/PlugBase.L.001",
+      "target": "armature/Hips/Spine/Chest/Breast_L_Root/Breast_L.001/Breast_L.002/BreastToy.L/PlugBase.L.001",
+      "exact": true
+    },
+    {
+      "source": "armature/Hips/Spine/Chest/Base/PlugBase.L.002",
+      "target": "armature/Hips/Spine/Chest/Breast_L_Root/Breast_L.001/Breast_L.002/BreastToy.L/PlugBase.L.001/PlugBase.L.002",
+      "exact": true
+    },
+    {
+      "source": "armature/Hips/Spine/Chest/Base/PlugBase.R.001",
+      "target": "armature/Hips/Spine/Chest/Breast_R_Root/Breast_R.001/Breast_R.002/BreastToy.R/PlugBase.R.001",
+      "exact": true
+    },
+    {
+      "source": "armature/Hips/Spine/Chest/Base/PlugBase.R.002",
+      "target": "armature/Hips/Spine/Chest/Breast_R_Root/Breast_R.001/Breast_R.002/BreastToy.R/PlugBase.R.001/PlugBase.R.002",
+      "exact": true
+    },
+    {
+      "source": "armature/Hips/LegToy/HipsMain/LegToy_L",
+      "target": "armature/Hips/UpperLeg.L/LegAssembly_L_UpperLegBind",
+      "exact": true
+    },
+    {
+      "source": "armature/Hips/LegToy/HipsMain/LegToy_R",
+      "target": "armature/Hips/UpperLeg.R/LegAssembly_R_UpperLegBind",
+      "exact": true
+    }
+  ],
+  "errors": [],
+  "validationLimit": "Static saved-prefab references and package merge-mapping semantics; no Play or Avatar build run",
+  "all16ExistingPhysBoneSerializedBlocksExact": true,
+  "all5ExistingReactionSerializedBlocksExact": true
+}

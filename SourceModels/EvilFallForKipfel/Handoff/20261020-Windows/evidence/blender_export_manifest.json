@@ -1,0 +1,960 @@
+{
+  "sourceBlend": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalEarphoneCableHairClearance/EvilFall_Kipfel_EarphoneCableHairClearance.blend",
+  "sourceSHA256": "bf43363dd6c81e47ea5b6aaf4523d6be0f5a383f082264d92dab390f9fea20ef",
+  "meshMaterials": {
+    "AnalToy": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "BreastPlug": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "CyberDick": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "CyberEgg": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "CyberLockedDick": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "CyberLockedDickTube": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "FaceMask": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvillFallTrans (Blender preview)"
+    ],
+    "FaceMaskGasFilter": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "FaceMaskV2": [
+      "MainTrans",
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "GlassMain": [
+      "MainTrans",
+      "Namelight",
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "HeadACC": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvillFallTrans (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "HeadMask": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "LegRing": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "LegToyCollectionBottle": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvillFallTrans (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "LegToyCollectionBottleLiquid1": [
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "LegToyCollectionBottleLiquiid2": [
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "LegToyCollectionTube": [
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "LegToyUrineCollector": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvillFallTrans (Blender preview)"
+    ],
+    "LegToyUrineCollectorLiquid": [
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "MainArmGlove": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvillFallTrans (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "MainBodyBreast": [
+      "EvillFallTrans (Blender preview)"
+    ],
+    "MainBodySuit": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvillFallTrans (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "MainBone": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvillFallTrans (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "MainChestTube": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "MainCoat": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvillFallTransJacket (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "MainCoatAcc": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "MainHipTube": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "MainLegHeel": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvillFallTrans (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "MainNeckTube": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "MainSpinTube": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "PussyDotToy": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "PussyToy": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "Tail": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvillFallTrans (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "UrineCollectTube": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)"
+    ],
+    "WeaponBaseHandle": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "WeaponMain": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvilFallMetail (Blender preview)",
+      "EvillFallPlastcUV (Blender preview)"
+    ],
+    "WeaponTube": [
+      "EvillFallPlastc (Blender preview)",
+      "EvillFallLight Type 1 (Blender preview)",
+      "EvillFallTrans (Blender preview)",
+      "EvilFallMetail (Blender preview)"
+    ],
+    "WeaponeBladePart": [
+      "MainUVTrains"
+    ]
+  },
+  "defaultActive": {
+    "AnalToy": true,
+    "BreastPlug": true,
+    "CyberDick": true,
+    "CyberEgg": true,
+    "CyberLockedDick": true,
+    "CyberLockedDickTube": true,
+    "FaceMask": true,
+    "FaceMaskGasFilter": true,
+    "FaceMaskV2": false,
+    "GlassMain": true,
+    "HeadACC": true,
+    "HeadMask": false,
+    "LegRing": true,
+    "LegToyCollectionBottle": true,
+    "LegToyCollectionBottleLiquid1": true,
+    "LegToyCollectionBottleLiquiid2": true,
+    "LegToyCollectionTube": true,
+    "LegToyUrineCollector": true,
+    "LegToyUrineCollectorLiquid": true,
+    "MainArmGlove": true,
+    "MainBodyBreast": true,
+    "MainBodySuit": true,
+    "MainBone": true,
+    "MainChestTube": true,
+    "MainCoat": true,
+    "MainCoatAcc": true,
+    "MainHipTube": true,
+    "MainLegHeel": true,
+    "MainNeckTube": true,
+    "MainSpinTube": true,
+    "PussyDotToy": true,
+    "PussyToy": true,
+    "Tail": true,
+    "UrineCollectTube": true,
+    "WeaponBaseHandle": true,
+    "WeaponMain": true,
+    "WeaponTube": true,
+    "WeaponeBladePart": true
+  },
+  "blendShapeValues": {
+    "AnalToy": {
+      "RingChange": 0.0
+    },
+    "BreastPlug": {},
+    "CyberDick": {},
+    "CyberEgg": {},
+    "CyberLockedDick": {},
+    "CyberLockedDickTube": {},
+    "FaceMask": {
+      "NoMask": 0.0,
+      "Longer": 100.0,
+      "Wider": 0.0,
+      "GagIn": 0.0,
+      "ToughUp": 0.0
+    },
+    "FaceMaskGasFilter": {
+      "GagBallX": 0.0,
+      "GasMaskX": 76.40449404716492,
+      "GagTubeX": 0.0
+    },
+    "FaceMaskV2": {
+      "NoMask": 0.0,
+      "Longer": 0.0,
+      "Wider": 0.0,
+      "Tough": 0.0,
+      "HighNose": 72.79999852180481,
+      "HigherFace": 100.0
+    },
+    "GlassMain": {
+      "Wider": 0.0,
+      "Narror": 0.0,
+      "MiddleUp": 0.0,
+      "RingOff": 0.0,
+      "SideOff": 0.0,
+      "GlassOff": 0.0
+    },
+    "HeadACC": {},
+    "HeadMask": {
+      "Longer": 0.0,
+      "Wider": 100.0,
+      "HeadX": 0.0,
+      "Hair": 100.0
+    },
+    "LegRing": {},
+    "LegToyCollectionBottle": {},
+    "LegToyCollectionBottleLiquid1": {
+      "Used": 0.0
+    },
+    "LegToyCollectionBottleLiquiid2": {
+      "Used": 0.0
+    },
+    "LegToyCollectionTube": {},
+    "LegToyUrineCollector": {},
+    "LegToyUrineCollectorLiquid": {
+      "Used": 0.0
+    },
+    "MainArmGlove": {
+      "ArmShieldOff": 0.0,
+      "HandRingOff": 0.0,
+      "ArmRingOff": 0.0
+    },
+    "MainBodyBreast": {
+      "Breasts_big": 0.0,
+      "Breasts_small": 100.0,
+      "Breasts_push_up": 0.0,
+      "Nipple_ON": 0.0,
+      "Nipple_big": 0.0,
+      "Nipple_small": 0.0
+    },
+    "MainBodySuit": {
+      "BackHoleClose": 0.0,
+      "FrontHoleClose": 0.0,
+      "DressLonger": 0.0,
+      "Waist_corset": 0.0,
+      "Breasts_big": 0.0,
+      "Breasts_small": 100.0
+    },
+    "MainBone": {},
+    "MainChestTube": {},
+    "MainCoat": {
+      "BigBreast": 0.0
+    },
+    "MainCoatAcc": {},
+    "MainHipTube": {},
+    "MainLegHeel": {
+      "LegShieldOff": 0.0,
+      "FeetRingOff": 0.0,
+      "LegRingOff": 0.0
+    },
+    "MainNeckTube": {},
+    "MainSpinTube": {},
+    "PussyDotToy": {
+      "Up": 0.0
+    },
+    "PussyToy": {
+      "HandleChange": 0.0
+    },
+    "Tail": {},
+    "UrineCollectTube": {},
+    "WeaponBaseHandle": {
+      "LongState": 0.0
+    },
+    "WeaponMain": {},
+    "WeaponTube": {},
+    "WeaponeBladePart": {
+      "BladeShift": 0.0
+    }
+  },
+  "meshCounts": {
+    "AnalToy": {
+      "vertices": 4106,
+      "polygons": 4140,
+      "shapeKeys": [
+        "RingChange"
+      ]
+    },
+    "BreastPlug": {
+      "vertices": 1012,
+      "polygons": 1120,
+      "shapeKeys": []
+    },
+    "CyberDick": {
+      "vertices": 2172,
+      "polygons": 2076,
+      "shapeKeys": []
+    },
+    "CyberEgg": {
+      "vertices": 1324,
+      "polygons": 1338,
+      "shapeKeys": []
+    },
+    "CyberLockedDick": {
+      "vertices": 478,
+      "polygons": 488,
+      "shapeKeys": []
+    },
+    "CyberLockedDickTube": {
+      "vertices": 1402,
+      "polygons": 1420,
+      "shapeKeys": []
+    },
+    "FaceMask": {
+      "vertices": 577,
+      "polygons": 468,
+      "shapeKeys": [
+        "NoMask",
+        "Longer",
+        "Wider",
+        "GagIn",
+        "ToughUp"
+      ]
+    },
+    "FaceMaskGasFilter": {
+      "vertices": 1971,
+      "polygons": 2076,
+      "shapeKeys": [
+        "GagBallX",
+        "GasMaskX",
+        "GagTubeX"
+      ]
+    },
+    "FaceMaskV2": {
+      "vertices": 1117,
+      "polygons": 1130,
+      "shapeKeys": [
+        "NoMask",
+        "Longer",
+        "Wider",
+        "Tough",
+        "HighNose",
+        "HigherFace"
+      ]
+    },
+    "GlassMain": {
+      "vertices": 715,
+      "polygons": 700,
+      "shapeKeys": [
+        "Wider",
+        "Narror",
+        "MiddleUp",
+        "RingOff",
+        "SideOff",
+        "GlassOff"
+      ]
+    },
+    "HeadACC": {
+      "vertices": 5946,
+      "polygons": 5916,
+      "shapeKeys": []
+    },
+    "HeadMask": {
+      "vertices": 4993,
+      "polygons": 5658,
+      "shapeKeys": [
+        "Longer",
+        "Wider",
+        "HeadX",
+        "Hair"
+      ]
+    },
+    "LegRing": {
+      "vertices": 400,
+      "polygons": 400,
+      "shapeKeys": []
+    },
+    "LegToyCollectionBottle": {
+      "vertices": 1603,
+      "polygons": 1716,
+      "shapeKeys": []
+    },
+    "LegToyCollectionBottleLiquid1": {
+      "vertices": 64,
+      "polygons": 34,
+      "shapeKeys": [
+        "Used"
+      ]
+    },
+    "LegToyCollectionBottleLiquiid2": {
+      "vertices": 64,
+      "polygons": 34,
+      "shapeKeys": [
+        "Used"
+      ]
+    },
+    "LegToyCollectionTube": {
+      "vertices": 1082,
+      "polygons": 1100,
+      "shapeKeys": []
+    },
+    "LegToyUrineCollector": {
+      "vertices": 252,
+      "polygons": 248,
+      "shapeKeys": []
+    },
+    "LegToyUrineCollectorLiquid": {
+      "vertices": 36,
+      "polygons": 22,
+      "shapeKeys": [
+        "Used"
+      ]
+    },
+    "MainArmGlove": {
+      "vertices": 4234,
+      "polygons": 4076,
+      "shapeKeys": [
+        "ArmShieldOff",
+        "HandRingOff",
+        "ArmRingOff"
+      ]
+    },
+    "MainBodyBreast": {
+      "vertices": 1713,
+      "polygons": 1698,
+      "shapeKeys": [
+        "Breasts_big",
+        "Breasts_small",
+        "Breasts_push_up",
+        "Nipple_ON",
+        "Nipple_big",
+        "Nipple_small"
+      ]
+    },
+    "MainBodySuit": {
+      "vertices": 14407,
+      "polygons": 14254,
+      "shapeKeys": [
+        "BackHoleClose",
+        "FrontHoleClose",
+        "DressLonger",
+        "Waist_corset",
+        "Breasts_big",
+        "Breasts_small"
+      ]
+    },
+    "MainBone": {
+      "vertices": 3481,
+      "polygons": 3443,
+      "shapeKeys": []
+    },
+    "MainChestTube": {
+      "vertices": 2924,
+      "polygons": 2960,
+      "shapeKeys": []
+    },
+    "MainCoat": {
+      "vertices": 3645,
+      "polygons": 3556,
+      "shapeKeys": [
+        "BigBreast"
+      ]
+    },
+    "MainCoatAcc": {
+      "vertices": 5275,
+      "polygons": 5222,
+      "shapeKeys": []
+    },
+    "MainHipTube": {
+      "vertices": 2724,
+      "polygons": 2760,
+      "shapeKeys": []
+    },
+    "MainLegHeel": {
+      "vertices": 6367,
+      "polygons": 6179,
+      "shapeKeys": [
+        "LegShieldOff",
+        "FeetRingOff",
+        "LegRingOff"
+      ]
+    },
+    "MainNeckTube": {
+      "vertices": 2258,
+      "polygons": 2316,
+      "shapeKeys": []
+    },
+    "MainSpinTube": {
+      "vertices": 1182,
+      "polygons": 1200,
+      "shapeKeys": []
+    },
+    "PussyDotToy": {
+      "vertices": 290,
+      "polygons": 308,
+      "shapeKeys": [
+        "Up"
+      ]
+    },
+    "PussyToy": {
+      "vertices": 2139,
+      "polygons": 1978,
+      "shapeKeys": [
+        "HandleChange"
+      ]
+    },
+    "Tail": {
+      "vertices": 4378,
+      "polygons": 4454,
+      "shapeKeys": []
+    },
+    "UrineCollectTube": {
+      "vertices": 1482,
+      "polygons": 1500,
+      "shapeKeys": []
+    },
+    "WeaponBaseHandle": {
+      "vertices": 889,
+      "polygons": 908,
+      "shapeKeys": [
+        "LongState"
+      ]
+    },
+    "WeaponMain": {
+      "vertices": 3912,
+      "polygons": 3908,
+      "shapeKeys": []
+    },
+    "WeaponTube": {
+      "vertices": 4378,
+      "polygons": 4454,
+      "shapeKeys": []
+    },
+    "WeaponeBladePart": {
+      "vertices": 68,
+      "polygons": 64,
+      "shapeKeys": [
+        "BladeShift"
+      ]
+    }
+  },
+  "rigs": {
+    "AnalToyMain": {
+      "bones": 8
+    },
+    "Armature": {
+      "bones": 166
+    },
+    "BreastPlugMain": {
+      "bones": 5
+    },
+    "CyberDickSet": {
+      "bones": 9
+    },
+    "EvilFallBlade": {
+      "bones": 17
+    },
+    "EvilFall_FaceBranch_Rig": {
+      "bones": 3
+    },
+    "Kipfel_Fit_Rig": {
+      "bones": 212
+    },
+    "LegToy": {
+      "bones": 6
+    },
+    "PussyToyMain": {
+      "bones": 5
+    }
+  },
+  "materials": {
+    "EvillFallPlastc (Blender preview)": {
+      "textures": [
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/2.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/1.png"
+      ]
+    },
+    "EvillFallLight Type 1 (Blender preview)": {
+      "textures": [
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/2.png"
+      ]
+    },
+    "EvilFallMetail (Blender preview)": {
+      "textures": [
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/3.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/4.png"
+      ]
+    },
+    "EvillFallTrans (Blender preview)": {
+      "textures": [
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransBase.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransAlpha.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransNormal.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransMask.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/3.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/1.png"
+      ]
+    },
+    "EvillFallPlastcUV (Blender preview)": {
+      "textures": [
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MainMask.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MainNormal.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MainMaskEX.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/2.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/1.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/Gradient.jpg",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MainMask.png"
+      ]
+    },
+    "MainTrans": {
+      "textures": [
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/FaceMaskV2 Trans.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/Gradient.jpg",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/FaceMaskV2 Trans.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/T_Matcap_MC (2).png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/1.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/FaceMaskV2 Trans.png"
+      ]
+    },
+    "Namelight": {
+      "textures": [
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/FaceMaskV2 Text.png"
+      ]
+    },
+    "EvillFallTransJacket (Blender preview)": {
+      "textures": [
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransBase.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransAlpha.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransNormal.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransMask.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/3.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/1.png"
+      ]
+    },
+    "MainUVTrains": {
+      "textures": [
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransBase.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransNormal.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/T_InvertedHex_Noise.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/Gradient2.jpg",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/TransAlpha.png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/T_Matcap_MC (2).png",
+        "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/Material/Texture&Matcap/MatCap/1.png"
+      ]
+    }
+  },
+  "objectParents": {
+    "AnalToy": {
+      "parent": "AnalToyMain",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "AnalToyMain": {
+      "parent": null,
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "Armature": {
+      "parent": null,
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "BreastPlug": {
+      "parent": "BreastPlugMain",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "BreastPlugMain": {
+      "parent": null,
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "CyberDick": {
+      "parent": "CyberDickSet",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "CyberDickSet": {
+      "parent": null,
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "CyberEgg": {
+      "parent": "CyberDickSet",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "CyberLockedDick": {
+      "parent": "CyberDickSet",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "CyberLockedDickTube": {
+      "parent": "LegToy",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "EvilFallBlade": {
+      "parent": null,
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "EvilFall_FaceBranch_Rig": {
+      "parent": "Kipfel_Fit_Rig",
+      "type": "BONE",
+      "bone": "EvilFallFaceMask"
+    },
+    "FaceMask": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "FaceMaskGasFilter": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "FaceMaskV2": {
+      "parent": "Kipfel_Fit_Rig",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "GlassMain": {
+      "parent": "Kipfel_Fit_Rig",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "HeadACC": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "HeadMask": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "Kipfel_Fit_Rig": {
+      "parent": null,
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "LegAssembly_L_UpperLegBind": {
+      "parent": null,
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "LegAssembly_R_UpperLegBind": {
+      "parent": null,
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "LegRing": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "LegToy": {
+      "parent": null,
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "LegToyCollectionBottle": {
+      "parent": "LegToy",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "LegToyCollectionBottleLiquid1": {
+      "parent": "LegToy",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "LegToyCollectionBottleLiquiid2": {
+      "parent": "LegToy",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "LegToyCollectionTube": {
+      "parent": "LegToy",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "LegToyUrineCollector": {
+      "parent": "LegToy",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "LegToyUrineCollectorLiquid": {
+      "parent": "LegToy",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "MainArmGlove": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "MainBodyBreast": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "MainBodySuit": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "MainBone": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "MainChestTube": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "MainCoat": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "MainCoatAcc": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "MainHipTube": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "MainLegHeel": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "MainNeckTube": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "MainSpinTube": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "PussyDotToy": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "PussyToy": {
+      "parent": "PussyToyMain",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "PussyToyMain": {
+      "parent": null,
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "Tail": {
+      "parent": "Armature",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "UrineCollectTube": {
+      "parent": "LegToy",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "WeaponBaseHandle": {
+      "parent": "EvilFallBlade",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "WeaponMain": {
+      "parent": "EvilFallBlade",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "WeaponTube": {
+      "parent": "EvilFallBlade",
+      "type": "OBJECT",
+      "bone": ""
+    },
+    "WeaponeBladePart": {
+      "parent": "EvilFallBlade",
+      "type": "OBJECT",
+      "bone": ""
+    }
+  }
+}

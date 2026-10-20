@@ -1,0 +1,65 @@
+{
+  "timestamp_utc": "2026-10-20T07:41:31.775720+00:00",
+  "read_only": true,
+  "delivery_hashes_checked": 68,
+  "all_match": true,
+  "scene_disk_unchanged": true,
+  "user_live_files": [
+    {
+      "path": "Assets/HierarchyDecorator/Settings.asset",
+      "unchanged_from_disk_snapshot": true
+    },
+    {
+      "path": "Assets/MOCHIYAMA/Kipfel/Kipfel.unity",
+      "unchanged_from_disk_snapshot": true
+    },
+    {
+      "path": "Assets/SILVERBACK/NENEKUMA/Material/NENEKUMA_01_Red.mat",
+      "unchanged_from_disk_snapshot": true
+    },
+    {
+      "path": "Assets/SILVERBACK/NENEKUMA/Texture/NENEKUMA_02_Purple.png.meta",
+      "unchanged_from_disk_snapshot": true
+    },
+    {
+      "path": "Thry/presets_known_materials.txt",
+      "unchanged_from_disk_snapshot": true
+    },
+    {
+      "path": "Assets/WYH2004/Material/Hair_TwinTail_material_Purple.mat",
+      "unchanged_from_disk_snapshot": true
+    },
+    {
+      "path": "Assets/WYH2004/Material/Hair_TwinTail_material_Purple.mat.meta",
+      "unchanged_from_disk_snapshot": true
+    },
+    {
+      "path": "Assets/WYH2004/Material/Hair_material_Purple.mat",
+      "unchanged_from_disk_snapshot": true
+    },
+    {
+      "path": "Assets/WYH2004/Material/Hair_material_Purple.mat.meta",
+      "unchanged_from_disk_snapshot": true
+    },
+    {
+      "path": "Assets/WYH2004/Material/NENEKUMA.meta",
+      "unchanged_from_disk_snapshot": true
+    },
+    {
+      "path": "Assets/WYH2004/Material/NENEKUMA/NENEKUMA_01_Purple 1.mat",
+      "unchanged_from_disk_snapshot": true
+    },
+    {
+      "path": "Assets/WYH2004/Material/NENEKUMA/NENEKUMA_01_Purple 1.mat.meta",
+      "unchanged_from_disk_snapshot": true
+    },
+    {
+      "path": "Assets/WYH2004/Material/NENEKUMA/NENEKUMA_02_Purple 1.mat",
+      "unchanged_from_disk_snapshot": true
+    },
+    {
+      "path": "Assets/WYH2004/Material/NENEKUMA/NENEKUMA_02_Purple 1.mat.meta",
+      "unchanged_from_disk_snapshot": true
+    }
+  ]
+}

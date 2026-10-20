@@ -1,0 +1,37 @@
+{
+  "status": "GLASS_SIDE_FRAMES_85_PERCENT_COMPLETE",
+  "final_file": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassSideFrameScaleFit/EvilFall_Kipfel_GlassSideFrameScaleFit.blend",
+  "final_sha256": "a5d71de70719171c2de95df15ea3cee5a99372a0bac000eecfa73dc5cf143c2b",
+  "fresh_latest_before_backup": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/GlassSideFrameScaleFit/BeforeFinalGlassSideFrameScaleApply.blend",
+  "backup_sha256": "4d672ebdb12640ea03030be5f5611846998950b82b4ad0615b710fbd5deea676",
+  "selected_scale": 0.85,
+  "changed": "GlassMain Side191 each side only, 382 vertices all visible shape states. Scale around each lens outer-edge hinge.",
+  "fixed": "333 vertices including lens88 metal116 rear129, raw and all7keys exactly unchanged; all nonGlass50 meshes, all rigs/rest/controls/materials/UV/weights/topology preserved. SideOff original absolute endpoint unchanged.",
+  "validation": {
+    "seven_shape_endpoints_fullfrontBody": 0,
+    "ear_balls_all_seven_endpoints": 0,
+    "metal_side_seats_each_visible_side_triangle_contacts": 54,
+    "fixed333_raw_keys_evaluated_exact": true,
+    "other50_and_51_after_restore_exact": true,
+    "native_saved_reopen_full_snapshot_portable_exact": true,
+    "native_GPU_default_front_both_sides_and_Wider_reviewed": true,
+    "capture_canonical_portable_restored": true,
+    "encoded_normal_layer_not_replaced": true,
+    "owned_decoded_normal_codec_roundoff_max": 0.00013655424118041992
+  },
+  "limits": [
+    "Side frames stay under hair as requested; intentional hair embedding is preserved.",
+    "Side frame and upper ear cable contacts remain. Default triangle pairs176 to96, Narror176 to0, Wider100 to184. Actual GPU Wider side review shows existing line occlusion/contact region; this is not a full ear-cable collision fix.",
+    "Only seven shape endpoints rerun for this scale-only change, no new pose sweep or arbitrary combinations certified."
+  ],
+  "evidence": {
+    "SourceContourSmoothFit/GlassSideFrameScaleFit/Side85E/apply_side_scale.py": "4cc1baea620c710cc3ac9cc6e7a749bbffda3047fcdf1908e7e62bbf0cb0b553",
+    "SourceContourSmoothFit/GlassSideFrameScaleFit/Side85E/side85_E.npz": "5ec21f2ce163e3250a92de55e0d04ed3c684418d4565d0863f90ad58269899a4",
+    "SourceContourSmoothFit/GlassSideFrameScaleFit/IndependentReview/FROZEN_SIDE85E_INDEPENDENT_QA.json": "e64117cdee851612da3a368d27d0afbd85f85754e0abea07ca4c052da708da87",
+    "FinalGlassSideFrameScaleFit/native_install_report.json": "22f570279a802cf648fe753f9d7c49638b199539c7d28a9039085c421a84f63a",
+    "FinalGlassSideFrameScaleFit/saved_roundtrip_report.json": "41cf2efea2d5df97f23d61818ce4bc3d4fdaeaa5ed647ea7e7b475082bd8b1bb",
+    "FinalGlassSideFrameScaleFit/capture_restore_report.json": "c8191bf15906140868f81940b9ec9834ed5383905fafd28d0b516a5a422fef4d"
+  },
+  "preview": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassSideFrameScaleFit/Preview/front.png",
+  "production_unchanged": true
+}

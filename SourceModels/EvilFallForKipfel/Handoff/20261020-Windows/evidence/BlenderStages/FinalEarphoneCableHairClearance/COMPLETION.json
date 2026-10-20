@@ -1,0 +1,57 @@
+{
+  "status": "COMPLETE_NATIVE_INSTALLED_SAVED_REOPENED_ACTUAL_GPU_ACCEPTED",
+  "final_file": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalEarphoneCableHairClearance/EvilFall_Kipfel_EarphoneCableHairClearance.blend",
+  "final_sha256": "8298a3502a64b3d6cf847cc2378655a0d41d824dbd31155bbd4b8ae152f5cf36",
+  "fresh_latest_RAM_backup": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/EarphoneCableHairClearance/BeforeFinalEarphoneCableHairClearanceApply.blend",
+  "backup_sha256": "27535b0242ddc54e4c6965a37ef7915a5dcbeb50b1d2eaa597e911ec8a639b94",
+  "selected_candidate": "V3 real spatial rounded arc; V1/V2 visual rejection for projected sharp bottom U",
+  "entrypoint_already_applied_do_not_replay": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/EarphoneCableHairClearance/CandidateV3/apply_cable_hair_clearance.py",
+  "changed_scope": "HeadACC existing cable vertices and corresponding proper-rotation split normals only; 2042 points changed from fresh, no topology/count change",
+  "preserved": "Both spheres and lower36..53+cap exact; original tube cross-sections and compact ring spacing; GlassMain raw/all seven keys/normals entirely exact; other 50 meshes, UV, weights, rest bones, modifiers, materials, control state preserved",
+  "checks": {
+    "all_five_actual_hair_cable_crossings_LR": [
+      0,
+      0
+    ],
+    "all_seven_Glass_endpoint_cable_crossings_LR": [
+      0,
+      0
+    ],
+    "exposed_body_cable_crossings_LR": [
+      0,
+      0
+    ],
+    "intentional_original_lower52_53_enclosed_body_pairs_per_side": 49,
+    "c8_upper_socket_contacts_per_side": 40,
+    "minimum_true_hair_gap_mm": 2.1839420531325673,
+    "minimum_true_Glass_gap_mm": 22.870107118517502,
+    "saved_roundtrip": "PASS",
+    "actual_final_seven_view_capture_state_restored_exact": true,
+    "Root_actual_final_images_reviewed": [
+      "positive_cable_close.png",
+      "negative_cable_close.png",
+      "user_side_back.png"
+    ]
+  },
+  "limitations": [
+    "Finite static hair/body/glasses endpoints; no new pose sweep or arbitrary future hair guarantee.",
+    "Native custom-normal encoding changes unchanged HeadACC decoded components up to .000463284552; no bitwise decoded-normal claim for that mesh.",
+    "No whole-scene intersection-zero claim; mounting and original enclosed socket contacts intentional."
+  ],
+  "production_unchanged_sha256": "5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100",
+  "no_Unity_FBX_or_git_changes": true,
+  "artifacts_sha256": {
+    "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/EarphoneCableHairClearance/CandidateV3/FROZEN_SELECTED_EARPHONE_CABLE_HAIR_CLEARANCE_V3.json": "9f310d097cc1ccfb2d286815ff921769ddbdfb63d17536735a9367c41ae11a24",
+    "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/EarphoneCableHairClearance/IndependentReview/FinalV3/FROZEN_INDEPENDENT_CABLE_HAIR_QA_V3.json": "42e1fc7b026a763769f5102b99594487f8aa16471479b5f8114799f3caa5c491",
+    "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/EarphoneCableHairClearance/CandidateV3/apply_cable_hair_clearance.py": "28019d35b13ead88bc26e6a626b4ab48037cbdbca5dc9226f2796cf9c19f7eae",
+    "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/EarphoneCableHairClearance/CandidateV3/earphone_cables_spatial_arc_v3.npz": "5e92a1f141e4c5d8f61d7d2f8e21743daf222eb205be37ac3f78713c66b2bb2d",
+    "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/EarphoneCableHairClearance/ReadOnly/candidateV3_actual_full_cables_ALL5Hair_Glass_native_minimum_distances.json": "b5d69b1c7dd21b6b2412ba77a30eed0676488ab04cc3a793903de9839d4c2d21",
+    "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalEarphoneCableHairClearance/native_install_report.json": "efa96eb26b763697bdabfd924f8c8db53260eaee82f01d3c46508d254a5ed787",
+    "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalEarphoneCableHairClearance/saved_roundtrip_report.json": "275dd25d7eebecb5832c667702ee43ee76f141bc91c9952b9feefa898768281d",
+    "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalEarphoneCableHairClearance/capture_restore_report.json": "6cd25975c81dfcc50270c8da102979c5134130263d5ccb7494e32908e11c47ba",
+    "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalEarphoneCableHairClearance/Preview/capture.json": "c51b4af6a785ec7fca8a88586db107c385d511075230e1b4da85d949d75fada2",
+    "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalEarphoneCableHairClearance/Preview/positive_cable_close.png": "60e7f524d3439fffba67919fcb548066b45216718b680716e751cfc2b3ba7afd",
+    "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalEarphoneCableHairClearance/Preview/negative_cable_close.png": "a279464ef888c13515ee273b3657bdcdc07bb11f22f37d5a70f6d564060ba231",
+    "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalEarphoneCableHairClearance/Preview/user_side_back.png": "5a233228bcf60a8aaad174d7f2b01531a759050e09594b54aafb8f5af0f2986f"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "status": "NOT_CAPTURED_UI_TIMEOUT",
+  "request_created": false,
+  "scene_save_invoked": false,
+  "temporary_live_helper_removed": true,
+  "notes": "Unity CUA state reads timed out; no scene memory capture was triggered. Disk snapshots are available in user-work. No claim that unsaved Unity scene or prefab-stage changes have been preserved."
+}

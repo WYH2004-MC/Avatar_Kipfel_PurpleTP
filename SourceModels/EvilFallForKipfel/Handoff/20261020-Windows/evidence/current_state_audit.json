@@ -1,0 +1,62 @@
+{
+  "auditScope": "Read-only disk audit for Windows handoff; no Unity operations, no asset mutations",
+  "all68DeliveryHashesCurrent": true,
+  "latestPrefabSHA256": "b5cc9d70fca94a900696c18aa3a625b52da24ccb7137a007f426a4387b6dfa27",
+  "latestPrefabGUID": "4d5300ec6aad44f359dfd5df356ab737",
+  "FBXSHA256": "57894c81e2d7ef1976c282e563da7ab38c7446d850536edd037e3325b0c89602",
+  "counts": {
+    "menuAssets": 7,
+    "groups": 5,
+    "toggleFunctions": 32,
+    "boolParameters": 32,
+    "controllerLayers": 26,
+    "states": 60,
+    "mutualExclusionDrivers": 12,
+    "adaptedAnimationClips": 59,
+    "restoredParticleSystems": 20,
+    "physBoneCount": 19
+  },
+  "latestMAComponents": 30,
+  "latestMAInternal": 29,
+  "routes": 181,
+  "SMR": 38,
+  "actualPackageVersions": {
+    "vrchat.blackstartx.gesture-manager": "3.9.9",
+    "nadena.dev.modular-avatar": "1.17.1",
+    "com.vrchat.avatars": "3.10.5",
+    "com.anatawa12.avatar-optimizer": "1.9.14",
+    "com.triturbo.blendshare": "1.0.3",
+    "com.vrchat.base": "3.10.5",
+    "com.poiyomi.toon": "9.3.64",
+    "com.vrcfury.vrcfury": "1.1339.0",
+    "nadena.dev.ndmf": "1.14.4",
+    "jp.lilxyzw.liltoon": "2.3.2",
+    "lyuma.av3emulator": "3.4.13",
+    "com.triturbo.facetrackingframework": "1.0.18"
+  },
+  "testLimits": {
+    "agentPlay": false,
+    "agentFullAvatarBuild": false,
+    "onDeviceVRChat": false
+  },
+  "migration": {
+    "SourceModelsUntrackedApproxSize": "46G",
+    "YaokiAssetsUntrackedApproxSize": "56M",
+    "embeddedPackagesApproxSize": "463M",
+    "longestRelativePathChars": 238,
+    "pathsLongerThan220": 16,
+    "windowsInvalidNames": 0,
+    "caseCollisions": 0,
+    "symlinks": 0
+  },
+  "suggestedWindowsFirstChecks": [
+    "Clone alone insufficient: copy complete Assets and meta, Packages including embedded package directories and locks, ProjectSettings, SourceModels; preserve current dirty files.",
+    "Use short project root, verify latest prefab/FBX hashes and GUIDs before Unity; do not run old absolute Mac-path scripts automatically.",
+    "Open Unity 2022.3.22f1 on desktop Windows and allow reimport; inspect missing scripts/materials and package versions before upgrading.",
+    "Run a single controlled Avatar/NDMF test after saving local scene backup; verify outfit follows shoulders/elbows, head Glass/HeadACC, right hand weapon, hips/knees/feet shoes.",
+    "Exercise 5 groups and32menu toggles, default/saved states, mutual exclusion, weapon Off/Blade/Gun/Knife; report precise failing parameter/layer/animation path.",
+    "Test shoes8OFF shapes100while on and expected restoration while off; HeadACC hides Cat_Ear and Tail hides Cat_Tail; test repeated toggles.",
+    "Review accepted geometry/hair clearance in motion from front/side/back; current static checks do not certify dynamic clipping.",
+    "Test particle/PB functionality and VRChat build/local testing only after above; no previous full NDMF or Play proof."
+  ]
+}

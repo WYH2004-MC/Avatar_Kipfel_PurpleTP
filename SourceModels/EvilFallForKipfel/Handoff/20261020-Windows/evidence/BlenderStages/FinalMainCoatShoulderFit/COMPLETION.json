@@ -1,0 +1,22 @@
+{
+  "status": "SAVED_NATIVE_AND_REOPEN_VERIFIED",
+  "current_complete_blend": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalMainCoatShoulderFit/EvilFall_Kipfel_MainCoatShoulderFit.blend",
+  "sha256": "5f62af2a4be77af0d7722ac25054f98b854e87adbb1aee477a143864be5d0ccb",
+  "production_blend_unchanged_sha256": "5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100",
+  "native_preserves_latest_user_Glass_state_and_other_geometry": true,
+  "source_contour_and_open_cuff_repair_included": true,
+  "shoulder_silver_and_transparent_glove_crossings_in_checked_states": 0,
+  "actual_skin_crossings_both_keys_and_six_diagnostic_poses": 0,
+  "pink_assembly_intersections_retained": [
+    346,
+    360
+  ],
+  "prior_locked_wrist_layer_intersections_retained": [
+    374,
+    368
+  ],
+  "limitations": "Finite actual views/poses; no global coat-glove intersection0 or all-animation guarantee.",
+  "actual_final_gpu_views": 6,
+  "canonical_restore_exact": true,
+  "saved_reopen_exact": true
+}

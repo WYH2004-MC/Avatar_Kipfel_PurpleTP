@@ -1,0 +1,12 @@
+0a89aeef chore: 项目更新为Avatar_Kipfel_PurpleTP并移除VRCraft
+5c6579c1 feat: 创建新分支模型，独立添加ASFR着色器
+48e9379c feat: 使用原版动画控制器实现原来FaceEmo的功能，以节省参数占用
+1e55db54 fix: 修复哈气动画在面补模型下牙齿位置异常的问题
+11178e82 chore: 同步表情组菜单、动画资源及项目配置
+b7133541 fix: 移除 FaceEmo 并恢复原动画器表情控制
+c753e95d fix: 修复 FaceEmo 与面捕共存时的牙齿表情异常
+a64f7dc0 fix: 修复FaceEmo和面捕插件冲突的问题
+7d99c41b fix: 修复圆盘菜单icon丢失的问题
+e05caede feat: 部署FaceEmo用于管理模型表情
+d635cea7 feat: 部署面补插件
+05549799 fix: 修复 Gesture Manager 源码被忽略导致的 Safe Mode 问题

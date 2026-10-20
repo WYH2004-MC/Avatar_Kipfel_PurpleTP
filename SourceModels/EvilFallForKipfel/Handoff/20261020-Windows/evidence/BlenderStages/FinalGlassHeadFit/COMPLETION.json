@@ -1,0 +1,26 @@
+{
+  "status": "COMPLETE_NATIVE_INSTALLED_SAVED_REOPENED_VISUALLY_REVIEWED",
+  "file": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassHeadFit/EvilFall_Kipfel_GlassHeadFit.blend",
+  "SHA256": "be9a418db85bb5c39c3f1ff52d4885b9cf9e1e25af40cc7c0a68c075c09ffda8",
+  "scope": "GlassMain local fit only",
+  "front_lift_mm": 8,
+  "rear129_exact_frozen_V4": true,
+  "native_install_report": "native_install_report.json",
+  "saved_reopen_report": "saved_roundtrip_report.json",
+  "final_capture_restore_report": "capture_restore_report.json",
+  "final_actual_GPU_manifest": "Preview/capture.json",
+  "reviewed_actual_saved_GPU": [
+    "front",
+    "back",
+    "left",
+    "right",
+    "front_Narror1"
+  ],
+  "existing_other_objects_and_resources_preserved": true,
+  "production_blend_unchanged_SHA256": "5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100",
+  "not_exported_to_Unity": true,
+  "limits": [
+    "Existing side hardware hair contacts retained; whole GlassMain is not globally intersection free in every key or pose."
+  ],
+  "frozen_V6_manifest_SHA256": "d711c7af16de881259e4924b82c1dc72a68573169dac59da30fb386845c048ca"
+}

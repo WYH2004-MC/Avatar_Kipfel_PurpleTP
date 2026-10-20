@@ -1,0 +1,98 @@
+{
+  "status": "PASS_STATIC_PREFAB_BINDINGS_AND_REACTIONS_SAVED",
+  "prefab": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/EvilFall_Kipfel.prefab",
+  "prefabSHA256": "0effa1e3633973c0269af7446bcf129f75a51abb0a8bc748e68231c0c2d42d04",
+  "prefabGUID": "4d5300ec6aad44f359dfd5df356ab737",
+  "fbx": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/EvilFall_Kipfel.fbx",
+  "fbxSHA256": "57894c81e2d7ef1976c282e563da7ab38c7446d850536edd037e3325b0c89602",
+  "fbxUnchanged": true,
+  "rigFollow": {
+    "copyTransformRoutes": 181,
+    "childOfRoute": 1,
+    "objectFollowRoutes": 9,
+    "internalMergeComponents": 27,
+    "externalAvatarMergeComponents": 1,
+    "meshes": 38,
+    "bonesPerMesh": 431
+  },
+  "requestedReactions": {
+    "MainLegHeel": [
+      {
+        "target": "Body_Base",
+        "shape": "Knee_OFF_left",
+        "mode": "Set",
+        "value": 100.0
+      },
+      {
+        "target": "Body_Base",
+        "shape": "Knee_OFF_right",
+        "mode": "Set",
+        "value": 100.0
+      },
+      {
+        "target": "Body_Base",
+        "shape": "Foot_OFF_left",
+        "mode": "Set",
+        "value": 100.0
+      },
+      {
+        "target": "Body_Base",
+        "shape": "Foot_OFF_right",
+        "mode": "Set",
+        "value": 100.0
+      },
+      {
+        "target": "Body_Base",
+        "shape": "Toe_OFF_left",
+        "mode": "Set",
+        "value": 100.0
+      },
+      {
+        "target": "Body_Base",
+        "shape": "Toe_OFF_right",
+        "mode": "Set",
+        "value": 100.0
+      },
+      {
+        "target": "Body_Base",
+        "shape": "Lower_leg_01_OFF",
+        "mode": "Set",
+        "value": 100.0
+      },
+      {
+        "target": "Body_Base",
+        "shape": "Lower_leg_02_OFF",
+        "mode": "Set",
+        "value": 100.0
+      }
+    ],
+    "HeadACC_on_hides": "Cat_Ear",
+    "EvilFallTail_on_hides": "Cat_Tail",
+    "externalTargetsUseAvatarRelativePaths": true,
+    "sceneObjectReferencesStored": false
+  },
+  "nativeSavedReload": {
+    "status": "PASS",
+    "componentCount": 575,
+    "stableFieldCount": 38319,
+    "meshCount": 38,
+    "allBoneArrays": 431,
+    "currentAssetExactlyMatchesBeforeSaveIntent": true,
+    "assetWritten": false
+  },
+  "serializedReloadExact": true,
+  "agentPlayTestRun": false,
+  "agentFullAvatarBuildRun": false,
+  "userSceneDirtyStatesUnchanged": true,
+  "temporaryEditorScriptsRemoved": true,
+  "activeTriggerRemoved": true,
+  "bindingReport": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/Exports/20261020-Unity/RigBindingFix.report.json",
+  "neutralBeforeSave": {
+    "maximumWorldErrorMetres": 1.737759e-07
+  },
+  "validationLimit": "Native static mapping, saved references and complete persistent-state round trip passed. No agent-run Play test or full NDMF build. User continues runtime tests.",
+  "notes": [
+    "Original ForKipfel prefab overwritten with its GUID preserved. No duplicate Fitted prefab.",
+    "No geometry, blendshape, FBX, material asset, animation or user scene changes by this repair. Eleven generated renderer material slot arrays corrected to FBX order."
+  ]
+}

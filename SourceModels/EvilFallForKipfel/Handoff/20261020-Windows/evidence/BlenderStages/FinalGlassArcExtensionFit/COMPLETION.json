@@ -1,0 +1,58 @@
+{
+  "status": "GLASS_CONTINUOUS_ARC_EXTENSION_V2_COMPLETE",
+  "user_correction": "镜片保留原弧面，允许横向延伸接回小边框；允许边框藏在头发下，禁止为了边框外露折弯镜片。",
+  "final_file": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassArcExtensionFit/EvilFall_Kipfel_GlassArcExtensionFit.blend",
+  "final_sha256": "ffe33ec9ca0db343ba6201977114251272b520ba7c2c1da46024d0d8cb542169",
+  "backup": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/GlassLensContourRestore/BeforeFinalGlassArcExtensionApply.blend",
+  "backup_sha256": "9dc987b99aa53fdd29a6dfe0723289b8e82f915d81d370a8e76cb187ae70e6b4",
+  "result": {
+    "whole_lens88_and_metal116": "Each visible shape uses oldSide85 entire coordinates (1.06*x,y,z); no local wing rotation, no harmonic connector warp. Curve profile continuous; YZ exactly unchanged.",
+    "Side382": "Exact user screen size q=.8688508272 relative to Side85; old accepted orientation restored, contact-centroid translation only; allowed under hair.",
+    "rear129": "Exact oldaccepted raw and seven shape arrays; matrixI.",
+    "Off": "Original owned absolute arrays retained.",
+    "scope": "GlassMain only,715v700p7keys, other50 meshes and all rigs/rest/controls/UV/weights/materials/topology unchanged."
+  },
+  "validation": {
+    "three_static_endpoints": [
+      "Basis",
+      "Wider",
+      "Narror"
+    ],
+    "fullfront586_Body_cross": 0,
+    "lens88_vs_all5_hair_cross": 0,
+    "EarBall876_and_EarWire2764_cross": 0,
+    "four_interface_cross_pairs_each_state": [
+      44,
+      44,
+      63,
+      63
+    ],
+    "latest_scene_scope_preserved": true,
+    "actual_saved_full_snapshot_portable_reopen_exact": true,
+    "actual_native_ten_GPU_views_and_restore": true,
+    "minimum_true_Body_gap_mm": 4.298,
+    "minimum_true_lens_hair_gap_mm": 2.437,
+    "minimum_true_earwire_gap_default_mm": 0.060402
+  },
+  "limits": [
+    "Side and metal remain within Side/TwinTail hair as explicitly permitted; intersection counts are recorded by component. No claim allfrontHair0. Root reviewed current top/front/both side close, no deformed triangular coupler or broken lens wing.",
+    "Default earwire is very close, .060402mm static surface gap. Three static endpoint checks do not certify moving rig poses or arbitrary simultaneous controls.",
+    "Horizontal extension preserves original YZ profile and continuous curve form; it is a global1.06X length stretch, not a claim of exact identical metric curvature radius."
+  ],
+  "rejected": [
+    "FinalGlassSideUserSizeFit/G3 wing deformation was rejected by user for top-view lens shape.",
+    "GlassLensContourRestore/CandidateV1 harmonic metal bridge was rejected by Root for visible triangular warp. Neither is the final selected geometry."
+  ],
+  "evidence": {
+    "SourceContourSmoothFit/GlassLensContourRestore/CandidateV2/FROZEN_SELECTED_UNIFORM_ARC_EXTENSION_V2.json": "3e7faaf2b7c951101a0af41180112484a896e356fa9f023fb815c637c09db0d0",
+    "SourceContourSmoothFit/GlassLensContourRestore/IndependentReviewV2/FROZEN_UNIFORM_ARC_EXTENSION_V2_INDEPENDENT_QA.json": "ac5c45672afcf50d2d04fcff5ab1c3156fc9701be587543a7477d465305fe335",
+    "SourceContourSmoothFit/GlassLensContourRestore/CandidateV2/apply_uniform_arc_extension.py": "5f9fd058d85e89023ffe8dfad5f63249a63c605ee8207829687aa46163f53877",
+    "SourceContourSmoothFit/GlassLensContourRestore/CandidateV2/glass_uniform_arc_extension_v2.npz": "0c9660e074c884815d09508dbac46104338251e245d454069d7c0c68fa322ab5",
+    "FinalGlassArcExtensionFit/native_install_report.json": "425e337af47720f6f7c44da7665a88b024a8f475cc83d788d54ad8021b08725a",
+    "FinalGlassArcExtensionFit/saved_roundtrip_report.json": "b54687ea893a929059af52ef59b3e8971e666efd609851144d394afbaf069087",
+    "FinalGlassArcExtensionFit/capture_restore_report.json": "ed9917c01f6a786f26a3a93ef606f3fb46e06adbf620ed2be924ed5047c0c8fb"
+  },
+  "preview_top": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassArcExtensionFit/Preview/user_top_view.png",
+  "preview_profile": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassArcExtensionFit/Preview/lens_top_profile.png",
+  "production_unchanged": true
+}

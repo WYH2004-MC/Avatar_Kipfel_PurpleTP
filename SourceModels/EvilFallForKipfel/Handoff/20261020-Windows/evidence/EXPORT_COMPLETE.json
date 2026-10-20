@@ -1,0 +1,19 @@
+{
+  "status": "EXPORTED_OVER_ORIGINAL_USER_WILL_TEST",
+  "blend": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/Exports/20261020-Unity/EvilFall_Kipfel_AcceptedForUnity.blend",
+  "fbx": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/EvilFall_Kipfel.fbx",
+  "prefab": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/EvilFall_Kipfel.prefab",
+  "fbxGUID": "02362ac3b72a643bca5074e35b3eec18",
+  "prefabGUID": "4d5300ec6aad44f359dfd5df356ab737",
+  "existingGUIDsPreserved": true,
+  "original_backup": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/Exports/20261020-Unity/BeforeOverwrite",
+  "temporary_duplicate_assets_removed": [
+    "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/EvilFall_Kipfel_Fitted.fbx",
+    "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/EvilFall_Kipfel_Fitted.fbx.meta",
+    "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/EvilFall_Kipfel_Fitted.prefab",
+    "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/EvilFall_Kipfel_Fitted.prefab.meta",
+    "Assets/Editor/EvilFallFittedPrefabExport.cs",
+    "Assets/Editor/EvilFallFittedPrefabExport.cs.meta"
+  ],
+  "runtimeTesting": "User requested remaining testing be left to them; no further tests run. Blender constraints are not automatically Unity runtime controls."
+}

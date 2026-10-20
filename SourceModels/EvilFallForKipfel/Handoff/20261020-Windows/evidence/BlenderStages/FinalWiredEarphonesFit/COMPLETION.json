@@ -1,0 +1,55 @@
+{
+  "status": "EARPHONES_COMPLETE_NEW_GLASS_TASK_ACTIVE",
+  "file": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalWiredEarphonesFit/EvilFall_Kipfel_WiredEarphonesFit.blend",
+  "SHA256": "d50cd927736034b87c87159428d94a2c4fdeb872781fcfb4b915672fe87c43d4",
+  "native_save_reopen_exact": true,
+  "native_final_capture_self_restoration_exact": true,
+  "user_current_scene_changed_after_ear_save": {
+    "GlassMain": [
+      "matrix_Y_plus_0.0170208364725",
+      "hide"
+    ],
+    "hair": [
+      "TwinTail.hide",
+      "Rat.hide",
+      "Ribbon.hide"
+    ]
+  },
+  "new_task_backup": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/GlassFrontYHairFit/BeforeGlassFrontYHairFit.blend",
+  "new_task_backup_SHA256": "c37e493403acdcec62eea95c06d269ca90b672c640dd826e63e6127de3d62f3a",
+  "details": {
+    "状态": "耳机V7已由Root实际安装、保存并后台回读通过；本文件仅交接草稿，不修改主交接。",
+    "有效保存点": {
+      "文件": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalWiredEarphonesFit/EvilFall_Kipfel_WiredEarphonesFit.blend",
+      "SHA256": "d50cd927736034b87c87159428d94a2c4fdeb872781fcfb4b915672fe87c43d4",
+      "时间边界": "这是用户随后拖动眼镜、切换头发显隐之前的有效完整保存点。当前live已继续新任务，不能为恢复耳机而整文件覆盖live。"
+    },
+    "耳机已接受形状": [
+      "用户手摆的负X球438点世界姿势保留，另一球严格X镜像，孔朝向与原Source下接头关系一致；双侧耳背实际图无透出，后向耳面有限全三角间距最小约0.7971mm。",
+      "上接口Source0..14和端帽每侧301点为单一q=.620000122 proper刚体总成，原所有圈距及短粉间距保留；总成首尾8.8905mm，没有再把四黑环摊开。",
+      "主线Source15..53与球的literal相对变换不变，只延长原14→15一段；每侧20面细分16段，共加600点/600面，HeadACC现5946顶点、5916面。",
+      "HeadACC整体矩阵回到原已接受I，误拖的非耳2306点恢复原世界位置；原权重、UV、五材料、控制树、所有rest不动，新增点Head100%。"
+    ],
+    "证据": {
+      "V7冻结清单": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/WiredEarphonesFit/CandidateV7/FROZEN_NUMERICAL_SOURCE_INTERFACE_V7.json",
+      "冻结清单SHA256": "38cbef5114290b85d9aafd406c8e006715775a3f915c38ab85165aaf15933081",
+      "Root原生安装报告": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalWiredEarphonesFit/native_install_report.json",
+      "保存回读": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalWiredEarphonesFit/saved_roundtrip_report.json",
+      "独立圈距与追加UV权重": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/WiredEarphonesFit/IndependentReview/v7_compact_source_upper_uv_weights_join_review.json",
+      "后耳表面有限审": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/WiredEarphonesFit/SocketReview/user_pose_posterior_ear_surface_review_v3.json",
+      "Head姿态": "引用V2实际commonHead±10°六姿及完全恢复证据，V7绑定仍全部Head1；没有虚称V7重跑六姿。",
+      "视觉": "Root已接受用户视角及双侧接孔、耳背和紧凑上接口；native saved-roundtrip PASS。"
+    },
+    "限制与后续": [
+      "EarV7并未宣称所有配件同时无交叉：Glass侧件存在168对有限面接触（两侧各42桥段+42原21..23段），必须留给眼镜新阶段处理。",
+      "耳机静态有限头发检查只认证当时visible的CurrentUnity_Hair_Front/Side；当时隐藏的Tail/Rat/Ribbon组合未被认证。",
+      "法线保作者fan及proper运输；冻结native canonical回读精确，target codec最大约0.0004244，不能声称所有旧decoded法线逐位无变化。"
+    ],
+    "保存后的用户新改动及进行中任务": {
+      "用户改动": "额外切换Hair_TwinTail/rat/ribbon.hide，并把GlassMain整个object沿+Y移动17.020836mm及切换眼镜hide；不是EarV7保存失败。",
+      "当前目标": "GlassFrontYHairFit：保用户想要的前586组Y位置，恢复已接受后129环Y位置，处理现在五件真实头发visible时的前组穿插。须以Root新fresh为基线，不重放旧Glass675或回滚耳机完整文件。",
+      "截图恢复比较说明": "拿用户已改变的live与更早preuser快照作比较自然不等，不能据此判EarV7或拍图恢复失败；Root报告capture_live相对其自身before/after canonical为PASS。"
+    },
+    "操作约束": "后续只读最新GlassFrontYHairFit备份并局部推进；不要改已接受耳机、后环、其它服装或共享骨，不向Unity/Assets写入。"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "EXPORTED_FULL_FITTED_49_OBJECTS_SOURCE_UNCHANGED",
+  "fbx": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/Exports/20261020-Unity/EvilFall_Kipfel_Fitted_v2.fbx",
+  "sha256": "57894c81e2d7ef1976c282e563da7ab38c7446d850536edd037e3325b0c89602",
+  "bytes": 11852572,
+  "meshes": 38,
+  "armatures": 9,
+  "bones": 431,
+  "reference_body_hair_excluded": true,
+  "all_mesh_shape_key_names_preserved_for_import_validation": true,
+  "no_animation_baked": true,
+  "Blender_constraints_not_converted_to_Unity_runtime_logic": true,
+  "source": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalEarphoneCableHairClearance/EvilFall_Kipfel_EarphoneCableHairClearance.blend",
+  "source_sha256": "bf43363dd6c81e47ea5b6aaf4523d6be0f5a383f082264d92dab390f9fea20ef"
+}

@@ -1,0 +1,381 @@
+2026-10-20 原版EvilFall菜单与完整控制配置已还原至ForKipfel（当前最新状态）。
+原位更新 Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/EvilFall_Kipfel.prefab，GUID仍4d5300ec6aad44f359dfd5df356ab737，SHA b5cc9d70fca94a900696c18aa3a625b52da24ccb7137a007f426a4387b6dfa27。InstallMenu.asset入口→AccessoriesMenu.asset五组主菜单→ClothingMenu/FaceMenu/WeaponMenu/R18ToyMenu/PlugToyMenu。7菜单、5组32叶Toggle、全部原图标/顺序/名称/默认值；旧FaceMode/Weapon int已由原32个EvilFallKipfel/* Bool恢复，原拼写OhHand等保留。原菜单unused Toggle selfSubMenu按type处理，不是活动分支。
+Accessories.controller现为原版完整26层/60state/12互斥ParameterDriver（namespace改EvilFallKipfel/，其余图行为原样），root唯一MA MergeAnimator引用它，旧Clothing.controller保留资产但不再重复合并。59原动画完整适配到ForKipfel/OriginalAnimations，绑定零缺；原有3个ShapeChanger及2个ObjectToggle完整保留（实际新动画无Body_Base额外曲线），遮肤及原生猫耳/尾巴联动继续由MA反应负责。武器保留现有accepted pose payload并补原group语义；其它Transform motion按原rest→accepted rest delta重定向。
+补齐原4组20ParticleSystem+Renderer、缺3PhysBone（总19）与2PBBlocker；语义group重挂38SMR保持world，恢复8个胸部Fit控制骨和PB辅助链，新增2条管道nestedMA保证原骨映射。原已有28MA保留，总30。所有旧SMR的mesh/bones/shape默认逐项护住，中性BakeMesh误差最大3.625609e-7m；FBX、Blender与原版FX/menu/prefab均未改。
+MenuRestore/restore.report.json原生PASS，保存回读exact，用户场景dirty状态未改，现有meta/GUID保护通过；临时Editor脚本及trigger已清理。证据及备份在SourceModels/EvilFallForKipfel/Exports/20261020-Unity/MenuRestore，COMPLETION.json含交付哈希。菜单/控制器/effects三份最终独审均PASS：32项菜单、1178动画绑定零缺、181/181骨跟随路径正确。未启动Play/完整NDMF构建，用户继续实际功能测试。
+
+--- 以下保留旧阶段历史，当前以上方为准 ---
+
+2026-10-20 Unity跟随与开关联动修复已保存（最新状态，以本段为准）。
+原位交付 Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/EvilFall_Kipfel.prefab，GUID 4d5300ec6aad44f359dfd5df356ab737；SHA 0effa1e3633973c0269af7446bcf129f75a51abb0a8bc748e68231c0c2d42d04。未创建_Fitted副本。FBX保持SHA57894c81e2d7ef1976c282e563da7ab38c7446d850536edd037e3325b0c89602，Blender和网格均未改。
+修复前次导出遗漏的Unity跟随关系：Fit212为公开armature合并Avatar，Source166改名EvilFall_SourceRig并内部合并；27个内部MA加1个外部MA，完整复现181条CopyTransforms、1条Base ChildOf及9个object follow。保留静止位置/权重/形态键/动画，38SMR每个431骨有效，181条保存后YAML映射独审匹配。另纠正11个生成错误的renderer材质槽顺序，无材质资产变更。
+MainLegHeel MA ShapeChanger现在8条Body_Base Set100（原Knee/Foot/Toe双侧6条，加Lower_leg_01_OFF与Lower_leg_02_OFF）；HeadACC开启→Cat_Ear OFF；EvilFallTail开启→Cat_Tail OFF。均用Avatar相对路径，无场景对象引用。
+RigBindingFix.report.json最终PASS；575组件38319个稳定字段原生保存回读完全相等，先前reload误报仅Unity引用m_FileID会话编号子字段。保存前38mesh中性BakeMesh最大误差1.737759e-7m。用户场景dirty状态未改变。临时Editor脚本及触发request已清理，证据/备份在Exports/20261020-Unity/RigBindingFix及BeforeRigBindingFix。COMPLETION.json记录本轮交付。
+用户已接手Play测试；本轮agent没有启动Play或全NDMF构建。进行最终保存前发现Unity在用户Play测试中，已退出Play完成原生只读确认。后续继续用户实测反馈，不宣称已覆盖运行时所有效果。
+
+--- 以下保留旧阶段历史，当前以上方为准 ---
+
+2026-10-20 当前已切换到Unity阶段（用户明确授权保存、导出并覆盖原文件；最新要求「剩下我自己测试」，停止额外测试）。
+Blender最新保存：FinalEarphoneCableHairClearance/EvilFall_Kipfel_EarphoneCableHairClearance.blend，SHA bf43363dd6c81e47ea5b6aaf4523d6be0f5a383f082264d92dab390f9fea20ef；完整副本 SourceModels/EvilFallForKipfel/Exports/20261020-Unity/EvilFall_Kipfel_AcceptedForUnity.blend。
+已原位覆盖 Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/EvilFall_Kipfel.fbx 与同名.prefab，保原GUID 02362ac3b72a643bca5074e35b3eec18 / 4d5300ec6aad44f359dfd5df356ab737。不要再建_Fitted副本；这四个临时asset/meta及临时Editor生成脚本已清理。原四文件备份在Exports/20261020-Unity/BeforeOverwrite。
+完整导出49对象/38mesh/9rig431骨、所有keys/材质已载入保存为原Prefab并打开Unity；Blender源保持，导出副本规范化父级防多rig FBX回读误差。Unity保存回读报告 BuildFittedPrefab.report.json status=PASS_COMPLETE_MESH_PREFAB_SAVED_RELOADED_RUNTIME_RIG_CONFIGURATION_PENDING，GUI当前原prefab供用户自测。Blender的CopyTransforms/ChildOf等运行逻辑不会自动变为Unity跟随/合并；用户已接手测试，本轮没有额外pose/runtime测试保证。EXPORT_COMPLETE.json记录交付范围。
+SourceModels/EvilFallForKipfel/EvilFall_Kipfel.blend老production文件未改，后续Blender改动从上述最新完整保存/新RAM继续。旧阶段的「仅Blender，不导Unity」范围已被本轮用户明确撤销。
+
+--- 以下保留旧阶段历史，当前以上方为准 ---
+
+2026-10-20 最新完成：用户要求的耳机管线穿头发已修，选定真实空间圆弧V3，当前Blender已局部安装完整保存、独立真正重开并实际GPU复查通过。
+当前唯一完整原生文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalEarphoneCableHairClearance/EvilFall_Kipfel_EarphoneCableHairClearance.blend
+SHA256 8298a3502a64b3d6cf847cc2378655a0d41d824dbd31155bbd4b8ae152f5cf36。两侧线整段绕开当前五件真实头发，默认最小真发距2.183942mm；对眼镜全部7键端交线0、最小22.870107mm。Root亲看最终保存后的正负两侧近照及用户后侧角，底回弯是圆U，原上301圈组紧凑接在c8真正外表面，没有吞壳；原耳球位置/孔内下接头与36以后的下段固定，管径不变。只有HeadACC现有2042点改，仍5946v5916p；GlassMain完整raw/7keys/normals及其它50mesh/全rest控制、UV/权重/材料/资源逐位护住。
+唯一入口（已应用，不可重放）：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/EarphoneCableHairClearance/CandidateV3/apply_cable_hair_clearance.py；helper28019d35b13ead88bc26e6a626b4ab48037cbdbca5dc9226f2796cf9c19f7eae，payload5e92a1f141e4c5d8f61d7d2f8e21743daf222eb205be37ac3f78713c66b2bb2d。V1/V2虽数值clear但主U投影尖V被Root否决，均非最终；V3只在V2 main16..30的600点重做空间圆顺弧，其它5346点逐位V2固定。
+应用前最新完整备份：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/EarphoneCableHairClearance/BeforeFinalEarphoneCableHairClearanceApply.blend SHA27535b0242ddc54e4c6965a37ef7915a5dcbeb50b1d2eaa597e911ec8a639b94；设计fresh BeforeEarphoneCableHairClearance.blend SHAe65c3ebb7209e7c9711e663b4a473244e79aedb13914d4223586a663b58bdbeb。后续从本最新点/用户新RAM继续，不打开旧Glass或Ear完整点覆盖新工作。
+证据：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalEarphoneCableHairClearance/COMPLETION.json；native_install_report、saved_roundtrip_report、capture_restore_report、Preview/capture.json。SELECTED清单SHA9f310d097cc1ccfb2d286815ff921769ddbdfb63d17536735a9367c41ae11a24；独审清单SHA42e1fc7b026a763769f5102b99594487f8aa16471479b5f8114799f3caa5c491；全部51恢复/save-reopen精确。仅静态/7眼镜端点，无新pose保证；原lower52/53封在球内Body交线每侧49与c8上端接触各40为明确装配域保留。HeadACC正常编码decoded舍入最大.000463284552，不冒称所有旧decoded法线逐bit不变。
+仅Blender，未动Unity/FBX/Git；production SHA5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100原样。
+
+--- 以下保留旧阶段历史，当前以上方为准 ---
+
+2026-10-20 最新完成：用户指出「依旧穿模」的侧框上沿切发问题已修，整个前组与五发型实际表面分离，镜片弧形严格不动。
+当前唯一完整原生文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassSideHairClearance/EvilFall_Kipfel_GlassSideHairClearance.blend
+SHA256 50a16135d8a74a3eeebd67f5bb8ff03201e04759677655fc2fc092771f1beab4。Root已当前Blender局部安装并完整另存，独立真正重开全snapshot/portable精确；十二张实际GPU和显隐/键/视角恢复通过，亲看两侧近距上沿、Nar近距、前/用户角/top-profile，均无侧框露切或接头扭三角。
+重要：FinalGlassArcExtensionFit虽曾标完成，但被用户以截图否决（Side上沿穿HairSide），已加USER_REJECTED_SIDE_HAIR_INTERSECTION.json。此前把Side/metal交线叫「允许藏发」是错误放行，不再生效；本轮全front586对Body+ALL5Hair+完整Ear均必须0，未用任何藏发豁免。
+本轮lens88+rear129 raw/所有7keys逐bit当前ArcV2原样，保原弧和长度；Side382用户物理尺寸不变，以properR/T放到发面外；metal每58用单个整体正det仿射接回，面保持平面（无harmonic），不是再折镜片。仍715v700p/7keys，原Offowned绝对、UV/权重/材料/全部rest骨控制和其它50mesh含EarHeadACC5946精确护住。
+唯一helper（已应用，不可重放）：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/GlassSideHairClearance/CandidateV1/apply_glass_side_hair_clear.py
+helper21602759ed3ee7cb542bb550d2defd48718b302b8c98043737000f41479baefe，payloadb39d21de427ddd5650924d56cc80c154a3ad713a63411f5f6b94c32c30b33c79，nativecanonicale1bcdf60b7d9f9bd145ba5e3981466bc12a07fb329fdfc91ba854f97ab52af2e。targetnormalcodec最大.0004441/rear.0001445如实列，非所有旧decoded逐bit不变。
+应用前最新完整备份：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/GlassSideHairClearance/BeforeFinalGlassSideHairClearanceApply.blend SHA3bb411ba707a59069eb247b3827d9189c55216a65180830328d4c008bb53ccee；设计fresh BeforeGlassSideHairClearance.blend SHA6cd91bed1b51bc1f3807ea43b5a95e55892071736ec56e88573669b28f038606。勿打开旧完整点覆盖后续用户新RAM。
+三态Basis/Wider/Narror整个front586对Body+五件实际hair+Ear球876/线2764交线全部0；4处接位30/30/59/59。默认最小发距.853632mm、Nar .462722mm、Ear线≥15.60355mm；仅静态3端点，无新pose/任意组合保证。独审清单IndependentReview/FROZEN_SIDE_HAIR_CLEARANCE_V1_INDEPENDENT_QA.json SHAacf63700f9f3f0e2d01568cdb35873e5548fd9dfe0fb71090879a65c958449c3；Selected清单CandidateV1/FROZEN_SELECTED_GLASS_SIDE_HAIR_CLEAR_V1.json SHA44d849d8bd0728d7f7a63b19b57e773420fac51f38a8611f8c7fbf7f01be7711。
+完整交付证据：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassSideHairClearance/COMPLETION.json；近距图Preview/positive_hair_boundary_close.png及negative_hair_boundary_close.png。仅Blender，未动Unity/FBX/Git；production blend SHA5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100原样。
+
+--- 以下保留旧阶段历史，当前以上方为准 ---
+
+2026-10-20 最新完成：按用户纠正，镜片保持连续原弧面，仅整体向左右延长6%，小边框保用户指定尺寸并收回原藏发朝向，已原生安装、完整保存、真正重开与实际俯视复查。
+当前唯一完整文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassArcExtensionFit/EvilFall_Kipfel_GlassArcExtensionFit.blend
+SHA256 ffe33ec9ca0db343ba6201977114251272b520ba7c2c1da46024d0d8cb542169。
+重要纠正：用户拒绝FinalGlassSideUserSizeFit/G3两翼跟随外摆的镜片折角。后又明确「左右俩边框可以放到头发里面…镜片保留弧度向左右延伸再接边框」。G3虽数值clear但视觉失败，不能当final；LensContourRestore V1恢复lens但harmonic金属桥出灰尖三角，Root也弃稿。当前只采用V2全局X延伸，绝不重放G3/V1或局部20→35 wing旋转。
+当前改法：lens88+metal116所有可见key从oldSide85整域(x,y,z)→(1.06x,y,z)，原Y/Z逐点不动，完整弧形连续；两端各加约3.3mm，没有局部bend或harmonic。此为形态保持的横向长度拉伸，不声称弧面度量曲率半径逐值不变。Side382恢复old85原朝向，保持用户屏幕尺寸q=.868850827217102（相对早V2净.738523203），仅按真实接位centroid平移，允许藏发。rear129 raw/全7keys原位，matrixI。原Offowned绝对端保留；仍715v700p/7keys、原UV/权重/拓扑/材料/全部骨rest控制及其它50网格（含EarHeadACC5946）与最新现场守。
+唯一helper（已应用不可再次运行）：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/GlassLensContourRestore/CandidateV2/apply_uniform_arc_extension.py
+helper5f9fd058d85e89023ffe8dfad5f63249a63c605ee8207829687aa46163f53877，payload0c9660e074c884815d09508dbac46104338251e245d454069d7c0c68fa322ab5；nativecanonical63585446d260cea49442d20e4220b6b27be2ddcbe121150a544d7062d4f072ad，targetnormalcodec最大.00041336，不能说全部decoded旧值逐bit不变。
+应用前最新完整备份：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/GlassLensContourRestore/BeforeFinalGlassArcExtensionApply.blend SHA9dc987b99aa53fdd29a6dfe0723289b8e82f915d81d370a8e76cb187ae70e6b4。设计fresh BeforeGlassLensContourRestore.blend SHA6f0cf570c003f598a29704f63dceb959ee62c61c122a622be1541b7e67d88741。勿打开旧完整模型覆盖后续用户新RAM。
+三态Basis/Wider/Narror：fullfront586 Body0，lens88对5真hair0，Ear球876/线2764全0；四处接位44/44/63/63。Body真gap≥4.298mm、lensHair≥2.437mm；原Side/metal与Side/Tail发相交按用户藏发许可如实记录，不宣allfrontHair0。默认耳线真gap仅.060402mm，静态结论，不保证motion/任意组合；没有pose重扫。
+Root已亲看实际最终用户俯视、纯lens top-profile、默认front/左右close及Wider/Narror俯视。实际保存重开canonical/portable精确，十图后全canonical/portable恢复exact。最终证据/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassArcExtensionFit/COMPLETION.json；独审清单 IndependentReviewV2/FROZEN_UNIFORM_ARC_EXTENSION_V2_INDEPENDENT_QA.json SHAac5c45672afcf50d2d04fcff5ab1c3156fc9701be587543a7477d465305fe335；选定清单CandidateV2/FROZEN_SELECTED_UNIFORM_ARC_EXTENSION_V2.json SHA3e7faaf2b7c951101a0af41180112484a896e356fa9f023fb815c637c09db0d0。
+仅Blender。生产blend SHA5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100不变，未导FBX/未写Unity Assets/Git。
+
+--- 以下保留旧阶段历史，当前以上方为准 ---
+
+2026-10-20 最新完成：眼镜两侧黑框统一缩至85%，保藏发，已原生安装完整另存、独立真正重开及实际GPU复查。
+当前唯一完整文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassSideFrameScaleFit/EvilFall_Kipfel_GlassSideFrameScaleFit.blend
+SHA256 a5d71de70719171c2de95df15ea3cee5a99372a0bac000eecfa73dc5cf143c2b。用户要求「把两边的框架缩小会不会好点」；Root选15%缩小，前板/金属接头/后环不缩。仅GlassMain左右Side191（共382点）绕各key前板外竖边hinge正等比.85，非整眼镜缩放；固定333点（lens88/metal116/rear129）raw/所有7keys/actualworld精确原样。SideOff原owned绝对全715不动；GlassOff侧件用可见Basis hinge，不用collapsed镜片坐标。其它50网格含HeadACC5946及所有rest/控制/UV/权重/材料/原715v700p拓扑精确保留。
+唯一helper（已应用不可重放）：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/GlassSideFrameScaleFit/Side85E/apply_side_scale.py，SHA4cc1baea620c710cc3ac9cc6e7a749bbffda3047fcdf1908e7e62bbf0cb0b553；payload Side85E/side85_E.npz SHA5ec21f2ce163e3250a92de55e0d04ed3c684418d4565d0863f90ad58269899a4。
+本轮应用前最新完整备份：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/GlassSideFrameScaleFit/BeforeFinalGlassSideFrameScaleApply.blend；SHA4d672ebdb12640ea03030be5f5611846998950b82b4ad0615b710fbd5deea676。另BeforeGlassSideFrameScaleFit.blend SHA6fc54d9ffaf945b04e41d996af3dd2e2f388d30cbda729bde91d383c82d04f28为设计fresh。两者仅作恢复点，不覆盖后续用户新RAM。
+本轮独审7keys fullfront586 Body0、Ear球876全0，每侧metal/side真实接位before29→after54对（非SideOff），未悬空。fixed333法线decoded逐bit不动，owneduniform法线编码基底浮误差最大.000136554、保原encoded层不setter。其它50neutral、全51与控制恢复exact。独审清单 IndependentReview/FROZEN_SIDE85E_INDEPENDENT_QA.json SHAe64117cdee851612da3a368d27d0afbd85f85754e0abea07ca4c052da708da87。
+实际native另存与真正重开canonical/portable精确；Root亲看default正面/左右斜和close以及Wider正面/侧面。截图8图后canonical+portable恢复exact。证据/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassSideFrameScaleFit/COMPLETION.json及native_install_report、saved_roundtrip_report、capture_restore_report、Preview/capture.json。
+已知边界：侧框继续按用户选择嵌头发，不能宣allHair0。与耳线上部contact默认176→96、Narror176→0，但Wider100→184；GPU看既有线部分遮挡域，此任务没有清除全部耳线/侧框穿插。仅7端点重验，无新pose扫/任意组合保证。前镜/后环完全不动所以继承上一阶段那些证据，不把旧pose冒称本轮重跑。生产blend SHA5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100仍原样；仅Blender，无Unity/FBX/Git操作。
+
+--- 以下保留旧阶段历史，当前以上方为准 ---
+
+2026-10-20 最新完成：GlassFrontYHairFit 最终 V2 已原生局部安装、完整保存、独立真正重开及实际 GPU 检查通过。
+当前唯一完整原生文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassFrontYHairFit/EvilFall_Kipfel_GlassFrontYHairFit.blend
+SHA256：ecc14f4e6db9a7a011d3c53ed7605579d9f821249d5782d86db0543f6945d829。
+用户最终选择「那还是做成藏头发下吧」，因此两侧黑框继续藏发；V3 外露方案仅临时预览，未安装，不可拿来当当前版本。仅改 GlassMain，715v/700p/原7keys。中央|X|≤20mm完整保留用户 +Y17.020836mm，侧外上缘局部Y避发；后129点/所有keys原accepted local不动，matrix恢复I使后环回到原Y。侧尾Y平滑退回原accepted，X/Z全域原样，Wider/Narror/Off原控制端语义保留。当前Ear V7 HeadACC5946v/5916p和其它50网格/全部骨rest/控制/UV/权重/资源/显隐与本轮最新现场精确保留。
+最终唯一 helper（已应用，不可再放）：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/GlassFrontYHairFit/CandidateV2/apply_glass_front_Y.py
+helper 440c6859843416929adb0f226301e26c2418ff0cff2f7b725003d76b2dc9baf6，payload46c75c12505b7c48c18441d4773aaa787b68b8cebe02167bd00fd757d682147b，canonical780085d6acaf041bab714430fc6538b2271c78832c043084ac62089f0bea7e63。
+应用前最新完整备份：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/GlassFrontYHairFit/BeforeFinalGlassFrontYHairApply.blend
+SHA：61cc04c09c821ef43fe299fde323c5782756a0a44048a862b7ccb5a560d3373f。更早 BeforeGlassFrontYHairFit c37e.. 为几何设计基线，不得打开旧完整Ear/Glass文件覆盖后续用户RAM。
+7原键端点+5前骨XYZ +.03rad共15真实pose：前586对Body0，前镜88对Body/全部五件实际visibleHair0；默认最小真发距1.3767mm，有限pose最小.361462mm。所有后环、其它对象和51网格恢复/save-reopen已验。前镜中央保userY，正常/Narror/Wider及正侧后12图由Root亲看；截图后canonical/portable和实际保存完全一致。原生法线canonical精确，目标输入codec差.000374，不冒称全部旧decoded逐位不变。
+已知边界：侧框按用户选择嵌Side/TwinTail发，不能称全586对Hair0。侧框与已接受耳线上部仍有交线：默认176tri/92poly（早接受168/88），镜片/connector与耳线0、球876全键0。新增负侧小域面379位于|X|约97mm/Y−18mm/Z678mm，Root已看Final Preview/negative_side_wire_interface，耳线被框部分遮挡，未改球/孔/原走线；本任务不宣全部头饰无穿插。有限键/pose不保证任意组合或新发型。
+证据：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassFrontYHairFit/COMPLETION.json，native_install_report.json、saved_roundtrip_report.json、capture_restore_report.json、actual_live_after_capture_report.json；GPU在FinalGlassFrontYHairFit/Preview。仅Blender；未导FBX、未写Unity Assets/Git、生产blend SHA5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100不变。
+
+--- 以下保留旧阶段历史，当前以上方为准 ---
+
+2026-10-20 最新进度：耳机 V7 已完成，随后开始用户新要求的 GlassFrontYHairFit。
+正在工作 fresh（保留用户新眼镜Y和五发型显隐）：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/GlassFrontYHairFit/BeforeGlassFrontYHairFit.blend
+SHA256 c37e493403acdcec62eea95c06d269ca90b672c640dd826e63e6127de3d62f3a。新任务保前586组用户+Y17.020836mm，恢复后129环原Y，局部修前板/当前五件真发型穿插；必须局部修改，不打开耳机旧完整保存覆盖当前RAM。
+
+耳机完成完整点：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalWiredEarphonesFit/EvilFall_Kipfel_WiredEarphonesFit.blend
+SHA256 d50cd927736034b87c87159428d94a2c4fdeb872781fcfb4b915672fe87c43d4。Root 原生安装并真正重开 canonical/portable 精确；HeadACC5946v/5916p/11756tri。用户负X球世界438点保留、对侧镜像、耳背无露出(truegap约.7971mm)。Source上接口0..14+cap每侧301点同一qR/T，圈距/总长8.8905mm原样；Source15..53主弧和球孔同qRT。仅14→15接长，40旧quad→16strip净加600点/面。原误拖HeadACC matrix恢复I，2306非耳点恢复旧世界；所有其它对象/rest/控制/资源与当时最新现场守。法线nativecanonical精确，codec误差.0004244不冒称旧decoded逐位不变。
+V7仅当时visible Front/Side头发有限检查通过，用户后来开启Tail/Rat/Ribbon须新阶段检查。眼镜侧架同戴仍168对交面（桥84+固定84），作为新眼镜阶段参考限制，不能宣全scene无穿插。用户后来改Glass整体Y/hide和Tail三件hide，因此earsave后live与早快照不同，capture_live自身before/after恢复PASS，并非Ear保存失败。
+耳机唯一入口 CandidateV7/apply_wired_earphones.py（helper29f9ea0a88de07753435cd6d30eb567409bc8050a0cf7c4da24a92edba614098/payloadfb8dd707e65bbc9fd2be022ff539bcdb15b31708560007e1338e47e1eb1990d8），已应用不可再放；旧V1..V6均非最终。完整证据 FinalWiredEarphonesFit/COMPLETION.json。仅Blender，无Unity/FBX导出/生产替换。
+
+--- 以下保留旧阶段历史，当前以上方为准 ---
+
+2026-10-19 最新完成：GlassMain 后环与前镜 V6 已原生局部安装、保存，真正重开最终文件与实际 GPU 复查通过。
+目标唯一完整原生文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassHeadFit/EvilFall_Kipfel_GlassHeadFit.blend
+最终 SHA256：be9a418db85bb5c39c3f1ff52d4885b9cf9e1e25af40cc7c0a68c075c09ffda8
+原生局部安装/实际重开 canonical、portable 及当前用户状态回读：PASS_FRESH675_COMBINED_REAR_V4_FRONT_Z8_SAFE_NARROR_LATEST_SCOPE；PASS_SAVED_REOPEN_EXACT。证据 FinalGlassHeadFit/native_install_report.json、saved_roundtrip_report.json。
+最终文件实际 GPU 与临时键值、显隐、相机/选中/context 恢复：FinalGlassHeadFit/Preview/capture.json（11图）；capture_restore_report.json 为 PASS_FINAL_NATIVE_CAPTURE_RESTORED_EXACT，canonical 与 portable 精确恢复；OBJECT、active Armature、selection 空、GlassMain 七键0。Root 亲看保存后 front/back/left/right/front_Narror1，外观通过。
+
+本轮最终应用前现场完整备份：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/GlassRearRingFit/BeforeFinalGlassApply.blend，SHA256 90606c1d27a1cb0f0734052e17c7da1c5965fdd22beb83db0a3ed0a11476372a。更早 fresh675 只作原始几何基线。
+
+仅改 GlassMain，仍为 715 点/700 面，原 UV、权重、材料、拓扑、骨/rest 和控制树不变。后环129点完整厚截面紧凑绕开当前真实五件发型，主后环升高40mm、两侧宽缓再抬4mm并适度扩径；前镜与两侧/连接件共586点整体上提8mm。Root 已接受后环、前镜默认外观及最终 Narror=1。原收窄幅度按当前大头适配：后环 Narror 10%/Wider 80%，前组 Narror 18%；默认外形不因此改变。RingOff 仅后129点、SideOff 仅两侧382点、GlassOff 仅前镜88点的原绝对收起端保留；其它域照正常可见形态移动，没有新增控制。
+
+唯一入口（相对 20261013-skin-contact-fit）：SourceContourSmoothFit/GlassRearRingFit/CandidateV6/apply_combined_glass.py::apply()
+helper SHA256：fcdbeaaf274865d8df470169afd76e7c5125ba6f9d598944af4b52c6ab1cfb09
+payload：CandidateV6/combined_rear_v4_front_lift8_safe_narror_v6.npz
+payload SHA256：d054909e96081514d9558c97954854a9f4c2d5a49fb5332386d9a83dfcf4ce72
+冻结组合清单：GlassRearRingFit/CandidateV6/FROZEN_GLASS_COMBINED_V6.json，SHA d711c7af16de881259e4924b82c1dc72a68573169dac59da30fb386845c048ca。
+该入口只供原 fresh675 GlassMain 几何一次应用，不先串 V4/V5。最终原生文件已装完，不得重复 helper；不要打开离线 review blend 替换用户当前 RAM，也不要重放任何早期面罩/外衣流水线。
+
+独审后环30组实际 key/HeadRing、HeadRingBase 小姿态对真实发型/头/耳附件交线0，最小真三角面发距1.513917mm；V6后环所有 raw/7keys/decoded normals 精确继承此已验 V4。前组7个可见键端点对 Body 交线0，Narror 肤距1.548154mm；5前组骨各 XYZ 0.03rad 共15姿 Body交线0、最小2.199614mm。前镜88点对五发型/头/HeadACC在这些端点及15姿全部交线0，最小发距7.002526mm。其它50网格及所有骨/控制/资源/显隐保护，51网格恢复和离线保存回读精确通过。前组独审清单 IndependentReviewV6/FROZEN_INDEPENDENT_GLASS_FRONT_V6.json，SHA36468e055e0bfab022f084eb186c437b39a3aee54aec35e3c94dff46968b5429。
+
+保留并如实分类原侧件嵌发，默认 SideHair 182→192、TwinTail 340→329 对；原 Wider=1 侧件与 HeadACC 接触110→32 对，均不属于前镜88点。不可称全715点/所有键全域 pair0 或任意姿态、未来发型保证。RingOff 绝对键坐标精确，原生混合求值消差7.45nm已记录；作者 normal 输入与本机 canonical 编码护栏均保，不把原生法线编码舍入冒称旧值逐 bit 不变。
+
+此前已接受面罩、球/内外管、领口/衣边、MainCoat粉框、HeadMask、暂停的 FaceMaskV2 及其它服装保持。仅 Blender 工作文件；未导 FBX，未写 Unity Assets/Git、未替换生产 blend。后续先核本最终文件与用户新的现场改动，旧阶段记录只作历史。
+
+--- 以下保留旧阶段历史，当前以上方为准 ---
+
+2026-10-19 最新完成：MainCoat两侧黑粉饰框在袖筒处的四个可见断口修复。
+当前唯一完整原生文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalMainCoatPinkFramesFit/EvilFall_Kipfel_MainCoatPinkFramesFit.blend
+SHA256：1b5f81987d2478547fa9890f00e758266fbc20d892d4b0d6535e38223898622a
+已在当前native局部安装保存；保存后用户同机位正面及正负两侧Solid/Material共6张实际GPU，canonical恢复exact；独立后台实际重开本最终文件canonical/portable exact PASS。最新调用前用户的Rig/Filter显隐、眼镜、键值和视图等保留，不盲恢复旧场景。
+
+用户c41a5f49指出旧5f62肩版粉饰条仍被灰袖筒截断；此前允许旧粉346/360装配交线，遗漏其实际发光前面长弦切入c7。新修复只对四粉框32个长面各分4段、加96点，用Source父边参数t在每key中各自重采样共同连续变形场，完整黑底/发光/倒角/内返壁同走。原3549点/raw/两keys/weights全逐bit不动，保端角/条宽/既有肩与腕fit；新MainCoat3645v/3556poly/7124nativeTri，原UV分段插值、材料和原Key datablock/两key指针保留，Glove/Acc/cape/sleeve原点和所有骨/原控制均未改。
+Root亲看同角正面及近两侧6图（另独立视觉agent逐张核6图PASS），四条黑粉带均真正连续，无原四灰bar断口；Root另亲看7个上/下/前后/镜像实际图，没新明显尖片/断线，保宽保斜尾。不是靠alpha或只补一条粉细线。
+
+唯一helper：SourceContourSmoothFit/MainCoatPinkFramesFit/CandidateV1/apply_pink_frames.py::apply()
+helper SHA22627f27ed4a51f26a9aca614b64d18a2a430d2ee141acb5f49a76216da4e902；payload151f8f740590fb7715bb6f869c979a6555b3445d06c6a41301c7f9ba1a3766cd；最终geometry+QA清单FROZEN_MAIN_COAT_PINK_SOURCE_CURVE_V1.json SHA6be03bf1198ae9c7860a806000e2a9055042f152f1f5829ddaeddd61e828e1ba。只从新BeforePinkFramesFit原3549点几何调用一次，当前已含3645点，禁止重放任何旧Source/肩/腕helper。
+新用户现场备份BeforePinkFramesFit.blend SHAd7a6e358f447ac1776fb6fe2141ec619bf92f47a31414a29bcbae8a47092d759；正式应用前最后全RAM备份BeforeFinalPinkFramesApply.blend SHAf38202ca5024b6c1ec2e6f74ea5e0b2b048f4ca9b5d9d083f9194b65bc0c11b6。
+
+独审IndependentReviewV1/FROZEN_INDEPENDENT_PINK_FRAMES_V1.json：两key新增发光96tri×45探针、外黑细边/倒角对c7/Glove遮挡0；原3549点/2keys/weights全exact，新96点父参数/UV/weights/两key同场及完整闭截面核过。两key+6有限人体/专控pose actualSub4 body交叉0，min肤距.39993mm；其它50mesh/所有restcontrols显隐exact，51恢复及独立保存回读eval逐元素exact。保留黑内壁/edge-on厚侧面原Source半嵌逻辑与粉Glove125/130全域接触，不声称全部黑内面外露、全模型pair0或所有动画保证。
+原面罩/管路/前领衣边/HeadMask/暂停V2/生产blend均保。只Blender工作文件，没导FBX/没改Unity Assets/Git，生产SHA仍5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100。FinalMainCoatPinkFramesFit/COMPLETION.json、native_install_report.json、saved_roundtrip_report.json及Preview/capture.json是本最终现场证据。
+
+--- 以下旧阶段历史，当前以上方为准 ---
+
+2026-10-19 最新完成：MainCoat Source连续轮廓、袖口开口及两侧肩袖护臂兼容修复。
+当前唯一完整原生文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalMainCoatShoulderFit/EvilFall_Kipfel_MainCoatShoulderFit.blend
+SHA256：5f62af2a4be77af0d7722ac25054f98b854e87adbb1aee477a143864be5d0ccb
+已经当前native局部安装保存，保存后6向实际GPU、场景/键值/显隐/视图恢复exact；独立后台真正重开最终文件canonical/portable exact PASS。保存含用户工作中打开的Glass最新状态。后续先核新现场，不恢复旧阶段，不重放已应用helper。
+
+两轮MainCoat均已包括：先从原FBX两key共同Source场恢复肩部/外衣连续轮廓，恢复作者normals，删原袖末32封盖quad形成真正开口并宽缓腕fit（3549v/3460poly/6932tri；18无face cap点/原grid looseedge为保持key/权重index保留）；再针对用户715141bf所圈银锯齿做肩袖有限包覆。
+实际隔离证：coat_only无银片，加入MainArmGlove即有，是固定Glove蜂窝银环/透明Shield穿cape内壁；不是只58作者重合材质层问题。最新只MainCoat994点union的YZ/2regular keys与inverse-J作者normal运输，Glove/手部不动，>=220mm已接受腕fit全键exact。粉2..5原宽/外形保V1，不使用V2/V3削孔细条候选；c7背侧再宽缓+.65mm。Source130焊对/58反向材质层、原UV/权重/拓扑/所有骨/rest/原控件/其他50mesh均保留。
+
+最后局部入口：SourceContourSmoothFit/MainCoatRepairFit/ShoulderFollowup/CandidateV4/apply_shoulder_envelope.py::apply()
+helper SHA06ac67b927c803e1b50978ffcaa62ca9949b43db42f190b673e33209569df342；payload075b42b1cacbd66f3cd3250a7347dcfdb34031dc5e5eb9d0895a250ab4b26ce3。只从旧d0 MainCoat几何调用一次，当前已含，不可重放。最新全RAM应用前备份ShoulderFollowup/BeforeFinalShoulderApply.blend SHA9de81813acfc9336ab3f5ffbf947e67259bf967d2d2d99e5b7a0beddfb46b663，保用户Glass当前打开；最早d0 BeforeShoulderLayersRepair是另一旧检查点不可盲回。
+
+独立最终QA：ShoulderFollowup/CandidateV4/FINAL_V4_VALIDATION.json SHA546fd4fc748765e9b03f52234f7302f2c4569363ec846626e8c7668fca56c621。两key/六有限姿态actual Sub4真实body交线0、min肤距.39993mm；肩部c7与全Glove、银/透明Shield交线0；51eval/所有控制恢复exact，保存回读逐bit通过。Root另实际最终文件重开通过，证据见FinalMainCoatShoulderFit/COMPLETION.json/native_install_report.json/saved_roundtrip_report.json。
+Root/reviewer亲看7有效近肩上下/前后/镜像视角与当前完整角色双侧，原银锯齿消失且粉条原宽连续；axial镜头被长袖前景挡住不计。保留粉装配346/360实际交线，正斜样本在BLEND cape后但不能称全不透明遮蔽，部分严格上/轴向有无遮挡数值点；保留原锁定腕域c7↔Glove UV374/368对（均|X|>=279.892mm，subset原baseline）。不能宣全Coat-Glove/self-intersection0或全部动画保证。当前用户指定红圈可见问题有限验收通过。
+只Blender工作文件，生产blend SHA仍5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100；没导FBX/没改Unity Assets/Git。面罩、内外管、领口/衣边、HeadMask、暂停V2、原控制均保留。
+
+--- 以下为前阶段历史，当前以上方为准 ---
+
+2026-10-19 MainCoat修复进行中，尚未完成用户最后圈出的肩袖穿插。
+当前已保存完整原生检查点：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalMainCoatRepairFit/EvilFall_Kipfel_MainCoatRepaired.blend
+SHA256：d0d01e1676a2826541449ca2132709fdd58e31d564c0dc8b19f72f245b745dc5
+已安装MainCoat V4（Source轮廓恢复、32原袖末封盖面删为开口、两key统一宽缓腕fit）；真实Sub4身体、两key、有限肩肘腕/专控交叉0，native保存及独立重开exact PASS。面罩/管路/领衣边/Acc/骨/权重保留。
+但用户715141bf红圈又指出肩部银碎片。实际对象隔离已证：MainCoat单独完整，加入MainArmGlove后上端蜂窝银环穿Coat内壁，见SourceContourSmoothFit/MainCoatRepairFit/ShoulderFollowup/ObjectIsolation。当前正做Coat肩袖内腔有限扩容，Glove手部和外cape/pink饰条尽量锁定；不能拿Source作者58反向层重合作完成理由。
+当前现场就是以上V4，不能重放03da或V1..4 helper。ShoulderFollowup/BeforeShoulderLayersRepair.blend为同SHA备份。继续从当前检查点修，生产blend/Unity仍未修改。
+
+--- 以下为前阶段记录，当前以上方为准 ---
+
+2026-10-19 最新完成：前领衣边实形尖褶平顺、侧面自由灰唇重新嵌入管沿。
+当前完整原生文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalCollarEdgeSeatFit/EvilFall_Kipfel_CollarEdgeSeated.blend
+SHA256：c390836bb1744b1e874571bb6242c0471ec5157896c4b00a0af176d9c42f0405
+已在native应用保存，保存后6向实际GPU与现场状态恢复exact；后台独立重开canonical/portable exact PASS。全用户原键值、显隐、当前视图/选中/active/mode保护。Only current this file，后续先检查用户更新，不回退旧阶段。
+
+用户ff6310e9低角度尖褶：旧V3衣片quad扭到69°/边折111°，不能把连续facet当修平。前一步52b以局部高度面公平化，保X/Z、真实肤距通过；但用户e8ace764纯侧图又证实布边与管分离1.2mm，单Y平峰仍非完成版。
+本次从含52b的新现场fresh ccf248开始，只MainBodyBreast53点XYZ+原7keys共同delta；6个边界目标与内圈共同公平化，MainBodySuit全部银口/直管/夹块及所有其他对象/骨/控制全exact。只修真自由唇上段，不盲拉已经内嵌的其余边。
+
+唯一最终helper：SourceContourSmoothFit/CollarEdgeSeatFit/CandidateV2/apply_cloth_edge_seat_v2.py::apply()
+helper SHA256：dfd3d61b743fc780f965d741d704e9977d7622a1eac34e1ffa01d92204c5885e
+payload：CandidateV2/cloth_edge_seat_v2.npz
+payload SHA256：136eeb044b8e95d88058551b91db2a3a0eaf579f4487a3e81a6ffdd9e6b216ae
+只从BeforeCollarEdgeSeatFit.blend（SHA ccf248521863ece7db2112dc5586a43bd79de9f987d1760685c5865feef26c75）一次应用V2；当前完整文件已装，禁止重放或串旧helper。V1 94f只按main管体判断，完整过渡壳仍有.14–.16mm外离，已被V2取代。
+
+验证以真实完整BFS管壳每侧1466v/2928tri/4392closededges为准，不用Source未缩放半径或仅main3截面冒称整链嵌合。8edge×33=264连续点均inside；两侧最浅.151134/.110696mm，Chest.03/Neck.03后仍不脱座。实际CurrentUnity_Body_Base Sub4局部ROI共1368射线全命中，肤前min .874788mm，0negative；7keys逐bit共同D、实际端点LBS及恢复全scene/eval、保存回读通过。仅局部当前形态与有限诊断姿态，不承诺全部动画。
+
+Preview四张±90/±72纯侧/斜侧、prior_grazing、front实际验证：用户灰flap/白色楔缝已接回，无新尖峰或肤窗；保原低模圆鼓/材质明暗，未改shader、贴图、UV、权重、拓扑、原smooth设置或新增normal层。Side必须PERSP，ORTHO会被Tpose前臂/手在远处遮住。用户在发截图后继续orbit，fresh'_view'不等于截图侧角，不能用它代替明确侧视。
+
+现场及保存证据：actual_RAM_snapshot.json、actual_portable.json、saved_roundtrip_report.json、geometry_install_report.json、Preview/capture.json；独审见SC/CollarEdgeSeatFit/IndependentReviewV2。皮肤ROI复用SC/CollarClothSmoothFit/actual_body_base_sub4_front_roi.npz，原身体及rig记录精确匹配。所有Face/Gas内外管/HeadMask/暂停V2、原控制/所有rest均保。
+只Blender工作文件；没写Unity/Assets/Git、没导出FBX，生产blend SHA仍5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100。
+
+--- 以下旧阶段历史，当前以上方为准 ---
+
+2026-10-19 当前完成：前领银接口重新插接，斜管整段顺直，局部衣边收平。
+完整文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalCollarSocketFit/EvilFall_Kipfel_CollarSockets.blend
+SHA256：2f1fda09173a3fb08cad2f1eaaa897a7bea9a71fb30e87f24a7861d8a305d93c
+已经在当前 Blender 原生应用保存；保存后六方向GPU检查，并独立后台重开canonical/portable精确一致通过。用户原视图、显隐、选中、14个服装形态键及原值保留。
+
+红圈owner为MainBodySuit前领两侧silver cuffs，而非手臂MainArmGlove。银套完整Source真圆倒角保留，按原版轻嵌黑座；管/镶嵌粉条从银口到下夹块共同顺直，夹块刚体随管，夹下宽缓过渡回原线。MainBodyBreast邻边一起跟随；根部52点仅Y回补，消除初稿两小白肤/alpha窗口。没有改UV、透明贴图、材质、拓扑、权重或新增控制。
+
+最终直接入口：SourceContourSmoothFit/CollarSocketFit/CandidateV3/apply_collar_socket_v3.py::apply()。
+helper SHA256：5b1ae0d456589f038832a61db583ed27378553c11629cf0f7e5332c720af42d4
+payload：CandidateV3/collar_root_coverage_v3.npz
+payload SHA256：23cb4155909f710680320b2b0fa96341716c4fa6f195b0e0560b69b7d8494fc8
+只从BeforeCollarSocketFit.blend（SHA c0f25c6373266b408e5c34329e33b0274dc553bcca48ba32ca87679ed26b27ca）一次应用；当前完整文件已含修复，不能重放。V1短过渡产生可见弯折、V2根部有浅色窗口，均不是最终版。
+
+仅MainBodySuit1722点、MainBodyBreast104点的raw/各7keys共同delta与相关自动法向允许变化；其余几何、骨rest/pose、原控制、UV、weights、materials、actions、层级等全范围保护。Suit外12685点/Breast外1609点和其他49mesh实际eval精确不变。实际直段36.09mm；14keys逐bit共同D、各实际端点LBS、双Small1、Chest/Neck各.03rad与恢复51mesh/scene精确通过，0rest编辑。已接受Face/Gas内管、MainNeckTube及其8rest、HeadMask、暂停的FaceMaskV2全部保留。
+
+当前真实躯干CurrentUnity_Body_Base Sub4参与native六图检查；不把头部Body6944当胸前肤距证明，不宣称全部动画姿态。Preview/user_full_context.png为用户原角度完整场景；front/below/above/mirror为临时隔离检查，全部显隐视图已恢复并与保存文件精确一致。actual_RAM_snapshot.json、actual_portable.json、saved_roundtrip_report.json为现场证据。
+
+只做Blender工作文件；没有写Unity/Assets/Git、没有导出FBX，生产blend SHA仍5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100。
+下一次继续时先检查当前文件与用户新变更，以本完成文件为基线；旧OuterNeck文件仅为前一完整阶段，不要回退或串用旧helper。
+
+--- 以下旧阶段历史，当前以上方为准 ---
+
+2026-10-19 最新完成：外颈管统一后颈规格、左右对称平顺走线
+当前完整原生文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskOuterNeckTubes/EvilFall_Kipfel_OuterNeckTubes.blend
+SHA256：cdca1d0f19053bdf2fd9d1230ee5f4af7f275ee52d9c6fe1cd3860d9d454f5be
+Native已应用保存；后台独立重开canonical/portable exact PASS。保存后7方向实际GPU见FinalFaceMaskOuterNeckTubes/Preview。侧面/上下采用透视临时只显Body+Neck/Gas以排除Tpose手臂和头发遮挡，前面和接座近照用完整原场景；全部用户显隐/视图/选中已恢复，并与已保存状态精确一致。
+
+用户最新需求19a475ed：颊盘接向后颈的pink MainNeckTube管径不同，要求同后颈出口大小，并去诡异多次弯曲。
+- MainNeckTube2258中central334不动，两侧962×2共同重建；外露pink body真圆R2.8532/D5.7064mm，取后颈出口规格（原前端bodyD约3.352mm，原中段有R3.053鼓包）。后黑接环R4.2948；前端隐socket ring2仅R4.13，防止穿进已接受disk UV正面；隐藏首口ring1保约R1.6759短收口。不得声称每个hidden接头圈都与body同径。
+- 主走线是一个低维cubic(h35/26.75mm)并按Source弧长站位采样，弧长约95.05mm、最小曲率半径约23.185mm；去旧中部三波，两端既有切向约束需保一次宽缓反弯，并非承诺数学0inflection。SO3截面运输保圆，所有1924点严格X镜像，后颈端cap平均各微移约.02223mm收原Source微差；不冻结原32..48的毫米级非对称波浪。
+- 前盘frontcap有限独审：初V1放大ring2有每侧10对UVcap交线，V2仅这40点4.2948→4.13、其余2218exactV1，UVfrontcap真tri交线恢复0、整圆对frontplane余量约.10647mm。侧壁/black housing仍为插座式嵌接，不能把所有contact称全hidden/全pair0；已有塑料69及金属侧壁10局部交线，root实际斜侧近照判断为自然opaque socket接入，无可见UV盖破面。后颈接位Source交线未增加。主体/curve与V1相同。
+- 8rest为四名字GasMaskTube.L.001/.002/R.001/.002 × Armature(Source166)与Kipfel_Fit_Rig(212)两rig；按Source50站公共场运输head/tail/roll，不叠旧delta。独立3.6.23fresh no-op缓存变化0；其他rest含盘2、Gag6、GasMain2、GasTubeMain、FaceBranch保。51mesh neutral仅Neck.127370um，其余50strict0；4实际Kipfel .03rad仅所属侧962动，central334/另一侧/其他0，解析LBS误差≤.183818um，恢复exact。
+- geometry raw/eval目标误差5.59nm；central334 raw/eval/normals exact；MainNeck无keys，无normalsetter/无新custom层。Face/FaceMaskV2/Head/Body、Gas全部含已修内管/球/319/盘、外其他服装、所有原keys/values/controls/层级/UV/weights/topology/material/images/actions不动。Body_Base4986用户孤点保。
+
+唯一执行：SC/NeckTubeFlowFit/CandidateV2/apply_neck_flow.py SHAe8e59080aa33bc2e70d6164f7facb0afe73138007e17c15241aa83031fa237a6，payload1882008bfb1e5181c3275417c9d20a9ac2a9af0345ba29349cac23e52b18f88a → JointCandidateV1/apply_neck_flow_joints.py SHA1fe0ac5450cb5117436116c3d0e449393d9e484f5ca3207342f3af06a6c9e426，必须显式config_path=JointCandidateV2/joint_targets_v2.json SHA0ccbb1e70c5072114614f60204139638ec7fd3b84bb8755da0b87c2a2ceb0ae1。不能用旧V1默认pin或任何旧颈管/jointhelper。只从BeforeNeckTubeFlowFit.blend fresh89bc39abe8729ba94438c0aa14ffbca1299a4ec3c4c3e0c264b6507f8ae838a7执行一次，当前已装不能重复。
+
+用户Face Longer1/Wider0、Face隐藏、GasMaskX=.7640449404716492/其他0、Body原键和显隐/原相机均保。仅Blender；没有写Unity/Assets/Git或导出FBX，生产blend重hash5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100不变。FaceMaskV2仍不做。验证为当前姿态7视图/有限几何/4原控制与保存重开，不承诺全部动画姿态。后续先看当前文件和用户新改动，再继续。
+
+--- 以下旧阶段历史，当前以上方为准 ---
+
+2026-10-19 最新完成：内管与中央粉袖筒真正同轴、斜视悬唇修复
+当前完整文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskCoaxialTubes/EvilFall_Kipfel_CoaxialTubes.blend
+SHA256：d5d06344af0382f377fed01f6c5bfeb980b1707c4d1a1705ec64e4aa5f2e1736
+Native已应用并保存，独立后台重开canonical/portable exact PASS；保存后六方向真实GPU近照在FinalFaceMaskCoaxialTubes/Preview（用户679截图同角度、左右正面、左右高斜视、上方、反向）。当前为可复核版本，等待用户外观反馈，不宣称全动画姿态验收。
+
+连续用户反馈与纠正：先前误把“左边大右边小”当L/R两管大小不一致，实际是单根沿轴向中央pink出管口太粗。AxialTubeDiameterFit将桥80环收径至R2.40并hidden端对齐，虽后端环盖闭合，但仍保桥轴±X、管近嘴切线约19.35°/截面19.78°。可见外唇偏心约1.46mm，斜看产生C形悬唇。用户679指出后，这次彻底修接口轴线；旧FinalFaceMaskAxialTubeFit只是未验收检查点，不能再安装。
+- 两侧粉sleeve82（含cap494/495）properR转到公共mouth轴约21.1079°；Tube202近嘴站位/截面共同场，后段Hermite平缓接回盘端。盘端每侧cap0+ring1/2共41点完全fixed；根环共享gear内孔的邻接面自然跟随，gear外点/球/319/盘等不动。
+- 外口截面、套筒轴和首可见管切线同轴；原1.46mm偏心降到浮点量级(<.00006mm)，轴差<.00008°。四站转弯比原先更缓，圆环用SO3+统一径向缩放保真实圆与平面，没有世界YZ压扁。
+- V1同轴稿实侧壁未交，但全4.157mm插接域最短夹层仅.01656mm；原生高斜/上视有白色条点。受控V2只将隐藏mouth ring7的40点原平面统一R2.19（V1为2.35），其他1931点/keys exactV1，保持公共轴/全部cap/82sleeve/盘座；管内插部分至ring6约3.02mm平缓恢复到既有R2.4，不假称该短段表面不变。最短侧壁距提高到L.08321275/R.08316480mm；40×40原tri无交，每侧29520环周/轴样本全正。实际同角度A/B条点消失，采用V2；V1不再安装。
+- 当前直接fresh→V2共允许284点共同场，其余1687 raw/全部keys/eval exact；664 incident tri正面积、无新flip，gear内孔同poly转折约21.92°供GPU已检。完整GagTubeX绝对collapsed数组保持，native相对key混合hide最大7.45nm rounding；outside284 eval0、owned3.73nm。所有骨、原开关/树、权重、UV、材质/资源、Face/Head/FaceMaskV2/Body/319/盘/外管/其他服装不动。没有normalsetter，incident fan外loopnormals精确；内部形状变化的normal随nativeSourcefan自然更新。
+
+唯一本轮入口：SourceContourSmoothFit/TubeCoaxialFit/CandidateV2/apply_coaxial_tubes.py SHA6aea81bfc972be70a7da1ce5b02f290e4e5be2b3d37bf4d6189cd604cfd68dd0，payload coaxial_sleeves_and_inner_tubes_radius219_v2.npz SHAffda2053cae54988c477cc3f39281c75f693b4eeddfface5f0f09d97e742f0af。直接从本轮BeforeTubeCoaxialFit.blend fresh18d69f6b39e1e30b3eb2d4f0cd00b66242d75d827136ffdb0596453634ca0875调用一次；不能串旧Axial/V1/oldModule/旧jointhelper，当前已装也不能重复。
+用户Face Longer1/Wider0、Face隐藏、GasMaskX=.7640449404716492其余0、原相机高斜视、Body形态键与显隐/选中均保持；Body_Base4986用户孤点保。验证仅当前姿态多方向与有限几何/键端点/完整保存回读，不代表全动画姿态验收。未写Unity/Assets/Git、未导FBX，生产blend重hash5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100。V2面罩本体仍按要求不做。后续先看当前文件与用户新改动，别回旧C唇/厚楔候选。
+
+--- 以下旧阶段历史，当前以上方为准 ---
+
+2026-10-19 最新小改已原生保存：中央模块缩小与双侧内管接头统一
+当前完整文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskModuleTubeRefined/EvilFall_Kipfel_ModuleTubeRefined.blend
+SHA256：a4859231e952b202712f8eba61672d8c0b8198a60defc68f79b26cc5740d447c
+Native当前已应用并保存；后台独立重开canonical/portable exact PASS。保存后4实际GPU视图在FinalFaceMaskModuleTubeRefined/Preview（用户当前全部Filter keys0正/斜/侧+单外置过滤模式正面）。临时预览和当前保存状态精确一致并保留用户显隐/视图/选中。
+
+用户最新反馈：中央模块顶尖冒出Face鼻框，允许适当缩小并调位；中间出来的两根管要求统一尺寸。
+- fresh现场用户已Face Longer1/Wider0，Filter三个keys全0，原值照保；不要回上一轮Wider1。备份SourceContourSmoothFit/ModuleAndTubesRefine/BeforeModuleTubeRefine.blend SHA feca8b556727bd20dd087a264d8e808f0c89eaf9c5af0fea9345212ab1886031。
+- 仅中央319围绕原件质心uniform.90，保持Source形状/圆形、原半嵌和21°倾角；XYZ不另平移，不拉裙。顶尖从660.111降至657.695949mm，Face鼻框658.500016，内收.804067mm；frontstack760probe全露min3.9064mm，rear28点全部半嵌。GasMaskX中央绝对collapsed端点保，其他1652坐标在module步exact。
+- fresh实测左右内管142×2已严格同径同长，eval镜像max.00006018mm、paired直径max差.000000439mm；Source原环有body R2.29341和collar R2.60255mm两规格，导致局部粗细跳变。按用户统一观感要求双侧同station collar共同收至R2.40mm（直径4.80），body直径4.58682mm保，端cap/bodyring/4站中心/24.520680mm路径/连接盘位置不动；只160collar点径向修改。保native annulus不压零；560相关tri min area.037726mm²/dotmin.9999999976，无新增fold或零面。嘴端20/20外环仍埋入，盘端cap约.916mm嵌入不动，无新增端口缝。
+- 两GasMaskMain Sourcecarry rest按新q≈.46799989535重建到Armature/KipfelFit，长度15.628324mm；原18既有rest/FaceBranch/GagTube rests不变。有限51mesh中性仅Filter~1e−14m，其他50=0；dense参考BodyBaseSub4不做大规模eval，原raw/keys/modifiers/metadata/骨全scope守卫精确。原Kipfel controller显示/隐藏.03rad仅319动作，其他点0，恢复exact。
+- Tube GagTubeX284绝对collapsed端点保；相对形态键混合本机最多7.45nm roundoff；外284eval0。原normal encodedfans无setter，非tube loopnormals精确；模块uniformnormalcodec误差守卫通过。Face/Head/FaceMaskV2/Body/盘/外管/其他服装/UV/材质/weights/原树与控制值不变。
+
+唯一组合：ModuleAndTubesRefine/ModuleCandidateV1/apply_module.py（payloadbe924778…43e1）→ InternalTubeUniformFit/CandidateV1/apply_tube_collars.py（payload738914e7…40afa）→ ModuleAndTubesRefine/ModuleJointCandidateV1/apply_compact_filter_joints.py。冻结清单InternalTubeUniformFit/CandidateV1/FROZEN_COMBINED_MODULE_TUBES_V1.json SHA3528d82fddabfa0082af3b8608c7e7feeafb9c851f9dbfc6d5a4adf3181a7e11。只从fresh feca备份执行一次；当前已安装，不能重复旧helper。
+原作者开关与层级、用户Longer1/Wider0、Body vrc.v.oh和显隐保持，Body_Base4986用户孤点保。未导FBX/未写Unity/Assets/Git，生产blend重hash5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100不变。验证是当前姿态/有限原控制和保存重开，不代表所有动画姿态验收。后续先检查用户当前文件和新改动，再续做；FaceMaskV2继续不动。
+
+--- 以下旧阶段历史，当前以上方为准 ---
+
+2026-10-19 最新修订已保存：默认面罩紧凑侧面、中央模块恢复Source半嵌安装
+当前完整原生文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskCompactProfileFit/EvilFall_Kipfel_CompactProfileFit.blend
+SHA256：d1966a73c7b965d22394853a61612916784de8b5f1ffb98ef6cf752e95104794
+当前native已应用并保存，后台重新打开 canonical/portable exact PASS；保存后12实际GPU视图见 FinalFaceMaskCompactProfileFit/Preview。仅当前姿态与有限原控制验证，等待用户外观复核，不宣称全姿态验收。
+
+用户否决前一个SourceContourFit的中央厚楔过于前突（“马嘴套”）。上一版只作被否决的检查点，不能再当终稿安装。根因是将原Source半嵌后座的部分塑料/后缘也强制视作必须外露，错误把整个模块外推15.1mm并拉后座17.48mm来补空隙。已撤销该加厚。
+- 保SourceContour Face的原版小转折/浅碗面，在其中央宽缓Y后收2.5mm（Z630..636渐入、650..655渐退，|X|10..24渐退），316框和261片共同移动；Face allraw/allkey X/Z不变，侧脸圆盘接口exact，NoMask panel绝对收起端保。
+- 中央319恢复oldCheek原形，全件刚体绕X21°及相对oldCheek worldY−4.674484614mm；后座无新增延长/形变，按Source逻辑半嵌。原Source cap/glow/frontbevel1815:1916全部外露；原Source可见金属rim1957..1967留外露，不要求自遮/后座1968..1971暴露。
+- 最前worldY由被否决版−105.886收回−98.990mm（后收6.896mm），worldYbbox36.091→26.295mm；原Source局部内在depth q.52×33.851≈17.603mm，刚体不变，后裙增加0。原rear lip25/28投影在Face后约.36..5.24mm，3点在Face轮廓外属原底部外轮廓，实际侧/斜图后座未脱开。
+- 其他Gas1652（球、杆、内管、盘）allraw/allkeys/eval/normals exact；外颈管、Head、FaceMaskV2、Body与其余衣服保。Face、Gas原encodedauthorfan层不重写；实际front旋转normal误差.000108量级，原smooth面标记保持。
+- 独立有限检查：球1.0303mm、shaft3.0021、内管1.5500、Headfront.1936、Body5.0695余量；972tri新增flip0，panel normaldotmin.8268；原Source frontstack610点外露，visiblemetal122命中最小前露约.299928mm。保源轮廓不是对全部动画姿态无穿插保证。
+- 两GasMaskMain按原Source→finalq/R/T重新运输到Armature/Kipfel_Fit_Rig，修正原有source缩放遗留；不是在已移15.1mm的rest上再叠旧delta。Source长度q.51999991目标17.364806mm，head误差29.7nm/length44.5nm，roll随Source properR。其他18既有rest+FaceBranch exact当前独立3.6no-op；52mesh neutral仅Filter .11921um，其余51严格0。实际原Kipfel GasMaskMain .03rad在GasMaskX0/1各仅319动，其他1652与其他source0，恢复exact。
+
+唯一本轮入口：SourceContourSmoothFit/CompactExternalFilterFit/apply_compact.py（payload fb6076188b94362cca43c502956c31b95c78f6d40b5b2ed5fed996bf715d9466；helper57c647de…73e7e）→ CompactExternalFilterJointV1/apply_compact_filter_joints.py（default compact_joint_config_v1.json38e0ecea…dc9fd；helpercd3f8d89…2275a）。输入SHA pin见compact_final_install_inputs.json。必须从a12c被否决版baseline仅运行一次，已安装后不能重复。禁止运行旧FaceV3/旧15.1平移/旧后裙/旧resthelper覆盖当前。
+
+原作者控制树、keys/值、用户显隐与选中保持；Body vrc.v.oh=1；CurrentUnity_Body_Base4986用户孤点保。FaceMaskGasFilter仍按用户原hidden保持，预览中显示及隐藏头发均临时，已恢复。FaceMaskV2继续完全不动。
+备份：FinalFaceMaskCompactProfileFit/BeforeCompactProfileUserState.blend。未导FBX、未写Unity/Assets/Git，生产blend重hash5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100不变。
+后续先检查当前保存及用户新改动，不回旧厚楔候选。当前为Blender适配可复核版本，尚未操作Unity。
+
+--- 以下为旧阶段历史，当前以上方为准 ---
+
+2026-10-19 新反馈：用户否决SourceContourFit中央模块的厚楔和过度前突。该文件只作已保存检查点，不是验收终稿。正在CompactMaskProfile修订：撤掉17mm后座加厚，按Source侧面倾角/深度复原，V2仍不动。不能盲装旧纯平移或后裙候选。
+
+2026-10-19 最新完成：默认 FaceMask 原版轮廓重拟合、中央外置模块后座贴合
+当前完整原生文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskSourceContourFit/EvilFall_Kipfel_SourceContourFit.blend
+SHA256：a12c8057cb5f552837e0eaf8c58398c37df0eadda2848dbada315d3d0d73b7f9
+Blender 3.6.23 当前已应用并保存；后台独立重开 canonical/portable exact 通过。实际保存后12视图见 FinalFaceMaskSourceContourFit/Preview。
+
+用户要求：现在的适配可接受，但边框和面片棱角过多、外轮廓偏离原FBX图5；随后指出中央模块与面罩侧面分离。V2继续不动。
+- 默认 Face577 从原FBX316框+261面片共同重拟合为连续碗状曲面，保原小转折和浅下缺口，收掉旧累计大鼻尖和下尖。保原577点/468面、UV/权重/材质/6原keys及原平滑面标记；Source法线运输并用3.6编码检查。没有用全局Subdivision替代原轮廓。
+- Face CandidateV3冻结：source_surface_refit_v3.npz SHA f326bbf6227bbf2769c9c743df7368fb1fcd701850169a097aaf63ae9b942c26。既有侧盘420、内管284、球与中央杆948、外颈管2258、Head/V2/Body和已接受18rest保持。
+- 新面罩碗面会遮到中央外置过滤件上框，因此只中央319可见几何worldY−15.1mm，保护GasMaskX绝对collapsed坐标。用户指出纯平移后后座下半部脱开，该V1不能安装。
+- 终稿ExternalFilter319CandidateV2只相对该纯平移稿延长41点塑料后安装座Y，原前278点/金属/前圆盖/发光/倒角保；其余1652点及全部原控制保持。后沿11投影点轻嵌约.36–.65mm，侧GPU已确认空隙闭合；后裙最深延长17.48mm。这是安装壳深度适配，不能描述为中央319全刚体或源形体完全不变。
+- 后盖poly2046/2050存在内部局部95/105°quad转折；有限110关联面均正面积、311局部非邻接AABB候选无新增交线；所查面在Face后1.4–2.2mm，实际侧/斜视未外露。未为了隐藏rear转折再扩大改造。原前框与可见面保持。
+- Armature与Kipfel_Fit_Rig两GasMaskMain叶骨head/tail同移worldY−15.1mm，原roll/轴/长度及18既有rest保。52网格中性仅Filter误差.06664um，其他51严格0；原controller localY .03rad在GasMaskX显示/收起两端仅319动，其他1652与其他source网格0，状态恢复exact。
+
+唯一终稿顺序：CandidateV3/apply_source_surface.py → ExternalFilter319CandidateV2/apply_backskirt.py → ExternalFilter319JointCandidateV1/apply_external319_joint_translation.py（必须用JointCandidateV2/joint_config_v2.json）。完整SHA pin见 SourceContourSmoothFit/final_install_inputs.json。不要再运行纯平移V1或任何旧Face候选。
+当前保存前用户新隐藏了CurrentUnity_Hair_Front/Side，仅该两显隐差异被允许并保留；其他geometry/controls与fresh baseline相同。预览前/斜图临时显示头发，侧图临时隐藏，均已恢复用户状态。FaceFilter仍按用户当时隐藏及原key值保留；Body vrc.v.oh=1，Body_Base4986孤点保。原作者控制树、资源与其余服装保持。
+
+备份：FinalFaceMaskSourceContourFit/BeforeSourceContourLatestUserState.blend。更早fresh baseline在SourceContourSmoothFit/BeforeSourceContourSmoothFit.blend。
+未导FBX、未写Unity/Assets/Git、生产blend重hash仍5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100。
+验证为当前姿态多视图、有限几何和原控制、保存重开精确，不代表全部动画姿态验收。用户后续说继续时先查当前文件和新改动，不能回旧CheekSockets文件或旧RESUME状态。
+
+--- 以下为旧阶段历史，当前以上方为准 ---
+
+2026-10-19 最新完成：默认面罩球体对嘴、侧脸圆盘与内外管整套适配
+当前完整原生保存文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskCheekSocketsFit/EvilFall_Kipfel_CheekSocketsFit.blend
+SHA256：5320d044616215feddad248fcb9da95ee8d79e491cfbae0050a819216b97590f
+当前Native已打开并应用该版本。后台重新打开 canonical/portable精确通过，实际保存后的正/斜/侧GPU已核；球款闭嘴、哦嘴、HeadMask叠戴及普通过滤款另在原生临时副本检视，恢复exact。
+
+用户最终要求取代旧红圈盘位置：圆盘恢复原FBX侧脸安装逻辑，贴面罩略嵌；内部管延长；允许适当调整面罩。
+- 球0:454和中央杆454:948共同worldZ−4.67mm，球心Z638.6035mm对应嘴线；X/Y和尺寸保。内部原3控制/GagTubeX收起绝对坐标及层级保。原生GagMain/GagTube左右的Source+FaceBranch共6rest同移，有限控制仅各所属948/142/142点动作。
+- 侧盘210×2保持真圆直径12.76752mm，恢复Source侧脸斜角properR，右rear中心约[42.710,−61.481,638.650]mm，front约[45.997,−66.817,636.894]mm，左strictmirror。后座嵌Face，正面盖外露；不再保旧X±26.77内移位置。
+- 内142×2延长至侧盘，统一source q=.40935954圆截面，取代未装V1长锥形；原球/中央杆/三角过滤件保。MainNeckTube上端随盘Source座内offset同步，颈端与central334点保；两管原native环无新折返。
+- Face577框+片共同局部Y让位，all X/Z与鼻顶/浅U正面轮廓保；central峰8.643mm，肩场5.92mm，拒绝了旧21.67mm过大稿。当前sphere/内管与板有限双向交线0；外neck↔板交点均在盘座闭体内，盘外交0；盘front所有投影命中均在板前，圆盖可见。
+- Source166+Kipfel212中盘2+neck4共12rest同步，Neck按原Source站位运输修复旧stale pivot。52mesh neutral max Gas .1216um/Neck .0703um，其余50 strict0；6原控制.03rad有限LBS，仅所属210/962域动，状态全恢复。其他bone（含上述Gag6）、FaceBranch、Body、Head、V2不变。
+
+冻结入口 MouthSphereTubeFit/CheekMount/CandidateV2/apply_complete_cheek_v2.py（一次含Face/Gas/Neck）→CheekMount/JointCandidateV1/apply_cheek_neck_joint_transport.py(config joint_targets_v1.json)。旧MaskClearanceV1与CheekV1不可再装。BeforeCheekSocketFit.blend是应用前backup（已含sphere+6Gag joints），更早BeforeMaskClearance.blend在FinalFaceMaskMouthSphereTubesFit。
+
+原控制值、用户当前Body vrc.v.oh=1及显隐/视图保；Body4986孤点保，FaceMaskV2仍完全未做。未导FBX，未写Unity/Assets/Git，生产blend重hash仍5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100。仅有限静态/原控制测试，不代表全部动画姿态无穿插。
+
+--- 以下为旧阶段历史，当前以上方为准 ---
+
+2026-10-18 最新完成：默认面罩鼻部、内移小圆盘与HeadMask兼容
+当前完整原生保存文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskNoseDisksHeadMaskFit/EvilFall_Kipfel_NoseDisksHeadMaskFit.blend
+SHA256：1a94841615f4eac90793afbe0d7ff27f63bd6401556dcd118b974e241a687ff2
+当前Native已打开此文件；后台重开全部canonical/portable精确通过，实际9GPU检查裸脸默认款、HeadMask叠戴、HeadMask单戴的正/斜/侧均通过。F/Preview为实际原生已安装图片。
+
+用户最新需求：鼻上沿往上包；左右圆盘按19e18292红圈位置/大小且对称；默认款再次兼容HeadMask。保原作者独立控制/源文件树，FaceMaskV2模型继续不做。
+- Face577鼻部130点宽缓最高Z+3mm，frame与panel同场；下巴U高度及X宽度保。为兼容头罩必要的Y余量也同场调整。
+- 两侧210盘以原圆环properR朝正前，统一q=.6336835813394862(相对SideDisksRefined)，真圆直径12.76752mm。前环中心约[±26.7694,−78.4590,638.4995]mm，raw镜像误差严格0、实际eval浮点5.96e−8m。三轴等比、法线同旋；4原keys侧盘均exact同Basis，GasMaskX只收中央319语义保。其他Gas1551坐标/键保持。
+- Head4993下脸收容为较保守初稿.4倍，三件Logo共同外提.2mm以保独立壳层顺序；Head X/Z全不变、Z660以上不动、所有原keydelta保。3862个1mm skin点最小外余量.879mm；三Logo0.25mm点最小gap.272/.332/.273mm；1208panel点Head在后min.411mm。实际GPU单戴无第一稿漏肤/Logo碎洞。
+- 四专属GasMask.L.001/R.001 rest支点随新盘：Armature/Armature_SourceRig166与Kipfel_Fit_Rig/EvilFall_Kipfel_Armature212，从原Source作者joint总properqR/T运输，q约.40935954。其他骨head/tail/metadata/pose保，41骨matrix/length缓存严格匹配独立3.6 no-op重编对照而非声称旧bitwise；52mesh中性最大.000119mm，Face/Head/FaceMaskV2在pivot步严格0。原source专属单盘.03rad运动证据仅对应210点动，姿态恢复exact。
+- FaceMaskV2 mesh的raw/全部keys/normals/weights与原生fresh精确一致；候选目录CombinedCandidateV2、DiskCandidateV2的V2只是“本轮修订2”，不是在做FaceMaskV2。
+
+冻结执行：H/final_install_inputs.json；顺序CombinedCandidateV2/apply_combined.py(payload462a3866...)→DiskCandidateV2/apply_disks.py(payload413337a4...)→DiskPivotCandidateV1/apply_disk_joint_transport_codec36.py(config DiskPivotCandidateV2/cee030d5...)。原生三个step报告均PASS，V1临时问题稿未装。
+备份：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskNoseDisksHeadMaskFit/BeforeNoseDiskHoodFit.blend
+原控制值/显隐/当前视图保留；用户Body4986孤点/全部已接受服装/UV/weights/材质/源树不变。Unity/Assets/Git未写，无FBX输出；生产blend重hash5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100不变。
+后续先读当前保存与用户新改动，不能回旧较大圆盘/不兼容hood文件；不可执行之前候选或旧install脚本。仅当前姿态静态与有限原控制验证，无全动画验收承诺。
+
+--- 以下为旧阶段历史，当前以上方为准 ---
+
+2026-10-18 最新小改已原生保存并通过实际viewport检视：默认款左右圆盘在上一版基础各uniform0.95，中心不变，四个原key一致；仅GasFilter1232:1652共420点改，中央过滤件/框架/面板/V2/其余模型和原控制结构均exact上一版。
+当前完整文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskSideDisksRefined/EvilFall_Kipfel_SideDisksRefined.blend
+SHA256：d8ee2680db70710e91b9c3f890eb1efff1b3b3c2743cffcd36b1238b090e7f8f
+报告：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskSideDisksRefined/side_disk_refine_report.json
+备份：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMaskSideDisksRefined/BeforeSideDiskRefine.blend
+这是已应用的当前场景，不要回上一版较大圆盘。V2仍按用户要求不做。
+
+# Stage76 当前已保存：默认面罩浅U与包鼻轮廓（2026-10-18）
+
+当前完整原生文件：/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalFaceMasksContourFit/EvilFall_Kipfel_FaceMasksContourFit.blend
+SHA256：f7488b4f546a74faaf93bfe43e28f6dd668bafc803cb5cac56e4c8472f086b2a
+Blender3.6.23，当前原生已打开此文件。保存后后台重开 canonical/portable 全精确通过；实际原生正/斜/侧GPU见 FinalFaceMasksContourFit/Preview。
+
+## 用户最新范围
+
+- 红线浅U+中央包鼻用于默认 FaceMask，含316框、96点发光带、261透明片共同轮廓，不只压板。
+- FaceMaskGasFilter 中央319外件uniform0.65、两侧210各uniform0.85，随后刚体YZ适配新框；两圆盘仍为圆形，中心X保持。内部0..1231 exact。
+- 用户明确V2先不动，后面再考虑。FaceMaskV2所有raw、key coords、normal、骨骼/权重完全与原生fresh一致。本轮没有应用任何V2候选，仅为显示默认款将V2隐藏。
+- 默认款框/片X宽保原，黑框/粉色发光框共同浅U。中央外鼻框658.5mm、内片656.46；下U外623.5、内626.3。下沿后收到下巴；鼻部保空间。
+- 原独立shape keys/原FBX树保持，没有新集中控件。当前显示默认款：FaceNoMask0，FilterGasMaskX0、GagBallX1、GagTubeX1；Wider1用户值保持。V2只隐藏，其key值保持。
+
+## 冻结实施与验证
+
+唯一已安装载荷：LocalYZCandidateV15/local_shell_yz_candidate_v15.npz
+SHA f8639ec56664d7c7cdf51424f80b164a93097f0094bcf993054b28b345b0a9f8
+Helper SHA4df9d1e28e4d90c5206ab919af75e13202cb6d716ed3924b9a6c49cc40b5c184
+只2targets FaceMask、FaceMaskGasFilter；其余对象、骨骼、资源、材质、UV、拓扑、权重、控件结构均守卫精确。GasMaskX只保护中央319原collapsed绝对坐标，侧420同Basis缩小，切0/1时圆盘位移0。
+V15仅以4个frame点182/209/284/311修V14局部折回；20个有限关联面有向面积全部正；全部panel和Gas形体exactV14。实际正/斜/侧以及用户Wider1检视通过。
+
+## 备份与边界
+
+应用前完整用户状态：FinalFaceMasksContourFit/BeforeApplyUserState.blend。
+HeadMask、全部Body4986含用户孤点、所有其他已接受服装适配均不动。Unity/Assets/Git与生产blend无写入，未导出FBX。生产SHA5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100重验一致。
+
+## 后续
+
+先检查当前保存文件及用户新改动。V2后续需要用户再提出才做，不能安装V13V2或任意旧V2候选。本轮默认款已保存可供用户检查，不能盲跑旧install_live.py或旧暂停说明。旧候选/暂停资料仅诊断历史。该轮为当前姿态视觉与静态控制检查，不代表全动画验收。

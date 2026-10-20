@@ -1,0 +1,23 @@
+{
+  "status": "NATIVE_SAVED_FINAL_REOPEN_VERIFIED",
+  "current_complete_blend": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalMainCoatPinkFramesFit/EvilFall_Kipfel_MainCoatPinkFramesFit.blend",
+  "sha256": "1b5f81987d2478547fa9890f00e758266fbc20d892d4b0d6535e38223898622a",
+  "production_unchanged_sha256": "5f2ff36e8b3870180138dfe2a5f7f670711ab13803be1c129ba50ca794def100",
+  "old3549vertices_all_coordinates_both_keys_weights_exact": true,
+  "only32_long_profile_faces_subdivided": true,
+  "added_vertices": 96,
+  "vertices": 3645,
+  "polygons": 3556,
+  "triangles": 7124,
+  "visible_four_pink_lines_and_outer_black_edges_continuous_in_same_camera_Solid_and_Material": true,
+  "root_additional_seven_angles_accepted": true,
+  "independent_visual_six_angles_accepted": true,
+  "both_keys_and_six_diagnostic_poses_actual_body_crossings": 0,
+  "other_geometry_rigs_controls_visibility_exact": true,
+  "original_inner_wall_assembly_intersections_retained": [
+    125,
+    130
+  ],
+  "limitations": "Finite actual views and selected poses, not global self-intersection0 or all-animation guarantee.",
+  "saved_reopen_exact": true
+}

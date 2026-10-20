@@ -1,0 +1,7 @@
+{
+  "commit": "497d70bd6da8cb861f0aa78c014e069b5b79e650",
+  "subject": "fix: 完成EvilFall的Kipfel适配并恢复原版菜单功能",
+  "parent": "0a89aeef6f82cbb9008f232baa39259508d8c1d8",
+  "pushed": false,
+  "scope": "EvilFall assets, accepted full Blender source and scoped archival/line-ending rules. User live scene/material edits excluded."
+}

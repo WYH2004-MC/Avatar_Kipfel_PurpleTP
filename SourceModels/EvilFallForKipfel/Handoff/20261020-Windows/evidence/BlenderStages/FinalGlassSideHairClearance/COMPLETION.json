@@ -1,0 +1,50 @@
+{
+  "status": "GLASS_SIDE_HAIR_CLEARANCE_COMPLETE",
+  "final_file": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassSideHairClearance/EvilFall_Kipfel_GlassSideHairClearance.blend",
+  "final_sha256": "50a16135d8a74a3eeebd67f5bb8ff03201e04759677655fc2fc092771f1beab4",
+  "fresh_backup": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/SourceContourSmoothFit/GlassSideHairClearance/BeforeFinalGlassSideHairClearanceApply.blend",
+  "backup_sha256": "3bb411ba707a59069eb247b3827d9189c55216a65180830328d4c008bb53ccee",
+  "result": {
+    "lens88_and_rear129": "Current accepted continuous arc, raw and all seven shape keys exactly unchanged.",
+    "side382": "User physical size exactly preserved; proper rotation/translation outside all actual hair surfaces.",
+    "metal116": "One whole positive-det affine per58-vertex component, preserving planar surfaces. No harmonic twist.",
+    "fixed": "All other50 meshes, rigs/rest/controls/materials/UV/weights/topology preserved."
+  },
+  "validation": {
+    "three_static_endpoints": [
+      "Basis",
+      "Wider",
+      "Narror"
+    ],
+    "entire_front586_vs_Body_and_ALL5_hair_and_EarBall876_EarWire2764_cross_pairs": 0,
+    "hair_exemptions": false,
+    "four_interface_pairs": [
+      30,
+      30,
+      59,
+      59
+    ],
+    "default_minimum_hair_gap_mm": 0.853632,
+    "Narror_minimum_hair_gap_mm": 0.462722,
+    "EarWire_minimum_gap_mm": 15.60355,
+    "saved_full_snapshot_portable_reopen": "PASS_SAVED_REOPEN_EXACT",
+    "final_actual_GPU_twelve_views_and_restore": "PASS_FINAL_NATIVE_CAPTURE_RESTORED_EXACT",
+    "Root_visual_acceptance": "Both current near-side upper frame boundaries clear of hair; original current lens arc intact; metal not twisted."
+  },
+  "limits": [
+    "Only three static width endpoint states tested. No new pose sweep or arbitrary simultaneous controls certified. Minimum static hair clearance0.463mm.",
+    "Decoded custom-normal codec roundoff max.0004441 is recorded; native canonical exact, no claim every old decoded normal bit is unchanged."
+  ],
+  "supersedes": "FinalGlassArcExtensionFit rejected by user for a side-frame upper edge slicing through hair. The old underhair intersection exemption must not be reused.",
+  "evidence": {
+    "SourceContourSmoothFit/GlassSideHairClearance/CandidateV1/FROZEN_SELECTED_GLASS_SIDE_HAIR_CLEAR_V1.json": "44d849d8bd0728d7f7a63b19b57e773420fac51f38a8611f8c7fbf7f01be7711",
+    "SourceContourSmoothFit/GlassSideHairClearance/IndependentReview/FROZEN_SIDE_HAIR_CLEARANCE_V1_INDEPENDENT_QA.json": "acf63700f9f3f0e2d01568cdb35873e5548fd9dfe0fb71090879a65c958449c3",
+    "SourceContourSmoothFit/GlassSideHairClearance/CandidateV1/apply_glass_side_hair_clear.py": "21602759ed3ee7cb542bb550d2defd48718b302b8c98043737000f41479baefe",
+    "SourceContourSmoothFit/GlassSideHairClearance/CandidateV1/glass_side_hair_clear_v1.npz": "b39d21de427ddd5650924d56cc80c154a3ad713a63411f5f6b94c32c30b33c79",
+    "FinalGlassSideHairClearance/native_install_report.json": "8bbc9d08764a0647db0428e2541d2a81fc4cbe8d869649a2f1558e3b896681e1",
+    "FinalGlassSideHairClearance/saved_roundtrip_report.json": "36863ef91fb7cbf505746d5939534c6bc19290e4c6245ce3db1911461fa33758",
+    "FinalGlassSideHairClearance/capture_restore_report.json": "4ce8b65d1d92f2bae768d20632bb80927f3c689784a8574f3c20ea2551a307e2"
+  },
+  "near_side_preview": "/Users/wyh2004/Projects/VRChat/Avatar_Kipfel_BlueTP/SourceModels/EvilFallForKipfel/WorkSessions/20261013-skin-contact-fit/FinalGlassSideHairClearance/Preview/negative_hair_boundary_close.png",
+  "production_unchanged": true
+}
