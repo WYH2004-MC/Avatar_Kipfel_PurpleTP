@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: EvilFallSubMenu Outfit
+  m_EditorClassIdentifier: 
+  controls:
+  - name: Head
+    icon: {fileID: 2800000, guid: c36889a7dcb53eb448cab113a3d818e5, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/HeadAcc
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000}
+    subParameters: []
+    labels: []
+  - name: Tail
+    icon: {fileID: 2800000, guid: 9beba3ef1bd912541bf5f093a663b9a9, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/Tail
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Jacket
+    icon: {fileID: 2800000, guid: 186a0392fb38b26499b8b6b90de489e8, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/Jacket
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: JacketAcc
+    icon: {fileID: 2800000, guid: c853df55d41d66d4c96f077f55f0f315, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/JacketACC
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Bodysuit
+    icon: {fileID: 2800000, guid: 2c7719a116545624693e88d47314b82d, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/Bodysuit
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Glove
+    icon: {fileID: 2800000, guid: 90fddf019417ed141932a0e926a56caa, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/Glove
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Shoes
+    icon: {fileID: 2800000, guid: 4eac388556c6a8a4a9b307393d8b9746, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/Shoes
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Tube
+    icon: {fileID: 2800000, guid: 5637a68f5a04a864187a1bc7b14a4bf4, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/BodyTube
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []

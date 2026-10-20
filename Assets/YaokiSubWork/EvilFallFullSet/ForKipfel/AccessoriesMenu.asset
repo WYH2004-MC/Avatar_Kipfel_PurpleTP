@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: AccessoriesMenu
+  m_EditorClassIdentifier: 
+  Parameters: {fileID: 0}
+  controls:
+  - name: Outfit
+    icon: {fileID: 2800000, guid: 5eca4d0a0dcafd544a159fbf4e98f0d7, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 41f4886e0aae8445f938fddc98714729, type: 2}
+    subParameters: []
+    labels: []
+  - name: Face
+    icon: {fileID: 2800000, guid: 9d7140e65bf7a064f9bf9a0b3b2ac5d2, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 2028a639999a047a6bc94b9b93a8b226, type: 2}
+    subParameters: []
+    labels: []
+  - name: Weapon
+    icon: {fileID: 2800000, guid: ebff6b98d6d58d94496d69711bc55614, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: c2607815b3b194db7bd3709ec84c4085, type: 2}
+    subParameters: []
+    labels: []
+  - name: R18Toy
+    icon: {fileID: 2800000, guid: a244d3ea395d08241b75afa93bc7bbe5, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 55d1ca77754354c6ca9ee14dc4b2a494, type: 2}
+    subParameters: []
+    labels: []
+  - name: PlugToy
+    icon: {fileID: 2800000, guid: 013f4a4a72db8324f9a681978aa9fb9d, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: fff4532012ab7435898d7b21789114bd, type: 2}
+    subParameters: []
+    labels: []

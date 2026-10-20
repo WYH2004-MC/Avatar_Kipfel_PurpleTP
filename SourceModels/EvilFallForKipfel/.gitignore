@@ -1,0 +1,10 @@
+# Historical candidates remain on disk; the accepted source is tracked below.
+/Backups/
+/Preview/
+/WorkSessions/
+/EvilFall_Kipfel.blend*
+/Archives/
+/Exports/*
+!/Exports/20261020-Unity/
+/Exports/20261020-Unity/*
+!/Exports/20261020-Unity/EvilFall_Kipfel_AcceptedForUnity.blend

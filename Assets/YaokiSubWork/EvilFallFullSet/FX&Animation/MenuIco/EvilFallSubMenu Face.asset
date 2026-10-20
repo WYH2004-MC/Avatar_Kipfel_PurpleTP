@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: EvilFallSubMenu Face
+  m_EditorClassIdentifier: 
+  controls:
+  - name: HeadMask
+    icon: {fileID: 2800000, guid: 9d9ee3f4f4c32bb4b8f45900fd5f88e7, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/HeadMask
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000}
+    subParameters: []
+    labels: []
+  - name: FaceMask
+    icon: {fileID: 2800000, guid: bb4e30f02ef3a7b41a964765fbfab1c5, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/FaceMask
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: GasMask
+    icon: {fileID: 2800000, guid: 6fd7d64386d5ada439daa0268b607afe, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/GasMask
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Gag
+    icon: {fileID: 2800000, guid: 4e2a66e384d71e94db7bf6091c25257d, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/Gag
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: GagBall
+    icon: {fileID: 2800000, guid: 5d0581b1251184b49a5588d1349fb0e2, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/GagBall
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Glass
+    icon: {fileID: 2800000, guid: 7008ca503f7572b4cabc82c7d77cd1b9, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/Glass
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: FaceMaskV2
+    icon: {fileID: 2800000, guid: 9db8418b00cb8c64091337ff04c0f76f, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/MaskV2
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []

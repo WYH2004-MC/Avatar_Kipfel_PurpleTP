@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: EvilFallSubMenu PlugToy
+  m_EditorClassIdentifier: 
+  controls:
+  - name: PussyOn
+    icon: {fileID: 2800000, guid: 5253f3b2cbe28b440b1f8784bcd8c1d8, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/FrontToyOpen
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000}
+    subParameters: []
+    labels: []
+  - name: PussyOff
+    icon: {fileID: 2800000, guid: 88c3f2608bc2cae41a2b129cbe71842c, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/FrontToyOhHand
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: AnalOn
+    icon: {fileID: 2800000, guid: 627fe8d6b1142104295a44ade3f2bc98, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/BackToyOpen
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: AnalOff
+    icon: {fileID: 2800000, guid: 56f54b0139101e048a7a0ec955cd9801, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/BackToyOhHand
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: DotOn
+    icon: {fileID: 2800000, guid: 27ac737e2b18ed84aaf827826901d22a, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/FrontDotToyOpen
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: DotOff
+    icon: {fileID: 2800000, guid: 2fcb4f0eb5c0120409e19bd155f608a4, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/FrontDotToyUp
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: BoobOn
+    icon: {fileID: 2800000, guid: 0b17121c8ccd38846af5f2e70a307cf8, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/BreastToyOpen
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: BoofOff
+    icon: {fileID: 2800000, guid: 71be706ad8242604496b3d9faec57e76, type: 3}
+    type: 102
+    parameter:
+      name: EvilFall/BreastToyUp
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
