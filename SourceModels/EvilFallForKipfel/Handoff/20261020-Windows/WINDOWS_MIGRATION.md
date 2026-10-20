@@ -2,6 +2,22 @@
 
 归档日期：2026-10-20（Asia/Shanghai）。`Assets/`、`Packages/`、`ProjectSettings/`、`SourceModels/` 路径以工程根为基准；`evidence/`、`ram/`、`user-work/`、`logs/`、`tools/` 以本交接目录为基准。旧报告里的 macOS 绝对路径仅用于追溯。
 
+## Git LFS 补充（2026-10-20）
+
+两条适配/交接提交及紫色材质提交已随 `7a2c0428` 推送到 `origin/main`。随后将当前两个已跟踪 `.blend` 转入 Git LFS，模型的原始字节、SHA256 和权威关系保持不变。规则是 `*.blend filter=lfs diff=lfs merge=lfs -text`；采用追加提交，启用前普通 Git 中的历史大对象保留。
+
+Windows 安装 Git LFS 后，克隆或更新仓库，再在工程根执行：
+
+```powershell
+git lfs install --local
+git lfs pull
+git lfs ls-files
+```
+
+应能看到 Accepted 源及 `ram/Blender_Unreviewed.blend` 两项，工作区应为实际 Blender 文件。若文件只有几行 `version https://git-lfs.github.com/spec/v1` 文本，先完成 `git lfs pull`，再运行交接哈希检查或打开 Blender。大历史候选仍受忽略规则保护，不会因新增 `*.blend` 规则而自动加入仓库。
+
+已有 ZIP 和旁边 receipt 保留启用 LFS 前的归档基线；其中模型本身已是完整二进制。当前仓库的 `FILE_MANIFEST.json` 随 LFS 规则和本说明更新，旧 ZIP 内的清单仍只用于核对该 ZIP。
+
 ## 搬迁范围
 
 建议 Windows 使用 `D:\Kipfel` 等短根目录。历史证据最长相对路径有 238 个字符，深层目录应使用支持长路径的复制工具；先核对清单，再清理旧设备。
@@ -34,7 +50,7 @@ Unity 当前交付位于 `Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/`，继�
 
 本轮按用户要求分开本地提交：功能提交收录 EvilFall 资产与已接受 Blender 源；交接文档和证据随后另行提交，不 push。实际提交号查看交接主文档及 `git log`。
 
-这两条提交只存在于迁移前的本地仓库；从远端重新克隆不会自动得到它们。应复制完整仓库及 `.git/`，或另行制作并导入 Git bundle，再核对交接记录中的提交号。不要用远端分支覆盖本地未推送提交，也不要为消除脏状态执行重置或清理命令。
+归档生成时两条提交尚未推送；后来已随 `7a2c0428` 推送，当前从远端克隆可取得它们。若旧设备还有新的本地提交或未提交编辑，仍需另外搬迁并核对。不要用远端分支覆盖本地未推送提交，也不要为消除脏状态执行重置或清理命令。
 
 原有用户场景、材质等编辑没有默认合入功能提交；磁盘副本位于 `user-work/`，已跟踪文件差异位于 `logs/tracked-working-tree.patch`。仅通过 Git 迁移时，需要按需恢复这些文件；先比较目标文件，避免把 Windows 新编辑覆盖掉。完整复制带脏工作区的工程时则先检查是否已包含，勿重复应用补丁。
 

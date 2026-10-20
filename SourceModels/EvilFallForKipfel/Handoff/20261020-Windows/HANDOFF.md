@@ -105,7 +105,9 @@ Unity 当前 UI 状态读取超时。场景内存副本没有触发保存；因�
 
 精简 ZIP 包含交接资料、Accepted 源、本轮 EvilFall 资源和这组用户工作副本；**不是完整 Unity 工程**，不含全部角色资产、完整 Packages 或 46 GiB 历史。迁移完整工程请按 WINDOWS_MIGRATION 保留 Assets、Packages、ProjectSettings、所有 meta 和本地 Git。不要在新设备盲目执行 patch 或覆盖新编辑。
 
-Git 提交分为适配成果、交接资料两条本地提交，不 push。功能提交号记录于 `logs/functional-commit.json`；文档提交可通过 `git log --oneline -- SourceModels/EvilFallForKipfel/Handoff/20261020-Windows` 查询。本地未推送提交必须随 `.git/` 或 Git bundle 搬迁；只从远端 clone 不会得到它们。归档 ZIP 可重新生成，不重复提交大 ZIP。
+归档生成时，Git 提交分为适配成果、交接资料两条本地提交，尚未 push。随后这两条及紫色材质提交已随 `7a2c0428` 推送到 `origin/main`，当前从远端 clone 可取得。功能提交号记录于 `logs/functional-commit.json`；文档提交可通过 `git log --oneline -- SourceModels/EvilFallForKipfel/Handoff/20261020-Windows` 查询。以后新的本地未推送提交仍须随 `.git/` 或 Git bundle 搬迁。归档 ZIP 可重新生成，不重复提交大 ZIP。
+
+最新补充：当前两个已跟踪 `.blend` 已转入 Git LFS，实际模型内容与上述 SHA256 不变。Windows 先安装 Git LFS 并执行 `git lfs pull`，再核对模型；详细步骤见 WINDOWS_MIGRATION。旧 ZIP/receipt 保留原始归档基线，当前仓库清单已更新；Git 中启用前的大对象历史保留。
 
 ## 新 Codex 操作规则与核对命令
 

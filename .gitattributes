@@ -1,3 +1,4 @@
 # Keep the archived Unity delivery and its SHA256 baseline identical on Windows.
 Assets/YaokiSubWork/** -text
 SourceModels/EvilFallForKipfel/** -text
+*.blend filter=lfs diff=lfs merge=lfs -text

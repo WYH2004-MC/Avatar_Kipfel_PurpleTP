@@ -8,8 +8,8 @@
   "files": [
     {
       "project_path": ".gitattributes",
-      "size": 150,
-      "sha256": "c7538fd71e0d5b45d985f02dc75ca7baa01ef60735b92157403b591f7260d863"
+      "size": 194,
+      "sha256": "61f8e53482ebf36c4587b3bfd7683ee7a37e1abf25355e3566da87c54661250d"
     },
     {
       "project_path": "Assets/YaokiSubWork/EvilFallFullSet/FX&Animation/EvilFallFullSetAnImation Lime.controller",
@@ -2678,8 +2678,8 @@
     },
     {
       "project_path": "SourceModels/EvilFallForKipfel/Handoff/20261020-Windows/HANDOFF.md",
-      "size": 11606,
-      "sha256": "37042efcf9128cbf0a95ce3a71f25eaea09ad94c463cc53781c512c8c352b65b"
+      "size": 12048,
+      "sha256": "f6837b06711a3f2c810020a9a573dce8515be1fc4c786c39525f599013120080"
     },
     {
       "project_path": "SourceModels/EvilFallForKipfel/Handoff/20261020-Windows/START_HERE.txt",
@@ -2688,8 +2688,8 @@
     },
     {
       "project_path": "SourceModels/EvilFallForKipfel/Handoff/20261020-Windows/WINDOWS_MIGRATION.md",
-      "size": 5098,
-      "sha256": "bc774adda553a1574ed2bed4114a6395bc4537acff9c9501f3e6876f3d228d73"
+      "size": 6200,
+      "sha256": "5494375fd31794bef84c65940b8e3f15a7afb9d831b191b18da5ad8356b621c9"
     },
     {
       "project_path": "SourceModels/EvilFallForKipfel/Handoff/20261020-Windows/evidence/BlenderStages/FinalEarphoneCableHairClearance/COMPLETION.json",
@@ -3091,5 +3091,9 @@
       "meta_path": "Assets/YaokiSubWork/EvilFallFullSet/ForKipfel/EvilFall_Kipfel.fbx.meta",
       "guid": "02362ac3b72a643bca5074e35b3eec18"
     }
-  ]
+  ],
+  "lfs_update": {
+    "date": "2026-10-20",
+    "scope": "Current tracked blend files stored in Git LFS; actual file content hashes unchanged. Existing ZIP retains its earlier manifest baseline."
+  }
 }
