@@ -49,6 +49,16 @@ MonoBehaviour:
     saved: 0
     defaultValue: 0
     networkSynced: 1
+  - name: RemovePupil
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: Clothes
+    valueType: 0
+    saved: 1
+    defaultValue: 0
+    networkSynced: 0
   - name: EmoteList
     valueType: 0
     saved: 1
@@ -90,6 +100,21 @@ MonoBehaviour:
     defaultValue: 0
     networkSynced: 1
   - name: KipfelSync/EmoteList1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: KipfelSync/Clothes0
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: KipfelSync/Clothes1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: KipfelSync/Clothes2
     valueType: 2
     saved: 0
     defaultValue: 0

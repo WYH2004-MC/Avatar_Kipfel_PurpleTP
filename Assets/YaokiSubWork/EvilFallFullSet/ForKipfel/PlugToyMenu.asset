@@ -18,7 +18,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 5253f3b2cbe28b440b1f8784bcd8c1d8, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/FrontToyOpen
+      name: EvilFall/FrontToyOpen
     value: 1
     style: 0
     subMenu: {fileID: 11400000}
@@ -28,7 +28,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 88c3f2608bc2cae41a2b129cbe71842c, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/FrontToyOhHand
+      name: EvilFall/FrontToyOhHand
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -38,7 +38,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 627fe8d6b1142104295a44ade3f2bc98, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/BackToyOpen
+      name: EvilFall/BackToyOpen
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 56f54b0139101e048a7a0ec955cd9801, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/BackToyOhHand
+      name: EvilFall/BackToyOhHand
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -58,7 +58,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 27ac737e2b18ed84aaf827826901d22a, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/FrontDotToyOpen
+      name: EvilFall/FrontDotToyOpen
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -68,7 +68,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 2fcb4f0eb5c0120409e19bd155f608a4, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/FrontDotToyUp
+      name: EvilFall/FrontDotToyUp
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -78,7 +78,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 0b17121c8ccd38846af5f2e70a307cf8, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/BreastToyOpen
+      name: EvilFall/BreastToyOpen
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -88,7 +88,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 71be706ad8242604496b3d9faec57e76, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/BreastToyUp
+      name: EvilFall/BreastToyUp
     value: 1
     style: 0
     subMenu: {fileID: 0}

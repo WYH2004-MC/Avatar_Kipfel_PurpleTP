@@ -18,7 +18,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 83c6e22555642504ab5a976c714df973, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/Dick
+      name: EvilFall/Dick
     value: 1
     style: 0
     subMenu: {fileID: 11400000}
@@ -28,7 +28,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 974201bf1a8c0354487a9ba319aab343, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/DickLock
+      name: EvilFall/DickLock
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -38,7 +38,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 1eb03814b0440484aa1e121374481bde, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/UrineCollector
+      name: EvilFall/UrineCollector
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 3e04c150933625f4abfe9ef97e63b850, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/PussyLiquidCollector
+      name: EvilFall/PussyLiquidCollector
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -58,7 +58,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 88edc99c78f1a9a40a92ab98ce9fe7af, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/ToyTube
+      name: EvilFall/ToyTube
     value: 1
     style: 0
     subMenu: {fileID: 0}

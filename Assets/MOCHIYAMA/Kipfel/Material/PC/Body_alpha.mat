@@ -17,8 +17,7 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2455
-  stringTagMap:
-    VRCFallback: Hidden
+  stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -259,7 +258,7 @@ Material:
     - _AlphaMaskMode: 0
     - _AlphaMaskScale: 1
     - _AlphaMaskValue: 0
-    - _AlphaToMask: 0
+    - _AlphaToMask: 1
     - _Anisotropy2MatCap: 0
     - _Anisotropy2MatCap2nd: 0
     - _Anisotropy2Reflection: 0

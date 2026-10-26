@@ -50,3 +50,6 @@ Desktop.ini
 
 # Keep Unity metadata tracked
 !*.meta
+
+.claude
+

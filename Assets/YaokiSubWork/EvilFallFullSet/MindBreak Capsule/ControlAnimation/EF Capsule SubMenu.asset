@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: EF Capsule SubMenu
+  m_EditorClassIdentifier: 
+  controls:
+  - name: Toggle
+    icon: {fileID: 2800000, guid: 28bd5cbf68d3e9f479492d2e11a34390, type: 3}
+    type: 102
+    parameter:
+      name: EFcapsule/On
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Free
+    icon: {fileID: 2800000, guid: 7600899140f6bc347a899cd9ec14c3aa, type: 3}
+    type: 102
+    parameter:
+      name: EFcapsule/Free
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Cover
+    icon: {fileID: 2800000, guid: faec03be8d61c634eb97f455879fc51e, type: 3}
+    type: 102
+    parameter:
+      name: EFcapsule/Cover
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Liquid
+    icon: {fileID: 2800000, guid: fabe4be5dc15acf4e83a184acb315027, type: 3}
+    type: 102
+    parameter:
+      name: EFcapsule/Full
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: GlassLight
+    icon: {fileID: 2800000, guid: a47f6a52e925bfa46a054072e7cbb988, type: 3}
+    type: 102
+    parameter:
+      name: EFcapsule/GlassLight
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Milk
+    icon: {fileID: 2800000, guid: b887fa1f3ccf21b4da14d19bd31810ab, type: 3}
+    type: 102
+    parameter:
+      name: EFcapsule/Milk
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Waste
+    icon: {fileID: 2800000, guid: 6547277a7ed70014aa3be09c4de1741a, type: 3}
+    type: 102
+    parameter:
+      name: EFcapsule/Waste
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []

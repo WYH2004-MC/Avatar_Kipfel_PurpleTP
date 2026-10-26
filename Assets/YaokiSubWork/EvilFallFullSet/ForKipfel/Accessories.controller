@@ -63,7 +63,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/BreastToyUp
+    m_ConditionEvent: EvilFall/BreastToyUp
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1870749429560288034}
@@ -88,10 +88,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/WeaponState2
+    m_ConditionEvent: EvilFall/WeaponState2
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Tail
+    m_ConditionEvent: EvilFall/Tail
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6257882177853678535}
@@ -116,7 +116,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/UrineCollector
+    m_ConditionEvent: EvilFall/UrineCollector
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7367885418549739031}
@@ -168,7 +168,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/GasMask
+    m_ConditionEvent: EvilFall/GasMask
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5112995333638478033}
@@ -193,7 +193,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Bodysuit
+    m_ConditionEvent: EvilFall/Bodysuit
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7005784671427153979}
@@ -218,7 +218,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/DickLock
+    m_ConditionEvent: EvilFall/DickLock
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6802234566122795635}
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameters:
   - type: 0
-    name: EvilFallKipfel/FrontToyOhHand
+    name: EvilFall/FrontToyOhHand
     source: 
     value: 0
     valueMin: 0
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameters:
   - type: 0
-    name: EvilFallKipfel/WeaponOff
+    name: EvilFall/WeaponOff
     source: 
     value: 0
     valueMin: 0
@@ -289,7 +289,7 @@ MonoBehaviour:
     destMin: 0
     destMax: 0
   - type: 0
-    name: EvilFallKipfel/WeaponState2
+    name: EvilFall/WeaponState2
     source: 
     value: 0
     valueMin: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
     destMin: 0
     destMax: 0
   - type: 0
-    name: EvilFallKipfel/WeaponState3
+    name: EvilFall/WeaponState3
     source: 
     value: 0
     valueMin: 0
@@ -352,7 +352,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/WeaponState1
+    m_ConditionEvent: EvilFall/WeaponState1
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -507220129862699782}
@@ -433,7 +433,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/FrontToyOpen
+    m_ConditionEvent: EvilFall/FrontToyOpen
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 535403242945341078}
@@ -513,7 +513,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Tail
+    m_ConditionEvent: EvilFall/Tail
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8225845450454688122}
@@ -617,7 +617,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/Gag
+    m_ConditionEvent: EvilFall/Gag
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3569561898896760494}
@@ -642,7 +642,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/FrontToyOhHand
+    m_ConditionEvent: EvilFall/FrontToyOhHand
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3951216943528493537}
@@ -667,7 +667,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/Dick
+    m_ConditionEvent: EvilFall/Dick
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6262150489032808789}
@@ -824,7 +824,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/HeadAcc
+    m_ConditionEvent: EvilFall/HeadAcc
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1630577062014097599}
@@ -849,7 +849,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Glove
+    m_ConditionEvent: EvilFall/Glove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4991158022060530497}
@@ -954,7 +954,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Shoes
+    m_ConditionEvent: EvilFall/Shoes
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7106586217710969041}
@@ -979,7 +979,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/Glove
+    m_ConditionEvent: EvilFall/Glove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6513039285214277453}
@@ -1056,10 +1056,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/WeaponState1
+    m_ConditionEvent: EvilFall/WeaponState1
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Tail
+    m_ConditionEvent: EvilFall/Tail
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6257882177853678535}
@@ -1136,7 +1136,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Jacket
+    m_ConditionEvent: EvilFall/Jacket
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2193205990973334563}
@@ -1166,7 +1166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameters:
   - type: 0
-    name: EvilFallKipfel/FrontDotToyOpen
+    name: EvilFall/FrontDotToyOpen
     source: 
     value: 0
     valueMin: 0
@@ -1189,10 +1189,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/FrontToyOpen
+    m_ConditionEvent: EvilFall/FrontToyOpen
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/FrontToyOhHand
+    m_ConditionEvent: EvilFall/FrontToyOhHand
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4108424904148650132}
@@ -1243,7 +1243,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Dick
+    m_ConditionEvent: EvilFall/Dick
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6802234566122795635}
@@ -1268,7 +1268,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/WeaponOff
+    m_ConditionEvent: EvilFall/WeaponOff
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8564220312473080448}
@@ -1320,7 +1320,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/Tail
+    m_ConditionEvent: EvilFall/Tail
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -643759003272525166}
@@ -1402,7 +1402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameters:
   - type: 0
-    name: EvilFallKipfel/FrontToyOpen
+    name: EvilFall/FrontToyOpen
     source: 
     value: 0
     valueMin: 0
@@ -1430,7 +1430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameters:
   - type: 0
-    name: EvilFallKipfel/BreastToyUp
+    name: EvilFall/BreastToyUp
     source: 
     value: 0
     valueMin: 0
@@ -1453,7 +1453,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/JacketACC
+    m_ConditionEvent: EvilFall/JacketACC
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1723207410521715048}
@@ -1478,7 +1478,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/Bodysuit
+    m_ConditionEvent: EvilFall/Bodysuit
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2911468063833490449}
@@ -1556,7 +1556,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/Dick
+    m_ConditionEvent: EvilFall/Dick
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6262150489032808789}
@@ -1581,10 +1581,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/BackToyOpen
+    m_ConditionEvent: EvilFall/BackToyOpen
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/BackToyOhHand
+    m_ConditionEvent: EvilFall/BackToyOhHand
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4867617125597138455}
@@ -1609,7 +1609,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/FaceMask
+    m_ConditionEvent: EvilFall/FaceMask
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6638328297109740119}
@@ -1659,7 +1659,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/BackToyOhHand
+    m_ConditionEvent: EvilFall/BackToyOhHand
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2525938505641727887}
@@ -1684,10 +1684,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/FrontDotToyOpen
+    m_ConditionEvent: EvilFall/FrontDotToyOpen
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/FrontDotToyUp
+    m_ConditionEvent: EvilFall/FrontDotToyUp
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1999722805831589393}
@@ -1712,7 +1712,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/FrontDotToyOpen
+    m_ConditionEvent: EvilFall/FrontDotToyOpen
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 234856026428054007}
@@ -1791,7 +1791,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/HeadAcc
+    m_ConditionEvent: EvilFall/HeadAcc
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5359546804984024819}
@@ -1925,7 +1925,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/Glass
+    m_ConditionEvent: EvilFall/Glass
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -9177871950234544656}
@@ -1950,10 +1950,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/WeaponOff
+    m_ConditionEvent: EvilFall/WeaponOff
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/Tail
+    m_ConditionEvent: EvilFall/Tail
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8991216441934322876}
@@ -2037,7 +2037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameters:
   - type: 0
-    name: EvilFallKipfel/FrontDotToyUp
+    name: EvilFall/FrontDotToyUp
     source: 
     value: 0
     valueMin: 0
@@ -2060,7 +2060,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/MaskV2
+    m_ConditionEvent: EvilFall/MaskV2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4170167724127402947}
@@ -2085,7 +2085,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/GasMask
+    m_ConditionEvent: EvilFall/GasMask
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2277699195395711747}
@@ -2110,7 +2110,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/BodyTube
+    m_ConditionEvent: EvilFall/BodyTube
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2046079988935301963}
@@ -2214,7 +2214,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Gag
+    m_ConditionEvent: EvilFall/Gag
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -741653200486412251}
@@ -2266,7 +2266,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/DickLock
+    m_ConditionEvent: EvilFall/DickLock
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1925044193168037113}
@@ -2347,7 +2347,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/HeadMask
+    m_ConditionEvent: EvilFall/HeadMask
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3552829090775928084}
@@ -2372,10 +2372,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/WeaponState3
+    m_ConditionEvent: EvilFall/WeaponState3
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Tail
+    m_ConditionEvent: EvilFall/Tail
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6257882177853678535}
@@ -2400,193 +2400,193 @@ AnimatorController:
   m_Name: EvilFallFullSetAnImation Lime
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: EvilFallKipfel/HeadAcc
+  - m_Name: EvilFall/HeadAcc
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/Tail
+  - m_Name: EvilFall/Tail
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/Jacket
+  - m_Name: EvilFall/Jacket
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/JacketACC
+  - m_Name: EvilFall/JacketACC
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/Bodysuit
+  - m_Name: EvilFall/Bodysuit
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/Glove
+  - m_Name: EvilFall/Glove
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/Shoes
+  - m_Name: EvilFall/Shoes
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/BodyTube
+  - m_Name: EvilFall/BodyTube
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/FaceMask
+  - m_Name: EvilFall/FaceMask
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/HeadMask
+  - m_Name: EvilFall/HeadMask
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/GasMask
+  - m_Name: EvilFall/GasMask
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/Gag
+  - m_Name: EvilFall/Gag
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/GagBall
+  - m_Name: EvilFall/GagBall
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/Dick
+  - m_Name: EvilFall/Dick
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/DickLock
+  - m_Name: EvilFall/DickLock
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/UrineCollector
+  - m_Name: EvilFall/UrineCollector
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/PussyLiquidCollector
+  - m_Name: EvilFall/PussyLiquidCollector
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/ToyTube
+  - m_Name: EvilFall/ToyTube
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/WeaponOff
+  - m_Name: EvilFall/WeaponOff
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/WeaponState1
+  - m_Name: EvilFall/WeaponState1
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/WeaponState2
+  - m_Name: EvilFall/WeaponState2
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/WeaponState3
+  - m_Name: EvilFall/WeaponState3
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/FrontToyOpen
+  - m_Name: EvilFall/FrontToyOpen
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/FrontToyOhHand
+  - m_Name: EvilFall/FrontToyOhHand
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/BackToyOpen
+  - m_Name: EvilFall/BackToyOpen
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/BackToyOhHand
+  - m_Name: EvilFall/BackToyOhHand
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/FrontDotToyOpen
+  - m_Name: EvilFall/FrontDotToyOpen
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/FrontDotToyUp
+  - m_Name: EvilFall/FrontDotToyUp
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/BreastToyOpen
+  - m_Name: EvilFall/BreastToyOpen
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/BreastToyUp
+  - m_Name: EvilFall/BreastToyUp
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/Glass
+  - m_Name: EvilFall/Glass
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: EvilFallKipfel/MaskV2
+  - m_Name: EvilFall/MaskV2
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -2594,7 +2594,7 @@ AnimatorController:
     m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/HeadAcc
+    m_Name: EvilFall/HeadAcc
     m_StateMachine: {fileID: -5368685501434318609}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2606,7 +2606,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/Tail
+    m_Name: EvilFall/Tail
     m_StateMachine: {fileID: -349550729948645716}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2618,7 +2618,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/BodyTube
+    m_Name: EvilFall/BodyTube
     m_StateMachine: {fileID: -7307765786003740259}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2630,7 +2630,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/JacketACC
+    m_Name: EvilFall/JacketACC
     m_StateMachine: {fileID: 5687481598442422018}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2642,7 +2642,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/Jacket
+    m_Name: EvilFall/Jacket
     m_StateMachine: {fileID: -6242325584629225390}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2654,7 +2654,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/Bodysuit
+    m_Name: EvilFall/Bodysuit
     m_StateMachine: {fileID: -640119986146621551}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2666,7 +2666,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/Glove
+    m_Name: EvilFall/Glove
     m_StateMachine: {fileID: 6223297604698671292}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2678,7 +2678,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/Shoes
+    m_Name: EvilFall/Shoes
     m_StateMachine: {fileID: -4883966142842859300}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2690,7 +2690,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/FaceMask
+    m_Name: EvilFall/FaceMask
     m_StateMachine: {fileID: 4003504785622056640}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2702,7 +2702,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/GasMask
+    m_Name: EvilFall/GasMask
     m_StateMachine: {fileID: -2616918526769355435}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2714,7 +2714,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/Gag
+    m_Name: EvilFall/Gag
     m_StateMachine: {fileID: 435051484423488128}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2726,7 +2726,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/GagBall
+    m_Name: EvilFall/GagBall
     m_StateMachine: {fileID: 4907064093145215629}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2738,7 +2738,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/HeadMask
+    m_Name: EvilFall/HeadMask
     m_StateMachine: {fileID: 7303245617162641827}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2750,7 +2750,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/UrineCollector
+    m_Name: EvilFall/UrineCollector
     m_StateMachine: {fileID: -3691731438505291757}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2762,7 +2762,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/PussyCollector
+    m_Name: EvilFall/PussyCollector
     m_StateMachine: {fileID: -5895952269585725000}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2774,7 +2774,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/CollectorTube
+    m_Name: EvilFall/CollectorTube
     m_StateMachine: {fileID: -6683303855819296587}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2786,7 +2786,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/Dick
+    m_Name: EvilFall/Dick
     m_StateMachine: {fileID: 8694860671210738727}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2798,7 +2798,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/Weapon
+    m_Name: EvilFall/Weapon
     m_StateMachine: {fileID: 7292133092513453652}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2810,7 +2810,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/WeaponTail
+    m_Name: EvilFall/WeaponTail
     m_StateMachine: {fileID: -5727809465711765207}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2822,7 +2822,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/FrontToy
+    m_Name: EvilFall/FrontToy
     m_StateMachine: {fileID: -7192468619866371287}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2834,7 +2834,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/BackToy
+    m_Name: EvilFall/BackToy
     m_StateMachine: {fileID: -360754345118038950}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2846,7 +2846,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/FrontDotToy
+    m_Name: EvilFall/FrontDotToy
     m_StateMachine: {fileID: 5162507645410786065}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2858,7 +2858,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/BreastToy
+    m_Name: EvilFall/BreastToy
     m_StateMachine: {fileID: 3511979316089225540}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2870,7 +2870,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/EyeGlass
+    m_Name: EvilFall/EyeGlass
     m_StateMachine: {fileID: 3478664391768981028}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2882,7 +2882,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/MaskV2
+    m_Name: EvilFall/MaskV2
     m_StateMachine: {fileID: -6251589938892621532}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2894,7 +2894,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: EvilFallKipfel/MaskTubeOff
+    m_Name: EvilFall/MaskTubeOff
     m_StateMachine: {fileID: 86180520998802585}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -2966,7 +2966,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/WeaponState3
+    m_ConditionEvent: EvilFall/WeaponState3
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6408546304550260672}
@@ -3043,7 +3043,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/BreastToyOpen
+    m_ConditionEvent: EvilFall/BreastToyOpen
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8048508617562087579}
@@ -3122,7 +3122,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/GagBall
+    m_ConditionEvent: EvilFall/GagBall
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1429350726120691162}
@@ -3147,7 +3147,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/BodyTube
+    m_ConditionEvent: EvilFall/BodyTube
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8437858716885065201}
@@ -3204,7 +3204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameters:
   - type: 0
-    name: EvilFallKipfel/WeaponOff
+    name: EvilFall/WeaponOff
     source: 
     value: 0
     valueMin: 0
@@ -3217,7 +3217,7 @@ MonoBehaviour:
     destMin: 0
     destMax: 0
   - type: 0
-    name: EvilFallKipfel/WeaponState1
+    name: EvilFall/WeaponState1
     source: 
     value: 0
     valueMin: 0
@@ -3230,7 +3230,7 @@ MonoBehaviour:
     destMin: 0
     destMax: 0
   - type: 0
-    name: EvilFallKipfel/WeaponState3
+    name: EvilFall/WeaponState3
     source: 
     value: 0
     valueMin: 0
@@ -3333,7 +3333,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Glass
+    m_ConditionEvent: EvilFall/Glass
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -9159586828120967136}
@@ -3412,7 +3412,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/FrontDotToyUp
+    m_ConditionEvent: EvilFall/FrontDotToyUp
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 976337137537727890}
@@ -3437,7 +3437,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/GagBall
+    m_ConditionEvent: EvilFall/GagBall
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1760507541479556928}
@@ -3462,7 +3462,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/HeadMask
+    m_ConditionEvent: EvilFall/HeadMask
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7709715952356057270}
@@ -3625,7 +3625,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/FaceMask
+    m_ConditionEvent: EvilFall/FaceMask
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3041637985890592670}
@@ -3729,7 +3729,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/Tail
+    m_ConditionEvent: EvilFall/Tail
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6257882177853678535}
@@ -3759,7 +3759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameters:
   - type: 0
-    name: EvilFallKipfel/WeaponOff
+    name: EvilFall/WeaponOff
     source: 
     value: 0
     valueMin: 0
@@ -3772,7 +3772,7 @@ MonoBehaviour:
     destMin: 0
     destMax: 0
   - type: 0
-    name: EvilFallKipfel/WeaponState1
+    name: EvilFall/WeaponState1
     source: 
     value: 0
     valueMin: 0
@@ -3785,7 +3785,7 @@ MonoBehaviour:
     destMin: 0
     destMax: 0
   - type: 0
-    name: EvilFallKipfel/WeaponState2
+    name: EvilFall/WeaponState2
     source: 
     value: 0
     valueMin: 0
@@ -3808,10 +3808,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/BreastToyOpen
+    m_ConditionEvent: EvilFall/BreastToyOpen
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/BreastToyUp
+    m_ConditionEvent: EvilFall/BreastToyUp
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2918371649759983057}
@@ -3887,7 +3887,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/PussyLiquidCollector
+    m_ConditionEvent: EvilFall/PussyLiquidCollector
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5791069954932097444}
@@ -3939,7 +3939,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/ToyTube
+    m_ConditionEvent: EvilFall/ToyTube
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3503516034032749709}
@@ -4022,10 +4022,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/MaskV2
+    m_ConditionEvent: EvilFall/MaskV2
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/FaceMask
+    m_ConditionEvent: EvilFall/FaceMask
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3275258843416022207}
@@ -4050,7 +4050,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/Jacket
+    m_ConditionEvent: EvilFall/Jacket
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7067417358814695694}
@@ -4102,7 +4102,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/ToyTube
+    m_ConditionEvent: EvilFall/ToyTube
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6020406562484540476}
@@ -4184,7 +4184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameters:
   - type: 0
-    name: EvilFallKipfel/WeaponState1
+    name: EvilFall/WeaponState1
     source: 
     value: 0
     valueMin: 0
@@ -4197,7 +4197,7 @@ MonoBehaviour:
     destMin: 0
     destMax: 0
   - type: 0
-    name: EvilFallKipfel/WeaponState2
+    name: EvilFall/WeaponState2
     source: 
     value: 0
     valueMin: 0
@@ -4210,7 +4210,7 @@ MonoBehaviour:
     destMin: 0
     destMax: 0
   - type: 0
-    name: EvilFallKipfel/WeaponState3
+    name: EvilFall/WeaponState3
     source: 
     value: 0
     valueMin: 0
@@ -4233,7 +4233,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/UrineCollector
+    m_ConditionEvent: EvilFall/UrineCollector
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2516500827662366372}
@@ -4283,7 +4283,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/MaskV2
+    m_ConditionEvent: EvilFall/MaskV2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 9162916338677305033}
@@ -4313,7 +4313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameters:
   - type: 0
-    name: EvilFallKipfel/BreastToyOpen
+    name: EvilFall/BreastToyOpen
     source: 
     value: 0
     valueMin: 0
@@ -4444,7 +4444,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/FaceMask
+    m_ConditionEvent: EvilFall/FaceMask
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4170167724127402947}
@@ -4529,7 +4529,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/PussyLiquidCollector
+    m_ConditionEvent: EvilFall/PussyLiquidCollector
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6699939697544711239}
@@ -4554,7 +4554,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/JacketACC
+    m_ConditionEvent: EvilFall/JacketACC
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5500582514479674237}
@@ -4579,7 +4579,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/Shoes
+    m_ConditionEvent: EvilFall/Shoes
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4527888939466452708}
@@ -4686,7 +4686,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/WeaponState2
+    m_ConditionEvent: EvilFall/WeaponState2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6293401525183158367}
@@ -4716,7 +4716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameters:
   - type: 0
-    name: EvilFallKipfel/BackToyOhHand
+    name: EvilFall/BackToyOhHand
     source: 
     value: 0
     valueMin: 0
@@ -4739,7 +4739,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Tail
+    m_ConditionEvent: EvilFall/Tail
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1419448617996942758}
@@ -4791,7 +4791,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/MaskV2
+    m_ConditionEvent: EvilFall/MaskV2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1764978244901784624}
@@ -4821,7 +4821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameters:
   - type: 0
-    name: EvilFallKipfel/BackToyOpen
+    name: EvilFall/BackToyOpen
     source: 
     value: 0
     valueMin: 0
@@ -4844,10 +4844,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/WeaponOff
+    m_ConditionEvent: EvilFall/WeaponOff
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Tail
+    m_ConditionEvent: EvilFall/Tail
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8991216441934322876}
@@ -4900,7 +4900,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/BackToyOpen
+    m_ConditionEvent: EvilFall/BackToyOpen
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1067365089007144580}

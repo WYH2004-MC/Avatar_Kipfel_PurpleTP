@@ -18,7 +18,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 9d9ee3f4f4c32bb4b8f45900fd5f88e7, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/HeadMask
+      name: EvilFall/HeadMask
     value: 1
     style: 0
     subMenu: {fileID: 11400000}
@@ -28,7 +28,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: bb4e30f02ef3a7b41a964765fbfab1c5, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/FaceMask
+      name: EvilFall/FaceMask
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -38,7 +38,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 6fd7d64386d5ada439daa0268b607afe, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/GasMask
+      name: EvilFall/GasMask
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 4e2a66e384d71e94db7bf6091c25257d, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/Gag
+      name: EvilFall/Gag
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -58,7 +58,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 5d0581b1251184b49a5588d1349fb0e2, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/GagBall
+      name: EvilFall/GagBall
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -68,7 +68,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 7008ca503f7572b4cabc82c7d77cd1b9, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/Glass
+      name: EvilFall/Glass
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -78,7 +78,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 9db8418b00cb8c64091337ff04c0f76f, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/MaskV2
+      name: EvilFall/MaskV2
     value: 1
     style: 0
     subMenu: {fileID: 0}

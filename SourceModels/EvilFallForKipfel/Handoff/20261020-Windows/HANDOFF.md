@@ -1,3 +1,26 @@
+[LATEST USER REQUIREMENT — GLOBAL UPPER FLARE REJECTED; REGIONAL BODY CONTACT CLASSIFICATION REQUIRED]
+用户已拒绝侧面鼓包的全局上部外扩版本。必须先实际查看原版 MainLegHeel 与真正 Chiffin/Lime 源身体，逐区判断贴身区与设计留空区；不能以 LegRing 代替身体，不能对整个上半部统一外扩。
+当前磁盘 5a0a5048（候选 f7af6b30）是已保存但被用户拒绝、未验收的中间稿；98/45 项数值 PASS 不代表外观达标。f7 receipt 已撤销，禁止 final archive --apply、禁止导出或当作最终版。只允许继续 MainLegHeel 分区分析修复；原 LegRing 与 8 模块全字段 literal 7fd138、已接受鞋与原 32 参数保留，Unity held。
+以三份状态文档最前 LATEST_USER_REQUIREMENT 为继续依据。
+
+[HISTORICAL SUPERSEDED USER REQUIREMENT — SOURCE-FLARED UPPER REBUILD PENDING]
+上部 MainLegHeel 外扩筒口、斜框与护片应按原版整组离开大腿并留空腔；原 LegRing 位于内侧，原 LegRing 及 8 个模块所有字段保持 7fd138 原样。护片应连接 Main 外壳，不能独立悬空；内网袜独立贴身。不得再让体表拟合目标收紧外层整组。
+当前 a8078b 紧身预览只是未保存中间结果；a5975b 新软壳 UV 补丁尚未执行，后续外扩新拓扑需重算索引。旧 final/85 项 PASS 不代表满足这项源外扩要求，禁止最终归档或保存该中间结果。磁盘 Blender 权威仍为 ae404a22；Unity held，用户确认前不更新。原 32 EvilFall 参数及已接受鞋子保持不变。
+继续先读 WorkSessions/20261021-HeelRebuild/PENDING_UPPER_SOURCE_REBUILD.json 最前的 LATEST_USER_REQUIREMENT。
+
+[HISTORICAL USER CORRECTION — ORIGINAL EXTERNAL PROTECTION STILL APPLIES]
+LegRing及8个相关模块已恢复修改前原样；它们没有问题，严禁重放UpperHalfSourceRebuild的V1–V4环/模块变换。只允许继续MainLegHeel适配原环。先读WorkSessions/20261021-HeelRebuild/PENDING_UPPER_SOURCE_REBUILD.json。Unity仍待用户确认。
+
+<!-- CURRENT_DELIVERY_POINTER_BEGIN -->
+当前未完成且用户已拒绝 f7af6b30 / 5a0a5048 全局外扩鼓包版本；磁盘文件只是 rejected 未验收中间稿。先读 WorkSessions/20261021-HeelRebuild/PENDING_UPPER_SOURCE_REBUILD.json、CURRENT_STATE.json、REBUILD_REQUIREMENTS.json 最前 LATEST_USER_REQUIREMENT，实际对照源 Main 与真实源 Body 做分区接触/间隙分类后再修。98/45 PASS 不证明外观达标；f7 receipt 禁止 --apply。原 9 对象 literal 7fd138、已接受鞋/原32参数保留，Unity held。
+<!-- CURRENT_DELIVERY_POINTER_END -->
+
+<details><summary>历史 CURRENT 指针（已失效，仅保留记录，禁止当作当前权威）</summary>
+
+当前以 [膝上结构原版差异与逐项修复](../../Diagnostics/20261022-UpperHalfSourceRebuild/DIFFERENCES.md)、[完成报告](../../Diagnostics/20261022-UpperHalfSourceRebuild/COMPLETION.json) 和 [CURRENT_STATE](../../WorkSessions/20261021-HeelRebuild/CURRENT_STATE.json) 为准。11项已修复并保存回读PASS；斜框41.45°为保持膝部隐藏的用户选择，红线仅是防可见穿模的参考。独立LegRing在斜框内圈/护片背后，内部安装座与可见外壁分开判断。旧硬Z上限、薄通用框、程序网纹及37其它mesh一律不动的旧合同已被本轮明确范围替代。确认前不更新Unity，保持原32参数。
+
+</details>
+
 # EvilFall → Kipfel：Windows 调试交接
 
 交接基线：2026-10-20，Asia/Shanghai。目标是把当前适配结果、修改依据和待测事项交给 Windows 上的 Codex，继续在已有成果上调试。入口提示见 [START_HERE.txt](START_HERE.txt)，修改经过见 [CHANGELOG.md](CHANGELOG.md)，迁移步骤见 [WINDOWS_MIGRATION.md](WINDOWS_MIGRATION.md)。会话分享链接由用户另外提供。

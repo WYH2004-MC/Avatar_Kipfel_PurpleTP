@@ -73,9 +73,16 @@ namespace VF.Hooks {
                         var leftProp = so.FindProperty(f.Name);
                         var rightProp = so.FindProperty(f.Name.Substring(0, f.Name.Length - 1) + "R");
                         if (leftProp != null && rightProp != null) {
-                            Reflection.MirrorCollider.Invoke(editor, new object[] { leftProp, rightProp });
-                            // In case harmony isn't present so this didn't already get fixed
-                            FixColliderMirroringHook.FixPositionOffset(leftProp, rightProp);
+                            // SDK 3.10.5 mirrors in avatar space and requires this matrix.
+                            // Earlier SDKs expose the legacy two-argument method.
+                            var usesAvatarSpace = Reflection.MirrorCollider.GetParameters().Length == 3;
+                            Reflection.MirrorCollider.Invoke(editor, usesAvatarSpace
+                                ? new object[] { leftProp, rightProp, avatar.transform.worldToLocalMatrix }
+                                : new object[] { leftProp, rightProp });
+                            if (!usesAvatarSpace) {
+                                // In case harmony isn't present so this didn't already get fixed
+                                FixColliderMirroringHook.FixPositionOffset(leftProp, rightProp);
+                            }
                             so.ApplyModifiedPropertiesWithoutUndo();
                         }
                     }

@@ -36,7 +36,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/Bodysuit
+    m_ConditionEvent: EvilFall/Bodysuit
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6452721801454616804}
@@ -140,7 +140,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/BodyTube
+    m_ConditionEvent: EvilFall/BodyTube
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8873413925323366462}
@@ -217,7 +217,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/JacketACC
+    m_ConditionEvent: EvilFall/JacketACC
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6918833900395129173}
@@ -311,7 +311,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/BodyTube
+    m_ConditionEvent: EvilFall/BodyTube
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7982118690807032383}
@@ -336,7 +336,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/Shoes
+    m_ConditionEvent: EvilFall/Shoes
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1600077844693967011}
@@ -388,7 +388,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Glove
+    m_ConditionEvent: EvilFall/Glove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2958889873402602082}
@@ -413,37 +413,37 @@ AnimatorController:
   m_Name: Clothing
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: EvilFallKipfel/Jacket
+  - m_Name: EvilFall/Jacket
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
-  - m_Name: EvilFallKipfel/JacketACC
+  - m_Name: EvilFall/JacketACC
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
-  - m_Name: EvilFallKipfel/Bodysuit
+  - m_Name: EvilFall/Bodysuit
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
-  - m_Name: EvilFallKipfel/Glove
+  - m_Name: EvilFall/Glove
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
-  - m_Name: EvilFallKipfel/Shoes
+  - m_Name: EvilFall/Shoes
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
-  - m_Name: EvilFallKipfel/BodyTube
+  - m_Name: EvilFall/BodyTube
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -558,7 +558,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Shoes
+    m_ConditionEvent: EvilFall/Shoes
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2784338240535191502}
@@ -635,7 +635,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/Jacket
+    m_ConditionEvent: EvilFall/Jacket
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -9221210356787193056}
@@ -660,7 +660,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Jacket
+    m_ConditionEvent: EvilFall/Jacket
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8056491044686220038}
@@ -737,7 +737,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/Bodysuit
+    m_ConditionEvent: EvilFall/Bodysuit
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 9055975953640743965}
@@ -789,7 +789,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: EvilFallKipfel/JacketACC
+    m_ConditionEvent: EvilFall/JacketACC
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 296653057529060747}
@@ -841,7 +841,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: EvilFallKipfel/Glove
+    m_ConditionEvent: EvilFall/Glove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7082374448552922910}

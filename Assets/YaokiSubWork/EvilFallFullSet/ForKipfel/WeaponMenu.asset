@@ -18,7 +18,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: cea5d6e8acb03d8439b242ba2cf36470, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/WeaponOff
+      name: EvilFall/WeaponOff
     value: 1
     style: 0
     subMenu: {fileID: 11400000}
@@ -28,7 +28,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: bd2950c3b4a363046bdf48009de6b5ed, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/WeaponState1
+      name: EvilFall/WeaponState1
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -38,7 +38,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 87f5b36e658a7274794841fc1b035a53, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/WeaponState2
+      name: EvilFall/WeaponState2
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 09be625c655eb7249b92145be63482a8, type: 3}
     type: 102
     parameter:
-      name: EvilFallKipfel/WeaponState3
+      name: EvilFall/WeaponState3
     value: 1
     style: 0
     subMenu: {fileID: 0}

@@ -9,6 +9,8 @@ namespace VF.Hooks.VrcsdkFixes {
      */
     internal class FixColliderMirroringHook {
         private abstract class Reflection : ReflectionHelper {
+            public static readonly System.Reflection.MethodInfo MirrorCollider =
+                ReflectionUtils.GetTypeFromAnyAssembly("AvatarDescriptorEditor3")?.VFMethod("MirrorCollider");
             public static readonly HarmonyUtils.PatchObj Patch = HarmonyUtils.Patch(
                 typeof(FixColliderMirroringHook),
                 nameof(Postfix),
@@ -21,6 +23,8 @@ namespace VF.Hooks.VrcsdkFixes {
         [VFInit]
         private static void Init() {
             if (!ReflectionHelper.IsReady<Reflection>()) return;
+            // New SDKs already mirror position and rotation in avatar space.
+            if (Reflection.MirrorCollider.GetParameters().Length != 2) return;
             Reflection.Patch.apply();
         }
 

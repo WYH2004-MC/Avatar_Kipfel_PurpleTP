@@ -730,7 +730,7 @@ Material:
     - _UseEmission: 0
     - _UseEmission2nd: 0
     - _UseGlitter: 0
-    - _UseMain2ndTex: 1
+    - _UseMain2ndTex: 0
     - _UseMain3rdTex: 0
     - _UseMatCap: 0
     - _UseMatCap2nd: 0
