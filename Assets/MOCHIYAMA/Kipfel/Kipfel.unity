@@ -154,9 +154,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1493101094}
   - {fileID: 1969908040}
   - {fileID: 674811085}
-  - {fileID: 1493101094}
   - {fileID: 32641481}
   m_Father: {fileID: 787064072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3348,6 +3348,11 @@ MonoBehaviour:
   isDefault: 0
   automaticValue: 0
   label: 
+--- !u!1 &415423927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1875884124251073969, guid: fc2bbed7b4bcfd64cb0ca0b6317a81e8, type: 3}
+  m_PrefabInstance: {fileID: 230289524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &555946256
 GameObject:
   m_ObjectHideFlags: 0
@@ -3836,7 +3841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1164423716149784987, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00005216815
+      value: 0.000052166688
       objectReference: {fileID: 0}
     - target: {fileID: 1164423716149784987, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       propertyPath: m_LocalRotation.y
@@ -3844,7 +3849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1164423716149784987, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00008737627
+      value: 0.000087379995
       objectReference: {fileID: 0}
     - target: {fileID: 1165075735717591235, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       propertyPath: m_IsActive
@@ -7364,7 +7369,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: cac054e594d243e40a0e40909d2a8be3, type: 2}
     - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       propertyPath: animationHashSet.Array.size
-      value: 188
+      value: 196
       objectReference: {fileID: 0}
     - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       propertyPath: animationHashSet.Array.data[55].hash
@@ -8368,67 +8373,131 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       propertyPath: animationHashSet.Array.data[180].hash
-      value: 286136693
-      objectReference: {fileID: 0}
-    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
-      propertyPath: animationHashSet.Array.data[180].name
-      value: Value_3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
-      propertyPath: animationHashSet.Array.data[181].hash
       value: -16746407
       objectReference: {fileID: 0}
     - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
-      propertyPath: animationHashSet.Array.data[181].name
+      propertyPath: animationHashSet.Array.data[180].name
       value: Value_1
       objectReference: {fileID: 0}
     - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
-      propertyPath: animationHashSet.Array.data[182].hash
+      propertyPath: animationHashSet.Array.data[181].hash
       value: 1711876579
       objectReference: {fileID: 0}
     - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
-      propertyPath: animationHashSet.Array.data[182].name
+      propertyPath: animationHashSet.Array.data[181].name
       value: Value_2
       objectReference: {fileID: 0}
     - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
-      propertyPath: animationHashSet.Array.data[183].hash
-      value: 1393599941
+      propertyPath: animationHashSet.Array.data[182].hash
+      value: 286136693
       objectReference: {fileID: 0}
     - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
-      propertyPath: animationHashSet.Array.data[183].name
-      value: Init
-      objectReference: {fileID: 0}
-    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
-      propertyPath: animationHashSet.Array.data[184].hash
-      value: 2056342147
-      objectReference: {fileID: 0}
-    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
-      propertyPath: animationHashSet.Array.data[184].name
+      propertyPath: animationHashSet.Array.data[182].name
       value: Value_3
       objectReference: {fileID: 0}
     - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[183].hash
+      value: -1888842538
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[183].name
+      value: Value_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[184].hash
+      value: -127026112
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[184].name
+      value: Value_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       propertyPath: animationHashSet.Array.data[185].hash
-      value: -1801507921
+      value: 1634004474
       objectReference: {fileID: 0}
     - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       propertyPath: animationHashSet.Array.data[185].name
-      value: Value_1
+      value: Value_6
       objectReference: {fileID: 0}
     - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       propertyPath: animationHashSet.Array.data[186].hash
-      value: -476570823
+      value: 375643500
       objectReference: {fileID: 0}
     - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       propertyPath: animationHashSet.Array.data[186].name
-      value: Value_0
+      value: Value_7
       objectReference: {fileID: 0}
     - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       propertyPath: animationHashSet.Array.data[187].hash
-      value: 227965461
+      value: 1393599941
       objectReference: {fileID: 0}
     - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       propertyPath: animationHashSet.Array.data[187].name
+      value: Init
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[188].hash
+      value: 2056342147
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[188].name
+      value: Value_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[189].hash
+      value: -1801507921
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[189].name
+      value: Value_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[190].hash
+      value: -476570823
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[190].name
+      value: Value_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[191].hash
+      value: 227965461
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[191].name
       value: Value_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[192].hash
+      value: -453648608
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[192].name
+      value: Value_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[193].hash
+      value: -1812795466
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[193].name
+      value: Value_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[194].hash
+      value: 184270348
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[194].name
+      value: Value_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[195].hash
+      value: 2113703578
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      propertyPath: animationHashSet.Array.data[195].name
+      value: Value_7
       objectReference: {fileID: 0}
     - target: {fileID: 8759340135228064788, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       propertyPath: specialAnimationLayers.Array.data[1].isDefault
@@ -9722,10 +9791,13 @@ PrefabInstance:
       addedObject: {fileID: 1882876484}
     - targetCorrespondingSourceObject: {fileID: 8064491714067333647, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1333722505}
+      addedObject: {fileID: 1693684}
     - targetCorrespondingSourceObject: {fileID: 8064491714067333647, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1693684}
+      addedObject: {fileID: 2085588686}
+    - targetCorrespondingSourceObject: {fileID: 8064491714067333647, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1333722505}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7251082166939998389, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
       insertIndex: -1
@@ -9930,10 +10002,100 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7117617097925199875, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
   m_PrefabInstance: {fileID: 787064069}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &820048846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 820048847}
+  - component: {fileID: 820048850}
+  - component: {fileID: 820048848}
+  m_Layer: 0
+  m_Name: "Slime\u5316"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &820048847
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820048846}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1969908040}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &820048848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820048846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a162bb8ec7e24a5abcf457887f1df3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inverted: 0
+  m_objects:
+  - Object:
+      referencePath: Revan_Kipfel_underwear
+      targetObject: {fileID: 1775952575}
+    Active: 0
+  - Object:
+      referencePath: Slime_MaterialPriority
+      targetObject: {fileID: 2085588685}
+    Active: 1
+--- !u!114 &820048850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820048846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: New Toggle
+    icon: {fileID: 0}
+    type: 102
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
 --- !u!1 &842231993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5406387465486842598, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
   m_PrefabInstance: {fileID: 787064069}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &853750667 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4541317830661710112, guid: fc2bbed7b4bcfd64cb0ca0b6317a81e8, type: 3}
+  m_PrefabInstance: {fileID: 230289524}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &857527462 stripped
 GameObject:
@@ -10242,7 +10404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 392641776557850614, guid: 4d5300ec6aad44f359dfd5df356ab737, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 416376151464686520, guid: 4d5300ec6aad44f359dfd5df356ab737, type: 3}
       propertyPath: m_AABB.m_Center.y
@@ -11588,6 +11750,11 @@ MonoBehaviour:
   isDefault: 0
   automaticValue: 1
   label: 
+--- !u!1 &1010986705 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6498693764854436402, guid: fc2bbed7b4bcfd64cb0ca0b6317a81e8, type: 3}
+  m_PrefabInstance: {fileID: 230289524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1014485739
 GameObject:
   m_ObjectHideFlags: 0
@@ -19669,6 +19836,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1847146435830542585, guid: ca8e3c6c30feda145b920038d7d34ce5, type: 3}
   m_PrefabInstance: {fileID: 185268515}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1863145306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4120447191842334270, guid: fc2bbed7b4bcfd64cb0ca0b6317a81e8, type: 3}
+  m_PrefabInstance: {fileID: 230289524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1882876483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19837,6 +20009,7 @@ Transform:
   - {fileID: 802870433}
   - {fileID: 1149690429}
   - {fileID: 1992201775}
+  - {fileID: 820048847}
   m_Father: {fileID: 1693684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1969908042
@@ -19914,6 +20087,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   installer: {fileID: 1510137032}
+--- !u!1 &2006146135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1736563679124032693, guid: fc2bbed7b4bcfd64cb0ca0b6317a81e8, type: 3}
+  m_PrefabInstance: {fileID: 230289524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2015090777 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6967497688034476428, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
@@ -20069,6 +20247,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4105600011495212958, guid: a0846609f25356f448d2227d900a668f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105600011495212958, guid: a0846609f25356f448d2227d900a668f, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.641408
       objectReference: {fileID: 0}
@@ -20099,6 +20281,10 @@ PrefabInstance:
     - target: {fileID: 4105600011986467023, guid: a0846609f25356f448d2227d900a668f, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105600012125585397, guid: a0846609f25356f448d2227d900a668f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4105600012125585397, guid: a0846609f25356f448d2227d900a668f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20144,6 +20330,133 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3891770299732988681, guid: 875fb1d2161594e42a00c2890e28d006, type: 3}
   m_PrefabInstance: {fileID: 787064069}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2085588685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2085588686}
+  - component: {fileID: 2085588687}
+  - component: {fileID: 2085588688}
+  m_Layer: 0
+  m_Name: Slime_MaterialPriority
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2085588686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085588685}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 787064072}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2085588687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085588685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0adf335711644e34b6c635e94ae61fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inverted: 0
+  m_objects:
+  - Object:
+      referencePath: Body_Base
+      targetObject: {fileID: 626502623}
+    Material: {fileID: 2100000, guid: d3f7ae817990f5a44ba3a61c7d53e071, type: 2}
+    MaterialIndex: 0
+  - Object:
+      referencePath: Cat_Ear
+      targetObject: {fileID: 2045839857}
+    Material: {fileID: 2100000, guid: 6fa8ae7287828174da95d4ec60174ca1, type: 2}
+    MaterialIndex: 0
+  - Object:
+      referencePath: Cat_Tail
+      targetObject: {fileID: 2108330030}
+    Material: {fileID: 2100000, guid: 6fa8ae7287828174da95d4ec60174ca1, type: 2}
+    MaterialIndex: 0
+  - Object:
+      referencePath: Body
+      targetObject: {fileID: 2015090777}
+    Material: {fileID: 2100000, guid: d3f7ae817990f5a44ba3a61c7d53e071, type: 2}
+    MaterialIndex: 3
+  - Object:
+      referencePath: BukiyouTwinTail_Kipfel/Hair_TwinTail
+      targetObject: {fileID: 1863145306}
+    Material: {fileID: 2100000, guid: e3db46df784b73a4abf261c9a7d95f83, type: 2}
+    MaterialIndex: 0
+  - Object:
+      referencePath: BukiyouTwinTail_Kipfel/Hair_TwinTail_Rat
+      targetObject: {fileID: 2006146135}
+    Material: {fileID: 2100000, guid: e3db46df784b73a4abf261c9a7d95f83, type: 2}
+    MaterialIndex: 0
+  - Object:
+      referencePath: BukiyouTwinTail_Kipfel/Hair_TwinTail_Ribbon
+      targetObject: {fileID: 415423927}
+    Material: {fileID: 2100000, guid: e3db46df784b73a4abf261c9a7d95f83, type: 2}
+    MaterialIndex: 0
+  - Object:
+      referencePath: BukiyouTwinTail_Kipfel/Hair_Side
+      targetObject: {fileID: 1010986705}
+    Material: {fileID: 2100000, guid: e3db46df784b73a4abf261c9a7d95f83, type: 2}
+    MaterialIndex: 0
+  - Object:
+      referencePath: Body
+      targetObject: {fileID: 2015090777}
+    Material: {fileID: 2100000, guid: d3f7ae817990f5a44ba3a61c7d53e071, type: 2}
+    MaterialIndex: 0
+  - Object:
+      referencePath: Body
+      targetObject: {fileID: 2015090777}
+    Material: {fileID: 2100000, guid: 6fa8ae7287828174da95d4ec60174ca1, type: 2}
+    MaterialIndex: 1
+  - Object:
+      referencePath: Body
+      targetObject: {fileID: 2015090777}
+    Material: {fileID: 2100000, guid: d3f7ae817990f5a44ba3a61c7d53e071, type: 2}
+    MaterialIndex: 3
+  - Object:
+      referencePath: BukiyouTwinTail_Kipfel/Hair_Front
+      targetObject: {fileID: 853750667}
+    Material: {fileID: 2100000, guid: e3db46df784b73a4abf261c9a7d95f83, type: 2}
+    MaterialIndex: 0
+--- !u!114 &2085588688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085588685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b259b73280ead4e4fbbdafc5e29175d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inverted: 0
+  m_root:
+    referencePath: 
+    targetObject: {fileID: 0}
+  m_swaps:
+  - From: {fileID: 2100000, guid: fd7c89bf2761e894eaf746251d625bab, type: 2}
+    To: {fileID: 2100000, guid: c4e35d9a748a31e4bb06a9f8499bf08b, type: 2}
+  m_quickSwapMode: 0
 --- !u!1 &2090727306
 GameObject:
   m_ObjectHideFlags: 0
