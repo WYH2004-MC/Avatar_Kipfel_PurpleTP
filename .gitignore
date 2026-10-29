@@ -32,6 +32,13 @@
 sysinfo.txt
 *.stackdump
 
+# NDMF build output (regenerated on every build)
+**/__Generated/
+
+# Blender auto-backups (never commit; the real file is the one without the suffix)
+*.blend1
+*.blend2
+
 # OS generated files
 .DS_Store
 .AppleDouble
