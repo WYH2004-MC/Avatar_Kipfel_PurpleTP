@@ -1,0 +1,5485 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TM_Tentacle_Move_L&M
+  serializedVersion: 7
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -18.548, y: -8.838, z: 34.416}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.41666666
+        value: {x: -45.331, y: -36.485, z: 49.659}
+        inSlope: {x: 0, y: 0, z: 1.0259973}
+        outSlope: {x: 0, y: 0, z: 1.0259973}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.3333334
+        value: {x: -24.76, y: -15.25, z: 50.001}
+        inSlope: {x: 18.635996, y: 19.235992, z: 0}
+        outSlope: {x: 18.635996, y: 19.235992, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: -18.548, y: -8.838, z: 34.416}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM1.001/Bone_TM1.002/Bone_TM1.003/Bone_TM1.004/Bone_TM1.005/Bone_TM1.006/Bone_TM1.007/Bone_TM1.008/Bone_TM1.009/Bone_TM1.010/Bone_TM1.011
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -14.628, y: 25.908, z: -62.987}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.68333334
+        value: {x: -28.665, y: 60.499, z: -71.439}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: -14.628, y: 25.908, z: -62.987}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM2.001/Bone_TM2.002/Bone_TM2.003/Bone_TM2.004/Bone_TM2.005/Bone_TM2.006/Bone_TM2.007/Bone_TM2.008/Bone_TM2.009/Bone_TM2.010/Bone_TM2.011
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -38.722, y: -22.405, z: 51.982}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.18333334
+        value: {x: -37.053, y: -21.265, z: 45.088}
+        inSlope: {x: 6.4606404, y: 4.4129086, z: -23.374838}
+        outSlope: {x: 6.4606404, y: 4.4129086, z: -23.374838}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.0333333
+        value: {x: -18.672, y: -8.709, z: 27.828}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: -38.722, y: -22.405, z: 51.982}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM3.001/Bone_TM3.002/Bone_TM3.003/Bone_TM3.004/Bone_TM3.005/Bone_TM3.006/Bone_TM3.007/Bone_TM3.008/Bone_TM3.009/Bone_TM3.010/Bone_TM3.011
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 7.157, y: 7.846, z: -58.39}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.5833333
+        value: {x: 0.535, y: 25.839, z: -69.307}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: 7.157, y: 7.846, z: -58.39}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM4.001/Bone_TM4.002/Bone_TM4.003/Bone_TM4.004/Bone_TM4.005/Bone_TM4.006/Bone_TM4.007/Bone_TM4.008/Bone_TM4.009/Bone_TM4.010
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 1.055, y: 13.003, z: -56.708}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.16666667
+        value: {x: -8.373, y: 27.554, z: -57.645}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.25
+        value: {x: 5.083, y: 6.796, z: -57.26}
+        inSlope: {x: 0, y: 0, z: 0.5917896}
+        outSlope: {x: 0, y: 0, z: 0.5917896}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: 1.055, y: 13.003, z: -56.708}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM4.001/Bone_TM4.002/Bone_TM4.003/Bone_TM4.004/Bone_TM4.005/Bone_TM4.006/Bone_TM4.007/Bone_TM4.008/Bone_TM4.009/Bone_TM4.010/Bone_TM4.011
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -14.398, y: -13.777, z: -51.241}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.6
+        value: {x: -5.937, y: -23.849, z: -54.303}
+        inSlope: {x: 13.908858, y: -16.55743, z: 0}
+        outSlope: {x: 13.908858, y: -16.55743, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.1666666
+        value: {x: 1.829, y: -33.094, z: -49.085}
+        inSlope: {x: 0, y: 0, z: 9.124801}
+        outSlope: {x: 0, y: 0, z: 9.124801}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.4333333
+        value: {x: -5.244, y: -24.674, z: -46.699}
+        inSlope: {x: -27.81771, y: 33.114857, z: 0}
+        outSlope: {x: -27.81771, y: 33.114857, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: -14.398, y: -13.777, z: -51.241}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM5.001/Bone_TM5.002/Bone_TM5.003/Bone_TM5.004/Bone_TM5.005/Bone_TM5.006/Bone_TM5.007/Bone_TM5.008/Bone_TM5.009/Bone_TM5.010/Bone_TM5.011
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -55.746, y: -67.515, z: 52.051}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.4
+        value: {x: -39.397, y: -50.723, z: 49.199}
+        inSlope: {x: 41.739597, y: 42.871197, z: -13.689589}
+        outSlope: {x: 41.739597, y: 42.871197, z: -13.689589}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.8333333
+        value: {x: -20.963, y: -31.789, z: 28.38}
+        inSlope: {x: 0, y: 0, z: -35.84509}
+        outSlope: {x: 0, y: 0, z: -35.84509}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.3166667
+        value: {x: -39.776, y: -51.112, z: 16.341}
+        inSlope: {x: -37.945087, y: -38.973816, z: 0}
+        outSlope: {x: -37.945087, y: -38.973816, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: -55.746, y: -67.515, z: 52.051}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM6.001/Bone_TM6.002/Bone_TM6.003/Bone_TM6.004/Bone_TM6.005/Bone_TM6.006/Bone_TM6.007/Bone_TM6.008/Bone_TM6.009/Bone_TM6.010/Bone_TM6.011
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -81.639, y: -82.161, z: 38.71}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.23333333
+        value: {x: -65.759, y: -55.45, z: 12.796}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.81666666
+        value: {x: -76.592, y: -120.687, z: 66.783}
+        inSlope: {x: -17.261694, y: -103.95051, z: 102.54203}
+        outSlope: {x: -17.261694, y: -103.95051, z: 102.54203}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.2166667
+        value: {x: -82.733, y: -157.668, z: 113.629}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: -81.639, y: -82.161, z: 38.71}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM7.001/Bone_TM7.002/Bone_TM7.003/Bone_TM7.004/Bone_TM7.005/Bone_TM7.006/Bone_TM7.007/Bone_TM7.008/Bone_TM7.009/Bone_TM7.010/Bone_TM7.011
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 23.553, y: 19.243, z: -39.929}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.1166667
+        value: {x: -3.293, y: 40.136, z: -22.95}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: 23.553, y: 19.243, z: -39.929}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM8.001/Bone_TM8.002/Bone_TM8.003/Bone_TM8.004/Bone_TM8.005/Bone_TM8.006/Bone_TM8.007/Bone_TM8.008/Bone_TM8.009/Bone_TM8.010/Bone_TM8.011
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -36.913, y: -63.807, z: 40.86}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.73333335
+        value: {x: -12.125, y: -48.566, z: 18.309}
+        inSlope: {x: 0, y: 0, z: -19.32267}
+        outSlope: {x: 0, y: 0, z: -19.32267}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.5
+        value: {x: -19.808, y: -49.202, z: 11.063}
+        inSlope: {x: -24.381638, y: -2.5022862, z: 0}
+        outSlope: {x: -24.381638, y: -2.5022862, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: -36.913, y: -63.807, z: 40.86}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM9.001/Bone_TM9.002/Bone_TM9.003/Bone_TM9.004/Bone_TM9.005/Bone_TM9.006/Bone_TM9.007/Bone_TM9.008/Bone_TM9.009/Bone_TM9.010/Bone_TM9.011
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -33.24, y: 25.159, z: -59.474}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.55
+        value: {x: -43.81, y: 30.769, z: -12.449}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.1166667
+        value: {x: -33.24, y: 25.159, z: -59.096}
+        inSlope: {x: 0, y: 0, z: -1.2599983}
+        outSlope: {x: 0, y: 0, z: -1.2599983}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: -33.24, y: 25.159, z: -59.474}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM10.001/Bone_TM10.002/Bone_TM10.003/Bone_TM10.004/Bone_TM10.005/Bone_TM10.006/Bone_TM10.007/Bone_TM10.008/Bone_TM10.009/Bone_TM10.010/Bone_TM10.011
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.452, y: 29.006, z: -38.782}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.53333336
+        value: {x: -6.9, y: 32.657, z: -26.498}
+        inSlope: {x: 0, y: 0, z: 25.16137}
+        outSlope: {x: 0, y: 0, z: 25.16137}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.2166667
+        value: {x: 0.452, y: 29.006, z: -8.169}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: 0.452, y: 29.006, z: -38.782}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM11.001/Bone_TM11.002/Bone_TM11.003/Bone_TM11.004/Bone_TM11.005/Bone_TM11.006/Bone_TM11.007/Bone_TM11.008/Bone_TM11.009/Bone_TM11.010/Bone_TM11.011
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 47.945, y: -87.633, z: -73.038}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.81666666
+        value: {x: 38.267, y: -61.132, z: -54.691}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: 47.945, y: -87.633, z: -73.038}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM12.001/Bone_TM12.002/Bone_TM12.003/Bone_TM12.004/Bone_TM12.005/Bone_TM12.006/Bone_TM12.007/Bone_TM12.008/Bone_TM12.009/Bone_TM12.010/Bone_TM12.011
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 29.417, y: 11.89, z: -56.703}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.81666666
+        value: {x: 36.091, y: -2.057, z: -64.288}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: 29.417, y: 11.89, z: -56.703}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM12.001/Bone_TM12.002/Bone_TM12.003/Bone_TM12.004/Bone_TM12.005/Bone_TM12.006/Bone_TM12.007/Bone_TM12.008/Bone_TM12.009/Bone_TM12.010/Bone_TM12.011/Bone_TM12.012
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 15.938, y: -8.487, z: 45.428}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.43333334
+        value: {x: 5.425, y: -18.939, z: 43.477}
+        inSlope: {x: 0, y: 0, z: -6.303638}
+        outSlope: {x: 0, y: 0, z: -6.303638}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.1
+        value: {x: 10.781, y: -13.614, z: 38.494}
+        inSlope: {x: 7.984557, y: 7.938227, z: 0}
+        outSlope: {x: 7.984557, y: 7.938227, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: 15.938, y: -8.487, z: 45.428}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM13.001/Bone_TM13.002/Bone_TM13.003/Bone_TM13.004/Bone_TM13.005/Bone_TM13.006/Bone_TM13.007/Bone_TM13.008/Bone_TM13.009/Bone_TM13.010/Bone_TM13.011
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -8.697, y: -35.849, z: 36.699}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.5833333
+        value: {x: -18.843, y: -45.701, z: 44.612}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: -8.697, y: -35.849, z: 36.699}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM13.001/Bone_TM13.002/Bone_TM13.003/Bone_TM13.004/Bone_TM13.005/Bone_TM13.006/Bone_TM13.007/Bone_TM13.008/Bone_TM13.009/Bone_TM13.010/Bone_TM13.011/Bone_TM13.012
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 52.882, y: -39.701, z: -58.404}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.46666667
+        value: {x: 59.012, y: -73.507, z: -78.676}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.8833333
+        value: {x: 57.493, y: -65.13, z: -77.121}
+        inSlope: {x: -4.7345486, y: 26.11015, z: 4.846754}
+        outSlope: {x: -4.7345486, y: 26.11015, z: 4.846754}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.75
+        value: {x: 52.882, y: -39.701, z: -58.404}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM14.001/Bone_TM14.002/Bone_TM14.003/Bone_TM14.004/Bone_TM14.005/Bone_TM14.006/Bone_TM14.007/Bone_TM14.008/Bone_TM14.009/Bone_TM14.010/Bone_TM14.011
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves:
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.06666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.15
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.21666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.31666666
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.36666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.46666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.55
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6166667
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.73333335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.93333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.05
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.1666666
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.3166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.45
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.6166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: blendShape.Move_A_1
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/TentacleBase
+    classID: 137
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.06666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.15
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.21666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.31666666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.36666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.46666667
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.55
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.73333335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.93333334
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.05
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.1666666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.3166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.45
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.6166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: blendShape.Move_A_2
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/TentacleBase
+    classID: 137
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 5
+        inSlope: 78.65728
+        outSlope: 78.65728
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.2727081
+      - serializedVersion: 3
+        time: 0.3
+        value: 30
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6333333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.2
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.65
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 5
+        inSlope: 74.85354
+        outSlope: 74.85354
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.7470439
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: blendShape.Move_B_1
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/TentacleBase
+    classID: 137
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.3
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6333333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.2
+        value: 30
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: blendShape.Move_B_2
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/TentacleBase
+    classID: 137
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.13333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.33333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.46666667
+        value: 30
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.15
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.45
+        value: 30
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: blendShape.Move_C_1
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/TentacleBase
+    classID: 137
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.13333334
+        value: 30
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.33333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.46666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9166667
+        value: 30
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.15
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.45
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: blendShape.Move_C_2
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/TentacleBase
+    classID: 137
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 21.058296
+        outSlope: 21.058296
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.40640593
+      - serializedVersion: 3
+        time: 0.23333333
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.56666666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.5666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 1
+        inSlope: 6.2126355
+        outSlope: 6.2126355
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.51904106
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: blendShape.Long
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/TentacleBase
+    classID: 137
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.23333333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.48333332
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.5166667
+        value: 30
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: blendShape.Short
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/TentacleBase
+    classID: 137
+    script: {fileID: 0}
+    flags: 0
+  m_PPtrCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 3497079864
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 1440384224
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 2677216919
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 2891560780
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 2247942929
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 1337291110
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 3391013310
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 5723081
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 4274072242
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 881375429
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 3188700026
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 1913133915
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 4252099961
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 3583493302
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 829836632
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 782278175
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 955457404
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 4190870486
+      attribute: 2821102362
+      script: {fileID: 0}
+      typeID: 137
+      customType: 20
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 4190870486
+      attribute: 825215648
+      script: {fileID: 0}
+      typeID: 137
+      customType: 20
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 4190870486
+      attribute: 2858427715
+      script: {fileID: 0}
+      typeID: 137
+      customType: 20
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 4190870486
+      attribute: 862549241
+      script: {fileID: 0}
+      typeID: 137
+      customType: 20
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 4190870486
+      attribute: 2879541108
+      script: {fileID: 0}
+      typeID: 137
+      customType: 20
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 4190870486
+      attribute: 850075342
+      script: {fileID: 0}
+      typeID: 137
+      customType: 20
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 4190870486
+      attribute: 2611283542
+      script: {fileID: 0}
+      typeID: 137
+      customType: 20
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 4190870486
+      attribute: 1323941798
+      script: {fileID: 0}
+      typeID: 137
+      customType: 20
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 1.75
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves:
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.06666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.15
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.21666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.31666666
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.36666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.46666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.55
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6166667
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.73333335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.93333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.05
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.1666666
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.3166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.45
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.6166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: blendShape.Move_A_1
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/TentacleBase
+    classID: 137
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.06666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.15
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.21666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.31666666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.36666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.46666667
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.55
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.73333335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.93333334
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.05
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.1666666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.3166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.45
+        value: 60
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.6166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: blendShape.Move_A_2
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/TentacleBase
+    classID: 137
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 5
+        inSlope: 78.65728
+        outSlope: 78.65728
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.2727081
+      - serializedVersion: 3
+        time: 0.3
+        value: 30
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6333333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.2
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.65
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 5
+        inSlope: 74.85354
+        outSlope: 74.85354
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.7470439
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: blendShape.Move_B_1
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/TentacleBase
+    classID: 137
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.3
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6333333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.2
+        value: 30
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: blendShape.Move_B_2
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/TentacleBase
+    classID: 137
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.13333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.33333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.46666667
+        value: 30
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.15
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.45
+        value: 30
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: blendShape.Move_C_1
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/TentacleBase
+    classID: 137
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.13333334
+        value: 30
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.33333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.46666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9166667
+        value: 30
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.15
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.45
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: blendShape.Move_C_2
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/TentacleBase
+    classID: 137
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 21.058296
+        outSlope: 21.058296
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.40640593
+      - serializedVersion: 3
+        time: 0.23333333
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.56666666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.5666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 1
+        inSlope: 6.2126355
+        outSlope: 6.2126355
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.51904106
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: blendShape.Long
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/TentacleBase
+    classID: 137
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.23333333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.48333332
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.5166667
+        value: 30
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: blendShape.Short
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/TentacleBase
+    classID: 137
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -18.548
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.41666666
+        value: -45.331
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.3333334
+        value: -24.76
+        inSlope: 18.635996
+        outSlope: 18.635996
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -18.548
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM1.001/Bone_TM1.002/Bone_TM1.003/Bone_TM1.004/Bone_TM1.005/Bone_TM1.006/Bone_TM1.007/Bone_TM1.008/Bone_TM1.009/Bone_TM1.010/Bone_TM1.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -8.838
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.41666666
+        value: -36.485
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.3333334
+        value: -15.25
+        inSlope: 19.235992
+        outSlope: 19.235992
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -8.838
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM1.001/Bone_TM1.002/Bone_TM1.003/Bone_TM1.004/Bone_TM1.005/Bone_TM1.006/Bone_TM1.007/Bone_TM1.008/Bone_TM1.009/Bone_TM1.010/Bone_TM1.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 34.416
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.41666666
+        value: 49.659
+        inSlope: 1.0259973
+        outSlope: 1.0259973
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.3333334
+        value: 50.001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 34.416
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM1.001/Bone_TM1.002/Bone_TM1.003/Bone_TM1.004/Bone_TM1.005/Bone_TM1.006/Bone_TM1.007/Bone_TM1.008/Bone_TM1.009/Bone_TM1.010/Bone_TM1.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -14.628
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.68333334
+        value: -28.665
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -14.628
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM2.001/Bone_TM2.002/Bone_TM2.003/Bone_TM2.004/Bone_TM2.005/Bone_TM2.006/Bone_TM2.007/Bone_TM2.008/Bone_TM2.009/Bone_TM2.010/Bone_TM2.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 25.908
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.68333334
+        value: 60.499
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 25.908
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM2.001/Bone_TM2.002/Bone_TM2.003/Bone_TM2.004/Bone_TM2.005/Bone_TM2.006/Bone_TM2.007/Bone_TM2.008/Bone_TM2.009/Bone_TM2.010/Bone_TM2.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -62.987
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.68333334
+        value: -71.439
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -62.987
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM2.001/Bone_TM2.002/Bone_TM2.003/Bone_TM2.004/Bone_TM2.005/Bone_TM2.006/Bone_TM2.007/Bone_TM2.008/Bone_TM2.009/Bone_TM2.010/Bone_TM2.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -38.722
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.18333334
+        value: -37.053
+        inSlope: 6.4606404
+        outSlope: 6.4606404
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.0333333
+        value: -18.672
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -38.722
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM3.001/Bone_TM3.002/Bone_TM3.003/Bone_TM3.004/Bone_TM3.005/Bone_TM3.006/Bone_TM3.007/Bone_TM3.008/Bone_TM3.009/Bone_TM3.010/Bone_TM3.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -22.405
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.18333334
+        value: -21.265
+        inSlope: 4.4129086
+        outSlope: 4.4129086
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.0333333
+        value: -8.709
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -22.405
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM3.001/Bone_TM3.002/Bone_TM3.003/Bone_TM3.004/Bone_TM3.005/Bone_TM3.006/Bone_TM3.007/Bone_TM3.008/Bone_TM3.009/Bone_TM3.010/Bone_TM3.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 51.982
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.18333334
+        value: 45.088
+        inSlope: -23.374838
+        outSlope: -23.374838
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.0333333
+        value: 27.828
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 51.982
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM3.001/Bone_TM3.002/Bone_TM3.003/Bone_TM3.004/Bone_TM3.005/Bone_TM3.006/Bone_TM3.007/Bone_TM3.008/Bone_TM3.009/Bone_TM3.010/Bone_TM3.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 7.157
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5833333
+        value: 0.535
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 7.157
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM4.001/Bone_TM4.002/Bone_TM4.003/Bone_TM4.004/Bone_TM4.005/Bone_TM4.006/Bone_TM4.007/Bone_TM4.008/Bone_TM4.009/Bone_TM4.010
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 7.846
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5833333
+        value: 25.839
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 7.846
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM4.001/Bone_TM4.002/Bone_TM4.003/Bone_TM4.004/Bone_TM4.005/Bone_TM4.006/Bone_TM4.007/Bone_TM4.008/Bone_TM4.009/Bone_TM4.010
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -58.39
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5833333
+        value: -69.307
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -58.39
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM4.001/Bone_TM4.002/Bone_TM4.003/Bone_TM4.004/Bone_TM4.005/Bone_TM4.006/Bone_TM4.007/Bone_TM4.008/Bone_TM4.009/Bone_TM4.010
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1.055
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.16666667
+        value: -8.373
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.25
+        value: 5.083
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 1.055
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM4.001/Bone_TM4.002/Bone_TM4.003/Bone_TM4.004/Bone_TM4.005/Bone_TM4.006/Bone_TM4.007/Bone_TM4.008/Bone_TM4.009/Bone_TM4.010/Bone_TM4.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 13.003
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.16666667
+        value: 27.554
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.25
+        value: 6.796
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 13.003
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM4.001/Bone_TM4.002/Bone_TM4.003/Bone_TM4.004/Bone_TM4.005/Bone_TM4.006/Bone_TM4.007/Bone_TM4.008/Bone_TM4.009/Bone_TM4.010/Bone_TM4.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -56.708
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.16666667
+        value: -57.645
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.25
+        value: -57.26
+        inSlope: 0.5917896
+        outSlope: 0.5917896
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -56.708
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM4.001/Bone_TM4.002/Bone_TM4.003/Bone_TM4.004/Bone_TM4.005/Bone_TM4.006/Bone_TM4.007/Bone_TM4.008/Bone_TM4.009/Bone_TM4.010/Bone_TM4.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -14.398
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6
+        value: -5.937
+        inSlope: 13.908858
+        outSlope: 13.908858
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.1666666
+        value: 1.829
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.4333333
+        value: -5.244
+        inSlope: -27.81771
+        outSlope: -27.81771
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -14.398
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM5.001/Bone_TM5.002/Bone_TM5.003/Bone_TM5.004/Bone_TM5.005/Bone_TM5.006/Bone_TM5.007/Bone_TM5.008/Bone_TM5.009/Bone_TM5.010/Bone_TM5.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -13.777
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6
+        value: -23.849
+        inSlope: -16.55743
+        outSlope: -16.55743
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.1666666
+        value: -33.094
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.4333333
+        value: -24.674
+        inSlope: 33.114857
+        outSlope: 33.114857
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -13.777
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM5.001/Bone_TM5.002/Bone_TM5.003/Bone_TM5.004/Bone_TM5.005/Bone_TM5.006/Bone_TM5.007/Bone_TM5.008/Bone_TM5.009/Bone_TM5.010/Bone_TM5.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -51.241
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6
+        value: -54.303
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.1666666
+        value: -49.085
+        inSlope: 9.124801
+        outSlope: 9.124801
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.4333333
+        value: -46.699
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -51.241
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM5.001/Bone_TM5.002/Bone_TM5.003/Bone_TM5.004/Bone_TM5.005/Bone_TM5.006/Bone_TM5.007/Bone_TM5.008/Bone_TM5.009/Bone_TM5.010/Bone_TM5.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -55.746
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: -39.397
+        inSlope: 41.739597
+        outSlope: 41.739597
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.8333333
+        value: -20.963
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.3166667
+        value: -39.776
+        inSlope: -37.945087
+        outSlope: -37.945087
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -55.746
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM6.001/Bone_TM6.002/Bone_TM6.003/Bone_TM6.004/Bone_TM6.005/Bone_TM6.006/Bone_TM6.007/Bone_TM6.008/Bone_TM6.009/Bone_TM6.010/Bone_TM6.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -67.515
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: -50.723
+        inSlope: 42.871197
+        outSlope: 42.871197
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.8333333
+        value: -31.789
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.3166667
+        value: -51.112
+        inSlope: -38.973816
+        outSlope: -38.973816
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -67.515
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM6.001/Bone_TM6.002/Bone_TM6.003/Bone_TM6.004/Bone_TM6.005/Bone_TM6.006/Bone_TM6.007/Bone_TM6.008/Bone_TM6.009/Bone_TM6.010/Bone_TM6.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 52.051
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 49.199
+        inSlope: -13.689589
+        outSlope: -13.689589
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.8333333
+        value: 28.38
+        inSlope: -35.84509
+        outSlope: -35.84509
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.3166667
+        value: 16.341
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 52.051
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM6.001/Bone_TM6.002/Bone_TM6.003/Bone_TM6.004/Bone_TM6.005/Bone_TM6.006/Bone_TM6.007/Bone_TM6.008/Bone_TM6.009/Bone_TM6.010/Bone_TM6.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -81.639
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.23333333
+        value: -65.759
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.81666666
+        value: -76.592
+        inSlope: -17.261694
+        outSlope: -17.261694
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.2166667
+        value: -82.733
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -81.639
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM7.001/Bone_TM7.002/Bone_TM7.003/Bone_TM7.004/Bone_TM7.005/Bone_TM7.006/Bone_TM7.007/Bone_TM7.008/Bone_TM7.009/Bone_TM7.010/Bone_TM7.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -82.161
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.23333333
+        value: -55.45
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.81666666
+        value: -120.687
+        inSlope: -103.95051
+        outSlope: -103.95051
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.2166667
+        value: -157.668
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -82.161
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM7.001/Bone_TM7.002/Bone_TM7.003/Bone_TM7.004/Bone_TM7.005/Bone_TM7.006/Bone_TM7.007/Bone_TM7.008/Bone_TM7.009/Bone_TM7.010/Bone_TM7.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 38.71
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.23333333
+        value: 12.796
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.81666666
+        value: 66.783
+        inSlope: 102.54203
+        outSlope: 102.54203
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.2166667
+        value: 113.629
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 38.71
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM7.001/Bone_TM7.002/Bone_TM7.003/Bone_TM7.004/Bone_TM7.005/Bone_TM7.006/Bone_TM7.007/Bone_TM7.008/Bone_TM7.009/Bone_TM7.010/Bone_TM7.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 23.553
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.1166667
+        value: -3.293
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 23.553
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM8.001/Bone_TM8.002/Bone_TM8.003/Bone_TM8.004/Bone_TM8.005/Bone_TM8.006/Bone_TM8.007/Bone_TM8.008/Bone_TM8.009/Bone_TM8.010/Bone_TM8.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 19.243
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.1166667
+        value: 40.136
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 19.243
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM8.001/Bone_TM8.002/Bone_TM8.003/Bone_TM8.004/Bone_TM8.005/Bone_TM8.006/Bone_TM8.007/Bone_TM8.008/Bone_TM8.009/Bone_TM8.010/Bone_TM8.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -39.929
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.1166667
+        value: -22.95
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -39.929
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM8.001/Bone_TM8.002/Bone_TM8.003/Bone_TM8.004/Bone_TM8.005/Bone_TM8.006/Bone_TM8.007/Bone_TM8.008/Bone_TM8.009/Bone_TM8.010/Bone_TM8.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -36.913
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.73333335
+        value: -12.125
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.5
+        value: -19.808
+        inSlope: -24.381638
+        outSlope: -24.381638
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -36.913
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM9.001/Bone_TM9.002/Bone_TM9.003/Bone_TM9.004/Bone_TM9.005/Bone_TM9.006/Bone_TM9.007/Bone_TM9.008/Bone_TM9.009/Bone_TM9.010/Bone_TM9.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -63.807
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.73333335
+        value: -48.566
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.5
+        value: -49.202
+        inSlope: -2.5022862
+        outSlope: -2.5022862
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -63.807
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM9.001/Bone_TM9.002/Bone_TM9.003/Bone_TM9.004/Bone_TM9.005/Bone_TM9.006/Bone_TM9.007/Bone_TM9.008/Bone_TM9.009/Bone_TM9.010/Bone_TM9.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 40.86
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.73333335
+        value: 18.309
+        inSlope: -19.32267
+        outSlope: -19.32267
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.5
+        value: 11.063
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 40.86
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM9.001/Bone_TM9.002/Bone_TM9.003/Bone_TM9.004/Bone_TM9.005/Bone_TM9.006/Bone_TM9.007/Bone_TM9.008/Bone_TM9.009/Bone_TM9.010/Bone_TM9.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -33.24
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.55
+        value: -43.81
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.1166667
+        value: -33.24
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -33.24
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM10.001/Bone_TM10.002/Bone_TM10.003/Bone_TM10.004/Bone_TM10.005/Bone_TM10.006/Bone_TM10.007/Bone_TM10.008/Bone_TM10.009/Bone_TM10.010/Bone_TM10.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 25.159
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.55
+        value: 30.769
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.1166667
+        value: 25.159
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 25.159
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM10.001/Bone_TM10.002/Bone_TM10.003/Bone_TM10.004/Bone_TM10.005/Bone_TM10.006/Bone_TM10.007/Bone_TM10.008/Bone_TM10.009/Bone_TM10.010/Bone_TM10.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -59.474
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.55
+        value: -12.449
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.1166667
+        value: -59.096
+        inSlope: -1.2599983
+        outSlope: -1.2599983
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -59.474
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM10.001/Bone_TM10.002/Bone_TM10.003/Bone_TM10.004/Bone_TM10.005/Bone_TM10.006/Bone_TM10.007/Bone_TM10.008/Bone_TM10.009/Bone_TM10.010/Bone_TM10.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.452
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.53333336
+        value: -6.9
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.2166667
+        value: 0.452
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 0.452
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM11.001/Bone_TM11.002/Bone_TM11.003/Bone_TM11.004/Bone_TM11.005/Bone_TM11.006/Bone_TM11.007/Bone_TM11.008/Bone_TM11.009/Bone_TM11.010/Bone_TM11.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 29.006
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.53333336
+        value: 32.657
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.2166667
+        value: 29.006
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 29.006
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM11.001/Bone_TM11.002/Bone_TM11.003/Bone_TM11.004/Bone_TM11.005/Bone_TM11.006/Bone_TM11.007/Bone_TM11.008/Bone_TM11.009/Bone_TM11.010/Bone_TM11.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -38.782
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.53333336
+        value: -26.498
+        inSlope: 25.16137
+        outSlope: 25.16137
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.2166667
+        value: -8.169
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -38.782
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM11.001/Bone_TM11.002/Bone_TM11.003/Bone_TM11.004/Bone_TM11.005/Bone_TM11.006/Bone_TM11.007/Bone_TM11.008/Bone_TM11.009/Bone_TM11.010/Bone_TM11.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 47.945
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.81666666
+        value: 38.267
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 47.945
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM12.001/Bone_TM12.002/Bone_TM12.003/Bone_TM12.004/Bone_TM12.005/Bone_TM12.006/Bone_TM12.007/Bone_TM12.008/Bone_TM12.009/Bone_TM12.010/Bone_TM12.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -87.633
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.81666666
+        value: -61.132
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -87.633
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM12.001/Bone_TM12.002/Bone_TM12.003/Bone_TM12.004/Bone_TM12.005/Bone_TM12.006/Bone_TM12.007/Bone_TM12.008/Bone_TM12.009/Bone_TM12.010/Bone_TM12.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -73.038
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.81666666
+        value: -54.691
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -73.038
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM12.001/Bone_TM12.002/Bone_TM12.003/Bone_TM12.004/Bone_TM12.005/Bone_TM12.006/Bone_TM12.007/Bone_TM12.008/Bone_TM12.009/Bone_TM12.010/Bone_TM12.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 29.417
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.81666666
+        value: 36.091
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 29.417
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM12.001/Bone_TM12.002/Bone_TM12.003/Bone_TM12.004/Bone_TM12.005/Bone_TM12.006/Bone_TM12.007/Bone_TM12.008/Bone_TM12.009/Bone_TM12.010/Bone_TM12.011/Bone_TM12.012
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 11.89
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.81666666
+        value: -2.057
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 11.89
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM12.001/Bone_TM12.002/Bone_TM12.003/Bone_TM12.004/Bone_TM12.005/Bone_TM12.006/Bone_TM12.007/Bone_TM12.008/Bone_TM12.009/Bone_TM12.010/Bone_TM12.011/Bone_TM12.012
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -56.703
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.81666666
+        value: -64.288
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -56.703
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM12.001/Bone_TM12.002/Bone_TM12.003/Bone_TM12.004/Bone_TM12.005/Bone_TM12.006/Bone_TM12.007/Bone_TM12.008/Bone_TM12.009/Bone_TM12.010/Bone_TM12.011/Bone_TM12.012
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 15.938
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.43333334
+        value: 5.425
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.1
+        value: 10.781
+        inSlope: 7.984557
+        outSlope: 7.984557
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 15.938
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM13.001/Bone_TM13.002/Bone_TM13.003/Bone_TM13.004/Bone_TM13.005/Bone_TM13.006/Bone_TM13.007/Bone_TM13.008/Bone_TM13.009/Bone_TM13.010/Bone_TM13.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -8.487
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.43333334
+        value: -18.939
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.1
+        value: -13.614
+        inSlope: 7.938227
+        outSlope: 7.938227
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -8.487
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM13.001/Bone_TM13.002/Bone_TM13.003/Bone_TM13.004/Bone_TM13.005/Bone_TM13.006/Bone_TM13.007/Bone_TM13.008/Bone_TM13.009/Bone_TM13.010/Bone_TM13.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 45.428
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.43333334
+        value: 43.477
+        inSlope: -6.303638
+        outSlope: -6.303638
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.1
+        value: 38.494
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 45.428
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM13.001/Bone_TM13.002/Bone_TM13.003/Bone_TM13.004/Bone_TM13.005/Bone_TM13.006/Bone_TM13.007/Bone_TM13.008/Bone_TM13.009/Bone_TM13.010/Bone_TM13.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -8.697
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5833333
+        value: -18.843
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -8.697
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM13.001/Bone_TM13.002/Bone_TM13.003/Bone_TM13.004/Bone_TM13.005/Bone_TM13.006/Bone_TM13.007/Bone_TM13.008/Bone_TM13.009/Bone_TM13.010/Bone_TM13.011/Bone_TM13.012
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -35.849
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5833333
+        value: -45.701
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -35.849
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM13.001/Bone_TM13.002/Bone_TM13.003/Bone_TM13.004/Bone_TM13.005/Bone_TM13.006/Bone_TM13.007/Bone_TM13.008/Bone_TM13.009/Bone_TM13.010/Bone_TM13.011/Bone_TM13.012
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 36.699
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5833333
+        value: 44.612
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 36.699
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM13.001/Bone_TM13.002/Bone_TM13.003/Bone_TM13.004/Bone_TM13.005/Bone_TM13.006/Bone_TM13.007/Bone_TM13.008/Bone_TM13.009/Bone_TM13.010/Bone_TM13.011/Bone_TM13.012
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 52.882
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.46666667
+        value: 59.012
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.8833333
+        value: 57.493
+        inSlope: -4.7345486
+        outSlope: -4.7345486
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: 52.882
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM14.001/Bone_TM14.002/Bone_TM14.003/Bone_TM14.004/Bone_TM14.005/Bone_TM14.006/Bone_TM14.007/Bone_TM14.008/Bone_TM14.009/Bone_TM14.010/Bone_TM14.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -39.701
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.46666667
+        value: -73.507
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.8833333
+        value: -65.13
+        inSlope: 26.11015
+        outSlope: 26.11015
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -39.701
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM14.001/Bone_TM14.002/Bone_TM14.003/Bone_TM14.004/Bone_TM14.005/Bone_TM14.006/Bone_TM14.007/Bone_TM14.008/Bone_TM14.009/Bone_TM14.010/Bone_TM14.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -58.404
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.46666667
+        value: -78.676
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.8833333
+        value: -77.121
+        inSlope: 4.846754
+        outSlope: 4.846754
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.75
+        value: -58.404
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM14.001/Bone_TM14.002/Bone_TM14.003/Bone_TM14.004/Bone_TM14.005/Bone_TM14.006/Bone_TM14.007/Bone_TM14.008/Bone_TM14.009/Bone_TM14.010/Bone_TM14.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 16
+  m_EulerEditorCurves:
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM1.001/Bone_TM1.002/Bone_TM1.003/Bone_TM1.004/Bone_TM1.005/Bone_TM1.006/Bone_TM1.007/Bone_TM1.008/Bone_TM1.009/Bone_TM1.010/Bone_TM1.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM1.001/Bone_TM1.002/Bone_TM1.003/Bone_TM1.004/Bone_TM1.005/Bone_TM1.006/Bone_TM1.007/Bone_TM1.008/Bone_TM1.009/Bone_TM1.010/Bone_TM1.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM1.001/Bone_TM1.002/Bone_TM1.003/Bone_TM1.004/Bone_TM1.005/Bone_TM1.006/Bone_TM1.007/Bone_TM1.008/Bone_TM1.009/Bone_TM1.010/Bone_TM1.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM2.001/Bone_TM2.002/Bone_TM2.003/Bone_TM2.004/Bone_TM2.005/Bone_TM2.006/Bone_TM2.007/Bone_TM2.008/Bone_TM2.009/Bone_TM2.010/Bone_TM2.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM2.001/Bone_TM2.002/Bone_TM2.003/Bone_TM2.004/Bone_TM2.005/Bone_TM2.006/Bone_TM2.007/Bone_TM2.008/Bone_TM2.009/Bone_TM2.010/Bone_TM2.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM2.001/Bone_TM2.002/Bone_TM2.003/Bone_TM2.004/Bone_TM2.005/Bone_TM2.006/Bone_TM2.007/Bone_TM2.008/Bone_TM2.009/Bone_TM2.010/Bone_TM2.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM3.001/Bone_TM3.002/Bone_TM3.003/Bone_TM3.004/Bone_TM3.005/Bone_TM3.006/Bone_TM3.007/Bone_TM3.008/Bone_TM3.009/Bone_TM3.010/Bone_TM3.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM3.001/Bone_TM3.002/Bone_TM3.003/Bone_TM3.004/Bone_TM3.005/Bone_TM3.006/Bone_TM3.007/Bone_TM3.008/Bone_TM3.009/Bone_TM3.010/Bone_TM3.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM3.001/Bone_TM3.002/Bone_TM3.003/Bone_TM3.004/Bone_TM3.005/Bone_TM3.006/Bone_TM3.007/Bone_TM3.008/Bone_TM3.009/Bone_TM3.010/Bone_TM3.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM4.001/Bone_TM4.002/Bone_TM4.003/Bone_TM4.004/Bone_TM4.005/Bone_TM4.006/Bone_TM4.007/Bone_TM4.008/Bone_TM4.009/Bone_TM4.010
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM4.001/Bone_TM4.002/Bone_TM4.003/Bone_TM4.004/Bone_TM4.005/Bone_TM4.006/Bone_TM4.007/Bone_TM4.008/Bone_TM4.009/Bone_TM4.010
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM4.001/Bone_TM4.002/Bone_TM4.003/Bone_TM4.004/Bone_TM4.005/Bone_TM4.006/Bone_TM4.007/Bone_TM4.008/Bone_TM4.009/Bone_TM4.010
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM4.001/Bone_TM4.002/Bone_TM4.003/Bone_TM4.004/Bone_TM4.005/Bone_TM4.006/Bone_TM4.007/Bone_TM4.008/Bone_TM4.009/Bone_TM4.010/Bone_TM4.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM4.001/Bone_TM4.002/Bone_TM4.003/Bone_TM4.004/Bone_TM4.005/Bone_TM4.006/Bone_TM4.007/Bone_TM4.008/Bone_TM4.009/Bone_TM4.010/Bone_TM4.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM4.001/Bone_TM4.002/Bone_TM4.003/Bone_TM4.004/Bone_TM4.005/Bone_TM4.006/Bone_TM4.007/Bone_TM4.008/Bone_TM4.009/Bone_TM4.010/Bone_TM4.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM5.001/Bone_TM5.002/Bone_TM5.003/Bone_TM5.004/Bone_TM5.005/Bone_TM5.006/Bone_TM5.007/Bone_TM5.008/Bone_TM5.009/Bone_TM5.010/Bone_TM5.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM5.001/Bone_TM5.002/Bone_TM5.003/Bone_TM5.004/Bone_TM5.005/Bone_TM5.006/Bone_TM5.007/Bone_TM5.008/Bone_TM5.009/Bone_TM5.010/Bone_TM5.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM5.001/Bone_TM5.002/Bone_TM5.003/Bone_TM5.004/Bone_TM5.005/Bone_TM5.006/Bone_TM5.007/Bone_TM5.008/Bone_TM5.009/Bone_TM5.010/Bone_TM5.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM6.001/Bone_TM6.002/Bone_TM6.003/Bone_TM6.004/Bone_TM6.005/Bone_TM6.006/Bone_TM6.007/Bone_TM6.008/Bone_TM6.009/Bone_TM6.010/Bone_TM6.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM6.001/Bone_TM6.002/Bone_TM6.003/Bone_TM6.004/Bone_TM6.005/Bone_TM6.006/Bone_TM6.007/Bone_TM6.008/Bone_TM6.009/Bone_TM6.010/Bone_TM6.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM6.001/Bone_TM6.002/Bone_TM6.003/Bone_TM6.004/Bone_TM6.005/Bone_TM6.006/Bone_TM6.007/Bone_TM6.008/Bone_TM6.009/Bone_TM6.010/Bone_TM6.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM7.001/Bone_TM7.002/Bone_TM7.003/Bone_TM7.004/Bone_TM7.005/Bone_TM7.006/Bone_TM7.007/Bone_TM7.008/Bone_TM7.009/Bone_TM7.010/Bone_TM7.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM7.001/Bone_TM7.002/Bone_TM7.003/Bone_TM7.004/Bone_TM7.005/Bone_TM7.006/Bone_TM7.007/Bone_TM7.008/Bone_TM7.009/Bone_TM7.010/Bone_TM7.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM7.001/Bone_TM7.002/Bone_TM7.003/Bone_TM7.004/Bone_TM7.005/Bone_TM7.006/Bone_TM7.007/Bone_TM7.008/Bone_TM7.009/Bone_TM7.010/Bone_TM7.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM8.001/Bone_TM8.002/Bone_TM8.003/Bone_TM8.004/Bone_TM8.005/Bone_TM8.006/Bone_TM8.007/Bone_TM8.008/Bone_TM8.009/Bone_TM8.010/Bone_TM8.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM8.001/Bone_TM8.002/Bone_TM8.003/Bone_TM8.004/Bone_TM8.005/Bone_TM8.006/Bone_TM8.007/Bone_TM8.008/Bone_TM8.009/Bone_TM8.010/Bone_TM8.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM8.001/Bone_TM8.002/Bone_TM8.003/Bone_TM8.004/Bone_TM8.005/Bone_TM8.006/Bone_TM8.007/Bone_TM8.008/Bone_TM8.009/Bone_TM8.010/Bone_TM8.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM9.001/Bone_TM9.002/Bone_TM9.003/Bone_TM9.004/Bone_TM9.005/Bone_TM9.006/Bone_TM9.007/Bone_TM9.008/Bone_TM9.009/Bone_TM9.010/Bone_TM9.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM9.001/Bone_TM9.002/Bone_TM9.003/Bone_TM9.004/Bone_TM9.005/Bone_TM9.006/Bone_TM9.007/Bone_TM9.008/Bone_TM9.009/Bone_TM9.010/Bone_TM9.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM9.001/Bone_TM9.002/Bone_TM9.003/Bone_TM9.004/Bone_TM9.005/Bone_TM9.006/Bone_TM9.007/Bone_TM9.008/Bone_TM9.009/Bone_TM9.010/Bone_TM9.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM10.001/Bone_TM10.002/Bone_TM10.003/Bone_TM10.004/Bone_TM10.005/Bone_TM10.006/Bone_TM10.007/Bone_TM10.008/Bone_TM10.009/Bone_TM10.010/Bone_TM10.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM10.001/Bone_TM10.002/Bone_TM10.003/Bone_TM10.004/Bone_TM10.005/Bone_TM10.006/Bone_TM10.007/Bone_TM10.008/Bone_TM10.009/Bone_TM10.010/Bone_TM10.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM10.001/Bone_TM10.002/Bone_TM10.003/Bone_TM10.004/Bone_TM10.005/Bone_TM10.006/Bone_TM10.007/Bone_TM10.008/Bone_TM10.009/Bone_TM10.010/Bone_TM10.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM11.001/Bone_TM11.002/Bone_TM11.003/Bone_TM11.004/Bone_TM11.005/Bone_TM11.006/Bone_TM11.007/Bone_TM11.008/Bone_TM11.009/Bone_TM11.010/Bone_TM11.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM11.001/Bone_TM11.002/Bone_TM11.003/Bone_TM11.004/Bone_TM11.005/Bone_TM11.006/Bone_TM11.007/Bone_TM11.008/Bone_TM11.009/Bone_TM11.010/Bone_TM11.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM11.001/Bone_TM11.002/Bone_TM11.003/Bone_TM11.004/Bone_TM11.005/Bone_TM11.006/Bone_TM11.007/Bone_TM11.008/Bone_TM11.009/Bone_TM11.010/Bone_TM11.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM12.001/Bone_TM12.002/Bone_TM12.003/Bone_TM12.004/Bone_TM12.005/Bone_TM12.006/Bone_TM12.007/Bone_TM12.008/Bone_TM12.009/Bone_TM12.010/Bone_TM12.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM12.001/Bone_TM12.002/Bone_TM12.003/Bone_TM12.004/Bone_TM12.005/Bone_TM12.006/Bone_TM12.007/Bone_TM12.008/Bone_TM12.009/Bone_TM12.010/Bone_TM12.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM12.001/Bone_TM12.002/Bone_TM12.003/Bone_TM12.004/Bone_TM12.005/Bone_TM12.006/Bone_TM12.007/Bone_TM12.008/Bone_TM12.009/Bone_TM12.010/Bone_TM12.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM12.001/Bone_TM12.002/Bone_TM12.003/Bone_TM12.004/Bone_TM12.005/Bone_TM12.006/Bone_TM12.007/Bone_TM12.008/Bone_TM12.009/Bone_TM12.010/Bone_TM12.011/Bone_TM12.012
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM12.001/Bone_TM12.002/Bone_TM12.003/Bone_TM12.004/Bone_TM12.005/Bone_TM12.006/Bone_TM12.007/Bone_TM12.008/Bone_TM12.009/Bone_TM12.010/Bone_TM12.011/Bone_TM12.012
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM12.001/Bone_TM12.002/Bone_TM12.003/Bone_TM12.004/Bone_TM12.005/Bone_TM12.006/Bone_TM12.007/Bone_TM12.008/Bone_TM12.009/Bone_TM12.010/Bone_TM12.011/Bone_TM12.012
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM13.001/Bone_TM13.002/Bone_TM13.003/Bone_TM13.004/Bone_TM13.005/Bone_TM13.006/Bone_TM13.007/Bone_TM13.008/Bone_TM13.009/Bone_TM13.010/Bone_TM13.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM13.001/Bone_TM13.002/Bone_TM13.003/Bone_TM13.004/Bone_TM13.005/Bone_TM13.006/Bone_TM13.007/Bone_TM13.008/Bone_TM13.009/Bone_TM13.010/Bone_TM13.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM13.001/Bone_TM13.002/Bone_TM13.003/Bone_TM13.004/Bone_TM13.005/Bone_TM13.006/Bone_TM13.007/Bone_TM13.008/Bone_TM13.009/Bone_TM13.010/Bone_TM13.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM13.001/Bone_TM13.002/Bone_TM13.003/Bone_TM13.004/Bone_TM13.005/Bone_TM13.006/Bone_TM13.007/Bone_TM13.008/Bone_TM13.009/Bone_TM13.010/Bone_TM13.011/Bone_TM13.012
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM13.001/Bone_TM13.002/Bone_TM13.003/Bone_TM13.004/Bone_TM13.005/Bone_TM13.006/Bone_TM13.007/Bone_TM13.008/Bone_TM13.009/Bone_TM13.010/Bone_TM13.011/Bone_TM13.012
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM13.001/Bone_TM13.002/Bone_TM13.003/Bone_TM13.004/Bone_TM13.005/Bone_TM13.006/Bone_TM13.007/Bone_TM13.008/Bone_TM13.009/Bone_TM13.010/Bone_TM13.011/Bone_TM13.012
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM14.001/Bone_TM14.002/Bone_TM14.003/Bone_TM14.004/Bone_TM14.005/Bone_TM14.006/Bone_TM14.007/Bone_TM14.008/Bone_TM14.009/Bone_TM14.010/Bone_TM14.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM14.001/Bone_TM14.002/Bone_TM14.003/Bone_TM14.004/Bone_TM14.005/Bone_TM14.006/Bone_TM14.007/Bone_TM14.008/Bone_TM14.009/Bone_TM14.010/Bone_TM14.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: TergetBone_TentacleMask/SwitchOnOff_TentacleMask/Armature_Mask/Bone_Mask.000/Bone_Mask.001/Bone_Mask.end/Armature_TentaclesMiddle/Bone_TentaclesMiddle/Bone_TM14.001/Bone_TM14.002/Bone_TM14.003/Bone_TM14.004/Bone_TM14.005/Bone_TM14.006/Bone_TM14.007/Bone_TM14.008/Bone_TM14.009/Bone_TM14.010/Bone_TM14.011
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events: []

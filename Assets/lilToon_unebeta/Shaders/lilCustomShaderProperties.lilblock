@@ -1,0 +1,29 @@
+
+        //----------------------------------------------------------------------------------------------------------------------
+        // Custom Properties
+        //_CustomVariable ("Custom Variable", Float) = 0
+        [Space]
+        [NoScaleOffset]
+        _Mask ("Mask", 2D) = "white" {}
+
+        [Space]
+        _MinimumDistance ("MinimumDistance(m)", float) = 0.01
+        _BehindDistance  ("BehindDistance(m)", float) = 0.5
+        _FlippingDistanceCoefficient ("FlippingDistanceCoefficient(m)", float) = 1.0
+
+        [Space]
+        _UneunePower ("_UneunePower", float) = 0.01
+        _UneuneSpeed ("_UneuneSpeed", float) = 1.0
+        _UneunePosition ("_UneunePosition", float) = 10.0
+        
+        [Space]
+        _useVertex ("_useVertex", Float) = 1.0
+        _useUv0 ("_useUv0", Float) = 1.0
+        _useUv1 ("_useUv1", Float) = 1.0
+        _useUv2 ("_useUv2", Float) = 1.0
+        _useUv3 ("_useUv3", Float) = 1.0
+        _useUvMain ("_useUvMain", Float) = 1.0
+        _useUvMat ("_useUvMat", Float) = 1.0
+        _useUvRim ("_useUvRim", Float) = 1.0
+        _useUvPanorama ("_useUvPanorama", Float) = 1.0
+        _useUvSc ("_useUvSc", Float) = 1.0    
